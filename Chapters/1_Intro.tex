@@ -1,0 +1,512 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\setchapterstyle{kao}
+\setchapterpreamble[u]{\margintoc}
+\setchapterimage[6.5cm]{Images/intro.jpg}
+\chapter[Introduction]{Introduction\footnotemark[0]}
+\labch{intro}
+\section{Dimensional Analysis and Energy Scales}
+We start our discussion about the Standard Model by introducing some fundamental concepts about dimensional analysis. For our purposes, we work with natural units, i.e. $\hbar=c=1$. It follows that:
+\begin{itemize}
+    \item $[m]=[E]$ since $E=mc^2$ 
+    \item $[t]=[E^{-1}]$ since $\Delta E\Delta t\gtrsim\hbar$
+    \item $P^\mu=(E,\Vec{p})$ and we have that $[x]=[E^{-1}]$
+    \item the Lagrangian density $\pazocal{L}$ has dimension $[\pazocal{L}]=[E^4]$ because it has to be $[S]=\left[\int d^4x\pazocal{L}\right]=0$
+    \item The fields we work with have dimensions $[\phi]=[E]$, $[\partial_\mu\phi]=[E]$, $[\Psi]=[E^{3/2}]$, $[A_\mu]=[E]$
+\end{itemize}
+For the couplings, we observe that $e\bar{\Psi}\gamma^\mu A_\mu\Psi$ must have dimension $E^4$ therefore it has to be $[e]=[E^0]$. Same reasoning applies for $G_F\bar{\Psi}\Psi\bar{\Psi}\Psi$ and we obtain $[G_F]=[E^{-2}]$.
+
+The typical energy scale we are going to use is GeV, while the masses we are interested in are:
+\[
+\left\{
+\begin{aligned}
+&\text{Leptons: } &&m_e=0.511\text{ MeV} \quad &&m_\mu=105\text{ MeV} \quad &&m_\tau=1.77\text{ GeV}\\
+&\text{Light quarks: } &&m_u=2.5\text{ MeV} \quad &&m_d=5.0\text{ MeV} \quad &&m_s=0.105\text{ GeV}\\
+&\text{Heavy quarks: } &&m_c=1.27\text{GeV} \quad &&m_b=4.20\text{GeV} \quad &&m_t=173\text{GeV}
+\end{aligned}
+\right.
+%Grazie a Giorgio che mi ha fatto allineare tutto per bene (giovedì 20 ottobre 2022, nell'Ufficio)
+\]
+In quantum chromodynamics (QCD) the QCD scale is given by the quantity $\Lambda_{QCD}$. Its value is $\Lambda_{QCD}=332\pm17$ MeV when the energy involved in the process allows only to produce the light quarks, i.e. energies below 1.27 GeV. At higher energy, $\Lambda_{QCD}=210\pm14$ MeV, above the bottom quark mass. This gives mass to elementary fields:
+\[
+\left\{
+\begin{aligned}
+&m_p=938\text{ MeV}=g_p\Lambda_{QCD} \quad m_n=939\text{ MeV}=g_n\Lambda_{QCD}\\
+&m_{\pi^\pm}=139\text{ MeV}, m_{\pi^0}=135\text{ MeV}\propto\sqrt{(m_u+m_d)\Lambda_{QCD}}
+\end{aligned}
+\right.
+\Rightarrow \text{we have a different scaling}
+\]
+Lastly, we give the mass of the two gauge bosons $W$ and $Z$ and of the Higgs boson $h$:\marginnote{Remember that the other two gauge bosons $\gamma$ and $g$ are massless.}
+\[
+m_W\simeq80\text{ GeV} \quad m_Z\simeq90\text{ GeV} \quad m_h\simeq125\text{ GeV}
+\]
+\subsection{Muon Decay}
+With the energy scales briefly discussed before, we want to compute the muon decay width and its lifetime.\\
+For a decay of the type $A\xrightarrow[]{}B_1+B_2+B_3+\dots$ we know that
+\[
+d\Gamma=\frac{1}{2m_A}\left(\prod_f\frac{d^3p_A}{(2\pi)^3}\frac{1}{2E_f}\right)(2\pi)^4\delta^4(p_A-\{p_f\})|\pazocal{M}|^2
+\]
+We are now interested in $\mu^-\xrightarrow[]{}e^-\bar{\nu}_e\nu_\mu$
+\marginnote[-15mm]{\includegraphics[]{Images/muondecay.pdf}} and what we want to compute is
+\[
+\pazocal{M}\{\mu^-(P_\mu,a)\xrightarrow[]{}e^-(P_e,b)+\bar{\nu}_e(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $P_1$};}}{P_{\bar{\nu}_e}},c)+\nu_\mu(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $P_2$};}}{P_{\nu_\mu}},d)\}
+\]
+The gauge bosons are massive, so we need to fix the gauge: in the unitary gauge, we have that the propagator is given by 
+\[
+-i\frac{g^{\alpha\beta}-k^\alpha k^\beta/m_W^2}{K^2-m^2_W+i\varepsilon}
+\]
+with $K^\alpha=(P_\mu)^\alpha-(P_2)^\alpha$. We need an additional Feynman rule for this diagram: for each vertex in which there is an interaction with the $W$ boson, we obtain a factor $i\frac{g_2}{\sqrt{2}}\gamma^\alpha P_L$. With this said, and using the Feynman rules we already know, we get
+\[
+\pazocal{M}(a,b,c,d)=\bar{u}_b(P_e)i\frac{g_2}{\sqrt{2}}\gamma^\beta P_Lv_c(P_1)\left[-i\frac{(g^{\alpha\beta}-k^\alpha k^\beta/m_W^2)}{K^2-m^2_W+i\varepsilon}\right]\bar{u}_d(P_2)i\frac{g_2}{\sqrt{2}}\gamma_\alpha P_Lu_a(P_\mu)
+\]
+At this point, it is time to use some approximations:
+\[
+\left\{
+\begin{aligned}
+&K^2\simeq P^2_\mu-2P_\mu\cdot P_2\sim\pazocal{O}(m_\mu^2)\\
+&m_\mu\sim0.1\text{ GeV}\\
+&m_W\sim10^2\text{ GeV}
+\end{aligned}
+\right.
+\Rightarrow
+\frac{i}{m^2_W}\left(\frac{ig_2}{\sqrt{2}}\right)^2=-\frac{i}{2}\underbrace{\left(\frac{g_2^2}{m_W^2}{\color{red}\frac{\sqrt{2}}{8}}\right)}_{G_F}{\color{red}\frac{8}{\sqrt{2}}}=-\frac{4iG_F}{\sqrt{2}}
+\]
+With these approximations, we get
+\[
+\pazocal{M}(a,b,c,d)=\bar{u}_b(P_e)\gamma^\beta\left(\frac{1-\gamma^5}{2}\right)v_c(P_1)\bar{u}_d(P_2)\gamma^\beta\left(\frac{1-\gamma^5}{2}\right)u_a(P_\mu)\left(-\frac{4iG_F}{\sqrt{2}}\right)
+\]
+What we are really interested in is $\frac{1}{2}\sum_{a,b,c,d}\pazocal{M}(a,b,c,d)\pazocal{M}^*(a,b,c,d)$, which can be expressed as
+\[
+\frac{1}{2}\sum_{a,b,c,d}\pazocal{M}(a,b,c,d)\pazocal{M}^*(a,b,c,d)=\left(\frac{G_F}{\sqrt{2}}\right)^2L_e^{\beta\gamma}(L_\mu)_{\beta\gamma}
+\]
+We now focus on $L_e^{\beta\gamma}$:
+\begin{align*}
+L_e^{\beta\gamma}&=\bar{u}_b(P_e)\gamma^\beta(1-\gamma^5)v_c(P_1)v_c^\dagger(P_1)(1-\gamma^5)^\dagger(\gamma^\gamma)^\dagger\bar{u}_b^\dagger(P_e)\\
+&=\bar{u}_b(P_e)\gamma^\beta(1-\gamma^5)v_c(P_1)\bar{v}_c(P_1)\gamma^0(1-\gamma^5)\gamma^0\gamma^\gamma\gamma^0\gamma^0u_b(P_e)\\
+&=\bar{u}_b(P_e)\gamma^\beta(1-\gamma^5)v_c(P_1)\bar{v}_c(P_1)(1+\gamma^5)\gamma^\gamma u_b(P_e)
+\end{align*}
+Now, keep in mind that $\sum u(p)\bar{u}(p)=\slashed{P}+m$ and $\sum v(p)\bar{v}(p)=\slashed{P}-m$. For our purpose, in this part we can set $m_e=m_{\bar{\nu}_e}=m_{\nu_\mu}=0$ and finally we get:
+\[
+L_e^{\beta\gamma}=4\Tr{\gamma^\beta\left(\frac{1-\gamma^5}{2}\right)\slashed{P_1}\left(\frac{1+\gamma^5}{2}\right)\gamma^\gamma\slashed{P_e}}=4\Tr{\gamma^\beta\left(\frac{1-\gamma^5}{2}\right)\slashed{P_1}\gamma^\gamma\slashed{P_e}}\marginnote{We used the fact that $P_L^2=P_L$}
+\]
+To calculate the trace of this object, we use the following rules:
+\[
+\left\{
+\begin{aligned}
+&\Tr{\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma}=4\left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}+g^{\mu\sigma}g^{\nu\rho}\right)\\
+&\Tr{\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma\gamma^5}=-4i\varepsilon^{\mu\nu\rho\sigma}; \quad \varepsilon^{\alpha\beta\mu\nu}\varepsilon_{\alpha\beta\rho\sigma}=-2(\delta^\mu_\rho\delta^\nu_\sigma-\delta^\mu_\sigma\delta^\nu_\rho)
+\end{aligned}
+\right.
+\]
+After repeating everything for $(L_\mu)_{\beta\gamma}$ and tedious calculations, we obtain
+\[
+\frac{1}{2}\sum|\pazocal{M}|^2=64G^2_F(P_e\cdot P_2)(P_\mu\cdot P_1)
+\]
+We can compute the decay width, which is equal to
+\[
+\Gamma=\frac{1}{2m_\mu}\int\frac{d^3P_e}{(2\pi)^3}\frac{1}{2E_e}\int\frac{d^3P_1}{(2\pi)^3}\frac{1}{2E_1}\int\frac{d^3P_2}{(2\pi)^3}\frac{1}{2E_2}(2\pi)^4\delta^4(P_\mu-P_e-P_1-P_2)\langle|\pazocal{M}|^2\rangle
+\]
+Now, we integrate on $d^3P_e$:
+\[
+\int\frac{d^3P_e}{2E_e}=\int d^4P_e\theta(E_e)\delta(P_e^2-m_e^2)\delta^4(P_\mu-P_e-P_1-P_2)=\theta(E_\mu-E_1-E_2)\delta((P_\mu-P_1-P_2)^2)
+\]
+Suppose now that we fix the direction of $P_1$ as the x-axis of our system: we have no dependence on the azimuth angle because the 3-body decay is planar, so $\int d\Omega_1=4\pi$ and $\int d\phi_{12}=2\pi$. We are in a reference system such that $P_\mu=(m_\mu,\Vec{0})$.
+\[
+\Gamma=\frac{4\pi}{2m_\mu}\frac{2\pi}{(2\pi)^5}\int_0^{+\infty}\frac{dE_1E_1^2}{2E_1}\int_0^{+\infty}\frac{dE_2E_2^2}{2E_2}\int_{-1}^{+1}d\cos\theta_{12}\delta(m_\mu^2-2m_\mu(E_1+E_2)+2E_1E_2(1-\cos\theta_{12}))64G_F^2(P_e\cdot P_2)(P_\mu\cdot P_1)
+\]
+We integrate the delta function in $d\cos\theta_{12}$. We can rewrite it as:
+\[
+\delta\left(\cos\theta_{12}-\frac{m_\mu^2-2m_\mu(E_1+E_2)+2E_1E_2}{2E_1E_2}\right)
+\]
+Hence, we have to see for which values of $E_1$ and $E_2$, $\cos\theta_{12}$ is in the interval [-1,+1]:
+\[
+\left\{
+\begin{aligned}
+E_1&: 0\le E_1\le m_\mu/2\\
+E_2&: -1\le\frac{m_\mu^2-2m_\mu(E_1+E_2)+2E_1E_2}{2E_1E_2}\le1\Rightarrow\frac{m_\mu}{2}-E_1\le E_2\le\frac{m_\mu}{2}
+\end{aligned}
+\right.
+\]
+The upper limit on $E_1$ corresponds to having $e$ and $\nu_\mu (2)$ emitted in one direction and $\bar{\nu}_e (1)$ emitted in the other one, hence splitting the muon energy $m_\mu$ equally in the to directions. For $E_2$, we fix $E_1$ and do tedious calculations. The final result is:
+\[
+\Gamma=\frac{1}{2^5m_\mu\pi^3}\int_0^{m_\mu/2}dE_1E_1\int_{m_\mu/2-E_1}^{m_\mu/2}dE_2E_22^6G_F^2(P_e\cdot P_2)(P_\mu\cdot P_1)=\frac{G_F^2m_\mu^5}{192\pi^3}=\Gamma_0
+\]
+If we include the effects of electrons, we get some corrections:
+\[
+\Gamma=\Gamma_0(1-8r+8r^3-r^4-12r^4\ln r) \quad r=(m_e/m_\mu)^2
+\]
+We can estimate this decay width by taking into account that\\
+$G_F\sim1/300^4$ GeV$^{-4}$ and $m_\mu^5\sim10^{-5}$ GeV$^5$. It follows
+\[
+\Gamma\sim10^{-19}\text{ GeV}\Rightarrow\tau_\mu=2.1\cdot10^{-6}\text{ s}
+\]
+
+
+\section{How to build a model/Lagrangian/EFT?}
+Our goal is to find the effective Lagrangian of nature, effective field theories (EFT) are characterised by certain degrees of freedom at a certain energy scale. To build a Lagrangian we have to:
+\begin{enumerate}
+    \item specify the local symmetries, i.e. the gauge group G of the theory+Lorentz
+    \item specify the fields content
+    \item write the most general Lagrangian according to 1. and 2.
+    \item spend several hours admiring the beautiful Lagrangian we just wrote and try to understand it without summoning any ancient demon
+\end{enumerate}
+\textit{"Everything not forbidden is compulsory. -Marco Nardecchia"} -Michael Scott
+\begin{figure}[h!]
+\includegraphics{Images/WikiHow.png}
+\caption{WikiHow is not a good place to learn how to build a Lagrangian.}
+\end{figure}
+\newline
+Let's have a look at the case of QED:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c}
+        Field & G=U$(1)_C$ & Lorentz\\
+        \hline
+        $A_\mu$ & 0 & vector\\
+        $\Psi_L$ & -1 & (1/2,0)\\
+        $\Psi_R$ & -1 & (0,1/2)\\
+        \hline
+    \end{tabular}
+    \caption*{}
+    \label{tab:qed}
+\end{table}
+\newline
+The most general Lagrangian up to dimension 4 is given by:
+\[
+\pazocal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+i\bar{\Psi}\gamma^\mu D_\mu\Psi-m\bar{\Psi}\Psi+\text{h.c.}
+\]
+with $F_{\mu\nu}=\partial_\mu A_nu-\partial_\nu A_\mu$ and $D_\mu=i\partial_\mu-ieA_\mu$. Focus now on the Lagrangian without the mass term:
+\[
+\pazocal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+i\bar{\Psi}_L\gamma^\mu D_\mu\Psi_L+i\bar{\Psi}_R\gamma^\mu D_\mu\Psi_R{\color{red}
+-(m\bar{\Psi}_L\Psi_R+m^*\bar{\Psi}_R\Psi_L)}
+\]
+We can set $m=\hat{m}e^{i\theta}$ and $\Psi_L\xrightarrow[]{}\Psi'_L=\Psi_Le^{i\theta}$. In this way:
+\[
+(m\bar{\Psi}_L\Psi_R+m^*\bar{\Psi}_R\Psi_L)\xrightarrow[]{}(\hat{m}\bar{\Psi}'_L\Psi_R+\hat{m}\bar{\Psi}_R\Psi'_L)=m\bar{\Psi}\Psi
+\]
+In the case of QED, the group G=U$(1)_C=$U$(1)_L\times$U$(1)_R$ (2 generators) is broken into H=U$(1)_V$ (1 generator), i.e. $\Psi_{L/R}\xrightarrow[]{}e^{i\alpha}\Psi_{L/R}$:
+\[
+\left\{
+\begin{aligned}
+&\text{\# naive generators}=1 \text{ complex}=2 \text{ real}=\text{ modulus+phase}\\
+&\text{\# broken generators}=2-1=1\\
+&\text{\# physical parameters=\# naive-\# broken=1}
+\end{aligned}
+\right.
+\]
+\subsection{Review of the Standard Model}
+For what concerns the Standard Model, we have:
+\begin{enumerate}
+    \item the gauge group is G=SU$(3)_C\times$SU$(2)_L\times$U$(1)_Y$
+    \item the fields content is
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c|c|c|c|c}
+        Field & SU$(3)_C$ & SU$(2)_L$ & U$(1)_Y$ & Lorentz \\
+        \hline
+        $Q_L^i=\begin{pmatrix}u_L\\d_L
+        \end{pmatrix}$ & 3 & 2 & 1/6 & (1/2,0) \\
+        $u_R$ & 3 & 1 & 2/3 & (0,1/2) \\
+        $d_R$ & 3 & 1 & -1/3 & (0,1/2) \\
+        \hline
+        $l_L^i=\begin{pmatrix}\nu_L\\e_L\end{pmatrix}$ & 1 & 2 & -1/2 & (1/2,0) \\
+        $e_R$ & 1 & 1 & -1 & (0,1/2) \\
+        \hline
+        $H$ & 1 & 2 & 1/2 & \\
+        $\Tilde{H}$ & 1 & 2 & -1/2 & \\
+        \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:my_label}
+    \end{table}
+    \item $\pazocal{L}=\pazocal{L}_{kin}+\pazocal{L}_\theta+\pazocal{L}_{Yuk}-V(H)$ with
+    \[
+    \left\{
+    \begin{aligned}
+    &\pazocal{L}_{kin}=\sum_{\{\Psi\}}\bar{\Psi}i\slashed{D}\Psi-\frac{1}{4}G_{\mu\nu}^aG^{\mu\nu,a}-\frac{1}{4}W_{\mu\nu}^iW^{\mu\nu,i}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}G_{\mu\nu}^aG^{\mu\nu,a}+(D_\mu H)^\dagger(D_\mu H) \\
+    &D_\mu=\partial_\mu-ig_1YB_\mu-ig_2T^iW_\mu^i-ig_3\lambda^aG_\mu^a\\
+    &\pazocal{L}_\theta=\frac{g_3^2}{32\pi^2}\theta G_{\mu\nu}^aG_{\rho\sigma}^a\varepsilon^{\mu\nu\rho\sigma} \\
+    &\pazocal{L}_{Yuk}=-\sum_{i,j=1}^3\left[\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}\right] \quad H^c=i\sigma^2H^* \\
+    &V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2
+    \end{aligned}
+    \right.
+    \]
+\end{enumerate}
+The mass terms are impossible to write because they are not gauge invariant:
+\[
+\left\{
+\begin{aligned}
+&\bar{Q}_LQ_L \quad &&\text{ not Lorentz invariant}\\
+&\bar{Q}_Lu_R \quad &&\text{ not gauge invariant}\\
+&\bar{Q}_Ld_R \quad &&\text{ not gauge invariant}
+\end{aligned}
+\right.
+\]
+The Higgs potential can be rewritten taking into account that $H$ is in the form
+\[
+H=\begin{pmatrix}\phi_1+i\phi_2\\\phi_3+i\phi_4\end{pmatrix}
+\]
+hence the term $H^\dagger H$ which appears in $V(H)$ is equal to $\varphi^2/2$:\marginnote{\includegraphics[]{Images/cowboy.jpg}\\
+Do not wear a sombrero potential hat if you encounter a cowboy, that might be dangerous: cowboys can be evil.}
+\[
+V(H)\xrightarrow[]{}V(\phi)=-\frac{\mu^2}{2}\phi^2+\frac{\lambda}{4}\phi^4
+\]
+\begin{figure}[h!]
+    \centering
+    \includegraphics{Images/sombrero.png}
+    \caption{Sombrero potential}
+    \labfig{sombrero}
+\end{figure}\\
+This potential has two minima in $\pm v$, where $v=\sqrt{\mu^2/\lambda}=\langle\phi\rangle$: the field $\phi(x)$ can be written as its mean value plus an excitation which turns out to be the Higgs boson:\marginnote{\includegraphics[]{Images/higgs.jpg}\\
+From \href{https://commons.wikimedia.org/wiki/File:Nobel_Prize_24_2013.jpg}{WikiMedia}: Peter Ware Higgs (born 29 May 1929) is a British theoretical physicist, Emeritus Professor in the University of Edinburgh, and Nobel Prize laureate for his work on the mass of subatomic particles.}
+\[
+\phi(x)=\frac{v+h(x)}{\sqrt{2}}
+\]
+We have 4 degrees of freedom in $H(x)$, so we can parameterize it as follows
+\[
+H(x)=e^{i\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Nambu-Goldstone bosons};}}{\chi^i(x)}\sigma^i}\begin{pmatrix}0\\\frac{v+h(x)}{\sqrt{2}}\end{pmatrix}
+\]
+$h(x)$ is the radial excitation while $\chi(x)$ is the angular excitation: the latter costs no energy since $V(\phi)$ does not depend on $\chi$, therefore the Nambu-Goldstone bosons (NGB) are massless. The \href{https://en.wikipedia.org/wiki/Peter_Higgs}{Higgs} scalar potential breaks SU$(2)_{EW}\times$U$(1)_Y$ into U$(1)_Q$, i.e. 3+1 generators are broken into 1, resulting in 3 massless modes.
+
+Now we bring our attention to the kinetic term, in particular to $|D_\mu H|^2$:
+\begin{align*}
+|D_\mu H|^2&=(D_\mu H)^\dagger(D_\mu H)=(\partial_\mu H)^\dagger(\partial_\mu H)+H^\dagger\left(\frac{g_1B_\mu}{\sqrt{2}}+g_2W_\mu^i\frac{\sigma^i}{2}\right)^2H\\
+&+\frac{1}{2}H^\dagger(g_1B_\mu+\sigma^iW_\mu^ig_2)\partial^\mu H+\text{h.c.}\\
+&=\frac{(v+h(x))^2}{8}\begin{pmatrix}0&1\end{pmatrix}\left[g_1B_\mu+g_2W_\mu^3\sigma^3+g_2(W_\mu^1\sigma^1+W_\mu^2\sigma^2)\right]^2\begin{pmatrix}0\\1\end{pmatrix}\\
+&=(v+h(x))^2\left[\frac{(g_1^2+g_2^2)}{8}Z_\mu Z^\mu+\frac{g_2^2}{4}W_\mu^+W^{\mu-}\right]
+\end{align*}
+where we introduced $W_\mu^\pm=(W_\mu^1\pm iW_\mu^2)/\sqrt{2}$. Moreover, we can define $m_Z$ and $m_W$ as:
+\[
+\left\{
+\begin{aligned}
+m_Z&=\frac{\sqrt{g_1^2+g_2^2}}{2}v\\
+m_W&=\frac{g_2}{2}v
+\end{aligned}
+\right.
+\Rightarrow|D_\mu H|^2=\left(1+\frac{h(x)}{v}\right)^2\left[\frac{m_Z^2}{2}Z_\mu Z^\mu+m_W^2W_\mu^+W^{\mu-}\right]
+\]
+Notice that
+\[
+\frac{m_W^2}{m_Z^2}=\frac{g_2^2}{g_1^2+g_2^2}=\cos^2\theta_W
+\]
+from which we can define the quantity $\rho$: 
+\[
+\rho=\frac{m_W^2}{m_Z^2\cos^2\theta_W}
+\]
+which is equal to 1 at tree level but this symmetry gets broken by the hypercharge.
+
+The field $H(x)$ can be written in such a way that there is mixing between $\phi_i$ and the gauge fields:
+\[
+H(x)=\begin{pmatrix}\phi_1+i\phi_2\\\frac{v+h(x)+i\phi_3}{\sqrt{2}}\end{pmatrix}
+\]
+We define two new matrices $\sigma^+$ and $\sigma^-$ and redo all the computations for $|D_\mu H|^2$
+\[
+\sigma^+=\begin{pmatrix}0&1\\0&0\end{pmatrix}
+\quad
+\sigma^-=\begin{pmatrix}0&0\\1&0\end{pmatrix}
+\]
+\begin{align*}
+|D_\mu H|^2&=iH^\dagger[g_1B_\mu+g_2\sigma_3W_\mu^3+g_2(W_\mu^1\sigma^1+W_\mu^2\sigma^2)]\partial_\mu H+\text{h.c.}\\
+&=\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[(g_1B_\mu-g_2W_\mu^3)\frac{1}{\sqrt{2}}\partial_\mu(h+i\phi_3)\begin{pmatrix}0\\1\end{pmatrix}+\text{h.c.}\right]\\
+&+\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[\frac{g_2}{\sqrt{2}}(W_\mu^+\sigma^++W_\mu^-\sigma^-)\partial_\mu H+\text{h.c.}+\dots\right]\\
+&=\frac{v+h(x)}{2}\left[-(g_1B_\mu-g_2W_\mu^3)\partial_\mu\phi_3+(ig_2W_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots\right]\\
+&=m_Z\partial_\mu\phi_3Z^\mu+(im_WW_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots
+\end{align*}
+We now add a gauge-fixing term to the Lagrangian:
+\[
+\pazocal{L}_{GF}=-\frac{1}{2\xi}(\partial_\mu A^\mu)^2-\frac{1}{2\xi_Z}(\partial_\mu Z^\mu+m_Z\phi_3\xi_Z)^2-\frac{1}{2\xi_W}|\partial_\mu W^{-\mu}-im_W\xi_W\phi^-|^2
+\]
+For the $Z$ boson, the propagator is given by:
+\[
+-\frac{i}{q^2-m_z^2}\left[\eta_{\mu\nu}-(1-\xi_Z)\frac{q_\mu q_\nu}{q^2-\xi_Zm_Z^2}\right]
+\]
+In the unitary gauge, we have that $\xi_{W/Z}\to\infty$ hence $\phi_3$ has to vanish while in the Landau gauge $\xi_{W/Z}\to0$: $\partial_\mu Z^\mu$ has to vanish.
+
+To express $D_\mu$ in terms of the physical fields, we have to perform a rotation:
+\[
+\left(\begin{array}{c}
+      B_\mu\\
+      W_\mu^3
+\end{array}\right)=\left(\begin{array}{cc}
+    \cos\theta_W & \sin\theta_W \\
+    -\sin\theta_W & \cos\theta_W
+\end{array}\right)\left(\begin{array}{c}
+      A_\mu\\
+      Z_\mu
+\end{array}\right)
+\]
+After this rotation, we can write:
+\[
+D_\mu=\partial_\mu-i\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  em coupling: $1/e^2=1/g_1^2+1/g_2^2$};}}{e}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  generator $Q=T_3+Y$};}}{Q}A_\mu-i\frac{e}{\cos\theta_W\sin\theta_W}(T_3-\sin^2\theta_WQ)Z_\mu-i\frac{g_2}{\sqrt{2}}(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $T^\pm=\sigma^\pm/2$};}}{T^+}W_\mu^++T^-W_\mu^-)-ig_3\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Gell-Mann matrices};}}{\lambda^a}G_\mu^a
+\]
+At this point, we move our attention to the Yukawa sector: we know that it is written as
+\[
+\pazocal{L}_{Yuk}=-\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}
+\]
+In the unitary gauge, we have $H=\begin{pmatrix}0\\v/\sqrt{2}\end{pmatrix}\begin{pmatrix}1+h/v\end{pmatrix}$ and the Yukawa interaction can be rewritten in the following form:
+\[
+\pazocal{L}_{Yuk}\supset-\bar{u}_L^i\left(Y_u^{ij}\frac{v}{\sqrt{2}}\right)u_R^j\left(1+\frac{h}{v}\right)-\bar{d}_L^i\left(Y_d^{ij}\frac{v}{\sqrt{2}}\right)d_R^j\left(1+\frac{h}{v}\right)-\bar{e}_L^i\left(Y_e^{ij}\frac{v}{\sqrt{2}}\right)l_R^j\left(1+\frac{h}{v}\right)+\text{h.c}
+\]
+Furthermore, we can rotate up left/right and down left/right:\marginnote{\includegraphics{Images/cabibbo.jpeg}\\
+From \href{https://www.nature.com/articles/nphys1791}{Nature}: Italian particle physicist Nicola Cabibbo (10 April 1935-16 August 2010) had been a towering figure in Italian physics, particularly as president of the National Institute of Nuclear Physics (INFN) between 1983 and 1992, and then as president of the Pontifical Academy of Sciences.}
+\[
+\left\{
+\begin{aligned}
+&u_L^i\xrightarrow[]{}U_L^{ij}u_L^j\\
+&u_R^i\xrightarrow[]{}U_R^{ij}u_R^j
+\end{aligned}
+\right.
+\quad
+\left\{
+\begin{aligned}
+&d_L^i\xrightarrow[]{}D_L^{ij}d_L^j\\
+&d_R^i\xrightarrow[]{}D_R^{ij}d_R^j
+\end{aligned}
+\right.
+\quad
+U_{L/R},D_{L/R}\in\text{SU}(3)
+\]
+We introduce the \href{https://en.wikipedia.org/wiki/Cabibbo-Kobayashi-Maskawa_matrix}{Cabibbo–Kobayashi–Maskawa (CKM) matrix}\\ $V_{CKM}^{ij}=(U_LD_L^\dagger)^{ij}$ which is a special unitary $3\times3$ matrix with 8 real parameters: 3 angles+5 phases, with 4 of them being unphysical. The interaction with the Higgs implies flavour mixing but there is no flavour change at tree level.
+\section{Symmetries}
+\subsection{Parity}
+We already know that we can parameterize our field as composed by a left-handed spinor $\xi$ and a right-handed spinor $\eta$:
+\[
+\Psi=\left(\begin{array}{c}
+     \xi\\
+     \eta
+\end{array}\right)
+\quad
+\left\{
+\begin{aligned}
+&\xi=(2,1) \text{ of Lorentz}\\
+&\eta=(1,2) \text{ of Lorentz}
+\end{aligned}
+\right.
+\]
+Moreover, we have that under parity position and momentum transform as:
+\[
+(\Vec{x},t)\xrightarrow[]{}(-\Vec{x},t) \quad \Vec{p}\xrightarrow[]{}-\Vec{p}
+\]
+while the spin remains untouched being a pseudo-vector. For the right- and left-handed spinors, we have the relation $\xi(\Vec{x,t})\xleftrightarrow[]{}\eta(-\Vec{x},t)$ and we can introduce an intrinsic parity of the field, i.e. a phase:
+\[
+\left\{
+\begin{aligned}
+&\xi(\Vec{x},t)\xrightarrow[]{}\zeta_p\eta(-\Vec{x},t)\\
+&\eta(\Vec{x},t)\xrightarrow[]{}\zeta_p\xi(-\Vec{x},t)
+\end{aligned}
+\right.
+\]
+In terms of $\Psi$ we have $\Psi(\Vec{x},t)\xrightarrow[]{}\zeta_p\gamma^0\Psi(-\Vec{x},t).$\marginnote{The gamma matrices are defined as:
+\[
+\gamma^\mu=\left(\begin{array}{cc}
+    0 & \sigma^\mu \\
+    \Bar{\sigma}^\mu & 0
+\end{array}\right), \gamma^5=\left(\begin{array}{cc}
+    -1 & \\
+     & -1
+\end{array}\right)
+\]
+with $\sigma^\mu=(\mathbb{1},\sigma^i)$, $\bar{\sigma}^\mu=(\mathbb{1},-\sigma^i)=\eta_{\mu\mu}\sigma^\mu$ and $\eta_{\mu\mu}=(+1,-1,-1,-1)$} We can have a look at the current under parity:
+\begin{align*}
+\bar{\Psi}\gamma^\mu\Psi=\Psi^\dagger\gamma^0\gamma^\mu\Psi=\xi^\dagger\bar{\sigma}^\mu\xi+\eta^\dagger\sigma^\mu\eta\xrightarrow[\text{parity}]{}&\eta^\dagger\bar{\sigma}^\mu\eta+\xi^\dagger\sigma^\mu\xi\\
+&=\eta_{\mu\mu}(\eta^\dagger\sigma^\mu\eta+\xi^\dagger\bar{\sigma}^\mu\xi)\\
+&=\eta_{\mu\mu}\bar{\Psi}\gamma^\mu\Psi
+\end{align*}
+This is just a vector, now we include $A_\mu(\Vec{x},t)\xrightarrow[]{}\eta_{\mu\mu}A_\mu(-\Vec{x},t)$: it follows that $A_\mu\bar{\Psi}\gamma^\mu\Psi$ is invariant, hence QED is invariant under parity. The same results apply for QCD since $G_\mu^a\bar{\Psi}\lambda^a\gamma^\mu\Psi$ is invariant. On the other hand, the theta term is odd under parity: it is proportional to $G_{\mu\nu}G_{\rho\sigma}\varepsilon^{\mu\nu\rho\sigma}$ and $\varepsilon$ forces 3 indices to be space-like and 1 to be time-like.
+\subsection{Charge conjugation}
+We now see what happens when we transform the field $\Psi$ under charge conjugation:
+\[
+\Psi(x)\xrightarrow[]{C}i\gamma_2\Psi^*(x)\Tilde{\eta}_\Psi
+\quad
+\left\{
+\begin{aligned}
+&\xi(x)\xrightarrow[]{C}\Tilde{\eta}_\Psi\eta^c(\Vec{x},t) \,\text{ with }\, \eta^c=i\sigma^2\eta^*\\
+&\eta(x)\xrightarrow[]{C}-\Tilde{\eta}_\Psi\xi^c(\Vec{x},t) \,\text{ with }\, \xi^c=i\sigma^2\xi^*
+\end{aligned}
+\right.
+\]
+Moreover, we have that $\eta^\dagger\sigma^\mu\eta=-\eta^c^\dagger\bar{\sigma}^\mu\eta^c$:
+\[
+-\eta^c^\dagger\bar{\sigma}^\mu\eta^c=-(i\sigma^2\eta^*)^\dagger\bar{\sigma}^\mu(i\sigma^2\eta^*)=-\eta^T\underbrace{\sigma_2\bar{\sigma}^\mu\sigma_2}_{\sigma^\mu^T}\eta^*=-\eta^T\sigma^\mu^T\eta^*=\eta^\dagger\sigma^\mu\eta
+\]
+What happens now if we do $C^\dagger A_\mu(x)C$? We obtain just a phase $\eta_A$ since photons are real particles.
+
+The QCD case is more complicated: we have $\bar{\Psi}_\alpha\gamma^\mu\frac{\lambda^a_{\alpha\beta}}{2}G_\mu^a\Psi_\beta$ and we ask ourselves how does $\bar{\Psi}_\alpha\gamma^\mu\Psi_\beta$ transform under charge conjugation.
+\[
+\left\{
+\begin{aligned}
+&\bar{\Psi}_\alpha\gamma^\mu\Psi_\beta\xrightarrow[]{C}-\bar{\Psi}_\beta\gamma^\mu\Psi_\alpha\Tilde{\eta}_{\Psi_\alpha}\Tilde{\eta}^*_{\Psi_\beta}\\
+&\bar{\Psi}_\alpha\gamma^\mu\frac{\lambda^a_{\alpha\beta}}{2}\Psi_\beta\xrightarrow[]{C}\bar{\Psi}\gamma^\mu\frac{(\lambda^a)^T}{2}\Psi\\
+&G_\mu^a\lambda^a\xrightarrow[]{C}-G_\mu^a(\lambda^a)^T\Rightarrow C^\dagger G_\mu^a C=\Tilde{\eta}_{G_\mu}G_\mu^a
+\end{aligned}
+\right.
+\]
+The phase $\Tilde{\eta}_{G_\mu}$ depends on the generators:
+\[
+\left\{
+\begin{aligned}
+&(\lambda^a)^T=\lambda^a &&\text{ for } \, a=1,3,4,6,8\Rightarrow\Tilde{\eta}_{G_\mu}=-1\\
+&(\lambda^a)^T=-\lambda^a &&\text{ for } \, a=2,5,7\Rightarrow\Tilde{\eta}_{G_\mu}=+1
+\end{aligned}
+\right.
+\]
+\subsection{Discrete Symmetries}
+We are now going to review discrete symmetries, focusing on states, creation/annihilation  operators and fields:\marginnote{$A$ is just an internal quantum number.}
+\[
+\ket{A,\Vec{p},\sigma}\xrightarrow[\text{parity}]{}\left\{
+\begin{aligned}
+&\hat{P}\ket{A,\Vec{p},\sigma}=\eta_A\ket{A,-\Vec{p},\sigma}\\
+&\hat{P}\ket{\bar{A},\Vec{p},\sigma}=\eta_{\bar{A}}\ket{\bar{A},-\Vec{p},\sigma}
+\end{aligned}
+\right.
+\]
+The operators $\hat{a}^\dagger, \hat{a}$ refer to particles while $\hat{b}^\dagger, \hat{b}$ refer to anti-particles:
+\[
+\hat{P}\hat{a}^\dagger_\sigma(\Vec{p})\hat{P}^\dagger\ket{0}=\eta_A\hat{a}^\dagger_\sigma(-\Vec{p})\ket{0}\Rightarrow\left\{
+\begin{aligned}
+&\hat{P}\hat{a}^\dagger_\sigma(\Vec{p})\hat{P}^\dagger=\eta_A\hat{a}^\dagger_\sigma(-\Vec{p})\\
+&\hat{P}\hat{b}^\dagger_\sigma(\Vec{p})\hat{P}^\dagger=\eta_{\bar{A}}\hat{b}^\dagger_\sigma(-\Vec{p})
+\end{aligned}
+\right.
+\]
+Now we want the transformation rules for the fields: $\hat{P}\phi(x)\hat{P}^\dagger=?$ For scalar fields, we have:
+\[
+\hat{P}\phi(x)\hat{P}^\dagger=\eta_\phi\phi(\pazocal{P}x) \, \text{ with } \, \pazocal{P}=\text{diag}(+1,-1,-1,-1)
+\]
+Furthermore, we know how to express the field $\phi(x)$ in terms of creation and annihilation operators:
+\[
+\phi(x)=\int \frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_p}}\left[\hat{a}(\Vec{p})e^{-ipx}+\hat{b}^\dagger(\Vec{p})e^{+ipx}\right]
+\]
+Acting with parity on $\phi(x)$, in order to get the previous form, it has to be $\eta_\phi=\eta_A^*$ and $\eta_A\eta_{\bar{A}}=1$.
+
+It is possible to repeat the same procedure for fermions:
+\[
+\Psi(x)=\sum_\sigma\int \frac{d^3p}{(2\pi)^3}\frac{1}{2E(\Vec{p})}\left[\hat{a}_\sigma(\Vec{p})e^{-ipx}u(\Vec{p})+\hat{b}^\dagger_\sigma(\Vec{p})e^{+ipx}v(\Vec{p})\right]
+\]
+We now act with the parity operator $\hat{P}$:
+\[
+\hat{P}\Psi(x)\hat{P}^\dagger=\eta_\Psi\gamma^0\Psi(\pazocal{P}x)=\sum_\sigma\int \frac{d^3p}{(2\pi)^3}\frac{1}{2E(\Vec{p})}\left[\eta_A^*\hat{a}_\sigma(-\Vec{p})e^{-ipx}u(\Vec{p})+\eta_{\bar{A}}\hat{b}^\dagger_\sigma(-\Vec{p})e^{+ipx}v(\Vec{p})\right]
+\]
+The field $\Psi$ is now not calculated in $x$ but in $\pazocal{P}x$. For the spinors, this means $u(\Vec{p})=\gamma^0u(\pazocal{P}\Vec{p})$ and $v(\Vec{p})=-\gamma^0v(\pazocal{P}\Vec{p})$. What we get at the end is that $\eta_\Psi=\eta_A^*$ and $\eta_A\eta_{\bar{A}}=-1$.
+
+Suppose now to have an Abelian symmetry $U(\theta)\ket{A,\Vec{p},\sigma}=e^{iq_A\theta}\ket{A,\Vec{p},\sigma}$ and to apply parity to it:
+\[
+\hat{P}U(\theta)\ket{A,\Vec{p},\sigma}=\underbrace{e^{iq_A\theta}\eta_A}_{\eta'_A}\ket{A,-\Vec{p},\sigma}
+\]
+We can redefine $\eta'_A$ to be equal to 1. Doing this, we also define a new operator $\hat{P}'=\hat{P}U(\theta=-\arg(\eta_A)/q_A)$. This is possible only when there is a global symmetry associated.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+    State & $\eta$ & Global symmetry & Theory\\
+    \hline
+    Lepton & +1 & U$(1)_e\times$U$(1)_\mu\times$U$(1)_\tau$ & QED\\
+    Anti-lepton & -1 & U$(1)_e\times$U$(1)_\mu\times$U$(1)_\tau$ & QED\\
+    Quarks & +1 & U$(1)^{N_F}$ & QCD+QED\\
+    Anti-quarks & -1 & U$(1)_u\times$U$(1)_d\times$U$(1)_s$ & QCD+QED\\
+    \hline
+    \end{tabular}
+    \caption*{}
+    \label{tab:my_label}
+\end{table}
+\end{document}

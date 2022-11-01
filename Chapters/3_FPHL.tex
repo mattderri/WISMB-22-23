@@ -1,0 +1,335 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\setchapterstyle{kao}
+\setchapterpreamble[u]{\margintoc}
+\setchapterimage[6.5cm]{Images/forces.jpg}
+\chapter[Flavour Physics at Hadron Level]{Flavour Physics at Hadron Level\footnotemark[0]}
+\labch{fphl}
+We start to discuss the real problem of flavour and doing also precise computations because we are not dealing with quarks anymore but we have QCD and strongly coupled theory.
+\section{Running of the Strong Coupling Constant}
+What we want to do is to renormalize divergencies in QFT, hence we use dimensional regularization. As seen in \refch{intro}, we know that in terms of energy $\left[\int d^Dx\pazocal{L}(x)\right]=0$, therefore $\left[\pazocal{L}\right]=D=4-2\varepsilon$. This implies that the terms $\partial^\mu\phi\partial_\mu\phi$, $\Bar{\Psi}\slashed{\partial}\Psi$ and $g\Bar{\Psi}\slashed{A}\Psi$ must all have dimension $D$:
+\[
+\left[\phi\right]=1-\varepsilon \quad \left[\Psi\right]=\frac{3}{2}-\varepsilon \quad \left[g\right]=\varepsilon\xleftarrow[]{}\text{no good}
+\]
+We now write the bare Lagrangian of QCD, assuming for the moment that all the fields are massless:\marginnote{The assumption of massless fields is called chiral limit.}
+\[
+\pazocal{L}_0=\Bar{\Psi}_Bi\slashed{\partial}\Psi_B-\frac{1}{4}F_{\mu\nu,B}^aF^{\mu\nu,a}_B+g_B\Bar{\Psi}_B\slashed{A}_B\Psi_B+\text{(gauge fixing terms, ghosts)}
+\]
+The bare fields can be expressed in terms of the renormalized ones via the renormalization constants, which are all dimensionless:
+\[
+\Psi_B=Z_2^{1/2}\Psi_R \quad A^\mu_B=Z_3^{1/2}A^\mu_R \quad g_B=Z_g\mu^\varepsilon g_R
+\]
+With $[g_R]=0$ and the dimensionality is put into the parameter $\mu$. The terms present in the Lagrangian can now be written as follows:
+\[
+Z_2\Bar{\Psi}_R\slashed{\partial}\Psi_R=\Bar{\Psi}_R\slashed{\partial}\Psi_R+(Z_2-1)\Bar{\Psi}_R\slashed{\partial}\Psi_R=\Bar{\Psi}_R\slashed{\partial}\Psi_R+\delta_2\Bar{\Psi}_R\slashed{\partial}\Psi_R
+\]
+We do the same for $F_{\mu\nu}F^{\mu\nu}$ obtaining $\delta_3=Z_3-1$, while for the last term we get:
+\[
+Z_gZ_2Z_3^{1/2}\Bar{\Psi}_R\slashed{A}_R\Psi_Rg_R\mu^\varepsilon \quad Z_gZ_2Z_3^{1/2}=Z_1=1+Z_1-1=1+\delta_1
+\]
+How do we compute these deltas? They are all the counter terms which cancel the divergencies. From quark self-energy, we get $\delta_2$ by computing:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/delta2.pdf}
+    \caption{Quark self-energy and mass counter term.}
+    \label{fig:my_label}
+\end{figure}\\
+And obtain $\delta_2=-C_F\alpha_s/4\pi\varepsilon$ with $\alpha_s=g_R^2/4\pi$. The factor $C_F$ is such that $C_FN=\Tr{\sum_a\lambda^a\lambda^a}=(N^2-1)/2$ for SU(N).\\
+We get $\delta_3$ by computing the gluon self-energy:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/delta3.pdf}
+    \caption{Gluon self-energy.}
+    \label{fig:my_label}
+\end{figure}\\
+By computing these diagrams, we get for $\delta_3$:
+\[
+\delta_3=(\frac{5}{3}C_A-\frac{4}{3}\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize number of flavours };}}{
+n_f}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize $\Tr{T_F^aT_F^b}=T_F\delta^{ab}$ };}}
+{T_f})\frac{\alpha_s}{4\pi\varepsilon} \qquad C_A=N
+\]
+For $\delta_1$ we have to consider $\Bar{q}qg$ vertex corrections:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/delta1.pdf}
+    \caption{Vertex corrections.}
+    \label{fig:my_label}
+\end{figure}\\
+Which leads us to $\delta_1=-(C_A+C_F)\alpha_s/4\pi\varepsilon$.\\
+The renormalization constant $Z_g$ is dimensionless but depends on $\alpha_s$:
+\[
+Z_g=Z_g(\alpha_s)=\frac{Z_1}{Z_2Z_3^{1/2}}\simeq1+\delta_1-\delta_2-\frac{1}{2}\delta_3=1-\frac{1}{\varepsilon}\alpha_s\frac{b_0}{2} \quad b_0=\frac{1}{2\pi}\left(\frac{11}{6}C_a-\frac{2}{3}n_fT_f\right)
+\]
+At this point we may ask ourselves a totally legit question: why in the name of God do we need all this terms? The answer is that we would like to find a differential equation telling us how the coupling changes with $\mu$, arriving at the end to an expression of $\alpha_s(\mu)$. The starting point is to consider $\frac{d}{d\mu}g_B=0$, i.e. the bare coupling does not know about $\mu$. The parameter $\mu$ is an artifact of the regularization prescription, introduced to define the dimensional coupling in $D$ dimensions, therefore it should not enter in measurable quantities. We know that $g_B=\mu^\varepsilon Z_g g_R$ and now we do what is called a pro gamer move: instead of differentiating with respect to $\mu$, we differentiate with respect to $\frac{d}{dt}=\mu^2\frac{d}{d\mu^2}=\frac{d}{d\log\mu^2}$. We then get:
+\[
+\varepsilon\mu^{2\varepsilon}Z_g^2\alpha_s+2\mu^{2\varepsilon}Z_g\alpha_s\frac{dZ_g}{dt}+\mu^{2\varepsilon}Z_g^2\frac{d\alpha_s}{dt}=0
+\]
+$Z_g$ depends on $\mu$ through $\alpha_s$, we can define $\beta(\alpha_s):=\frac{d\alpha_s}{dt}$ and write the previous expression as follows:
+\begin{align*}
+&\varepsilon\alpha_s+2\frac{\alpha_s}{Z_g}\frac{dZ_g}{d\alpha_s}\frac{d\alpha_s}{dt}+\frac{d\alpha_s}{dt}=0\\
+&\varepsilon\alpha_s+2\alpha_s\left(-\frac{b_0}{2\varepsilon}\right)\beta(\alpha_s)+\beta(\alpha_s)=0\\
+&\beta(\alpha_s)=-\frac{\varepsilon\alpha_s}{1-b_0\alpha_s/\varepsilon}\simeq-\varepsilon\alpha_s(1+b_0\alpha_s/\varepsilon)+\pazocal{O}(\alpha_s^3)=-b_0\alpha_s^2
+\end{align*}
+In this way, we obtain a differential equation for $\alpha_s$:
+\[
+\frac{d\alpha_s}{dt}=-b_0\alpha_s^2 \quad \text{with}\,b_0\stackrel{N=3}{=}\frac{1}{12\pi}(33-2n_f)
+\]
+The sign of $b_0$ tells us if we are going towards the infrared or the ultraviolet region. $b_0>0$ for $n_f<16$, which is our case since we are dealing with $n_f=6$. At 1-loop, the coupling gets smaller in the ultraviolet region and bigger in the infrared region:
+\begin{equation}
+\labeq{alpha_s}
+\alpha_s(\mu)=\frac{1}{b_0\log(\mu^2/\Lambda_{QCD}^2)}
+\end{equation}
+The parameter $\Lambda_{QCD}$ describes the boundary condition of the first order differential equation and corresponds to the scale at which the coupling becomes infinity.\marginnote{\includegraphics{Images/QCD.jpg}}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/couplingconstant.png}
+    \caption{From \href{https://commons.wikimedia.org/wiki/File:Strong_coupling_as_function_of_energy.svg}{WikiMedia}: strong coupling constant as a function of energy.}
+    \label{fig:my_label}
+\end{figure}
+\section{Renormalization Group Invariance}
+The fact that the coupling constant $\alpha_s$ depends on the unphysical renormalization scale $\mu$ should not be a source of worry since the coupling constant is not an observable. What we observe are instead decay rates, spectra or cross sections, given by the product of the coupling constant and some matrix element. The matrix element will in general acquire a non-trivial renormalization scale dependence through the renormalization procedure, therefore we just need to check that the $\mu$ dependence of the coupling constant and of the matrix element cancel each other.
+
+Consider now a physical observable, e.g. the ratio 
+\[
+R=\sigma(e^+e^-\to\text{hadrons})/\sigma(e^+e^-\to\mu^+\mu^-)
+\]
+It can be calculated in perturbation theory within QCD, giving rise to a series expansion in terms of the renormalized coupling $\alpha_s(\mu)$:
+\[
+R(\alpha_s(\mu),t=s/\mu^2)=1+\alpha_sf_1(t)+\alpha_s^2f_2(t)+\dots=\sum_{n=0}^\infty\alpha_s^nf_n(t)
+\]
+$R$ has a clear dependence on $\alpha_s$ and on $\mu$ via the functions $f_n(t)$. Being it an observable, it should be independent on $\mu$:
+\[
+\mu^2\frac{d}{d\mu^2}R(\alpha_s(\mu),t=s/\mu^2)=0=\beta(\alpha_s)f_1(t)+\alpha_s\mu^2\frac{df_1(t)}{d\mu^2}+2\alpha_s\beta(\alpha_s)f_2(t)+\alpha_s^2\mu^2\frac{df_2(t)}{d\mu^2}+\dots
+\]
+At order $\alpha_s$ we have $\frac{df_1(t)}{d\mu^2}=0$, $f_1(t)=$ constant=$a_1$ and there is no dependence on $t$ (hence on $\mu$). This is a non-trivial result, it is telling us that $R$ at 1-loop is finite and all infinities must cancel without charge renormalization. If they did not cancel, $f_1$ would depend explicitly on $\mu$: this is a consequence of the fact that colour interactions do not enter in the renormalization of the electric charge. At order $\alpha_s^2$ we have:
+\[
+\beta(\alpha_s)a_1+\alpha_s^2\mu^2\frac{df_2(t)}{d\mu^2}=0\Rightarrow f_2(t)=a_2+b_0a_1\log(\mu^2/s)
+\]
+We obtained the leading log-effect at 2-loops using only 1-loop computations. So far, up to order $\alpha_s^2$ we obtained:
+\[
+R=1+\underbrace{a_1\alpha_s}_{\text{1-loop}}+\underbrace{b_0a_1\alpha_s^2\log(\mu^2/s)+a_2\alpha_s^2}_{\text{2-loops}}+\pazocal{O}(\alpha_s^3)
+\]
+Carrying out the computations at higher orders allows us to express the generic function $f_n(t)$ as $f_n(t)=a_1[b_0\log(\mu^2/s)]^n$. Putting all the terms together, we arrive to the following expression of the ratio $R$:
+\begin{align*}
+R&=1+a_1\alpha_s[1+b_0\alpha_s\log(\mu^2/s)+(b_0\alpha_s\log(\mu^2/s))^2+\dots]+a_2\alpha_s^2+\dots\\
+&=1+a_1\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\log(s/\mu^2)}+a_2\alpha_s^2+\dots
+\end{align*}
+Moreover, keeping in mind the expression of $\alpha_s(\mu)$ we found in the previous section [\refeq{alpha_s}], the fraction above can be written as:
+\begin{align*}
+\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\log(s/\mu^2)}&=\frac{1}{b_0\log(\mu^2/\Lambda_{QCD}^2)}\frac{1}{1+\frac{1}{b_0\log(\mu^2/\Lambda_{QCD}^2)}b_0\log(s/\mu^2)}\\
+&=\frac{1}{b_0\log(\mu^2/\Lambda_{QCD}^2)+b_0\log(s/\mu^2)}\\
+&=\frac{1}{b_0\log(s/\Lambda_{QCD}^2)}=\alpha_s(s)
+\end{align*}
+Renormalization Group Invariance constraints the form of higher-order corrections and the higher-order logarithmic terms can be resummed by simply setting the scale of $\alpha_s$ to $s$. The final result will be in the form:
+\[
+R=1+a_1\alpha_s(2)+a_2\alpha_s(s)^2+a_3\alpha_s(s)^3+\dots
+\]
+From $\alpha_s(m_Z)=0.118$ we can extract:
+\[
+\left\{
+\begin{aligned}
+&\Lambda_{QCD}=89.9\,\text{MeV at 1-loop with $n_f=5$}\\
+&\Lambda_{QCD}=213.3\,\text{MeV at 4-loop with $n_f=5$}
+\end{aligned}
+\right.
+\]
+$\Lambda_{QCD}$ determines the separation between light and heavy quarks: below $\Lambda_{QCD}$ we have the light quarks (u,d,s), above we have the heavy quarks (t,b,c).
+\section{Symmetries of QCD}
+The QCD Lagrangian containing only light flavours in the chiral limit ($m_u,m_d,m_s\to0$) is a good starting point in the discussion of low energy QCD:\marginnote{The covariant derivative acts on colour and Dirac indices only but it is independent of flavour.}
+\[
+\pazocal{L}_{QCD}^0=\sum_{f=u,d,s}\Bar{q}_fi\slashed{D}q_f-\frac{1}{2}\Tr{G_{\mu\nu}G^{\mu\nu}}
+\]
+Out goal is to analyze the symmetry of the QCD Lagrangian with respect to independent global transformations of the left- and right-handed fields. There are 16 independent $4\times4$ matrices that can be expressed in terms of the identity, $\gamma^\mu$, $\gamma_5$, $\gamma^\mu\gamma_5$ and $\sigma^{\mu\nu}=i[\gamma^\mu,\gamma^\nu]/2$. In order to decompose this 16 quadratic forms into their projection for left- and right-handed fields, we use:
+\begin{equation}
+\labeq{gammarelations}
+\Bar{q}\Gamma_iq=\left\{
+\begin{aligned}
+&\Bar{q}_R\Gamma_1q_R+\Bar{q}_L\Gamma_1q_L \quad \text{for}\,\Gamma_1\in\{\gamma^\mu,\gamma^\mu\gamma_5\}\\
+&\Bar{q}_R\Gamma_2q_L+\Bar{q}_L\Gamma_2q_R \quad \text{for}\,\Gamma_1\in\{\mathbb{1},\gamma_5,\sigma^{\mu\nu}\}
+\end{aligned}
+\right.
+\end{equation}
+We now apply this to the term of $\pazocal{L}_{QCD}^0$ containing the contraction of the covariant derivative with $\gamma^\mu$. This quadratic form decouples into the sum of two term which connect left-handed with left-handed and right-handed with right-handed fields.
+\[
+\pazocal{L}_{QCD}^0=\sum_{f=u,d,s}(\Bar{q}_{L,f}i\slashed{D}q_{L,f}+\Bar{q}_{R,f}i\slashed{D}q_{R,f})-\frac{1}{2}\Tr{G_{\mu\nu}G^{\mu\nu}}
+\]
+Due to flavour independence of the covariant derivative, $\pazocal{L}_{QCD}^0$ is invariant under:
+\begin{equation}
+\labeq{transformation}
+q_{L/R}=\left(\begin{array}{c}
+    u_{L/R}\\
+    d_{L/R}\\
+    s_{L/R}
+\end{array}\right)\to q_{L/R}'=U_{L/R}q_{L/R}=\exp{-i\sum_{a=1}^8\theta_a^{L/R}\frac{\lambda^a}{2}}e^{-i\theta_{L/R}}q_{L/R}
+\end{equation}
+$U_{L/R}\in$U(3), for $\Bar{q}_{L/R}$ we have that it transforms as $q_{L/R}\to\Bar{q}_{L/R}'U_{L/R}^\dagger$. If we perform explicit computations, we easily obtain:
+\[
+\Bar{q}_{L/R}i\slashed{D}q_{L/R}\to\Bar{q}_{L/R}U_{L/R}^\dagger U_{L/R}i\slashed{D}q_{L/R}=\Bar{q}_{L/R}i\slashed{D}q_{L/R} \quad \checkmark
+\]
+$\pazocal{L}_{QCD}^0$ is said to have a classical global U$(3)_L\times$U$(3)_R$ symmetry. One would expect then to have 2$\times$(8+1)=18 conserved currents.
+\subsection{N\"other's Theorem}
+\href{https://en.wikipedia.org/wiki/Emmy_Noether}{N\"other}'s Theorem
+\marginnote{\includegraphics[]{Images/Nother.jpg}\\
+From \href{https://en.wikipedia.org/wiki/File:Noether.jpg}{WikiMedia}: Amalie Emmy N\"other (23 March 1882 – 14 April 1935) was a German mathematician who made many important contributions to abstract algebra. She discovered N\"other's First and Second Theorem, which are fundamental in mathematical physics.}
+establishes the connection between continuous symmetries of a dynamical system and conserved quantities. In order to identify the conserved currents associated with the transformation of \refeq{transformation}, we shortly recall the method of Gell-Mann and Levy which will then be applied to $\pazocal{L}_{QCD}^0$. We start with a Lagrangian depending on $n$ independent fields $\phi_i$ and their partial derivatives, from which we obtain $n$ equation of motions:
+\[
+\pazocal{L}(\phi_i,\partial_\mu\phi_i)\to\frac{\partial\pazocal{L}}{\partial\phi_i}-\partial_\mu\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}=0 \quad i=1,\dots,n
+\]
+Suppose that this Lagrangian is invariant under a global symmetry transformation depending on $r$ real parameters: the method of Gell-Mann and Levy consist of promoting this global symmetry to a local one. We consider transformations which depend on $r$ local parameters $\varepsilon_a(x)$:
+\[
+\phi_i(x)\to\phi_i'(x)=\phi_i(x)+\delta\phi_i(x)=\phi_i(x)-i\varepsilon_a(x)F_i^a(\phi)
+\]
+How does $\pazocal{L}$ react to this type of transformation? We neglect terms of order $\varepsilon^2$ and higher and obtain:
+\begin{align*}
+\delta\pazocal{L}&=\frac{\partial\pazocal{L}}{\partial\phi_i}\delta\phi_i+\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}{\color{blue}\partial_\mu\delta\phi_i}\\
+&=\frac{\partial\pazocal{L}}{\partial\phi_i}\delta\phi_i+\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}{\color{blue}[-i\partial_\mu\varepsilon_a(x)F_i^a(\phi)-i\varepsilon_a(x)\partial_\mu F_i^a(\phi)]}\\
+&=\varepsilon_a(x)\left(-i\frac{\partial\pazocal{L}}{\partial\phi_i}F_i^a(\phi)-i\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}\partial_\mu F_i^a(\phi)\right)+\partial_\mu\varepsilon_a(x)\left(-i\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}F_i^a(\phi)\right)\\
+&=\varepsilon_a(x)\partial_\mu J^{\mu,a}+\partial_\mu\varepsilon_a(x)J^{\mu,a}
+\end{align*}
+We chose the parameters of the transformation to be local but our starting point was a Lagrangian invariant under a global transformation. In this case, the term $\partial_\mu\varepsilon_a(x)$ disappears and since the Lagrangian is invariant we obtain the conservation of the current: $\partial_\mu J^{\mu,a}=0$. From the current, we can define the charge $Q^a(t)$ which is a constant of motion in the case we have a conserved current.
+\[
+Q^a(t)=\int d^3xJ^{0,a}(\Vec{x},t)\to\int d^3x\partial_\mu j^{\mu,a}=\Dot{Q}(t)-\int d^3x\Vec{\nabla}\cdot\Vec{J}(\Vec{x},t)=0
+\]
+As a special case, we consider now an infinitesimal transformation linear in the fields:
+\[
+\phi_i(x)\to\phi_i'(x)=\phi_i(x)-i\varepsilon_a(x)t_{ij}^a\phi_j(x)
+\]
+with $t_{ij}^a$ constants generating a mixing of the fields. The current and the charge now becomes:
+\[
+J^{\mu,a}(x)=-it_{ij}^a\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}\phi_j \quad Q^a(t)=-i\int d^3x\frac{\partial\pazocal{L}}{\partial(\partial_0\phi_i)}t_{ij}^a\phi_j(x)=-i\int d^3x\Pi_i(x)t_{ij}^a\phi_j(x)
+\]
+Current and charge are now operators and we would like to find equal-time commutation rules. \marginnote{Remember that in quantum field theory we have:
+\[
+\left\{
+\begin{aligned}
+&[\phi_i(\Vec{x},t),\phi_j(\Vec{y},t)]=[\PI_i(\Vec{x},t),\Pi_j(\Vec{y},t)]=0\\
+&[\phi_i(\Vec{x},t),\Pi_j(\Vec{y},t)]=i\delta^3(\Vec{x}-\Vec{y})\delta_{ij}
+\end{aligned}
+\right.
+\]}
+\begin{align*}
+[Q^a(t),\phi_k(\Vec{y},t)]&=-it_{ij}^a\int d^3x[\Pi_i(\Vec{x},t)\phi_j(\Vec{x},t),\phi_k(\Vec{y},t)]\\
+&=-it_{ij}^a\int d^3x\left(-i\delta^3(\Vec{x}-\Vec{y})\delta_{ik}\right)\phi_j(\Vec{x},t)\\
+&=-t_{ik}^a\phi_j(\Vec{y},t)
+\end{align*}
+For the commutation relations between two generators, we have:
+\begin{align*}
+[Q^a(t),Q^b(t)]&=-i\left(t_{ij}^at_{jk}^b-t_{ij}^bt_{jk}^a\right)\int d^3x\Pi_i(x)\phi_k(x)\\
+&=if_{abc}t_{ik}^c\int d^3x\Pi_i(x)\phi_k(x)\\
+&=if_{abc}Q^c(t)
+\end{align*}
+The charge operators form a Lie algebra with structure constants $f_{abc}$. 
+\subsection{Currents of the Light Quarks Sector}
+The method of Gell-Man and Levy can be now applied to the QCD Lagrangian by calculating the variation under the infinitesimal local form of \refeq{transformation}:
+\[
+\delta\pazocal{L}_{QCD}^0=\Bar{q}_R\left(\sum_{a=1}^8\partial_\mu\theta_a^R\frac{\lambda^a}{2}+\partial_\mu\theta^R\right)\gamma^\mu q_R+\Bar{q}_L\left(\sum_{a=1}^8\partial_\mu\theta_a^L\frac{\lambda^a}{2}+\partial_\mu\theta^L\right)\gamma^\mu q_L
+\]
+From which we obtain the conserved currents associated with the transformations of the left- and right-handed quarks:
+\[
+L^{\mu,a}=\Bar{q}_L\gamma^\mu\frac{\lambda^a}{2}q_L \quad R^{\mu,a}=\Bar{q}_R\gamma^\mu\frac{\lambda^a}{2}q_R
+\]
+The eight currents $L^{\mu,a}$ transform under SU$(3)_L\times$SU$(3)_R$ as an (8,1) multiplet, i.e. as an octet under transformation of the left-handed fields and as a singlet under transformation of the right-handed fields. Analogously, $R^{\mu,a}$ transform as an (1,8) multiplet under SU$(3)_R\times$SU$(3)_L$. Instead of using these chiral currents, it is very common to work instead with linear combinations of them:
+\[
+\left\{
+\begin{aligned}
+V^{\mu,a}&=R^{\mu,a}+L^{\mu,a}=\Bar{q}\gamma^\mu\frac{\lambda^a}{2}q\\
+A^{\mu,a}&=R^{\mu,a}-L^{\mu,a}=\Bar{q}\gamma^\mu\gamma_5\frac{\lambda^a}{2}q
+\end{aligned}
+\right.
+\xrightarrow[a=0 (\lambda^0=2\mathbb{1})]{}
+\left\{
+\begin{aligned}
+V^\mu&=\Bar{q}\gamma^\mu q\\
+A^\mu&=\Bar{q}\gamma^\mu\gamma_5q
+\end{aligned}
+\right.
+\]
+We then have a conserved singlet vector current $V^\mu$ originating from a transformation of all left- and right-handed quark fields by the same phase, $\partial_\mu V^\mu=0$. The singlet axial vector current $A^\mu$, comes from a transformation of all left-handed quark fields with one phase and all right-handed quark fields with the opposite phase. Such current is only conserved on the classical level and this symmetry is not preserved in the quantization, resulting in anomalies:\marginnote{In the limit of large number of colours $N_c$, the singlet axial-current is conserved because the strong coupling constant goes like $g^2\sim N_c^{-1}$.}
+\[
+\partial_\mu A^\mu=\frac{3g^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}G^{\mu\nu,a}G^{\rho\sigma}_a
+\]
+The SU$(3)_L\times$SU$(3)_R\times$U$(1)_V$ symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. As a consequence, we have that the charge operators are no longer time independent but the equal-time commutation relations still play an important role even when the symmetry gets explicitly broken. Let's consider the mass term now:
+\[
+\pazocal{L}_M=-\Bar{q}Mq \quad \text{with}\;M=\mqty(\dmat{m_u,m_d,m_s})
+\]
+Applying \refeq{gammarelations}, we observe that the quark mass terms mix left- and right-handed fields: $\pazocal{L}_M=-(\Bar{q}_LMq_R+\Bar{q}_RMq_L)$. We can compute the variation of $\pazocal{L}_M$ due to the infinitesimal form of \refeq{transformation}:
+\begin{align*}
+\delta\pazocal{L}_M=&-i\left[\Bar{q}_R\left(\sum_{a=1}^8\theta_a^R\frac{\lambda^a}{2}+\theta^R\right)Mq_L-\Bar{q}_RM\left(\sum_{a=1}^8\theta_a^L\frac{\lambda^a}{2}+\theta^L\right)q_L\right.\\
+&+\left.\Bar{q}_L\left(\sum_{a=1}^8\theta_a^L\frac{\lambda^a}{2}+\theta^L\right)Mq_R-\Bar{q}_LM\left(\sum_{a=1}^8\theta_a^R\frac{\lambda^a}{2}+\theta^R\right)q_R\right]\\
+=&-i\left[\sum_{a=1}^8\theta_a^R\left(\Bar{q}_R\frac{\lambda^a}{2}Mq_L-\Bar{q}_LM\frac{\lambda^a}{2}q_R\right)+\theta^R(\Bar{q}_RMq_L-\Bar{q}_LMq_R)\right.\\
+&+\left.\sum_{a=1}^8\theta_a^L\left(\Bar{q}_L\frac{\lambda^a}{2}Mq_R-\Bar{q}_RM\frac{\lambda^a}{2}q_L\right)+\theta^L(\Bar{q}_LMq_R-\Bar{q}_RMq_L)\right]
+\end{align*}
+This results in:
+\[
+\left\{
+\begin{aligned}
+&\partial_\mu L^{\mu,a}=-i\left(\Bar{q}_L\frac{\lambda^a}{2}Mq_R-\Bar{q}_RM\frac{\lambda^a}{2}q_L\right)\\
+&\partial_\mu R^{\mu,a}=-i\left(\Bar{q}_R\frac{\lambda^a}{2}Mq_L-\Bar{q}_LM\frac{\lambda^a}{2}q_R\right)
+\end{aligned}
+\right.
+\]
+For the vector $V^{\mu,a}$ and axial $A^{\mu,a}$ currents, from the previous relations one finds:
+\[
+\left\{
+\begin{aligned}
+&\partial_\mu V^{\mu,a}=i\Bar{q}[M,\lambda^a/2]q&&\to\partial_\mu V^\mu=0\\
+&\partial_\mu A^{\mu,a}=i\Bar{q}\{\lambda^a/2,M\}\gamma_5q&&\to\partial_\mu A^\mu=2i\Bar{q}M\gamma_5q+\frac{3g^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}G^{\mu\nu,a}G^{\rho\sigma}_a
+\end{aligned}
+\right.
+\]
+We can now summarize the symmetries of the strong interaction in combination with their currents and divergencies:
+\begin{itemize}
+    \item In the limit of massless quarks, the currents $L^{\mu,a}$ and $R^{\mu,a}$ (or equivalently $V^{\mu,a}$ and $A^{\mu,a}$) are conserved. The singlet axial current $A^\mu$ has an anomaly.
+    \item For any value of the quark masses, the individual flavour currents $\Bar{u}\gamma^\mu u$, $\Bar{d}\gamma^\mu d$ and $\Bar{s}\gamma^\mu s$ are conserved, reflecting the flavour independence of the strong coupling and the diagonality of the quark mass matrix. $V^\mu$ is conserved, while $A^\mu$ has, in addition to the anomaly, a divergence due to quark masses.
+    \item For equal quark masses, $V^{\mu,a}$ are conserved since $[\mathbb{1},\lambda^a/2]=0$. However, $A^{\mu,a}$ are not conserved.
+\end{itemize}
+\subsection{Spontaneous Symmetry Breaking}
+So far we have focused on the chiral symmetry of the QCD Lagrangian and the explicit symmetry breaking through the quark masses. It is now time to study an important aspect of low-energy QCD, which is the concept of spontaneous symmetry breaking. A continuous symmetry is said to be spontaneously broken if the ground state of the system is no longer invariant under the full symmetry group G of the Hamiltonian, which in the chiral limit, is equal to G=SU$(3)_L\times$SU$(3)_R\times$U$(1)_V$. The U$(1)_V$ symmetry results in baryon number $B$ conservation, leading to a classification of hadrons into baryons $(B=1)$ and mesons $(B=0)$. The charge operators $Q_A^a$ and $Q_V^a$ commute with $\hat{H}_{QCD}^0$ and have opposite parity.
+\[
+\left\{
+\begin{aligned}
+&Q_V^a=Q_L^a+Q_R^a\\
+&Q_A^a=Q_L^a-Q_R^a
+\end{aligned}
+\right.
+\qquad [Q_V^a,\hat{H}_{QCD}^0]=[Q_A^a,\hat{H}_{QCD}^0]=0
+\]
+Having opposite parity, for any state with parity $(+)$ one expects the existence of a degenerate state with parity $(-)$: this is called parity doubling. Parity is a symmetry we like since it commutes with $\hat{H}^0$, so we start our discussion by considering a generic state $\ket{i,+}$ with $i$ denoting all the internal quantum numbers and the $+$ indicates the parity sign. We now apply $\hat{P}$ and $\hat{H}^0$ to the state we just defined:
+\[
+\left\{
+\begin{aligned}
+&\hat{P}\ket{i,+}=\ket{i,+}\\
+&\hat{H}^0\ket{i,+}=E_i\ket{i,+}
+\end{aligned}
+\right.
+\]
+From this, we can define a new state namely $\ket{\phi}=Q_A^a\ket{i,+}$ and ask ourselves: what happens when we apply the parity and energy operator?
+\[
+\left\{
+\begin{aligned}
+&\hat{H}^0\ket{\phi}=\hat{H}^0Q_A^a\ket{i,+}=Q_A^a\hat{H}^0\ket{i,+}=Q_A^aE_i\ket{i,+}=E_i\ket{\phi}\\
+&\hat{P}\ket{\phi}=\hat{P}Q_A^a\ket{i,+}=\hat{P}Q_A^a{\color{red}\hat{P}^\dagger\hat{P}}\ket{i,+}=-Q_A^a\ket{i,+}=-\ket{\phi}\marginnote{\textit{"We do what we do when we are in a complicated situation in life, we write 1"}=we insert the identity as $\hat{P}^\dagger\hat{P}$.}
+\end{aligned}
+\right.
+\]
+From parity, we get that for every state we expect another state with opposite parity but unfortunately the low-energy spectrum of baryons does not contain a degenerate baryon octet of negative parity. The solution to this problem is spontaneous symmetry breaking.\\
+Suppose now to have two different states, created respectively by $\hat{a}_i^\dagger$ and $\hat{b}_i^\dagger$:
+\[
+\ket{i,+}=\hat{a}_i^\dagger\ket{0} \quad \ket{i,-}=\hat{b}_i^\dagger\ket{0} \qquad [Q_A^a,\hat{a}_i^\dagger]=-t^a_{ij}\hat{b}_j^\dagger
+\]
+Let's see what happens when we apply $Q_A^a$ to this newly defined state $\ket{i,+}$:
+\[
+Q_A^a\ket{i,+}=Q_A^a\hat{a}_i^\dagger\ket{0}=(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize this gives us a state with parity $(-)$ };}}
+{[Q_A^a,\hat{a}_i^\dagger]}+\hat{a}_i^\dagger Q_A^a)\ket{0}
+\]
+\marginnote{\includegraphics[]{Images/goldstone.jpg}\\
+From \href{https://physics.mit.edu/faculty/jeffrey-goldstone/}{MIT Physics}: Jeffrey Goldstone (born 3 September 1933) is a British theoretical physicist and an emeritus physics faculty member at the MIT Center for Theoretical Physics. He worked at the University of Cambridge until 1977. He is famous for the discovery of the Nambu–Goldstone boson. He is currently working on quantum computation.}\\
+Since the parity doubling is not observed, one assumes that $Q_A^a$ do not annihilate the ground state, i.e. the ground state of QCD is not invariant under axial transformation. $Q_A^a\ket{0}\neq0$, the ground state is not invariant under the full symmetry group of the Lagrangian , resulting in spontaneous symmetry breaking: G$\to$H$\subset$SU$(3)_V\times$U$(1)_V$.\\
+Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-\href{https://en.wikipedia.org/wiki/Jeffrey_Goldstone}{Goldstone} bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_A$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.\\
+We know that there is symmetry breaking and we want to support this interpretation. Since the theory is spontaneously broken, there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that $\bra{0}[Q_A^a,\hat{O}]\ket{0}\neq0$.\marginnote{We might be tempted to study $Q_A^a\ket{0}$ instead but there are problems concerning the norm of this state.}\\
+The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that $\bra{0}J^0\ket{G}\bra{G}\hat{O}\ket{0}\neq0$. Who is the candidate to play the role of $\ket{G}$? This state has to be pseudo-scalar and transform under SU$(3)_V$. We know that $[Q_V^a,Q_A^b]=if_{abc}Q_A^c$, this tells us that the Goldstone boson transforms as the adjoint, so they form an octet of SU$(3)$, and the current is the axial one. The operator $\hat{O}$ is the following:
+\[
+\bra{0}[Q_A^a,\Bar{q}\gamma_5\pambda^aq]\ket{0}=-\frac{1}{2}\bra{0}\Bar{q}\{\lambda^a,\lambda^b\}q\ket{0}=-\frac{2}{3}\delta_{ab}\bra{0}\Bar{q}q\ket{0}\sim\pazocal{O}(\Lambda_{QCD})
+\]
+The term $\bra{0}\Bar{q}q\ket{0}$ is called chiral condensate and it transforms like a $(\Bar{3},3)_0$ under SU$(3)_L\times$SU$(3)_R\times$U$(1)_V$, it is the representation which breaks the symmetry. The symmetry that leaves this term invariant is SU$(3)_V\times$U$(1)_V$, this condensate is the most elementary version of the symmetry breaking in the Higgs mechanism. What we want to do next is writing the QCD Lagrangian and then add the mass as a perturbation: this is called the chiral Lagrangian.
+\end{document}
