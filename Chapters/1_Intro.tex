@@ -6,7 +6,7 @@
 \chapter[Introduction]{Introduction\footnotemark[0]}
 \labch{intro}
 \section{Dimensional Analysis and Energy Scales}
-We start our discussion about the Standard Model by introducing some fundamental concepts about dimensional analysis. For our purposes, we work with natural units, i.e. $\hbar=c=1$. It follows that:
+We start our discussion about the Standard Model by introducing some fundamental concepts about dimensional analysis. For our purposes, we work with \textbf{natural units}, i.e. $\hbar=c=1$. It follows that:
 \begin{itemize}
     \item $[m]=[E]$ since $E=mc^2$ 
     \item $[t]=[E^{-1}]$ since $\Delta E\Delta t\gtrsim\hbar$
@@ -14,7 +14,7 @@ We start our discussion about the Standard Model by introducing some fundamental
     \item the Lagrangian density $\pazocal{L}$ has dimension $[\pazocal{L}]=[E^4]$ because it has to be $[S]=\left[\int d^4x\pazocal{L}\right]=0$
     \item The fields we work with have dimensions $[\phi]=[E]$, $[\partial_\mu\phi]=[E]$, $[\Psi]=[E^{3/2}]$, $[A_\mu]=[E]$
 \end{itemize}
-For the couplings, we observe that $e\bar{\Psi}\gamma^\mu A_\mu\Psi$ must have dimension $E^4$ therefore it has to be $[e]=[E^0]$. Same reasoning applies for $G_F\bar{\Psi}\Psi\bar{\Psi}\Psi$ and we obtain $[G_F]=[E^{-2}]$.
+For the couplings, we observe that $e\bar{\Psi}\gamma^\mu A_\mu\Psi$ must have dimension $E^4$ therefore it has to be $[e]=[E^0]$. The same reasoning applies for $G_F\bar{\Psi}\Psi\bar{\Psi}\Psi$ and we obtain $[G_F]=[E^{-2}]$.
 
 The typical energy scale we are going to use is GeV, while the masses we are interested in are:
 \[
@@ -27,7 +27,7 @@ The typical energy scale we are going to use is GeV, while the masses we are int
 \right.
 %Grazie a Giorgio che mi ha fatto allineare tutto per bene (giovedì 20 ottobre 2022, nell'Ufficio)
 \]
-In quantum chromodynamics (QCD) the QCD scale is given by the quantity $\Lambda_{QCD}$. Its value is $\Lambda_{QCD}=332\pm17$ MeV when the energy involved in the process allows only to produce the light quarks, i.e. energies below 1.27 GeV. At higher energy, $\Lambda_{QCD}=210\pm14$ MeV, above the bottom quark mass. This gives mass to elementary fields:
+In quantum chromodynamics (QCD) the QCD scale is given by the quantity $\Lambda_{QCD}$. Its value is $\Lambda_{QCD}=332\pm17$ MeV when the energy involved in the process allows only to produce the light quarks, i.e., energies below 1.27 GeV. At higher energy, $\Lambda_{QCD}=210\pm14$ MeV, above the bottom quark mass. This gives mass to elementary fields:
 \[
 \left\{
 \begin{aligned}
@@ -56,7 +56,8 @@ The gauge bosons are massive, so we need to fix the gauge: in the unitary gauge,
 \[
 -i\frac{g^{\alpha\beta}-k^\alpha k^\beta/m_W^2}{K^2-m^2_W+i\varepsilon}
 \]
-with $K^\alpha=(P_\mu)^\alpha-(P_2)^\alpha$. We need an additional Feynman rule for this diagram: for each vertex in which there is an interaction with the $W$ boson, we obtain a factor $i\frac{g_2}{\sqrt{2}}\gamma^\alpha P_L$. With this said, and using the Feynman rules we already know, we get
+with $K^\alpha=(P_\mu)^\alpha-(P_2)^\alpha$. We need an additional \href{https://en.wikipedia.org/wiki/Richard_Feynman}{Feynman}\marginnote{\includegraphics[]{Images/Feynman.jpg}\\
+From \href{https://en.wikipedia.org/wiki/File:Richard_Feynman_Nobel.jpg}{WikiMedia}: Richard Phillips Feynman (May 11, 1918 – February 15, 1988) was an American theoretical physicist, known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, the physics of the superfluidity of supercooled liquid helium, as well as his work in particle physics for which he proposed the parton model. For contributions to the development of quantum electrodynamics, Feynman received the Nobel Prize in Physics in 1965 jointly with Julian Schwinger and Shinichiro Tomonaga. } rule for this diagram: for each vertex in which there is an interaction with the $W$ boson, we obtain a factor $i\frac{g_2}{\sqrt{2}}\gamma^\alpha P_L$. With this said, and using the Feynman rules we already know, we get
 \[
 \pazocal{M}(a,b,c,d)=\bar{u}_b(P_e)i\frac{g_2}{\sqrt{2}}\gamma^\beta P_Lv_c(P_1)\left[-i\frac{(g^{\alpha\beta}-k^\alpha k^\beta/m_W^2)}{K^2-m^2_W+i\varepsilon}\right]\bar{u}_d(P_2)i\frac{g_2}{\sqrt{2}}\gamma_\alpha P_Lu_a(P_\mu)
 \]
@@ -128,7 +129,7 @@ E_2&: -1\le\frac{m_\mu^2-2m_\mu(E_1+E_2)+2E_1E_2}{2E_1E_2}\le1\Rightarrow\frac{m
 \end{aligned}
 \right.
 \]
-The upper limit on $E_1$ corresponds to having $e$ and $\nu_\mu (2)$ emitted in one direction and $\bar{\nu}_e (1)$ emitted in the other one, hence splitting the muon energy $m_\mu$ equally in the to directions. For $E_2$, we fix $E_1$ and do tedious calculations. The final result is:
+The upper limit on $E_1$ corresponds to having $e$ and $\nu_\mu (2)$ emitted in one direction and $\bar{\nu}_e (1)$ emitted in the other one, hence splitting the muon energy $m_\mu$ equally in the two directions. For $E_2$, we fix $E_1$ and do tedious calculations. The final result is:
 \[
 \Gamma=\frac{1}{2^5m_\mu\pi^3}\int_0^{m_\mu/2}dE_1E_1\int_{m_\mu/2-E_1}^{m_\mu/2}dE_2E_22^6G_F^2(P_e\cdot P_2)(P_\mu\cdot P_1)=\frac{G_F^2m_\mu^5}{192\pi^3}=\Gamma_0
 \]
@@ -144,14 +145,14 @@ $G_F\sim1/300^4$ GeV$^{-4}$ and $m_\mu^5\sim10^{-5}$ GeV$^5$. It follows
 
 
 \section{How to build a model/Lagrangian/EFT?}
-Our goal is to find the effective Lagrangian of nature, effective field theories (EFT) are characterised by certain degrees of freedom at a certain energy scale. To build a Lagrangian we have to:
+Our goal is to find the effective Lagrangian of nature, effective field theories (EFT) are characterized by certain degrees of freedom at a certain energy scale. To build a Lagrangian we have to:
 \begin{enumerate}
-    \item specify the local symmetries, i.e. the gauge group G of the theory+Lorentz
-    \item specify the fields content
-    \item write the most general Lagrangian according to 1. and 2.
+    \item specify the \textbf{local symmetries}, i.e. the gauge group G of the theory+Lorentz
+    \item specify the \textbf{fields content}
+    \item write the \textbf{most general Lagrangian} according to 1. and 2.
     \item spend several hours admiring the beautiful Lagrangian we just wrote and try to understand it without summoning any ancient demon
 \end{enumerate}
-\textit{"Everything not forbidden is compulsory. -Marco Nardecchia"} -Michael Scott
+\textit{“Everything not forbidden is compulsory. — Marco Nardecchia”} — Michael Scott
 \begin{figure}[h!]
 \includegraphics{Images/WikiHow.png}
 \caption{WikiHow is not a good place to learn how to build a Lagrangian.}
@@ -196,10 +197,10 @@ In the case of QED, the group G=U$(1)_C=$U$(1)_L\times$U$(1)_R$ (2 generators) i
 \right.
 \]
 \subsection{Review of the Standard Model}
-For what concerns the Standard Model, we have:
+For what concerns the Standard Model (SM), we have:
 \begin{enumerate}
     \item the gauge group is G=SU$(3)_C\times$SU$(2)_L\times$U$(1)_Y$
-    \item the fields content is
+    \item the field's content is
     \begin{table}[h]
         \centering
         \begin{tabular}{c|c|c|c|c}
@@ -213,80 +214,215 @@ For what concerns the Standard Model, we have:
         $l_L^i=\begin{pmatrix}\nu_L\\e_L\end{pmatrix}$ & 1 & 2 & -1/2 & (1/2,0) \\
         $e_R$ & 1 & 1 & -1 & (0,1/2) \\
         \hline
-        $H$ & 1 & 2 & 1/2 & \\
-        $\Tilde{H}$ & 1 & 2 & -1/2 & \\
+        $H$ & 1 & 2 & 1/2 & scalar\\
+        $\Tilde{H}$ & 1 & 2 & -1/2 & scalar\\
         \hline
         \end{tabular}
         \caption*{}
         \label{tab:my_label}
     \end{table}
-    \item $\pazocal{L}=\pazocal{L}_{kin}+\pazocal{L}_\theta+\pazocal{L}_{Yuk}-V(H)$ with
-    \[
-    \left\{
-    \begin{aligned}
-    &\pazocal{L}_{kin}=\sum_{\{\Psi\}}\bar{\Psi}i\slashed{D}\Psi-\frac{1}{4}G_{\mu\nu}^aG^{\mu\nu,a}-\frac{1}{4}W_{\mu\nu}^iW^{\mu\nu,i}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}G_{\mu\nu}^aG^{\mu\nu,a}+(D_\mu H)^\dagger(D_\mu H) \\
-    &D_\mu=\partial_\mu-ig_1YB_\mu-ig_2T^iW_\mu^i-ig_3\lambda^aG_\mu^a\\
-    &\pazocal{L}_\theta=\frac{g_3^2}{32\pi^2}\theta G_{\mu\nu}^aG_{\rho\sigma}^a\varepsilon^{\mu\nu\rho\sigma} \\
-    &\pazocal{L}_{Yuk}=-\sum_{i,j=1}^3\left[\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}\right] \quad H^c=i\sigma^2H^* \\
-    &V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2
-    \end{aligned}
-    \right.
-    \]
+    \item $\pazocal{L}=\pazocal{L}_{QCD}+\pazocal{L}_{EW}+\pazocal{L}_{Higgs}+\pazocal{L}_{Yukawa}$
+    \marginnote{\includegraphics[]{Images/GellMann.jpg}\\
+    From \href{https://commons.wikimedia.org/wiki/File:MurrayGellMannJI1.jpg}{WikiMedia}: Murray Gell-Mann (September 15, 1929 – May 24, 2019) was an American physicist who received the 1969 Nobel Prize in Physics for his work on the theory of elementary particles.}
+    \begin{itemize}
+        \item The \textbf{QCD sector} defines the interaction between quarks and gluons, which is a gauge theory with SU(3) symmetry generated by the 8 \href{https://en.wikipedia.org/wiki/Murray_Gell-Mann}{Gell-Mann} matrices $\lambda^a$.
+        \[
+        \pazocal{L}_{QCD}=\sum_\Psi\bar{\Psi}_i\left[i\gamma^\mu(\partial_\mu\delta_{ij}-ig_s\lambda^aG_\mu^a)\right]\Psi_j-\frac{1}{4}G_{\mu\nu}^aG^{\mu\nu,a}
+        \]
+        $\Psi_i$ is the Dirac spinor of the quark field, i=\{r,g,b\} is the index of colour, $g_s$ is the strong coupling constant, $G_\mu^a$ $(a=1,\dots,8)$ is the 8-component SU(3) gauge field, $G_{\mu\nu}^a$ is the gluon field strength tensor.
+        \item The \textbf{electroweak sector} is a gauge theory with symmetry group U$(1)\times$SU$(2)_L$.
+        \[
+        \pazocal{L}_{EW}=\sum_\Psi\bar{\Psi}\gamma^\mu\left(i\partial_\mu-\frac{g_1}{2}Y_WB_\mu-\frac{g_2}{2}\sigma_iW_\mu^i\right)\Psi-\frac{1}{4}W_{\mu\nu}^iW^{\mu\nu,i}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}
+        \]
+        $B_\mu$\marginnote{\includegraphics[]{Images/higgs.jpg}\\
+        From \href{https://commons.wikimedia.org/wiki/File:Nobel_Prize_24_2013.jpg}{WikiMedia}: Peter Ware Higgs (born 29 May 1929) is a British theoretical physicist, Emeritus Professor in the University of Edinburgh, and Nobel Prize laureate for his work on the mass of subatomic particles.}
+        \noindent is the U(1) gauge field, $Y_W$ is the weak hypercharge (the generator of the U(1) group), $W_\mu^i$ is the 3-component gauge field, $g_1$ and $g_2$ are respectivelty the U(1) and SU(2) coupling constant, $W_{\mu\nu}^i$ and $B_{\mu\nu}$ are the field strength tensors respectively for the weak isospin and weak hypercharge fields.
+        \item In the SM, the \textbf{\href{https://en.wikipedia.org/wiki/Peter_Higgs}{Higgs} field} is a complex scalar of the group SU$(2)_L$.
+        \[
+        H=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+            \phi^+\\
+            \phi^0
+        \end{array}\right)
+        % =\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+        %      \phi_1+i\phi_2 \\
+        %      \phi_3+i\phi_4
+        %  \end{array}\right)
+        \]
+        where the superscripts + and 0 indicate the charge of the components. The weak hypercharge $Y_W$ of both components is 1. The Higgs Lagrangian is:
+        \[
+        \left\{
+        \begin{aligned}
+        &\pazocal{L}_{Higgs}=(D_\mu H)^\dagger(D_\mu H)+V(H)\\
+        &D_\mu=\partial_\mu-\frac{i}{2}(g_1Y_WB_\mu+g_2W_\mu^i\sigma^i)\\
+        &V(H)=\mu^2H^\dagger H-\lambda(H^\dagger H)^2
+        \end{aligned}
+        \right.
+        \]
+        The potential $V(H)$ is symmetric under rotations.
+        \item The \textbf{\href{https://en.wikipedia.org/wiki/Hideki_Yukawa}{Yukawa}\marginnote{\includegraphics[]{Images/Yukawa.jpg}\\
+        From \href{https://commons.wikimedia.org/wiki/File:Yukawa.jpg}{WikiMedia}: Hideki Yukawa (23 January 1907 – 8 September 1981) was a Japanese theoretical physicist and the first Japanese Nobel laureate for his prediction of the pi meson, or pion.} interaction terms} are:
+        \[
+        \pazocal{L}_{Yuk}=-\sum_{i,j=1}^3\left[\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}\right]
+        \]
+        where $H^c=i\sigma^2H^*$ and $Y_{u,d,e}$ are $3\times3$ matrices of Yukawa couplings.
+    \end{itemize}
+    % \item $\pazocal{L}=\pazocal{L}_{kin}+\pazocal{L}_\theta+\pazocal{L}_{Yuk}-V(H)$ with
+    % \[
+    % \left\{
+    % \begin{aligned}
+    % &\pazocal{L}_{kin}=\sum_{\{\Psi\}}\bar{\Psi}i\slashed{D}\Psi-\frac{1}{4}G_{\mu\nu}^aG^{\mu\nu,a}-\frac{1}{4}W_{\mu\nu}^iW^{\mu\nu,i}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}G_{\mu\nu}^aG^{\mu\nu,a}+(D_\mu H)^\dagger(D_\mu H) \\
+    % &D_\mu=\partial_\mu-ig_1YB_\mu-ig_2T^iW_\mu^i-ig_3\lambda^aG_\mu^a\\
+    % &\pazocal{L}_\theta=\frac{g_3^2}{32\pi^2}\theta G_{\mu\nu}^aG_{\rho\sigma}^a\varepsilon^{\mu\nu\rho\sigma} \\
+    % &\pazocal{L}_{Yuk}=-\sum_{i,j=1}^3\left[\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}\right] \quad H^c=i\sigma^2H^* \\
+    % &V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2
+    % \end{aligned}
+    % \right.
+    % \]
 \end{enumerate}
-The mass terms are impossible to write because they are not gauge invariant:
+% \[
+% \left\{
+% \begin{aligned}
+% &\bar{Q}_LQ_L \quad &&\text{ not Lorentz invariant}\\
+% &\bar{Q}_Lu_R \quad &&\text{ not gauge invariant}\\
+% &\bar{Q}_Ld_R \quad &&\text{ not gauge invariant}
+% \end{aligned}
+% \right.
+% \]
+The mass terms cannot be included in the Lagrangian, since terms of the form $m\bar{\Psi}\Psi$ do not respect U$(1)\times$SU$(2)_L$ gauge invariance.\\
+We have to choose the right parametrization for the Higgs field $H$. We have 4 degrees of freedom, so we can put three of them on an exponential and the last one as a multiplicative constant:
 \[
-\left\{
-\begin{aligned}
-&\bar{Q}_LQ_L \quad &&\text{ not Lorentz invariant}\\
-&\bar{Q}_Lu_R \quad &&\text{ not gauge invariant}\\
-&\bar{Q}_Ld_R \quad &&\text{ not gauge invariant}
-\end{aligned}
-\right.
+H(x)=e^{i\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Nambu-Goldstone bosons};}}{\chi^i(x)}\sigma^i}\left(\begin{array}{c}0\\\frac{\phi(x)}{\sqrt{2}}\end{array}\right)
 \]
-The Higgs potential can be rewritten taking into account that $H$ is in the form
-\[
-H=\begin{pmatrix}\phi_1+i\phi_2\\\phi_3+i\phi_4\end{pmatrix}
-\]
-hence the term $H^\dagger H$ which appears in $V(H)$ is equal to $\varphi^2/2$:\marginnote{\includegraphics[]{Images/cowboy.jpg}\\
-Do not wear a sombrero potential hat if you encounter a cowboy, that might be dangerous: cowboys can be evil.}
+Substituing this form of $H$ into the expression for the potential $V(H)$, we find out that this is only a function of $\phi(x)$:
 \[
 V(H)\xrightarrow[]{}V(\phi)=-\frac{\mu^2}{2}\phi^2+\frac{\lambda}{4}\phi^4
 \]
+\newpage
 \begin{figure}[h!]
     \centering
     \includegraphics{Images/sombrero.png}
-    \caption{Sombrero potential}
+    \caption{Higgs potential has the shape of a Mexican hat ("\textit{sombrero potential}").}
     \labfig{sombrero}
 \end{figure}\\
-This potential has two minima in $\pm v$, where $v=\sqrt{\mu^2/\lambda}=\langle\phi\rangle$: the field $\phi(x)$ can be written as its mean value plus an excitation which turns out to be the Higgs boson:\marginnote{\includegraphics[]{Images/higgs.jpg}\\
-From \href{https://commons.wikimedia.org/wiki/File:Nobel_Prize_24_2013.jpg}{WikiMedia}: Peter Ware Higgs (born 29 May 1929) is a British theoretical physicist, Emeritus Professor in the University of Edinburgh, and Nobel Prize laureate for his work on the mass of subatomic particles.}
+This potential has two minima in $\pm v$, where $v=\sqrt{\mu^2/\lambda}=\langle\phi\rangle$: the field $\phi(x)$ can be written as its mean value plus an excitation which turns out to be the Higgs boson:
 \[
 \phi(x)=\frac{v+h(x)}{\sqrt{2}}
+\marginnote{\includegraphics[]{Images/cowboy.jpg}\\
+Do not wear a sombrero potential hat if you encounter a cowboy, that might be dangerous: cowboys can be evil.}
 \]
-We have 4 degrees of freedom in $H(x)$, so we can parameterize it as follows
-\[
-H(x)=e^{i\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Nambu-Goldstone bosons};}}{\chi^i(x)}\sigma^i}\begin{pmatrix}0\\\frac{v+h(x)}{\sqrt{2}}\end{pmatrix}
-\]
-$h(x)$ is the radial excitation while $\chi(x)$ is the angular excitation: the latter costs no energy since $V(\phi)$ does not depend on $\chi$, therefore the Nambu-Goldstone bosons (NGB) are massless. The \href{https://en.wikipedia.org/wiki/Peter_Higgs}{Higgs} scalar potential breaks SU$(2)_{EW}\times$U$(1)_Y$ into U$(1)_Q$, i.e. 3+1 generators are broken into 1, resulting in 3 massless modes.
+$h(x)$ is the radial excitation while $\chi(x)$ is the angular excitation: the latter costs no energy since $V(\phi)$ does not depend on $\chi$, therefore the Nambu-Goldstone bosons (NGB) are massless. The Higgs scalar potential breaks SU$(2)_{EW}\times$U$(1)_Y$ into U$(1)_Q$, i.e. 3+1 generators are broken into 1, resulting in 3 massless modes.
 
-Now we bring our attention to the kinetic term, in particular to $|D_\mu H|^2$:
+\paragraph{Kinetic term in the Higgs sector} What we want to do now is to explicitly compute the term $|D_\mu H|^2=(D_\mu H)^\dagger(D_\mu H)$:
+\[
+D_\mu H=\frac{1}{\sqrt{2}}\left[\partial_\mu-\frac{i}{2}(g_1Y_WB_\mu+g_2W_\mu^i\sigma^i)\right]\begin{pmatrix}0 \\ v+h(x)\end{pmatrix}
+\]
+At first, we define $W_\mu^\pm:=(W_\mu^2\mp iW_\mu^2)/\sqrt{2}$ and $\sigma^\pm:=(\sigma^1\pm i\sigma^2)/\sqrt{2}$, so that we can write:
 \begin{align*}
-|D_\mu H|^2&=(D_\mu H)^\dagger(D_\mu H)=(\partial_\mu H)^\dagger(\partial_\mu H)+H^\dagger\left(\frac{g_1B_\mu}{\sqrt{2}}+g_2W_\mu^i\frac{\sigma^i}{2}\right)^2H\\
-&+\frac{1}{2}H^\dagger(g_1B_\mu+\sigma^iW_\mu^ig_2)\partial^\mu H+\text{h.c.}\\
-&=\frac{(v+h(x))^2}{8}\begin{pmatrix}0&1\end{pmatrix}\left[g_1B_\mu+g_2W_\mu^3\sigma^3+g_2(W_\mu^1\sigma^1+W_\mu^2\sigma^2)\right]^2\begin{pmatrix}0\\1\end{pmatrix}\\
-&=(v+h(x))^2\left[\frac{(g_1^2+g_2^2)}{8}Z_\mu Z^\mu+\frac{g_2^2}{4}W_\mu^+W^{\mu-}\right]
+W_\mu^+\sigma^++W_\mu^-\sigma^-&=\frac{1}{2\sqrt{2}}(W_\mu^1-iW_\mu^2)(\sigma^1+i\sigma^2)+\frac{1}{2\sqrt{2}}(W_\mu^1+iW_\mu^2)(\sigma^1-i\sigma^2)\\
+&=\frac{1}{2\sqrt{2}}(W_\mu^1\sigma^1+\cancel{iW_\mu^1\sigma^2}-\cancel{iW_\mu^2\sigma^1}+W_\mu^2\sigma^2)\\
+&+\frac{1}{2\sqrt{2}}(W_\mu^1\sigma^1-\cancel{iW_\mu^2\sigma^2}+\cancel{iW_\mu^2\sigma^1}+W_\mu^2\sigma^2)\\
+&=\frac{1}{\sqrt{2}}(W_\mu^1\sigma^1+W_\mu^2\sigma^2)
 \end{align*}
-where we introduced $W_\mu^\pm=(W_\mu^1\pm iW_\mu^2)/\sqrt{2}$. Moreover, we can define $m_Z$ and $m_W$ as:
+From which it follows that:
+\[
+W_\mu^1\sigma^1+W_\mu^2\sigma^2+W_\mu^3\sigma^3=\sqrt{2}(W_\mu^+\sigma^++W_\mu^-\sigma^-)+W_\mu^3\sigma^3
+\]
+$D_\mu H$ now becomes:
+\[
+D_\mu H=\frac{1}{\sqrt{2}}\begin{pmatrix}0 \\ \partial_\mu h(x)\end{pmatrix}-\frac{i}{2\sqrt{2}}(g_1Y_WB_\mu+g_2W_\mu^3\sigma^3)\begin{pmatrix}0 \\ v+h(x)\end{pmatrix}-\frac{ig_2}{2}(W_\mu^+\sigma^++W_\mu^-\sigma^-)\begin{pmatrix}0 \\ v+h(x)\end{pmatrix}
+\]
+When we act with $\sigma^3$, $\sigma^+$ and $\sigma^-$ on $H(x)$ we get:
 \[
 \left\{
 \begin{aligned}
-m_Z&=\frac{\sqrt{g_1^2+g_2^2}}{2}v\\
-m_W&=\frac{g_2}{2}v
+&\sigma^3H(x)=\left(\begin{array}{cc}
+    1 & 0 \\
+    0 & -1
+\end{array}\right)\left(\begin{array}{c}
+  0 \\
+  v+h(x)
+\end{array}\right)=-\left(\begin{array}{c}
+  0 \\
+  v+h(x)
+\end{array}\right) \\
+&\sigma^+H(x)=\left(\begin{array}{cc}
+    0 & 1 \\
+    0 & 0
+\end{array}\right)\left(\begin{array}{c}
+  0 \\
+  v+h(x)
+\end{array}\right)=\left(\begin{array}{c}
+  v+h(x) \\
+  0
+\end{array}\right) \\
+&\sigma^-H(x)=\left(\begin{array}{cc}
+    0 & 0 \\
+    1 & 0
+\end{array}\right)\left(\begin{array}{c}
+  0 \\
+  v+h(x)
+\end{array}\right)=\left(\begin{array}{c}
+  0 \\
+  0
+\end{array}\right)
 \end{aligned}
 \right.
-\Rightarrow|D_\mu H|^2=\left(1+\frac{h(x)}{v}\right)^2\left[\frac{m_Z^2}{2}Z_\mu Z^\mu+m_W^2W_\mu^+W^{\mu-}\right]
 \]
-Notice that
+Substituting this into the previous expression for $D_\mu H$, one finds:
+\[
+D_\mu H=\frac{1}{\sqrt{2}}\begin{pmatrix}0 \\ \partial_\mu h(x)\end{pmatrix}+\frac{i}{2\sqrt{2}}(g_2W_\mu^3-g_1Y_WB_\mu)\begin{pmatrix}0 \\ v+h(x)\end{pmatrix}-\frac{ig_2}{2}W_\mu^+\begin{pmatrix}v+h(x) \\ 0 \end{pmatrix}
+\]
+With the same strategy, we compute $(D_\mu H)^\dagger$:
+\begin{align*}
+(D_\mu H)^\dagger&=\begin{pmatrix}0 & v+h(x)\end{pmatrix}\frac{1}{\sqrt{2}}\left[\partial_\mu+\frac{i}{2}(g_1Y_WB_\mu+g_2\sigma^iW_\mu^i)\right]\\
+&=\frac{1}{\sqrt{2}}\begin{pmatrix}0 & \partial_\mu h(x)\end{pmatrix}+\frac{i}{2\sqrt{2}}\begin{pmatrix}0 & v+h(x)\end{pmatrix}(g_2\sigma^3W_\mu^3-g_1Y_WB_\mu)\\
+&+\frac{ig_2}{2}\begin{pmatrix}0 & v+h(x)\end{pmatrix}(\sigma^+W_\mu^++\sigma^-W_\mu^-)\marginnote{We act with the $\sigma$ matrices on the row vector: $\sigma^3$ changes its sign as before, $\sigma^+$ gives a zero while $\sigma^-$ flips it.}\\
+&=\frac{1}{\sqrt{2}}\begin{pmatrix}0 & \partial_\mu h(x)\end{pmatrix}-\frac{i}{2\sqrt{2}}\begin{pmatrix}0 & v+h(x)\end{pmatrix}(g_1Y_WB_\mu-g_2W_\mu^3)\\
+&+\frac{ig_2}{2}\begin{pmatrix}v+h(x) & 0\end{pmatrix}W_\mu^-
+\end{align*}
+We can finally write the full form of $|D_\mu H|^2$:
+\begin{align*}
+|D_\mu H|^2&=(D_\mu H)^\dagger(D_\mu H)\\
+&=\frac{1}{2}(\partial_\mu h(x))^2+\frac{(v+h(x))^2}{8}(g_2W_\mu^3-g_1B_\mu)^2+\frac{g_2^2}{4}(v+h(x))^2W_\mu^+W_\mu^-\\
+&=\frac{1}{2}(\partial_\mu h(x))^2+\frac{v^2}{8}(g_2W_\mu^3-g_1B_\mu)^2\left(1+\frac{h(x)}{v}\right)^2+\frac{g_2^2v^2}{4}W_\mu^+W_\mu^-\left(1+\frac{h(x)}{v}\right)^2
+\end{align*}
+Moreover, we can define the mass of the $Z$ and the $W$ boson $m_Z$ and $m_W$ as:
+\[
+\left\{
+\begin{aligned}
+m_Z^2&=\frac{g_1^2+g_2^2}{4}v^2\\
+m_W^2&=\frac{g_2^2}{4}v^2
+\end{aligned}
+\right.
+\]
+To write $m_Z$ explicitly inside $|D_\mu H|^2$, we perform a rotation\marginnote[-1.5cm]{
+\includegraphics[]{Images/weinberg.jpg}\\
+From \href{https://commons.wikimedia.org/wiki/File:Steven_weinberg_2010.jpg}{WikiMedia}: Steven Weinberg (May 3, 1933 – July 23, 2021) was an American theoretical physicist and Nobel laureate in physics for his contributions with Abdus Salam and Sheldon Glashow to the unification of the weak force and electromagnetic interaction between elementary particles. }. Let $A_\mu$ be the massless field and $Z_\mu$ the massive one:
+\[
+\left(\begin{array}{c}
+     A_\mu \\
+     Z_\mu
+\end{array}\right)=\left(\begin{array}{cc}
+    \cos\theta_W & \sin\theta_W \\
+    -\sin\theta_W & \cos\theta_W
+\end{array}\right)\left(\begin{array}{c}
+     B_\mu \\
+     W_\mu^3 
+\end{array}\right)\Rightarrow Z_\mu=-\sin\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  \href{https://en.wikipedia.org/wiki/Steven_Weinberg}{Weinberg} angle};}}{\theta_W}B_\mu+\cos\theta_WW_\mu^3
+\]
+To write the mass term $m_Z^2$ in the expression of $|D_\mu H|^2$, we have to perform some tricks:
+\[
+{\color{red}\frac{g_1^2+g_2^2}{g_1^2+g_2^2}}\frac{v^2}{8}(g_1B_\mu-g_2W_\mu^3)^2=\frac{m_Z^2}{2}\left(\frac{g_2}{\sqrt{g_1^2+g_2^2}}W_\mu^3-\frac{g_1}{\sqrt{g_1^2+g_2^2}}B_\mu\right)^2
+\]
+To obtain the desired result, we express the Weinberg angle $\theta_W$ in terms of the couplings $g_1$ and $g_2$:
+\[
+\sin\theta_W:=\frac{g_1}{\sqrt{g_1^2+g_2^2}} \quad \cos\theta_W:=\frac{g_2}{\sqrt{g_1^2+g_2^2}}
+\]
+$|D_\mu H|^2$ now can be written as:
+\[
+|D_\mu H|^2=\frac{1}{2}(\partial_\mu h(x))^2+\frac{m_Z^2}{2}Z_\mu Z^\mu\left(1+\frac{h(x)}{v}\right)^2+m_W^2W_\mu^+W_\mu^-\left(1+\frac{h(x)}{v}\right)^2
+\]
+We have the three fields that will acquire mass, the only remaining massless field is the photon. The mixing angle $\theta_W$ also gives the relationship between the masses of the $W$ and the $Z$ boson:
 \[
 \frac{m_W^2}{m_Z^2}=\frac{g_2^2}{g_1^2+g_2^2}=\cos^2\theta_W
 \]
@@ -294,52 +430,52 @@ from which we can define the quantity $\rho$:
 \[
 \rho=\frac{m_W^2}{m_Z^2\cos^2\theta_W}
 \]
-which is equal to 1 at tree level but this symmetry gets broken by the hypercharge.
+which is equal to 1 at tree level, but this symmetry gets broken by the hypercharge.
+\hline
+% The field $H(x)$ can be written in such a way that there is mixing between $\phi_i$ and the gauge fields:
+% \[
+% H(x)=\begin{pmatrix}\phi_1+i\phi_2\\\frac{v+h(x)+i\phi_3}{\sqrt{2}}\end{pmatrix}
+% \]
+% We define two new matrices $\sigma^+$ and $\sigma^-$ and redo all the computations for $|D_\mu H|^2$
+% \[
+% \sigma^+=\begin{pmatrix}0&1\\0&0\end{pmatrix}
+% \quad
+% \sigma^-=\begin{pmatrix}0&0\\1&0\end{pmatrix}
+% \]
+% \begin{align*}
+% |D_\mu H|^2&=iH^\dagger[g_1B_\mu+g_2\sigma_3W_\mu^3+g_2(W_\mu^1\sigma^1+W_\mu^2\sigma^2)]\partial_\mu H+\text{h.c.}\\
+% &=\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[(g_1B_\mu-g_2W_\mu^3)\frac{1}{\sqrt{2}}\partial_\mu(h+i\phi_3)\begin{pmatrix}0\\1\end{pmatrix}+\text{h.c.}\right]\\
+% &+\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[\frac{g_2}{\sqrt{2}}(W_\mu^+\sigma^++W_\mu^-\sigma^-)\partial_\mu H+\text{h.c.}+\dots\right]\\
+% &=\frac{v+h(x)}{2}\left[-(g_1B_\mu-g_2W_\mu^3)\partial_\mu\phi_3+(ig_2W_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots\right]\\
+% &=m_Z\partial_\mu\phi_3Z^\mu+(im_WW_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots
+% \end{align*}
+% We now add a gauge-fixing term to the Lagrangian:
+% \[
+% \pazocal{L}_{GF}=-\frac{1}{2\xi}(\partial_\mu A^\mu)^2-\frac{1}{2\xi_Z}(\partial_\mu Z^\mu+m_Z\phi_3\xi_Z)^2-\frac{1}{2\xi_W}|\partial_\mu W^{-\mu}-im_W\xi_W\phi^-|^2
+% \]
+% For the $Z$ boson, the propagator is given by:
+% \[
+% -\frac{i}{q^2-m_z^2}\left[\eta_{\mu\nu}-(1-\xi_Z)\frac{q_\mu q_\nu}{q^2-\xi_Zm_Z^2}\right]
+% \]
+% In the unitary gauge, we have that $\xi_{W/Z}\to\infty$ hence $\phi_3$ has to vanish while in the Landau gauge $\xi_{W/Z}\to0$: $\partial_\mu Z^\mu$ has to vanish.
 
-The field $H(x)$ can be written in such a way that there is mixing between $\phi_i$ and the gauge fields:
-\[
-H(x)=\begin{pmatrix}\phi_1+i\phi_2\\\frac{v+h(x)+i\phi_3}{\sqrt{2}}\end{pmatrix}
-\]
-We define two new matrices $\sigma^+$ and $\sigma^-$ and redo all the computations for $|D_\mu H|^2$
-\[
-\sigma^+=\begin{pmatrix}0&1\\0&0\end{pmatrix}
-\quad
-\sigma^-=\begin{pmatrix}0&0\\1&0\end{pmatrix}
-\]
-\begin{align*}
-|D_\mu H|^2&=iH^\dagger[g_1B_\mu+g_2\sigma_3W_\mu^3+g_2(W_\mu^1\sigma^1+W_\mu^2\sigma^2)]\partial_\mu H+\text{h.c.}\\
-&=\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[(g_1B_\mu-g_2W_\mu^3)\frac{1}{\sqrt{2}}\partial_\mu(h+i\phi_3)\begin{pmatrix}0\\1\end{pmatrix}+\text{h.c.}\right]\\
-&+\frac{v+h(x)}{\sqrt{2}}\begin{pmatrix}0&1\end{pmatrix}\left[\frac{g_2}{\sqrt{2}}(W_\mu^+\sigma^++W_\mu^-\sigma^-)\partial_\mu H+\text{h.c.}+\dots\right]\\
-&=\frac{v+h(x)}{2}\left[-(g_1B_\mu-g_2W_\mu^3)\partial_\mu\phi_3+(ig_2W_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots\right]\\
-&=m_Z\partial_\mu\phi_3Z^\mu+(im_WW_\mu^-\partial_\mu\phi^++\text{h.c.})+\dots
-\end{align*}
-We now add a gauge-fixing term to the Lagrangian:
-\[
-\pazocal{L}_{GF}=-\frac{1}{2\xi}(\partial_\mu A^\mu)^2-\frac{1}{2\xi_Z}(\partial_\mu Z^\mu+m_Z\phi_3\xi_Z)^2-\frac{1}{2\xi_W}|\partial_\mu W^{-\mu}-im_W\xi_W\phi^-|^2
-\]
-For the $Z$ boson, the propagator is given by:
-\[
--\frac{i}{q^2-m_z^2}\left[\eta_{\mu\nu}-(1-\xi_Z)\frac{q_\mu q_\nu}{q^2-\xi_Zm_Z^2}\right]
-\]
-In the unitary gauge, we have that $\xi_{W/Z}\to\infty$ hence $\phi_3$ has to vanish while in the Landau gauge $\xi_{W/Z}\to0$: $\partial_\mu Z^\mu$ has to vanish.
-
-To express $D_\mu$ in terms of the physical fields, we have to perform a rotation:
-\[
-\left(\begin{array}{c}
-      B_\mu\\
-      W_\mu^3
-\end{array}\right)=\left(\begin{array}{cc}
-    \cos\theta_W & \sin\theta_W \\
-    -\sin\theta_W & \cos\theta_W
-\end{array}\right)\left(\begin{array}{c}
-      A_\mu\\
-      Z_\mu
-\end{array}\right)
-\]
-After this rotation, we can write:
-\[
-D_\mu=\partial_\mu-i\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  em coupling: $1/e^2=1/g_1^2+1/g_2^2$};}}{e}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  generator $Q=T_3+Y$};}}{Q}A_\mu-i\frac{e}{\cos\theta_W\sin\theta_W}(T_3-\sin^2\theta_WQ)Z_\mu-i\frac{g_2}{\sqrt{2}}(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $T^\pm=\sigma^\pm/2$};}}{T^+}W_\mu^++T^-W_\mu^-)-ig_3\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Gell-Mann matrices};}}{\lambda^a}G_\mu^a
-\]
+% To express $D_\mu$ in terms of the physical fields, we have to perform a rotation:
+% \[
+% \left(\begin{array}{c}
+%       B_\mu\\
+%       W_\mu^3
+% \end{array}\right)=\left(\begin{array}{cc}
+%     \cos\theta_W & \sin\theta_W \\
+%     -\sin\theta_W & \cos\theta_W
+% \end{array}\right)\left(\begin{array}{c}
+%       A_\mu\\
+%       Z_\mu
+% \end{array}\right)
+% \]
+% After this rotation, we can write:
+% \[
+% D_\mu=\partial_\mu-i\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  em coupling: $1/e^2=1/g_1^2+1/g_2^2$};}}{e}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  generator $Q=T_3+Y$};}}{Q}A_\mu-i\frac{e}{\cos\theta_W\sin\theta_W}(T_3-\sin^2\theta_WQ)Z_\mu-i\frac{g_2}{\sqrt{2}}(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $T^\pm=\sigma^\pm/2$};}}{T^+}W_\mu^++T^-W_\mu^-)-ig_3\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  Gell-Mann matrices};}}{\lambda^a}G_\mu^a
+% \]
 At this point, we move our attention to the Yukawa sector: we know that it is written as
 \[
 \pazocal{L}_{Yuk}=-\bar{Q}_L^i(Y_u)^{ij}H^cu_R^i+\bar{Q}_L^i(Y_d)^{ij}Hd_r^j+\bar{l}_L^i(Y_e)^{ij}He_r^j+\text{h.c}
@@ -367,7 +503,7 @@ From \href{https://www.nature.com/articles/nphys1791}{Nature}: Italian particle 
 \quad
 U_{L/R},D_{L/R}\in\text{SU}(3)
 \]
-We introduce the \href{https://en.wikipedia.org/wiki/Cabibbo-Kobayashi-Maskawa_matrix}{Cabibbo–Kobayashi–Maskawa (CKM) matrix}\\ $V_{CKM}^{ij}=(U_LD_L^\dagger)^{ij}$ which is a special unitary $3\times3$ matrix with 8 real parameters: 3 angles+5 phases, with 4 of them being unphysical. The interaction with the Higgs implies flavour mixing but there is no flavour change at tree level.
+We introduce the \href{https://en.wikipedia.org/wiki/Cabibbo-Kobayashi-Maskawa_matrix}{Cabibbo–Kobayashi–Maskawa (CKM) matrix}\\ $V_{CKM}^{ij}=(U_LD_L^\dagger)^{ij}$ which is a special unitary $3\times3$ matrix with 8 real parameters: 3 angles+5 phases, with 4 of them being unphysical. The interaction with the Higgs implies flavour mixing, but there is no flavour change at tree level.
 \section{Symmetries}
 \subsection{Parity}
 We already know that we can parameterize our field as composed by a left-handed spinor $\xi$ and a right-handed spinor $\eta$:
@@ -388,7 +524,7 @@ Moreover, we have that under parity position and momentum transform as:
 \[
 (\Vec{x},t)\xrightarrow[]{}(-\Vec{x},t) \quad \Vec{p}\xrightarrow[]{}-\Vec{p}
 \]
-while the spin remains untouched being a pseudo-vector. For the right- and left-handed spinors, we have the relation $\xi(\Vec{x,t})\xleftrightarrow[]{}\eta(-\Vec{x},t)$ and we can introduce an intrinsic parity of the field, i.e. a phase:
+while the spin remains untouched being a pseudo-vector. For the right- and left-handed spinors, we have the relation $\xi(\Vec{x,t})\xleftrightarrow[]{}\eta(-\Vec{x},t)$ and can introduce an intrinsic parity of the field, i.e. a phase:
 \[
 \left\{
 \begin{aligned}
@@ -413,7 +549,7 @@ with $\sigma^\mu=(\mathbb{1},\sigma^i)$, $\bar{\sigma}^\mu=(\mathbb{1},-\sigma^i
 &=\eta_{\mu\mu}(\eta^\dagger\sigma^\mu\eta+\xi^\dagger\bar{\sigma}^\mu\xi)\\
 &=\eta_{\mu\mu}\bar{\Psi}\gamma^\mu\Psi
 \end{align*}
-This is just a vector, now we include $A_\mu(\Vec{x},t)\xrightarrow[]{}\eta_{\mu\mu}A_\mu(-\Vec{x},t)$: it follows that $A_\mu\bar{\Psi}\gamma^\mu\Psi$ is invariant, hence QED is invariant under parity. The same results apply for QCD since $G_\mu^a\bar{\Psi}\lambda^a\gamma^\mu\Psi$ is invariant. On the other hand, the theta term is odd under parity: it is proportional to $G_{\mu\nu}G_{\rho\sigma}\varepsilon^{\mu\nu\rho\sigma}$ and $\varepsilon$ forces 3 indices to be space-like and 1 to be time-like.
+This is just a vector, now we include $A_\mu(\Vec{x},t)\xrightarrow[]{}\eta_{\mu\mu}A_\mu(-\Vec{x},t)$: it follows that $A_\mu\bar{\Psi}\gamma^\mu\Psi$ is invariant, hence QED is invariant under parity. The same results apply for QCD, since $G_\mu^a\bar{\Psi}\lambda^a\gamma^\mu\Psi$ is invariant. On the other hand, the theta term is odd under parity: it is proportional to $G_{\mu\nu}G_{\rho\sigma}\varepsilon^{\mu\nu\rho\sigma}$ and $\varepsilon$ forces 3 indices to be space-like and 1 to be time-like.
 \subsection{Charge conjugation}
 We now see what happens when we transform the field $\Psi$ under charge conjugation:
 \[

@@ -331,5 +331,241 @@ The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that 
 \[
 \bra{0}[Q_A^a,\Bar{q}\gamma_5\pambda^aq]\ket{0}=-\frac{1}{2}\bra{0}\Bar{q}\{\lambda^a,\lambda^b\}q\ket{0}=-\frac{2}{3}\delta_{ab}\bra{0}\Bar{q}q\ket{0}\sim\pazocal{O}(\Lambda_{QCD})
 \]
-The term $\bra{0}\Bar{q}q\ket{0}$ is called chiral condensate and it transforms like a $(\Bar{3},3)_0$ under SU$(3)_L\times$SU$(3)_R\times$U$(1)_V$, it is the representation which breaks the symmetry. The symmetry that leaves this term invariant is SU$(3)_V\times$U$(1)_V$, this condensate is the most elementary version of the symmetry breaking in the Higgs mechanism. What we want to do next is writing the QCD Lagrangian and then add the mass as a perturbation: this is called the chiral Lagrangian.
+The term $\bra{0}\Bar{q}q\ket{0}$ is called chiral condensate, and it transforms like an $(\Bar{3},3)_0$ under SU$(3)_L\times$SU$(3)_R\times$U$(1)_V$, it is the representation which breaks the symmetry. The symmetry that leaves this term invariant is SU$(3)_V\times$U$(1)_V$, this condensate is the most elementary version of the symmetry breaking in the Higgs mechanism. What we want to do next is writing the QCD Lagrangian and then add the mass as a perturbation: this is called the chiral Lagrangian.
+
+\section{Anomalies in Quantum Field Theory}\marginnote{Nardecchia and I were both wearing a NASA shirt during this lecture. Basically we are best friends now.}
+What we have done so far was discussing gauge theories with Dirac fermion fields. The Dirac field $\Psi$ can be written in terms of two left-handed \href{https://en.wikipedia.org/wiki/Hermann_Weyl}{Weyl}\marginnote{\includegraphics[]{Images/Weyl.jpg}\\
+From \href{https://commons.wikimedia.org/wiki/File:Hermann_Weyl_ETH-Bib_Portr_00890.jpg}{WikiMedia}: Hermann Klaus Hugo Weyl (9 November 1885 – 8 December 1955) was a German mathematician, theoretical physicist and philosopher. Although much of his working life was spent in Zürich, Switzerland, and then Princeton, New Jersey, he is associated with the University of Göttingen tradition of mathematics, represented by David Hilbert and Hermann Minkowski. } fields $\chi$ and $\xi$:
+\[
+\Psi=\left(\begin{array}{c}
+     \chi \\
+     \xi^\dagger 
+\end{array}\right)
+\]
+If $\Psi$ is in a representation R of the gauge group, then $\chi$ and $\xi^\dagger$ must be in R as well. Equivalently, we can have $\chi$ in R and $\xi$ in $\Bar{\text{R}}$. A Dirac field in R is then equivalent to two left-handed Weyl fields, one in R and one in $\Bar{\text{R}}$. If R is real, we can have a Majorana field:
+\[
+\Psi=\left(\begin{array}{c}
+     \psi \\
+     \psi^\dagger 
+\end{array}\right)
+\]
+where both $\psi$ and $\psi^\dagger$ are in R. A Majorana field in R is equivalent to one left-handed Weyl field in R.\\
+Suppose now to have a single left-handed Weyl field $\psi$ in a complex representation R. Such a gauge theory is parity violating and it is called \textbf{chiral}. Its Lagrangian is:
+\[
+\pazocal{L}=i\psi^\dagger\Bar{\sigma}^\mu D_\mu\psi-\frac{1}{4}F^{\mu\nu,a}F_{\mu\nu}^a
+\]
+A mass term for $\psi$ cannot be included, since $\psi\psi$ transforms as R$\otimes$R which does not contain a singlet if R is complex. Without the mass term, this Lagrangian seems fine and it has all the properties we like (Lorentz and gauge invariance). However, chiral gauge theories do not exist as quantum field theories, they are \textbf{anomalous}.\\
+We are now going to see a problem with gauge invariance at 1-loop level that affects most chiral gauge theories. We will use the simplest example available: a U(1) theory with a single Weyl field $\psi$ with charge +1. The Lagrangian is:
+\[
+\pazocal{L}=i\psi^\dagger\Bar{\sigma}^\mu D_\mu\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+\]
+To write this theory in terms of $\Psi$, we perform the following trick:
+\[
+P_L\Psi=\left(\begin{array}{c}
+     \psi \\
+     0 
+\end{array}\right)
+\quad
+P_L=\frac{1-\gamma_5}{2}
+\]
+Now the Lagrangian becomes:
+\[
+\pazocal{L}=i\Bar{\Psi}\slashed{D}P_L\Psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+\]
+and we can treat $\Psi$ as a Dirac field when deriving Feynman rules. The fermion propagator in momentum space is $-P_L\slashed{p}/p^2$ and the fermion-fermion-photon vertex is $ig\gamma^\mu P_L$.\\
+When we go to evaluate loop diagrams, we need a method for regulating diverging integrals. Dimensional regularization is problematic, so we are tempted to use Pauli-Villars regularization, consisting in the replacement:
+\[
+P_L\frac{\slashed{p}}{p^2}\to P_L\left(-\frac{\slashed{p}}{p^2}-\frac{-\slashed{p}+\Lambda}{p^2+\Lambda^2}\right)
+\]
+which is equivalent to adding an extra fermion field with mass $\Lambda$. But we have seen that the mass term cannot be gauge invariant, so in a chiral gauge theory Pauli-Villars regularization is not acceptable. We will post-pone the discussion about the regularization and see what we can deduce from loop diagrams without considering this problem. 
+
+Consider now the corrections to the photon propagator:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/photon_propagator.pdf}
+    \caption{1-loop and counterterm corrections to the photon propagator.}
+    \label{fig:my_label}
+\end{figure}
+\[
+i\Pi^{\mu\nu}(k)=(-1)(ig)^2\left(\frac{1}{i}\right)^2\int\frac{d^4l}{(2\pi)^4}\frac{\Tr{P_L(\slashed{l}+\slashed{k})\gamma^\mu P_LP_L\slashed{l}\gamma^\nu P_L}}{(l+k)^2l^2}-i(Z_3-1)(k^2g^{\mu\nu}-k^\mu k^\nu)+\pazocal{O}(g^4)
+\]
+Inside the trace in the numerator, we have $P_L^2=P_L$, $P_L\gamma^\mu=P_R\gamma^\mu$ and $P_L\gamma^\mu\gamma^\nu=\gamma^\mu\gamma^\nu P_L$ so all the $P_L$ can be collapsed into one, giving us:
+\[
+\Tr{P_L(\slashed{l}+\slashed{k})\gamma^\mu P_LP_L\slashed{l}\gamma^\nu P_L}=\Tr{(\slashed{l}+\slashed{k})\gamma^\mu\slashed{l}\gamma^\nu P_L}
+\]
+$P_L=(1-\gamma_5)/2$, the term with $1/2$ simply gives us half the result that we get with a Dirac field, the term with $-\gamma_5/2$ yields a vanishing contribution to $\Pi^{\mu\nu}$:\marginnote{$\Tr{\gamma_5\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma}=-4i\epsilon^{\mu\nu\rho\sigma}$}
+\[
+-\frac{1}{2}\Tr{(\slashed{l}+\slashed{k})\gamma^\mu\slashed{l}\gamma^\nu\gamma_5}=2i\epsilon^{\alpha\mu\beta\nu}(l+k)_\alpha l_\beta=2i\epsilon^{\alpha\mu\beta\nu}k_\alpha l_\beta
+\]
+Therefore, what we have is:
+\[
+\Pi^{\mu\nu}(k)=\frac{1}{2}\Pi^{\mu\nu}(k)_{Dirac}-2g^2\epsilon^{\alpha\mu\beta\nu}k_\alpha\int\frac{d^4l}{(2\pi)^4}\frac{l_\beta}{(l+k)^2l^2}-(Z_3-1)(k^2g^{\mu\nu}-k^\mu k^\nu)+\pazocal{O}(g^4)
+\]
+The integral is logarithmically divergent, carries a single index $\beta$ and depends only on the vector $k$: it must be some quantity proportional to $k_\beta$. This contribution vanishes when contracted with $\epsilon^{\alpha\mu\beta\nu}k_\alpha$. At 1-loop level, the contribution to the photon propagator of a single charged Weyl field is half of that of a Dirac field,\marginnote{This is physically reasonable since a Dirac field is equivalent to two charged Weyl fields.} nothing interesting happens at this level.
+
+We now bring our attention to diagrams with three external photons and no external fermions [\reffig{3photons}]:
+\begin{figure}[h]
+    \centering
+    \includegraphics[wodth=0.8\textwidth]{Images/3photons.pdf}
+    \caption{1-loop contributions to the three-photons vertex.}
+    \labfig{3photons}
+\end{figure}
+\[
+iV^{\mu\nu\rho}(p,q,r)=(-1)(ig)^3\left(\frac{1}{i}\right)^3\int\frac{d^4l}{(2\pi)^4}\frac{\Tr{(-\slashed{l}+\slashed{p})\gamma^\mu(-\slashed{l})\gamma^\nu(-\slashed{l}-\slashed{q})\gamma^\rho P_L}}{(l-p)^2l^2(l+q)^2}+(p,\mu\xleftrightarrow[]{}q,\nu)+\pazocal{O}(g^5)
+\]
+As before, the term in the numerator with $P_L\to1/2$ gives half the result that we get with a Dirac field, which makes a vanishing contribution to $V^{\mu\nu\rho}(p,q,r)$. We make the replacement $P_L\to-\gamma_5/2$ and we obtain:
+\[
+\Tr{(-\slashed{l}+\slashed{p})\gamma^\mu(-\slashed{l})\gamma^\nu(-\slashed{l}-\slashed{q})\gamma^\rho P_L}\to\frac{1}{2}\Tr{(\slashed{l}-\slashed{p})\gamma^\mu\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})\gamma^\rho\gamma_5}
+\]
+We would like to have $V^{\mu\nu\rho}(p,q,r)$ gauge invariant, which means having:
+\begin{equation}
+\labeq{pqr}
+\left\{
+\begin{aligned}
+&p_\mu V^{\mu\nu\rho}(p,q,r)=0 \\
+&q_\nu V^{\mu\nu\rho}(p,q,r)=0 \\
+&r_\rho V^{\mu\nu\rho}(p,q,r)=0
+\end{aligned}
+\right.
+\end{equation}
+We start by checking the last relation:
+\begin{align*}
+r_\rho N^{\mu\nu\rho}&=r_\rho\frac{1}{2}\Tr{(\slashed{l}-\slashed{p})\gamma^\mu\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})\gamma^\rho\gamma_5}\\
+&=\frac{1}{2}\Tr{(\slashed{l}-\slashed{p})\gamma^\mu\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})r_\rho\gamma^\rho\gamma_5}\marginnote{Cyclic property of the trace.}\\
+&=\frac{1}{2}\Tr{\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})\slashed{r}(\slashed{l}-\slashed{p})\gamma^\mu\gamma_5}\marginnote{$r+p+q=0\xleftrightarrow[]{}r=-(p+q)$}\\
+&=\frac{1}{2}\Tr{\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})[-(\slashed{l}+\slashed{q})+(\slashed{l}-\slashed{p})](\slashed{l}-\slashed{p})\gamma^\mu\gamma_5}
+\end{align*}
+Where we have written $\slashed{r}$ in that clever way in order to simplify the equation:
+\[
+(\slashed{l}+\slashed{q})[-(\slashed{l}+\slashed{q})+(\slashed{l}-\slashed{p})](\slashed{l}-\slashed{p})=(l+q)^2(\slashed{l}-\slashed{p})-(l-p)^2(\slashed{l}+\slashed{q})
+\]
+Now we have:
+\begin{align*}
+r_\rho N^{\mu\nu\rho}&=\frac{1}{2}(l+q)^2\Tr{\slashed{l}\gamma^\nu(\slashed{l}-\slashed{p})\gamma^\mu\gamma_5}-\frac{1}{2}(l-p)^2\Tr{\slashed{l}\gamma^\nu(\slashed{l}+\slashed{q})\gamma^\mu\gamma_5}\\
+&=-2i\epsilon^{\alpha\nu\beta\mu}[(l+q)^2l_\alpha(l-p)_\beta-(l-p)^2l_\alpha(l+q)_\beta]\\
+&=2i\epsilon^{\alpha\nu\beta\mu}[(l+q)^2l_\alpha p_\beta+(l-p)^2l_\alpha q_\beta]
+\end{align*}
+With this result, we obtain:
+\[
+r_\rho V^{\mu\nu\rho}(p,q,r)=-2g^3\epsilon^{\alpha\nu\beta\mu}\int\frac{d^4l}{(2\pi)^4}\left[\frac{l_\alpha p_\beta}{l^2(l-p)^2}-\frac{l_\alpha q_\beta}{l^2(l+q)^2}\right]+(p,\mu\xleftrightarrow[]{}q,\nu)+\pazocal{O}(g^5)
+\]
+The first term in the integrand gives us a term proportional to $p_\alpha p_\beta$, the second one a term proportional to $q_\alpha q_\beta$: both of them vanish when contracted with $\epsilon^{\alpha\nu\beta\mu}$, hence $r_\rho V^{\mu\nu\rho}(p,q,r)=0$. $iV^{\mu\nu\rho}(p,q,r)$ is not manifestly symmetric on the exchanges $(p,\mu\xleftrightarrow[]{}r,\rho)$ and\\ $(q,\nu\xleftrightarrow[]{}r,\rho)$, so we have to compute the other two terms in \refeq{pqr}.
+
+We repeat the same procedure for $p_\mu V^{\mu\nu\rho}(p,q,r)$ and what we find is:
+\[
+p_\mu V^{\mu\nu\rho}(p,q,r)=2g^3\epsilon^{\alpha\nu\beta\rho}\int\frac{d^4l}{(2\pi)^4}\left[\frac{l_\alpha q_\beta}{l^2(l+q)^2}-\frac{(l-p)_\alpha(p+q)_\beta}{(l-p)^2(l+q)^2}\right]+(p,\mu\xleftrightarrow[]{}q,\nu)+\pazocal{O}(g^5)
+\]
+The first term in the integrand gives us a term proportional to $q_\alpha q_\beta$, so it vanishes when contracted with $\epsilon^{\alpha\nu\beta\mu}$. For the second term, it is possible to make a shift $l\to l+p$:
+\[
+\frac{(l-p)_\alpha(p+q)_\beta}{(l-p)^2(l+q)^2}\to\frac{l_\alpha(p+q)_\beta}{l^2(l+p+q)^2}
+\]
+At this point, we can use the same argument as before, with the integral that must yields a term proportional to $(p+q)_\alpha(p+q)_\beta$ which vanishes when contracted with $\epsilon^{\alpha\nu\beta\mu}$, providing $p_\mu V^{\mu\nu\rho}(p,q,r)=0$. However, the integral is linearly divergent so things are not as easy as they seem. Let's make a simpler example to better understand this concept: consider a one-dimensional linearly divergent integral $I(a)$.
+\[
+I(a)=\int_{-\infty}^{+\infty}dxf(x+a)
+\]
+with $f(\pm\infty)=c_\pm$ ($c_+\neq c_-)$. If the integral had been convergent, $I(a)$ would not depend on $a$. In this case, we perform a Taylor expansion, obtaining:
+\[
+I(a)=\int_{-\infty}^{+\infty}dx\left[f(x)+af'(x)+\frac{1}{2}a^2f''(x)+\dots\right]
+\]
+When integrating the derivatives at orders higher than one, they vanish since $f(\pm\infty)$ is a constant, so we are left with:
+\[
+I(a)=I(0)+a(c_+-c_-)
+\]
+We go back to our case:
+\[
+f_\alpha(l):=\frac{l_\alpha}{l^2(l+p+q)^2} \quad \int\frac{d^4l}{(2\pi)^4}f_\alpha(l)=A(p+q)
+_\alpha
+\]
+Consider now $l\to l-p$:
+\[
+f_\alpha(l-p)=f_\alpha(l)-p^\beta\frac{\partial f_\alpha(l)}{\partial l^\beta}
+\]
+We know the contribution coming from the first term, so we bring our attention to the second term:
+\begin{align*}
+-p^\beta\int\frac{d^4l}{(2\pi)^4}\frac{\partial f_\alpha(l)}{\partial l^\beta}&\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  Wick's rotation};}}{=}-ip^\beta\lim_{l\to+\infty}\int\frac{dS_\beta}{(2\pi)^4}f_\alpha(l)=-ip^\beta\lim_{l\to+\infty}\int\frac{d\Omega}{(2\pi)^4}\frac{l^2l_\betal_\alpha}{l^2(l+p+q)^2}\\
+&=-ip^\beta\frac{\Omega_4}{(2\pi)^4}\frac{1}{4}g_{\alpha\beta}=-ip^\beta\frac{g_{\alpha\beta}}{32\pi^2}
+\end{align*}
+Combining all of this together, the final result is:
+\[
+\int\frac{d^4l}{(2\pi)^4}f_\alpha(l-p)=\int\frac{d^4l}{(2\pi)^4}\frac{(l-p)_\alpha}{(l-p)^2(l+q)^2}=A(p+q)_\alpha-\frac{i}{32\pi^2}p_\alpha
+\]
+At this point, we are ready to compute $p_\mu V^{\mu\nu\rho}(p,q,r)$:
+\begin{align*}
+p_\mu V^{\mu\nu\rho}(p,q,r)&=\frac{ig^3}{16\pi^2}\epsilon^{\alpha\nu\beta\rho}p_\alpha(p+q)_\beta+(p,\mu\xleftrightarrow[]{}q,\nu)+\pazocal{O}(g^5)\\
+&=\frac{ig^3}{8\pi^2}\epsilon^{\alpha\nu\beta\rho}p_\alpha q_\beta+\pazocal{O}(g^5)
+\end{align*}
+Following analogous calculations, one also finds:
+\[
+q_\nu V^{\mu\nu\rho}(p,q,r)=\frac{ig^3}{8\pi^2}\epsilon^{\alpha\rho\beta\mu}q_\alpha p_\beta+\pazocal{O}(g^5)
+\]
+This shows that the three-photon vertex does not exhibit the expected symmetry among the external lines.\marginnote{\textit{"This concept is not easy to digest, it's not like arrosticini"}. Also, do not have arrosticini with vino rosso otherwise it is game over.} The gauge symmetry is not conserved, due to the fact that the integral we computed is divergent and making a shift changes its value. We can set $a_\mu=c(p_\mu-q_\mu)$ and write:
+\begin{equation}
+\labeq{pqr2}
+\left\{
+\begin{aligned}
+&p_\mu V^{\mu\nu\rho}(p,q,r)=-\frac{ig^3}{8\pi^2}(1-c)\epsilon^{\nu\rho\alpha\beta}q_\alpha r_\beta+\pazocal{O}(g^5)\\
+&q_\nu V^{\mu\nu\rho}(p,q,r)=-\frac{ig^3}{8\pi^2}(1-c)\epsilon^{\rho\mu\alpha\beta}r_\alpha p_\beta+\pazocal{O}(g^5)\\
+&r_\rho V^{\mu\nu\rho}(p,q,r)=-\frac{ig^3}{8\pi^2}2c\epsilon^{\mu\nu\alpha\beta}p_\alpha q_\beta+\pazocal{O}(g^5)
+\end{aligned}
+\right.
+\end{equation}
+It is easy to see that it is not possible to choose a value of $c$ that cancels all the anomalies: we have failed in constructing a gauge-invariant U(1) theory with a single charged Weyl field.
+
+Consider now a U(1) gauge theory with multiple left-handed charged Weyl fields $\psi_i$ with charges $Q_i$, the covariant derivative is $(\partial_\mu-igQ_iA_\mu)\psi_i$. Each vertex in \reffig{3photons} gains an extra factor $Q_i$, so the right-hand sides of \refeq{pqr2} gets multiplied by a factor $\sum_i Q_i^3$: if this sum happens to be zero, then gauge invariance is restored. The simplest possible case is to have the fields coming in pairs with equal and opposite charges, but we can also have one field with charge +2 and eight fields with charge -1.\\
+We can generalize this idea to non-Abelian gauge theories. Suppose to have a single Weyl field in a representation $R$: we gain an extra factor $\Tr{T_R^aT_R^bT_R^c}$\marginnote{Indices $a.b.c$ go along with $p,q,r$.}. Combining it with $P_L$ gives us:\\
+\begin{center}
+\begin{tikzcd}
+&\frac{1}{2}\Tr{[T_R^a,T_R^b]T_R^c}=\frac{i}{2}T(R)f^{abc}T_R^c\\
+P_L=\frac{1-\gamma_5}{2} \arrow[ru, "1/2"] \arrow[rd, "-\gamma_5/2"] \\
+& \frac{1}{2}\Tr{T_R^a\{T_R^b,T_R^c\}}=A(\text{R})d^{abc}
+\end{tikzcd}
+\end{center}
+The $1/2$ term contributes to the renormalization of the tree-level three-gluon vertex, for the $\gamma_5$ term we have the completely symmetric tensor $d^{abc}$ and $A(\text{R})$ which is the anomaly coefficient of the representation R. In order for this theory to exist, it must be $A(\text{R})=0$: a theory with left-handed Weyl fields coming in R$\oplus\Bar{\text{R}}$ is automatically anomaly free since $A(\Bar{\text{R}})=-A$(R). In all the other cases, we must arrange the cancellation by hand. For SU(2) and SO(N), all representations have $A($R)=0, for SU(N) with N>3 the cancellation is not trivial.
+
+We have to check that the SM is anomaly free. The gauge group is G=SU$(3)_C\times$SU$(2)_L\times$U$(1)_Y$.
+\[
+\left\{
+\begin{aligned}
+&\text{U}(1)_Y^3=\sum_i[(2Y_{L_i}^3-Y_{e_i}^3)+3(2Y_{Q_i}^3-Y_{u_i}^3-Y_{d_i}^3)]=0\\
+&\text{SU}(2)_L^3=0 \qquad \text{SU}(3)_C^3=0\\
+&\text{SU}(3)_C\text{SU}(2)_L\text{U}(1)_Y=\Tr{T_{\text{SU}(3)_C}[T_{\text{SU}(2)_L},T_{\text{U}(1)_Y}]}\propto\Tr{T_{\text{SU}(3)_C}}=0\\
+&\text{SU}(3)_C\text{U}(1)_Y^2, \text{SU}(2)_L\text{U}(1)_Y^2, \text{SU}(3)_C\text{SU}(2)_L^2, \text{SU}(3)_C^2\text{SU}(2)_L=0\\
+&\text{SU}(3)_C^2\text{U}(1)_Y=\sum_i(-6Y_{Q_i}-3Y_{u_i}-3Y_{d_i})=0\\
+&\text{SU}(2)_L^2\text{U}(1)_Y=\sum_i(2Y_{L_i}+6Y_{Q_i})=0
+\end{aligned}
+\right.
+\]
+\subsection{Anomalies in Global Symmetries}
+The simplest example is QED with a massless Dirac field $\Psi$ with charge $Q=+1$ and Lagrangian given by:
+\[
+\pazocal{L}=-\frac{1}{4}F^{\mu\nu,a}F_{\mu\nu}^a+i\Bar{\Psi}(\slashed{\partial}-igA)\Psi\marginnote{We call the coupling constant $g$ instead of $e$ because we are using this theory as a formal example rather than a physical one.}
+\]
+This Lagrangian is invariant under a U(1) transformation:
+\[
+\left\{
+\begin{aligned}
+&\Psi\to e^{-i\alpha(x)}\Psi\\
+&\Bar{\Psi}\to e^{+i\alpha(x)}\Bar{\Psi}\\
+&A_\mu(x)\to A_\mu(x)+\partial_\mu\alpha(x)
+\end{aligned}
+\right.
+\]
+From which we obtain the conserved current $J^\mu=\Bar{\Psi}\gamma^\mu\Psi$. Due to the absence of the mass term, we also have an axial symmetry U$(1)_A$:
+\[
+\left\{
+\begin{aligned}
+&\Psi\to e^{-i\beta\gamma_5}\Psi\\
+&\Bar{\Psi}\to e^{+i\beta\gamma_5}\Bar{\Psi}
+\end{aligned}
+\right.
+\]
+This result in a current $J_A^\mu=\Bar{\Psi}\gamma^\mu\gamma_5\Psi$ which is not conserved but instead has a divergence:
+\[
+\partial_\mu J^\mu_A=-\frac{g^2}{16\pi^2}\epsilon^{\mu\nu\rho\sigma}F_{\mu\nu}F_{\rho\sigma}
+\]
+To prove this, consider the matrix element $\bra{p,q}J_A^\rho(x)\ket{0}$ where $\bra{p,q}$ is a state of two outgoing photons with four-momenta $p,q$ and polarizations $\varepsilon_\mu,\varepsilon_\nu'$.
+\[
+\bra{p,q}J_A^\rho(x)\ket{0}\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize LSZ formula for photons };}}{=}(ig)^2\varepsilon_\mu\varepsilon_\nu'\int d^4xd^4ye^{-i(px+qy)}\bra{0}T[J^\mu(x)J^\nu(y)J^\rho_A(z)]\ket{0}
+\]
+$J^\mu(x)$ and $J^\nu(y)$ are the usual currents corresponding to the U(1) gauge symmetry.
 \end{document}
