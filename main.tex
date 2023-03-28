@@ -1,0 +1,421 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% kaobook
+% LaTeX Template
+% Version 1.2 (4/1/2020)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% For the latest template development version and to make contributions:
+% https://github.com/fmarotta/kaobook
+%
+% Authors:
+% Federico Marotta (federicomarotta@mail.com)
+% Based on the doctoral thesis of Ken Arroyo Ohori (https://3d.bk.tudelft.nl/ken/en)
+% and on the Tufte-LaTeX class.
+% Modified for LaTeX Templates by Vel (vel@latextemplates.com)
+%
+% License:
+% CC0 1.0 Universal (see included MANIFEST.md file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	fontsize=10pt, % Base font size
+	twoside=false, % Use different layouts for even and odd pages (in particular, if twoside=true, the margin column will be always on the outside)
+	%open=any, % If twoside=true, uncomment this to force new chapters to start on any page, not only on right (odd) pages
+	%chapterprefix=true, % Uncomment to use the word "Chapter" before chapter numbers everywhere they appear
+	%chapterentrydots=true, % Uncomment to output dots from the chapter name to the page number in the table of contents
+	numbers=noenddot, % Comment to output dots after chapter numbers; the most common values for this option are: enddot, noenddot and auto (see the KOMAScript documentation for an in-depth explanation)
+	%draft=true, % If uncommented, rulers will be added in the header and footer
+	%overfullrule=true, % If uncommented, overly long lines will be marked by a black box; useful for correcting spacing problems
+]{kaobook}
+
+% Set the language
+\usepackage[italian]{babel} % Load characters and hyphenation
+\usepackage[english=british]{csquotes} % English quotes
+
+% Load packages for testing
+\usepackage{blindtext}
+%\usepackage{showframe} % Uncomment to show boxes around the text area, margin, header and footer
+%\usepackage{showlabels} % Uncomment to output the content of \label commands to the document where they are used
+
+% Load the bibliography package
+\usepackage{styles/kaobiblio}
+\addbibresource{main.bib} % Bibliography file
+
+% Load mathematical packages for theorems and related environments. NOTE: choose only one between 'mdftheorems' and 'plaintheorems'.
+\usepackage{styles/mdftheorems}
+%\usepackage{styles/plaintheorems}
+\usepackage{physics}
+\usepackage{tikz, mathtools}
+\usepackage{boxedminipage}
+\usepackage{svg}
+\usepackage{wrapfig}
+\usetikzlibrary{arrows.meta, bending, chains}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{calrsfs}
+\usepackage{nccmath}
+\usepackage{witharrows}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\usepackage{enumitem}
+\usepackage{tikz-cd} % For the curved arrows under the equations
+\newcommand\bigLambda{\makebox(3,3){\text{\huge $\Lambda_{\mu\nu}$}}}
+\newcommand\bigR{\makebox(3,3){\text{\huge $R$}}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+\usepackage{nicematrix} %Fa le matrici ciotte
+\usepackage{tikz}
+\usepackage{blkarray}
+\usepackage{multirow}
+\usepackage{arydshln}
+%\usepackage[fleqn,tbtags]{mathtools}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+% \tikzstyle{H} = [solid,<->,yshift=-2mm]
+% \tikzstyle{V} = [solid,<->,xshift=8mm]
+%\newcommand{\eps}{\varepsilon}
+\newcommand*{\img}[1]{%
+    \raisebox{-1.9\baselineskip}{%
+        \includegraphics[
+        height=2cm,
+        width=4cm,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+\newcommand*\mycirc[1]{%
+   \begin{tikzpicture}
+     \node[draw,circle,inner sep=1pt] {#1};
+   \end{tikzpicture}}
+\graphicspath{{examples/documentation/images/}{images/}} % Paths in which to look for images
+\usepackage{cancel}
+\usepackage{nicefrac}
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\usepackage{subfiles} % Best loaded last in the preamble
+\usepackage{soul}
+\usepackage{xcolor}
+\definecolor{red}{RGB}{255, 0, 0}
+\definecolor{blue}{RGB}{0, 0, 255}
+\renewcommand{\CancelColor}{\color{red}}
+\makeindex[columns=3, title=Indice analitico, intoc]% Make LaTeX produce the files required to compile the index
+%~~~~~~~~~~~~~~~~~~~~
+\usepackage{slashed}
+\usepackage{braket}
+%\usepackage[compat=1.0.0]{tikz-feynman}
+
+\makeglossaries % Make LaTeX produce the files required to compile the glossary
+
+\makenomenclature % Make LaTeX produce the files required to compile the nomenclature
+
+% Reset sidenote counter at chapters
+%\counterwithin*{sidenote}{chapter}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	BOOK INFORMATION
+%----------------------------------------------------------------------------------------
+
+\titlehead{The \texttt{kaobook} class}
+\subject{Appunti del corso di}
+
+\title[Weak Interactions in the Standard Model and Beyond]{Weak Interactions in the Standard Model and Beyond}
+\subtitle{Anno accademico 2022/2023\\Corso tenuto dai Proff. Roberto Contino \& Marco Nardecchia}
+
+\author[Matteo D'Errigo]{Matteo D'Errigo\thanks{Un amante dei panini}}
+
+\date{\today}
+
+%\publishers{Nemo}
+
+%----------------------------------------------------------------------------------------
+
+\frontmatter % Denotes the start of the pre-document content, uses roman numerals
+
+%----------------------------------------------------------------------------------------
+%	OPENING PAGE
+%----------------------------------------------------------------------------------------
+
+% \makeatletter
+% \extratitle{
+%	% In the title page, the title is vspaced by 9.5\baselineskip
+%	\vspace*{9\baselineskip}
+%	\vspace*{\parskip}
+%	\begin{center}
+%		% In the title page, \huge is set after the komafont for title
+%		\usekomafont{title}\huge\@title
+%	\end{center}
+%}
+%\makeatother
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\makeatletter
+\uppertitleback{\@titlehead} % Header
+
+\lowertitleback{
+    \textbf{Versione aggiornata}\\
+	Puoi trovare la versione aggiornata di questo testo, insieme al suo codice \LaTeX  all'indirizzo:\\
+	\url{https://it.overleaf.com/project/6421cb2c985d3113d7451602}\\
+	%E una versione italiana del testo qua:\\
+	%\url{https://www.overleaf.com/read/ntmsgsnnjjqs}\\
+	
+	\medskip
+	
+	\textbf{No copyright}\\
+	\cczero\ This book is released into the public domain using the CC0 code. To the extent possible under law, I waive all copyright and related or neighbouring rights to this work.
+	
+	Per vedere una copia del codice cc0 si può visitare il sito: \\\url{http://creativecommons.org/publicdomain/zero/1.0/}
+	
+	\medskip
+	
+	\textbf{Colophon} \\
+	This document was typeset with the help of \href{https://sourceforge.net/projects/koma-script/}{\KOMAScript} and \href{https://www.latex-project.org/}{\LaTeX} using the \href{https://github.com/fmarotta/kaobook/}{kaobook} class.
+	
+	Il codice sorgente di questo libro è disponibile su:\\\url{https://github.com/fmarotta/kaobook}
+	
+	(Il tuo contributo è benvenuto!)
+	
+	\medskip
+	
+
+
+	
+	    
+	\textbf{Publisher} \\
+	First wrote in October 2022 by me :)
+}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+% \dedication{
+% 	Symmetry, as wide or narrow as you may define its meaning, is one idea by which man through the ages has tried to comprehend and create order, beauty and perfection.\\
+% 	\begin{flushright} -- H. Weyl, Symmetry
+% 	\end{flushright}
+% 	\newline
+% 	\small{\newline La simmetria, per quanto ampio o stretto si possa definire il suo significato, è un'idea con cui l'uomo nel corso dei secoli ha cercato di comprendere e creare ordine, bellezza e perfezione.}\\
+% 	\begin{flushright} -- H. Weyl, Symmetry	
+% 	\end{flushright}    
+% }
+
+%----------------------------------------------------------------------------------------
+%	OUTPUT TITLE PAGE AND PREVIOUS
+%----------------------------------------------------------------------------------------
+
+% Note that \maketitle outputs the pages before here
+
+% If twoside=false, \uppertitleback and \lowertitleback are not printed
+% To overcome this issue, we set twoside=semi just before printing the title pages, and set it back to false just after the title pages
+\KOMAoptions{twoside=semi}
+\maketitle
+\KOMAoptions{twoside=false}
+
+%----------------------------------------------------------------------------------------
+%	PREFACE
+%----------------------------------------------------------------------------------------
+
+%\input{chapters/preface.tex}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LIST OF FIGURES/TABLES
+%----------------------------------------------------------------------------------------
+
+\begingroup % Local scope for the following commands
+
+% Define the style for the TOC, LOF, and LOT
+%\setstretch{1} % Uncomment to modify line spacing in the ToC
+%\hypersetup{linkcolor=blue} % Uncomment to set the colour of links in the ToC
+\setlength{\textheight}{23cm} % Manually adjust the height of the ToC pages
+
+% Turn on compatibility mode for the etoc package
+\etocstandarddisplaystyle % "toc display" as if etoc was not loaded
+\etocstandardlines % toc lines as if etoc was not loaded
+
+\tableofcontents % Output the table of contents
+
+%\listoffigures % Output the list of figures
+
+% Comment both of the following lines to have the LOF and the LOT on different pages
+\let\cleardoublepage\bigskip
+\let\clearpage\bigskip
+
+%\listoftables % Output the list of tables
+
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	MAIN BODY
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Denotes the start of the main document content, resets page numbering and uses arabic numbers
+\setchapterstyle{kao} % Choose the default chapter heading style
+
+%\part{Introduction}
+\subfile{chapters/1_Intro}
+%\part{Manifold and differential forms}
+\subfile{chapters/2_Nardecchia}
+\subfile{chapters/3_Contino}
+% \subfile{chapters/4_differential_forms_I}
+% \subfile{chapters/5_differential_forms_II}
+% \subfile{chapters/6_Electrodynamics and differential forms}
+% \part{Groups}
+% \dedication{
+% 	The beginner should not be discouraged if he finds that he does not have the prerequisites to read the prerequisites.\\
+% 	\begin{flushright} -- \href{https://it.wikipedia.org/wiki/Paul_Halmos}{P. Halmos} in \cite{Halmos1950}
+% 	\end{flushright}
+% 	\newline
+% 	\small{\newline Il principiante non deve scoraggiarsi se scopre di non avere i prerequisiti per leggere i prerequisiti.}\\
+% 	\begin{flushright} -- P. Halmos
+% 	\end{flushright}    
+% }
+% \subfile{chapters/7_Fundamental concepts}
+% \subfile{chapters/8_Lie_Groups_I}
+% \subfile{chapters/9_Lie_Groups_II}
+% \subfile{chapters/10_Lie_Groups_III}
+% \subfile{chapters/11_Two_Brothers}
+% \subfile{chapters/12_Matrix_Exponential_and_Logarithm}
+% \subfile{chapters/13_Tool:Polar_decomposition}
+% \subfile{chapters/14_Lie_Algebra_of_a_Matrix_Lie_Group}
+% \subfile{chapters/15_The exponential map_of_G}
+% \subfile{chapters/16_Group_Theory_and_Quantum_Mechanics}
+% \subfile{chapters/17_Representation_Theory}
+% \subfile{chapters/18_Representations_of_sl2c}
+% \subfile{chapters/19_Representations_of_sl3c}
+% \subfile{chapters/20_Lorentz_and_Poincare_groups}
+% \part{Exercises}
+% \subfile{chapters/21_Starred_Exercises}
+
+%\appendix % From here onwards, chapters are numbered with letters, as is the appendix convention
+
+%\pagelayout{wide} % No margins
+%\addpart{Appendice}
+%\pagelayout{margin} % Restore margins
+
+%\input{chapters/appendix.tex}
+
+%----------------------------------------------------------------------------------------
+
+\backmatter % Denotes the end of the main document content
+\setchapterstyle{plain} % Output plain chapters from this point onwards
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+% The bibliography needs to be compiled with biber using your LaTeX editor, or on the command line with 'biber main' from the template directory
+
+\defbibnote{bibnote}{Here are listed the references sorted by citation in the text.\par\bigskip} % Prepend this text to the bibliography
+\printbibliography[heading=bibintoc, title=References, prenote=bibnote] % Add the bibliography heading to the ToC, set the title of the bibliography and output the bibliography note
+
+%----------------------------------------------------------------------------------------
+%	NOMENCLATURE
+%----------------------------------------------------------------------------------------
+
+% The nomenclature needs to be compiled on the command line with 'makeindex main.nlo -s nomencl.ist -o main.nls' from the template directory
+
+% \nomenclature{$c$}{Velocità della luce nel vuoto in un sistema di riferimento inerziale}
+% \nomenclature{$h$}{Costante di Planck}
+% \nomenclature{$H$}{Hamiltoniana o funzione di Hamilton}
+% \nomenclature{$\mathbb{H}$}{Insieme dei quaterioni}
+% \nomenclature{$\mathcal{H}$}{Spazio di Hilbert - \textit{Hilbert space}}
+% \nomenclature{$\mathbb{N}$}{Numeri naturali - \textit{Natural numbers}}
+% \nomenclature{$E$}{Spazio di Banach - \textit{Banach space}}
+% \nomenclature{$U$}{Operatore unitario}
+% \nomenclature{$\textrm{U}$}{Gruppo di Lie degli operatori unitari}
+% \nomenclature{$\pazocal{U}$}{Gruppo degli operatori unitari nello spazio di Hilbert (usato in QM)}
+% \nomenclature{$\mathfrak{g}, \mathfrak{h}$}{Algebra di Lie (matriciale) - \textit{(matrix) Lie algebra}}
+
+% \renewcommand{\nomname}{Notazione} % Rename the default 'Nomenclature'
+% \renewcommand{\nompreamble}{Il seguente elenco descrive alcuni simboli che sono usati in questo documento.} % Prepend this text to the nomenclature
+
+% \printnomenclature % Output the nomenclature
+
+% %----------------------------------------------------------------------------------------
+% %	GREEK ALPHABET
+% % 	Originally from https://gitlab.com/jim.hefferon/linear-algebra
+% %----------------------------------------------------------------------------------------
+
+% \vspace{1cm}
+
+% {\usekomafont{chapter}Lettere greche con pronuncia inglese} \\[2ex]
+% \begin{center}
+% 	\newcommand{\pronounced}[1]{\hspace*{.2em}\small\textit{#1}}
+% 	\begin{tabular}{l l @{\hspace*{3em}} l l}
+% 		\toprule
+% 		Carattere & Nome & Carattere & Nome \\ 
+% 		\midrule
+% 		$\alpha$ & alpha \pronounced{AL-fuh} & $\nu$ & nu \pronounced{NEW} \\
+% 		$\beta$ & beta \pronounced{BAY-tuh} & $\xi$, $\Xi$ & xi \pronounced{KSIGH} \\ 
+% 		$\gamma$, $\Gamma$ & gamma \pronounced{GAM-muh} & o & omicron \pronounced{OM-uh-CRON} \\
+% 		$\delta$, $\Delta$ & delta \pronounced{DEL-tuh} & $\pi$, $\Pi$ & pi \pronounced{PIE} \\
+% 		$\epsilon$ & epsilon \pronounced{EP-suh-lon} & $\rho$ & rho \pronounced{ROW} \\
+% 		$\zeta$ & zeta \pronounced{ZAY-tuh} & $\sigma$, $\Sigma$ & sigma \pronounced{SIG-muh} \\
+% 		$\eta$ & eta \pronounced{AY-tuh} & $\tau$ & tau \pronounced{TOW (as in cow)} \\
+% 		$\theta$, $\Theta$ & theta \pronounced{THAY-tuh} & $\upsilon$, $\Upsilon$ & upsilon \pronounced{OOP-suh-LON} \\
+% 		$\iota$ & iota \pronounced{eye-OH-tuh} & $\phi$, $\Phi$ & phi \pronounced{FEE, or FI (as in hi)} \\
+% 		$\kappa$ & kappa \pronounced{KAP-uh} & $\chi$ & chi \pronounced{KI (as in hi)} \\
+% 		$\lambda$, $\Lambda$ & lambda \pronounced{LAM-duh} & $\psi$, $\Psi$ & psi \pronounced{SIGH, or PSIGH} \\
+% 		$\mu$ & mu \pronounced{MEW} & $\omega$, $\Omega$ & omega \pronounced{oh-MAY-guh} \\
+% 		\bottomrule
+% 	\end{tabular} \\[1.5ex]
+% 	Capitals shown are the ones that differ from Roman capitals.
+% \end{center}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+
+% The glossary needs to be compiled on the command line with 'makeglossaries main' from the template directory
+
+\newglossaryentry{computer}{
+	name=computer,
+	description={is a programmable machine that receives input, stores and manipulates data, and provides output in a useful format}
+}
+
+% Glossary entries (used in text with e.g. \acrfull{fpsLabel} or \acrshort{fpsLabel})
+\newacronym[longplural={Frames per Second}]{fpsLabel}{FPS}{Frame per Second}
+\newacronym[longplural={Tables of Contents}]{tocLabel}{TOC}{Table of Contents}
+
+\setglossarystyle{listgroup} % Set the style of the glossary (see https://en.wikibooks.org/wiki/LaTeX/Glossary for a reference)
+\printglossary[title=Special Terms, toctitle=List of Terms] % Output the glossary, 'title' is the chapter heading for the glossary, toctitle is the table of contents heading
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+% The index needs to be compiled on the command line with 'makeindex main' from the template directory
+
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+%	BACK COVER
+%----------------------------------------------------------------------------------------
+
+% If you have a PDF/image file that you want to use as a back cover, uncomment the following lines
+
+%\clearpage
+%\thispagestyle{empty}
+%\null%
+%\clearpage
+%\includepdf{cover-back.pdf}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
