@@ -559,9 +559,61 @@ In the SM point, in principle we can extrapolate the theory to very very high en
 \[
 V(H)=-\mu^2(H^\dagger H)+\lambda(H^\dagger H)^2
 \]
-The coupling $\lambda$ will have contributions from itself and from the top quark:
+The coupling $\lambda$ will have contributions from itself and from the top quark:\marginnote[-1cm]{\includegraphics[]{Images/betatbetal.pdf}\\
+Contributions for $\beta_\lambda$ and $\beta_t$.}
 \[
 \mu\frac{d}{d\mu}\lambda=\frac{\beta_\lambda}{16\pi^2}\lambda^2+\frac{\beta_t}{16\pi^2}y_t^4
 \]
-%Mancano gli ultimi 14 minuti circa di registrazione in cui Contino apriva una parentesi di un argomento "too technical" e mi sono rifiutato di andare oltre
+$\beta_\lambda$ is positive but $\beta_t$ is negative. Notice that $\lambda$ morally is the coupling squared, loss of perturbation theory occurs for $\lambda$ of order $16\pi^2$. There are two compelling effects in this story and it depends on the initial condition: if we start with a very small value of $\lambda$, i.e. light Higgs, then the first term would be subleading with respect to the top term which will win and the coupling will decrease as we go up in energy. On the other hand, if $\lambda$ at the initial point is large, i.e. heavy Higgs, then the first term will dominate, the coupling will increase by running up in energy and perturbative unitarity will be lost at a certain point. It turns out that the Higgs is light so the first term is subleading, the initial conditions are so small that the top ends up winning. The coupling decreases with the energy and there is a very very high energy at which $\lambda$ crosses the zero and becomes negative. One might now be worried that a negative $\lambda$ corresponds to a potential which is unbound from below.\marginnote{There is a connection between the evolution of $\lambda$ as a function of the energy and the stability of the vacuum, but it is a bit technical so I will skip it.}
+%La roba a bit technical sta da 1:27:43 in poi lezione del 05/12
+\section{Higgs Physics at LHC: an Overview}
+Let's start by going quickly through production and decay. How can we produce a Higgs boson? It has to come from the interaction of particles with sufficiently high energy. At LEP they tried with $e^+e^-\to Zh$:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/higgslep.pdf}
+    \caption*{}
+    \labfig{higgslep}
+\end{figure}\\
+This process requires having an invariant mass of $\sqrt{s}>m_h+m_Z$ and there was not enough energy to make it happen. At LHC more energy was available but it is a much more complicated environment: basically protons are smashed together. Protons are composite particles made of three quarks as we know and $\sqrt{s}$ was 7 TeV at the time of the discovery, then it went up to 8 TeV and finally to 13 TeV. The first two values correspond to Run 1, the latter to Run 2. Run 3 just started with increased energy but analyzed data from Run 3 are not available yet, so the results will come from Run 1 and Run 2 and we will consider the integrated luminosity of Run 2 much larger than the one of Run 1.\\
+How can the Higgs boson be produced at LHC? It has couplings with the quarks so the process is the following:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/qqhiggs.pdf}
+    \caption*{}
+    \labfig{qqhiggs}
+\end{figure}\\
+However, this vertex is proportional to $m_q/v$ so it is large if we have the top quark but unfortunately the top quark is not one of the valence quarks. But in addition to the valence quarks there are also the sea quarks, i.e. quarks that are produced by fluctuations in the vacuum coming from the facts that these quarks radiate  virtual gluons which split and in principle it is possible to have everything. We can even think of having a top out of this but it is very difficult, it has a very small probability to happen. Creating a bottom is more feasible, the probability of having a bottom inside a proton is not entirely negligible. It turns out that at the energy of the LHC, the probability to get a gluon inside the partons is very large, so one of the main process that it is possible to have is \textbf{gluon-gluon fusion} (GGF). These two gluons can meet and interact: 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/ggf.pdf}
+    \caption*{}
+    \labfig{ggf}
+\end{figure}\\
+In the loop, the top quark will give the largest contribution. Despite the fact that this is a one-loop effect, it gives the largest cross section at LHC.\\
+Then there is the coupling with vector bosons, however extracting the $W$ from the proton is difficult and very very rare. We then start with quarks and radiate a $W$ from the quarks, so the process which goes under the name of \textbf{vector boson fusion} (VBF) is:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/vbf.pdf}
+    \caption*{}
+    \labfig{vbf}
+\end{figure}\\
+Here the final state is not just the Higgs but the Higgs plus two quarks and it turns out that these quarks are very forward. Normally we have an interaction along the $z$-axis and the products in the final state have a certain distribution but particles that are very close to the beam line are more difficult to detect because there is other stuff which goes forward: two quarks can interact but the rest of the protons travel and hit the detector as well in the forward direction. It is much more clean to look at what happens in the transverse direction.\\
+VBF has a cross section which is way smaller than GGF because we need to have a $W$ or $Z$ boson radiated from the quarks, there are couplings involved. It is true that in GGF there is a loop but the couplings are strong and they are larger than the ones in VBF.\\
+There is also associated Higgs production which is when we have $q\overline{q}\to W/Zh$:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/higgsprod.pdf}
+    \caption*{}
+    \labfig{higgsprod}
+\end{figure}\\
+Here it has to be $Z$ when the initial state is neutral, so final state has to be neutral as well, but it could be a $W$ when the initial state is charged, e.g. when we have $u\overline{d}$. At LHC, $\overline{q}$ is a sea quark, i.e. not one of the three valence quarks, it comes from fluctuations of the vacuum of a virtually produced gluon. Associated Higgs production is again less frequent than GGF. Finally, there is another process which uses the coupling with the top:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/tth.pdf}
+    \caption*{}
+    \labfig{tth}
+\end{figure}\\
+The price to pay is that the top appears also in the final state of other processes so it is possible to have the gluons and then a $t\overline{t}$ pair to which we attach the Higgs. This is $t\overline{t}h$ production which requires a very large $\sqrt{s}$ so its cross section is one of the smallest ones.\\
+\marginnote{\includegraphics[-2cm]{Images/higgsplot.pdf}\\NNLO is the Next to Next Leading Order and represents some important corrections.}In the plot on the side, a summary of the various cross sections for different values of $m_h$ is shown. The Higgs mass is 125 GeV so we should look at the hierarchy highlighted by the cyan arrow. The total cross section is the sum of all cross sections of these processes and at $\sqrt{s}=13$\,TeV it turns out to be 56 pb. How many Higgs bosons are produced at LHC? In Run 1 there were something like 70k Higgs bosons while in Run 2 almost a million were produced, 900k. Be careful because these are the ones which were produced, they have to be detected and at this point it depends on how the Higgs boson decay.\\
+The Higgs boson decays into two quarks $H\toq\overline{q}$ but it cannot go into two tops since $m_t=173$\,GeV$>m_h=125$\,GeV, so the largest decay channel into quarks is $b\overline{b}$. This has a branching ratio of something like 60\%. However, detecting $b\overline{b}$ and distinguishing it from all the other quarks that can be produced at LHC is a very difficult challenge. These quarks transform themselves into jets and when the energy decreases they start to form hadrons. This transition is called \textbf{hadronization}, some hadrons can be unstable and they will decay.  
 \end{document}
