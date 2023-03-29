@@ -567,18 +567,19 @@ Contributions for $\beta_\lambda$ and $\beta_t$.}
 $\beta_\lambda$ is positive but $\beta_t$ is negative. Notice that $\lambda$ morally is the coupling squared, loss of perturbation theory occurs for $\lambda$ of order $16\pi^2$. There are two compelling effects in this story and it depends on the initial condition: if we start with a very small value of $\lambda$, i.e. light Higgs, then the first term would be subleading with respect to the top term which will win and the coupling will decrease as we go up in energy. On the other hand, if $\lambda$ at the initial point is large, i.e. heavy Higgs, then the first term will dominate, the coupling will increase by running up in energy and perturbative unitarity will be lost at a certain point. It turns out that the Higgs is light so the first term is subleading, the initial conditions are so small that the top ends up winning. The coupling decreases with the energy and there is a very very high energy at which $\lambda$ crosses the zero and becomes negative. One might now be worried that a negative $\lambda$ corresponds to a potential which is unbound from below.\marginnote{There is a connection between the evolution of $\lambda$ as a function of the energy and the stability of the vacuum, but it is a bit technical so I will skip it.}
 %La roba a bit technical sta da 1:27:43 in poi lezione del 05/12
 \section{Higgs Physics at LHC: an Overview}
-Let's start by going quickly through production and decay. How can we produce a Higgs boson? It has to come from the interaction of particles with sufficiently high energy. At LEP they tried with $e^+e^-\to Zh$:
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Images/higgslep.pdf}
-    \caption*{}
-    \labfig{higgslep}
-\end{figure}\\
-This process requires having an invariant mass of $\sqrt{s}>m_h+m_Z$ and there was not enough energy to make it happen. At LHC more energy was available but it is a much more complicated environment: basically protons are smashed together. Protons are composite particles made of three quarks as we know and $\sqrt{s}$ was 7 TeV at the time of the discovery, then it went up to 8 TeV and finally to 13 TeV. The first two values correspond to Run 1, the latter to Run 2. Run 3 just started with increased energy but analyzed data from Run 3 are not available yet, so the results will come from Run 1 and Run 2 and we will consider the integrated luminosity of Run 2 much larger than the one of Run 1.\\
+\subsection{Production}
+How can we produce a Higgs boson? It has to come from the interaction of particles with sufficiently high energy. At LEP they tried with $e^+e^-\to Zh$,
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.45\textwidth]{Images/higgslep.pdf}
+%     \caption*{}
+%     \labfig{higgslep}
+% \end{figure}\\
+this process requires having an invariant mass of $\sqrt{s}>m_h+m_Z$ and there was not enough energy to make it happen. At LHC more energy was available but it is a much more complicated environment: basically protons are smashed together. Protons are composite particles made of three quarks as we know and $\sqrt{s}$ was 7 TeV at the time of the discovery, then it went up to 8 TeV and finally to 13 TeV. The first two values correspond to Run 1, the latter to Run 2. Run 3 just started with increased energy but analyzed data from Run 3 are not available yet, so the results will come from Run 1 and Run 2 and we will consider the integrated luminosity of Run 2 much larger than the one of Run 1.\\
 How can the Higgs boson be produced at LHC? It has couplings with the quarks so the process is the following:
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.4\textwidth]{Images/qqhiggs.pdf}
+    \includegraphics[width=0.35\textwidth]{Images/qqhiggs.pdf}
     \caption*{}
     \labfig{qqhiggs}
 \end{figure}\\
@@ -614,6 +615,54 @@ Here it has to be $Z$ when the initial state is neutral, so final state has to b
     \labfig{tth}
 \end{figure}\\
 The price to pay is that the top appears also in the final state of other processes so it is possible to have the gluons and then a $t\overline{t}$ pair to which we attach the Higgs. This is $t\overline{t}h$ production which requires a very large $\sqrt{s}$ so its cross section is one of the smallest ones.\\
-\marginnote{\includegraphics[-2cm]{Images/higgsplot.pdf}\\NNLO is the Next to Next Leading Order and represents some important corrections.}In the plot on the side, a summary of the various cross sections for different values of $m_h$ is shown. The Higgs mass is 125 GeV so we should look at the hierarchy highlighted by the cyan arrow. The total cross section is the sum of all cross sections of these processes and at $\sqrt{s}=13$\,TeV it turns out to be 56 pb. How many Higgs bosons are produced at LHC? In Run 1 there were something like 70k Higgs bosons while in Run 2 almost a million were produced, 900k. Be careful because these are the ones which were produced, they have to be detected and at this point it depends on how the Higgs boson decay.\\
-The Higgs boson decays into two quarks $H\toq\overline{q}$ but it cannot go into two tops since $m_t=173$\,GeV$>m_h=125$\,GeV, so the largest decay channel into quarks is $b\overline{b}$. This has a branching ratio of something like 60\%. However, detecting $b\overline{b}$ and distinguishing it from all the other quarks that can be produced at LHC is a very difficult challenge. These quarks transform themselves into jets and when the energy decreases they start to form hadrons. This transition is called \textbf{hadronization}, some hadrons can be unstable and they will decay.  
+\marginnote[-2cm]{\includegraphics{Images/higgsplot.pdf}\\NNLO is the Next to Next Leading Order and represents some important corrections.}In the plot on the side, a summary of the various cross sections for different values of $m_h$ is shown. The Higgs mass is 125 GeV so we should look at the hierarchy highlighted by the cyan arrow. The total cross section is the sum of all cross sections of these processes and at $\sqrt{s}=13$\,TeV it turns out to be 56 pb. How many Higgs bosons are produced at LHC? In Run 1 there were something like 70k Higgs bosons while in Run 2 almost a million were produced, 900k. Be careful because these are the ones which were produced, they have to be detected and at this point it depends on how the Higgs boson decay.
+\subsection{Decay}
+The Higgs boson decays into two quarks $H\to q\overline{q}$ but it cannot go into two tops since $m_t=173$\,GeV$>m_h=125$\,GeV, so the largest decay channel into quarks is $b\overline{b}$. This has a branching ratio of something like 60\%. However, detecting $b\overline{b}$ and distinguishing it from all the other quarks that can be produced at LHC is a very difficult challenge. These quarks transform themselves into jets and when the energy decreases they start to form hadrons. This transition is called \textbf{hadronization}, some hadrons can be unstable and they will decay.\\
+What are the other possible processes? The Higgs cannot go into two $W$ but one of the two can be virtual and can decay either in $l\overline{\nu}$ or $q\overline{q}$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/hd1.pdf}
+    \caption*{}
+    \labfig{hd1}
+\end{figure}\\
+The process is then a three-body decay of the Higgs and it has a branching ratio around 30\%. Every time there are quarks things are complicated while with leptons things are easier: the cleanest possibility is when everything is leptonic but then we lose in probability. Another possible decay is the one in which the Higgs goes into two gluons but that is a nightmare because these gluons are submerged by tons of other gluons and quarks but there is a similar process with photons instead of gluons.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/hphotons.pdf}
+    \caption*{}
+    \labfig{hphotons}
+\end{figure}\\
+This is very rare, the branching ratio is 0.2\% but it is very clean because these two photons emerge separately and the invariant mass is 125 GeV. Actually not really clean because there are many many jets which fake photons, so the background we will see is very large and it is not coming from real photons but it comes from jets which eventually leave that energy in the detector and simulate a photon. Photons leave energy in the electromagnetic calorimeter and unfortunately jets do the same, in addition to depositing energy in the hadronic calorimeter. Some of the jets, very rarely, leave a signature which is very similar to the photons. It happens rarely but since we have so many jets there is eventually a significant contribution to the background.\\
+One last possible decay process is the one in which the Higgs goes into two $Z$ which then decay each in a pair $ll^+$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/h4l.pdf}
+    \caption*{}
+    \labfig{h4l}
+\end{figure}\\
+Compare it with the situation with the $W$ instead of the $Z$ where there are two charged leptons and two neutrinos and it is not possible to reconstruct the invariant  mass while in this case it is possible to reconstruct both invariant masses and we expect something of 125 GeV. $h\to4l$ and $h\to\gamma\gamma$ were the channels of discovery. A summary of the branching ratios for the different decay channels at $m_h=125$\,GeV is listed in the table below, while in the plot on the side it is possible to see how the branching ratios vary with the Higgs mass.\marginnote[2cm]{\includegraphics{Images/higgs2.pdf}}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c||c|c}
+    \hline
+    \rowcolor{gray!45}Process & Branching Ratio & Process & Branching Ratio\\
+    \hline
+    $b\overline{b}$ & 58\% & gg & 8.2\%\\
+    $WW^*$ & 21\% & $Wl\nu$ & 4.6\%\\
+    $ZZ^*$ & 2.6\% & $Zll$ & $1.8\times10^{-3}$\\
+    $ZZ^*\to4l$ & $1.2\times10^{-4}$ & $\gamma\gamma$ & $2.3\times10^{-3}$\\
+    \hline
+    \end{tabular}
+    \caption{Branching ratios for the different Higgs decay channels ($l=e,\mu$).}
+    \labtab{br}
+\end{table}\\
+Because of its mass, the total Higgs width is very small,  $\Gamma_h=4.1$\,MeV, and the main reason is that the couplings are small.\\ 
+One of the predictions of the SM is that the Higgs coupling with two fermions is proportional to $m_\Psi/v$ and with two vectors is proportional to $m_v/v$. There are these proportionality relations which can be tested. The prediction is for a straight line.
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/higgscouplings.pdf}
+    \caption*{}
+    \labfig{higgscouplings}
+\end{figure}\\
+Notice how these couplings are so different in strength but they all agree with the SM predictions. It is clear that there is a mechanism which relates the coupling to the mass of the particle. 
 \end{document}
