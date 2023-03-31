@@ -6,7 +6,7 @@
 \labch{rc}
 \section{Accidental Symmetries of the Standard Model}
 The \textbf{gauge group} of the Standard Model is given by\\ G=SU$(3)_{\text{C}}\times$SU$(2)_{\text{EW}}\times$U$(1)_{\text{Y}}$ and when we write the Lagrangian we know that the rules of the game are that we should write every single term allowed by this symmetry and by Lorentz invariance. Then we write all the terms and we may discover that, in addition to the invariance under this symmetry and under Lorentz, there is also invariance under some global symmetry group which comes for free because we did not impose it. Of course we could have imposed the requirement of invariance under some global group by hand, i.e. for phenomenological reasons. But in the SM we do not do it, we do not require invariance under any global symmetry group. The only thing we do is to impose invariance under G and under Lorentz, these are the only two requirements.\\
-Now the question is: \textit{is this Lagrangian invariant under some global symmetry?}\marginnote{We do not write the Lagrangian again, we did it in \refch{intro}} Obviously, the answer is \textbf{yes}. There are two discrete symmetries, parity and charge conjugation which are then violated, but it turns out there are actually \textbf{continuous symmetries} which are invariant transformations of the Lagrangian. How can we see these symmetries? We try to transform fields in a way which has to respect gauge invariance. This means that if we have a certain representation under the gauge group we have several fields transforming under this representation and it is possible to mix them among themselves and that could be a symmetry transformations. Do we have replicas? Yes, we have three families. It is possible to transform fields by mixing these families and this is something which respects Lorentz and gauge invariance. That is the global symmetry that we might have, whether we have it or not depends on the Lagrangian, more precisely whether such transformations leave the Lagrangian invariant or not.\\ 
+Now the question is: \textit{is this Lagrangian invariant under some global symmetry?} Obviously, the answer is \textbf{yes}. There are two discrete symmetries, parity and charge conjugation which are then violated, but it turns out there are actually \textbf{continuous symmetries} which are invariant transformations of the Lagrangian. How can we see these symmetries? We try to transform fields in a way which has to respect gauge invariance. This means that if we have a certain representation under the gauge group we have several fields transforming under this representation and it is possible to mix them among themselves and that could be a symmetry transformations. Do we have replicas? Yes, we have three families. It is possible to transform fields by mixing these families and this is something which respects Lorentz and gauge invariance. That is the global symmetry that we might have, whether we have it or not depends on the Lagrangian, more precisely whether such transformations leave the Lagrangian invariant or not.\\ 
 The kinetic term for the $q_L$ for example can be written in such a way that it is diagonal in flavour:
 \[
 \overline{q}_L^ii\slashed{D}\delta^{ij}q^j
@@ -738,8 +738,75 @@ It is a very good approximation to forget about QCD when describing electroweak 
 Diagrammatically, we can see that they get a mass because the propagator has a pole at some value. How do we compute this propagator? There is an interaction between the gauge bosons and the flavour currents of QCD.%45:41
 \begin{figure}[h]
     \centering
-    \includegraphics{Images/greenblobs.pdf}
+    \includegraphics[width=1.5\textwidth]{Images/greenblobs.pdf}
     \caption*{}
     \label{greenblobs}
-\end{figure}
+\end{figure}\\
+The green blobs in the diagram above correspond to the two-point function for the currents which the gauge bosons are coupled to. These are the currents of SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}\times$U$(1)_{\text{B}}$. The hypercharge is coupled to a linear combination of the third generator of SU$(2)_{\text{R}}$ and the current of U$(1)_{\text{B}}$ and the $W$ is coupled to SU$(2)_{\text{L}}$. It is possible to simplify this by forgetting for the moment about U$(1)_{\text{B}}$. This two-point function corresponds to a global symmetry so the two-point function has to be transverse, i.e. if we do the Fourier transform we get:
+\[
+\Braket{J_a^\mu(p)J_b^\nu(-p)}=(p_T)_{\mu\nu}\delta_{ab}\pi(p^2)\marginnote{This notation denotes the vacuum expectation value of the T-product of the currents.}
+\]
+where $\pi(p^2)$ is a form factor and $(p_T)_{\mu\nu}$ is given by:
+\[
+(p_T)_{\mu\nu}=\eta_{\mu\nu}\cdot\frac{p_\mu p_\nu}{p^2}
+\]
+This is for a given species of currents but we actually have two, left and right, hence three different form factors. 
+\[
+\Braket{L_a^\mu L_b^\nu}=(p_T)_{\mu\nu}\delta_{ab}\pi_{LL}(p^2) \quad \Braket{R_a^\mu R_b^\nu}=(p_T)_{\mu\nu}\delta_{ab}\pi_{RR}(p^2) \quad \Braket{L_a^\mu R_b^\nu}=(p_T)_{\mu\nu}\delta_{ab}\pi_{LR}(p^2)
+\]
+However, it turns out that this decomposition is not the most useful one because the vacuum of QCD does not preserve SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ symmetry, it preserves SU$(2)_{\text{V}}$ symmetry. We can then write left and right currents as linear combinations of vectorial and axial currents.
+\[
+\left\{
+\begin{aligned}
+&V_\mu=R_\mu+L_\mu\to\overline{q}\gamma_\mu q=\overline{q}\gamma_\mu\frac{1+\gamma_5}{2}q+\overline{q}\gamma_\mu\frac{1-\gamma_5}{2}q\\
+&A_\mu=R_\mu-L_\mu\to\overline{q}\gamma_\mu\gamma_5q=\overline{q}\gamma_\mu\frac{1+\gamma_5}{2}q-\overline{q}\gamma_\mu\frac{1-\gamma_5}{2}q
+\end{aligned}
+\right.
+\]
+In terms of these new currents, the decompositions now become:
+\[
+\Braket{V_a^\mu V_b^\nu}=(p_T)_{\mu\nu}\delta_{ab}\pi_{VV}(p^2) \quad \Braket{A_a^\mu A_b^\nu}=(p_T)_{\mu\nu}\delta_{ab}\pi_{AA}(p^2) \quad \Braket{V_a^\mu A_b^\nu}=0
+\]
+The last one is equal to 0 because of parity: the operator is a product between a vector and a pseudo-vector hence it has the wrong transformation under parity and has to be equal to 0. Necessarily, there is a relation between ($\pi_{LL}$, $\pi_{RR}$, $\pi_{LR}$) and ($\pi_{AA}$, $\pi_{VV}$):
+\[
+\pi_{LL}=\pi_{RR}=\frac{\pi_{VV}+\pi_{AA}}{4} \quad \pi_{LR}=\frac{\pi_{VV}-\pi_{AA}}{4}
+\]
+The bare propagator in the $\xi$-gauge is given by:
+\[
+-\frac{i}{p^2}\left[\eta_{\mu\nu}-(1-\xi)\frac{p_\mu p_\nu}{p^2}\right]=-\frac{i}{p^2}\left[(p_T)_{\mu\nu}+\xi(p_L)_{\mu\nu}\right] \quad \text{where} \;\; (p_L)_{\mu\nu}=\frac{p_\mu p_\nu}{p^2}
+\]
+The correction coming from the blobs is only a correction to the transverse part, the longitudinal part is not touched but it depends on the gauge so it is unphysical. The resummed propagator is then:
+\[
+(p_T)_{\mu\nu}\frac{-i}{p^2-g_Ag_B\pi_{AB}(p^2)}+\xi(p_L)_{\mu\nu} \quad A,B=L,R
+\]
+Does this propagator have any pole for finite values of $p^2$? The poles come only from the transverse part, being the longitudinal one unphysical. For $p^2\to0$, it is possible to expand the form factor in powers of $p^2$. Looking just at the first term, there will be a pole if $\pi_{AB}(p^2=0)\neq0$. The attention is now moved to see whether of this form factors is non-vanishing in 0. Remember that $p_T$ has a pole for $p^2=0$: if there is a non-vanishing value of $\pi_{AB}(p^2=0)$ then this propagator has a singularity at $p^2=0$. But this is not possible because the vector current does not excite any massless state. However, it is the case for the axial current because it excites the pions, which are the NGBs. In other words:
+\[
+\pi_{VV}(p^2=0)=0 \quad \pi_{AA}(p^2=0)=f^2_\pi
+\]
+We can verify this by taking an axial current $A_\mu$ which excites a pion that then gets reabsorbed by $A_\nu$. In each vertex the loop is given by the vacuum expectation value between the axial current and the pion field. 
+\[
+\bra{0}A_\mu(x)\ket{\pi(p)}=if_\pi e^{-ipx}p_\mu
+\]
+There is then a propagator given by $-i/p^2$ and the contribution for the exchange of the pion is proportional to $f_\pi^2p_\mu p_\nu/p^2$. This implies that:
+\[
+\pi_{LL}(0)=\pi_{RR}(0)=\frac{f_\pi^2}{4} \quad \pi_{LR}(0)=-\frac{f_\pi^2}{4}
+\]
+Remember that the $W$ gauges the left current and the hypercharge gauges the right current, so here there is a matrix of possibility: left and right can be chosen in 4 possible ways and this gives a mass matrix.
+\[
+M_0^2=\left(\begin{array}{cc}
+    g^2 & -gg' \\
+    -gg' & g'^2
+\end{array}\right)\frac{f_\pi^2}{4}
+\]
+Here, for simplicity, we fixed $a=3$ and in this case there are both left and right. For $a=1,2$ there is no right, $g'=0$ and there is only $g^2$. The one above is the neutral mass matrix but at the same time there is the charged mass matrix:
+\[
+M_\pm^2=g^2\frac{f_\pi^2}{4}
+\]
+We now recognize the form of the masses in the SM. There is 0 eigenvalue, i.e. the photon, and then there is another eigenvalue which is the mass of the $Z$.
+\[
+m_W=g\frac{f_\pi}{2} \quad m_Z=\sqrt{g^2+g'^2}\frac{f_\pi}{2} \quad m_\gamma=0
+\]
+So the $W$ and the $Z$ have acquired their mass, the photon remains massless and that is exactly the same of the SM with the only difference that instead of $v$ there is $f_\pi$. It is the same because the global symmetry breaking is the same: in the Higgs sector it was SU$(2)\times$SU$(2)\to$SU(2) which is the same in the QCD sector. Moreover, the $\rho$-parameter is equal to 1. In principle, we do not need the Higgs boson to give a mass to the $W$ and the $Z$ bosons: we remove the Higgs from the theory, decrease the energy until we reach the QCD scale and then there are the three NGBs which are eaten. If we compute these masses, they turn out to be $m_W=28$\,MeV and $m_Z=31$\,MeV. The values are not quite correct because we should run the coupling $g$ down to the QCD scale, in this calculation the value of $g$ at a hundred GeV is used.
+\section{Technicolor}
+As anticipated, the masses e just found are too small but qualitatively everything is okay so this gives us an idea. The idea is to replicate this story by saying that the fundamental Higgs field which gives the electroweak symmetry breaking at 246 GeV is a copy of QCD. Why one should do this perverse complication? Because this UV dynamics does not have a fundamental scalar inside and fundamental scalars imply hierarchy problems. This fundamental scalar has to be much lighter than this UV dynamics but at the moment we do not know the reason why it is like that. For QCD there is no such problem, there are no mass terms of fundamental scalars which we write in the Lagrangian. It is just the Lagrangian of QCD replicated at ten times the energy. This goes under the name of \textbf{technicolor}.   
 \end{document}
