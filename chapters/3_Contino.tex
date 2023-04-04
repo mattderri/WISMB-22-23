@@ -1172,8 +1172,54 @@ $s_0$ and $c_0$ are the tree-level expressions for sine and cosine of $\theta_w$
 \]
 All corrections means corrections from box, vertex and fermion self-energy and they are parametrized into the parameter $\delta G_{\text{V,B}}$.\\
 The 1-loop corrections are then encoded in $A^{ij}, F^{ij}, \delta g_V, \delta g_A$ and $\delta G_{\text{V,B}}$. Both the input observables $\{\alpha_{\text{em}}(0), G_{\text{F}}, m_Z \}$ and the final output observables will have an expression written in terms of these corrections. $i$ and $j$ can run either on 1,2,3 and $Y$ hypercharge in the SU$(2)\times$U(1) basis or sometimes it is more convenient to rotate to the physical basis where they run on $\pm W,\gamma$ and $Z$. Here we use the physical basis.
-\begin{align*}
-&\frac{\delta\alpha}{\alpha}=-F^{\gamma\gamma}(0)-2\frac{s}{c}\frac{A^{\gamma Z}(0)}{m_Z^2} \quad s^2=1-c^2=\frac{1}{2}\left[1-\left(1-\frac{4\pi\alpha(m_Z^2)}{\sqrt{2}G_{\text{F}}m_Z^2}\right)^{1/2}\right]\\
-&\delta m_Z^2=-A^{ZZ}(0)-m_Z^2F^{ZZ}(m_Z^2) \quad \frac{\delta G_{\text{F}}}{G_{\text{F}}}=\frac{A^{WW}(0)}{m_W^2}+\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}
-\end{align*}
+\[
+\left\{
+\begin{aligned}
+&\frac{\delta\alpha}{\alpha}=-F^{\gamma\gamma}(0)-2\frac{s}{c}\frac{A^{\gamma Z}(0)}{m_Z^2} &&s^2=1-c^2=\frac{1}{2}\left[1-\left(1-\frac{4\pi\alpha(m_Z^2)}{\sqrt{2}G_{\text{F}}m_Z^2}\right)^{1/2}\right]\\
+&\delta m_Z^2=-A^{ZZ}(0)-m_Z^2F^{ZZ}(m_Z^2) &&\frac{\delta G_{\text{F}}}{G_{\text{F}}}=\frac{A^{WW}(0)}{m_W^2}+\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}
+\end{aligned}
+\right.
+\]
+These are the input observables, then there are the predicted observables which have the following expressions:
+\[
+\left\{
+\begin{aligned}
+&m_W^2=m_Z^2c^2+\delta m_W^2-\frac{m_Z^2c^2}{s^2-c^2} \left(s^2\frac{\delta\alpha}{\alpha}-s^2\frac{\delta G_{\text{F}}}{G_{\text{F}}}-c^2\frac{\delta m_Z^2}{m_Z^2}\right)\\
+&\Gamma(Z\to l^-l^+)=\frac{G_{\text{F}}m_Z^3}{6\pi\Gamma_Z}\left(1-\frac{\delta G_{\text{F}}}{G_{\text{F}}}-\frac{\delta m_Z^2}{m_Z^2}-F^{ZZ}(m_Z^2)-m_Z^2F'^{ZZ}(m_Z^2)\right)\left[(g_V^0+\Delta g_V)^2+(g_A^0-\Delta g_A)^2\right]\\
+&\Delta g_V=-2\frac{s^2c^2}{c^2-s^2}\left(\frac{\delta G_{\text{F}}}{G_{\text{F}}}+\frac{\delta m_Z^2}{m_Z^2}-\frac{\delta\alpha}{\alpha}\right)+\delta g_V+2scF^{\gamma Z}(m_Z^2) \quad \Delta g_A=\delta g_A
+\end{aligned}
+\right.
+\]
+where $g_V^0$ and $g_A^0$ denote the tree-level SM couplings. There is also the forward-backward asymmetry, which can be written, assuming lepton universality, as:
+\[
+A_{\text{FB}}^l=3\frac{(g_V^0+\Delta g_V)^2(g_A^0+\Delta g_A)^2}{\left[(g_V^0+\Delta g_V)^2+(g_A^0+\Delta g_A)^2\right]^2}
+\]
+That is the same formula as the experimental one but now in terms of theoretical quantities. If we now compare this expression with the formulas of the observables written in terms of the pseudo-observables, we can derive the expression of the pseudo-observables in terms of these theoretical quantities. These are the master formulas, we don't need to compute the pseudo-observables every time. \marginnote{There is a complex system of Chinese boxes but it should be somehow clear.}
+\[
+\left\{
+\begin{aligned}
+&\Delta r_w=\frac{\delta G_{\text{F}}}{G_{\text{F}}}+\frac{c^2}{s^2}\frac{\delta m_Z^2}{m_Z^2}-\frac{\delta\alpha}{\alpha}+\frac{s^2-c^2}{c^2}\frac{\delta m_W^2}{m_W^2}\\
+&\Delta\rho=-\frac{\delta G_{\text{F}}}{G_{\text{F}}}-\frac{\delta m_Z^2}{m_Z^2}-F^{ZZ}(m_Z^2)-m_Z^2F'^{ZZ}(m_Z^2)-4\Delta g_A\\
+&\Delta k=\frac{1}{2s^2}[\Delta g_V-(1-4s^2)\Delta g_A]
+\end{aligned}
+\right.
+\]
+All the experimental information can be condensed in these three pseudo-observables and on the theoretical side we just need to compute the quantities arising from 1-loop corrections.\\
+How do these theoretical quantities on the mass of the Higgs and on the mass of the top? This was an important question at the time because neither the top nor the Higgs were observed, so this was the only indirect way to get information about their masses. We then want to isolate the observables which are most sensitive to these masses. The mass of the Higgs only enters logarithmically and is in fact very poorly determined, the mass of the top instead enters quadratically so there is a much stronger dependence and now we are going to see why. In particular, these three pseudo-observables depend quadratically on $m_t$ but it turns out that only one linear combination of them depends quadratically on the mass of the top. It is then useful to find a redefinition of the pseudo-observables in terms of other three parameters, the so-called $\varepsilon$ parameters, in such a way that one of them depends quadratically on $m_t$ and the other two do not. That parameter is then the most sensitive to constrain the mass of the top and once the top is discovered is the one most strongly affected. For example, $\Delta\rho$ depends quadratically on $m_t$ and this can be seen as follows. We can rewrite it as:
+\[
+\Delta\rho=\frac{A^{33}(0)-A^{WW}(0)}{m_W^2}-m_Z^2F'^{ZZ}(m_Z^2)-\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}-4\delta g_A
+\]
+Look now at the first term. It is the self-energy at one loop in which there is either a $W^3W^3$ on the external lines or a $W^+W^-$. These are the loop diagrams of such corrections:
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/loopcorr.pdf}
+    \caption*{}
+    \labfig{loopcorr}
+\end{figure}\\
+These quantities are convergent despite the fact that each of these contribution is logarithmically divergent. The one on the left goes like $\log(\Lambda/m_Z)$ and the one on the right goes like $\log(\Lambda/m_h)$, where $\Lambda$ is a cut-off. When we go to sum them the contribution is finite, $\sim\log(m_Z/m_h)$.\\
+There is a logarithmic dependence on $m_h$ and then there is also the observation that these difference is finite. Is it possible to understand why it is finite and why each of these contributions go like a logarithm? For example, if we do the calculation in the unitary gauge it is not obvious at all, the superficial degree of divergence is larger since there are derivatives in the vertices. It turns out that there is another way to do this calculation which basically rephrases this one in terms of another two-point function which is the one of the would-be Goldstone bosons, which are present in the $\xi$-gauge but not in the unitary one. It is a sort of equivalence theorem, so we look at the kinetic term and its one-loop corrections because when we are in the $\xi$-gauge, the mass term for the vector boson and the kinetic term for the would-be Goldstone boson are packaged in the same term, which looks like this:
+\[
+|D_\mu\chi^+-m_WW_\mu^+|^2
+\]
+Let's say now we are interested in the charged part $A^{WW}$, this would be covariant with respect to the photon
 \end{document}
