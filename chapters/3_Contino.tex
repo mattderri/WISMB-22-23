@@ -972,9 +972,10 @@ We now need to move from left and right couplings to vector and axial couplings:
 \]
 By performing the substitution, we recover the formulas displayed in the beginning.\\
 For the forward-backward asymmetry, the useful integrals are given by:
-\[
-\int_0^{+1}d\cos\theta(1+\cos^2\theta)=\int_{-1}^0d\cos\theta(1+\cos^2\theta)=\frac{4}{3} \quad \int_0^{+1}d\cos\theta\cos\theta=-\int_{-1}^0d\cos\theta\cos\theta=\frac{1}{2}
-\]
+\begin{align*}
+&\int_0^{+1}d\cos\theta(1+\cos^2\theta)=\int_{-1}^0d\cos\theta(1+\cos^2\theta)=\frac{4}{3}\\
+&\int_0^{+1}d\cos\theta\cos\theta=-\int_{-1}^0d\cos\theta\cos\theta=\frac{1}{2}
+\end{align*}
 When going to compute the asymmetry, we then get:
 \[
 A_{\text{FB}}=\frac{2[(g_L^e)^2-(g_R^e)^2][(g_L^f)^2-(g_R^f)^2]}{2\cdot\frac{4}{3}[(g_L^e)^2+(g_R^e)^2][(g_L^f)^2+(g_R^f)^2]}=\frac{3}{4}A_eA_f
@@ -1025,7 +1026,154 @@ This procedure gives us the possibility of expressing the raw observables, i.e. 
 \]
 The decay width $\Gamma_f$ is defined as:
 \[
-\Gamma_f:=4N_c\Gamma_0\left[(g_V^f)^2_{\text{eff}}R_V^f+(g_A^f)^2_{\text{eff}}R_A^f\right] \quad \Gamma_0:=\frac{G_{\text{F}}m_Z^3}{24\sqrt{2}\pi}
+\Gamma_f:=4N_c\Gamma_0\left[(g_V^f)^2_{\text{eff}}R_V^f+(g_A^f)^2_{\text{eff}}R_A^f\right]\sim(g_V^f)_{\text{eff}}^2+(g_A^f)_{\text{eff}}^2 \quad \Gamma_0:=\frac{G_{\text{F}}m_Z^3}{24\sqrt{2}\pi}
 \]
-$R_V^f$ and $R_A^f$ are numbers that take into account QED and QCD final state radiations. If there were no final state radiations, these two numbers would have been equal to 1. If we measure this quantity, we can then extract $\Gamma_e$ and $\Gamma_f$, i..e couplings, and also the mass of the $Z$ boson. 
+$R_V^f$ and $R_A^f$ are numbers that take into account QED and QCD final state radiations. If there were no final state radiations, these two numbers would have been equal to 1. If we measure this quantity, we can then extract $\Gamma_e$ and $\Gamma_f$, i.e. couplings, and also the mass of the $Z$ boson. These coefficients have to be interpreted as pseudo-observables and the other observables can be written in terms of them. In particular, we saw the expression of $A_{\text{FB}}$ in terms of $A_e$ and $A_f$ with the latter given by a tree-level expression which now has to be modified:
+\[
+A_f:=\frac{2(g_A^f)_{\text{eff}}(g_V^f)_{\text{eff}}}{(g_V^f)_{\text{eff}}^2+(g_A^f)_{\text{eff}}^2}\sim\frac{(g_V^f)_{\text{eff}}/(g_A^f)_{\text{eff}}}{1+[(g_V^f)_{\text{eff}}/(g_A^f)_{\text{eff}}]^2}
+\]
+The asymmetries depend on the ratio of the couplings while the partial width depends on the sum of the couplings squared. The formulas are the same of the tree-level but now the asymmetries are defined in terms of these pseudo-observables.\\ Other pseudo-observables are the ratio $R_l$ of the hadronic and the leptonic partial width:
+\[
+R_l:=\frac{\Gamma_h}{\Gamma_l} \quad l=e,\mu,\tau
+\]
+then there is also $R_{b,c}$ defined as:
+\[
+R_{b,c}:=\frac{\Gamma_{b,c}}{\Gamma_h}
+\]
+and the total hadronic cross section:
+\[
+\sigma_{\text{had}}^0:=12\pi\frac{\Gamma_e\Gamma_h}{m_Z^2\Gamma_Z^2}
+\]
+Moreover, there is the total invisible width, which is nothing but the $Z$ decay width minus the visible width:
+\[
+\Gamma_{\text{inv}}:=\Gamma_Z-\Gamma_e-\Gamma_\mu-\Gamma_\tau-\Gamma_{\text{had}}
+\]
+Another useful redefinition is the one of the effective couplings in terms of other pseudo-observables:
+\[
+(g_V^f)_{\text{eff}}=\sqrt{\rho_f}(T_3^f-2Q_f\sin^2\theta_{\text{eff}}^f) \quad (g_A^f)_{\text{eff}}=\sqrt{\rho_f}T_3^f
+\]
+At tree-level, they depend on the quantum numbers of the particle. In order to put everybody on the same page, these couplings have been redefined mimicking the structures of the tree-level expressions. Here two new parameters were introduced, $\rho_f$ and $\sin\theta_{\text{eff}}^f$, with the latter that can be written as:
+\[
+\sin\theta_{\text{eff}}^f=\frac{1}{|4Q^f|}\left(1-\frac{(g_V^f)_{\text{eff}}^2}{(g_A^f)_{\text{eff}}^2}\right) \quad \text{for}\;T_3^f=\pm\frac{1}{2}
+\]
+This depends on the ratio between the two effective couplings squared, which means it is a function of the asymmetries that fix this ratio. $\rho_f$ is the corresponding of the $\rho$-parameter we introduced earlier, defined as:
+\[
+\rho:=\frac{m_W^2}{m_Z^2\cos^2\theta_w}
+\]
+If there is a virtual exchange of $W$ or $Z$, then the propagator would give a contribution proportional to the inverse squared of the mass of the particle exchanged, $\sim1/m^2_{W/Z}$, times the strength of the coupling. The charged current strength, which is a contact interaction once the heavy states are integrated out, is given by:
+\[
+G_{\text{F}}^{\text{cc}}\sim\frac{g^2}{m_W^2}
+\]
+If we do the same for the $Z$, i.e. neutral current, we get:
+\[
+G_{\text{F}}^{\text{nc}}\sim\frac{g^2}{m_Z^2}+g'^2
+\]
+The relative importance between charged and neutral current, is a ratio of masses and couplings. The $\rho$-parameter then parametrizes the ratio of the strengths of the charged current over the neutral current interaction. For $\rho_f$ is the same story, if it is different from 1 it means that the strength of the charged current is different than neutral current. If it is close to 1, it means there is an effect which is changing this relative importance. These couplings parametrize the 
+effective interactions with the $Z$ with respect to the $W$. In other words, instead of defining $\rho_f$ as the ratio of masses, we look at the strength of interactions mediated by the $Z$ and by the $W$.\\
+Another observable is $m_W$ if we use the EW scheme where we choose to work with $\alpha_{\text{em}}(0)$ and $G_{\text{F}}$. Again, it is possible to express $m_W$ in terms of a pseudo-observable in the following way:
+\[
+\left(1-\frac{m_W^2}{m_Z^2}\right)\frac{m_W^2}{m_Z^2}:=\frac{\pi\alpha(m_Z)}{\sqrt{2}G_{\text{F}}m_Z^2(1-\Delta r_w)}
+\]
+where the new pseudo-observable is $\Delta r_w$. $m_Z$ and $\alpha$ are input parameters, $\alpha$ is computed at $m_Z$ and this effectively incorporates QED corrections in the photon self-energy. Let's check if this formula has a meaning that we are able to understand. At tree-level, $\Delta r_w$ is not present, the ratio of the masses can be written in terms of $g$ and $g'$ and we get:
+\[
+\underbrace{\left(1-\frac{g^2}{g^2+g'^2}\right)}_{=\frac{g'^2}{g^2+g'^2}=\sin^2\theta_w}\frac{m_W^2}{\cancel{m_Z^2}}=\frac{\pi e^2/4\pi v^2}{\cancel{m_Z^2}}\Rightarrow m_W^2=\frac{v^2}{4}\frac{e^2}{\sin^2\theta_w}=g\frac{v^2}{4} \quad \checkmark\marginnote{$\sqrt{2}G_{\text{F}}=1/v^2$ (we hope)}
+\]
+At tree-level, everything collapses into things we already know. At one-loop instead, we make an upgrade with this formula to incorporate radiative corrections and we do this by defining a new pseudo-observable in terms of $m_W$. At the end of the day, we have 3 pseudo-observables, $\rho_f, \sin\theta_{\text{eff}}^f$ and $\Delta r_w$. We are now going to define $\Delta\rho_f$ and $\Delta k'^f$ just to reflect the fact that if we switch off the corrections, then $\rho_f=1$ and $\sin\theta_{\text{eff}}^f=\sin\theta_w$.
+\[
+\left\{
+\begin{aligned}
+&\rho_f:=1+\Delta\rho_f\\
+&\sin\theta_{\text{eff}}^f:=s^2(1+\Delta k'^f)
+\end{aligned}
+\right.
+\quad \text{with}\;s^2:=\frac{1}{2}\left[1-\left(1-\frac{4\pi\alpha(m_Z)}{\sqrt{2}G_{\text{F}}m_Z^2}\right)^{1/2}\right]\xrightarrow[\text{tree-level}]{}\sin^2\theta_w
+\]
+At this point we have $\{\Delta\rho_f, \Delta k'^f, \Delta r_w\}$, there are three pseudo-observables for each given flavour. We have defined these quantities in such a way that the obvious dependence on the flavour $f$ has been removed, the only dependence on $f$ enters through sub-leading effects like the mass of the quarks in loops or in the final state. The index $f$ will now be dropped because the universality of these parameters is verified. All the information can be condensed in three pseudo-observables if we assume lepton and quarks universality, we now look at the data to see if they support this universality. From LEP collaboration, we get:
+\[
+\left\{
+\begin{aligned}
+&R_e=20.804\pm0.050 &&A_{\text{FB}}^e=0.0145\pm0.0025\\
+&R_\mu=20.785\pm0.033 &&A_{\text{FB}}^\mu=0.0169\pm0.0013\\
+&R_\tau=20.764\pm0.045 &&A_{\text{FB}}^\tau=0.0188\pm0.0017
+\end{aligned}
+\right.
+\]
+The data for $R_e, R_\mu$ and $R_\tau$ support universality while for the forward-backward asymmetries there are some differences and one might complain. This difference is coming from the masses and it is an effect which can be parametrized, but we do not want to discuss this so let's pretend universality is true to a very good degree.\\
+Another important quantity is the number of neutrinos:
+\[
+N_\nu:=\frac{\Gamma_{\text{inv}}/\Gamma_l}{(\Gamma_\nu/\Gamma_l)_{\text{SM}}} \quad (N_\nu)_{\text{exp}}=2.9840\pm0.0082
+\]
+This number should be 3 if everything is according to the SM. Why 3? Because these are the neutrinos in which the $Z$ can decay. Now one might say that in the SM there are no masses for neutrinos, so if we account for these masses maybe there are heavy neutrinos and everything is in agreement. Yes, maybe but we are talking about heavy neutrinos and the $Z$ cannot decay into them. This number is affected only by the light neutrinos, the fact that we get 3 is a test that there are no additional light degrees of freedom to which the $Z$ can decay.\\
+The final message is that there is a very good agreement among different experiments, there is evidence of universality and also there is agreement with what we measure in the leptonic sector with what we measure in the quark sector. Everything is pretty consistent, there are some fluctuations but we don't even discuss that. \marginnote[-5cm]{Some references about this topic:\begin{itemize}
+    \item \href{https://arxiv.org/abs/hep-ex/0412015}{A Combination of Preliminary Electroweak Measurements and Constraints on the Standard Model}
+    \item \href{https://arxiv.org/abs/hep-ex/0509008}{Precision Electroweak Measurements on the Z Resonance}
+    \item \href{https://arxiv.org/abs/1012.2367}{Precision Electroweak Measurements and Constraints on the Standard Model}
+    \item \href{https://arxiv.org/abs/hep-ph/0402031}{TASI Lectures on Precision Electroweak Physics}
+    \item \href{https://arxiv.org/abs/hep-ph/9303304}{Precision Tests of the Standard Model}
+    \item \href{https://arxiv.org/abs/hep-ph/9802302}{Precision Physics at LEP}
+    \item \href{https://lib-extopc.kek.jp/preprints/PDF/2000/0030/0030731.pdf}{Barbieri Lectures}
+\end{itemize}}\\ 
+Moving over and going at LEP2, the observables are $e^-e^+\to f\overline{f}$ at different values of $\sqrt{s}$ but there was also the possibility to produce pairs of on-shell $W$ bosons which then can decay in different ways:
+\[
+e^-e^+\to W^-W^+\to2q2\overline{q}/q\overline{q}l\nu/ll\nu\nu
+\]
+The first two possibilities are the best ones because it is possible to reconstruct their kinematics. In this way, we can measure the $W$ pole mass and its width,
+$\delta m_W\sim30$\,MeV and $\delta\Gamma_W\sim80$\,MeV.\\
+The other thing that we can measure in this way are the so-called \textbf{triple gauge couplings} (TGC).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/TGC.pdf}
+    \caption*{}
+    \labfig{tgc}
+\end{figure}\\
+This interaction is predicted by the SM, by measuring the cross section of the process we can test the existence of this interaction which was not observed before, it was the first time where a non-abelian interaction between three vector bosons was observed. The first reason to study this process is to study anomalous TGC, the structure of this interaction in the SM is a specific one but there could be other possible interactions in general which can be parametrized in terms of anomalous TGC which we are now going to list. One way to parametrize them is to write all possible local operators which are invariant under U$(1)_{\text{em}}$ and only some of these couplings will be present in the SM while other ones will be anomalous. From the viewpoint of EFT, these couplings come from higher dimensionality operators. Only one interaction comes from dimension 4 operator, which is the kinetic term of the $W$, but then there are higher dimension operators which also involve quartic interactions with possibly more derivative. If we write them in a way that they have to respect U$(1)_{\text{em}}$, we get:
+\[
+\marginnote{Each operator has a coefficient which is reported between parantheses.}
+\left\{
+\begin{aligned}
+&\gamma_{\mu\nu}W^\mu W^\nu\;\; (k_\gamma) && \gamma_{\nu\nu}W^{\nu\rho}W^\mu_\rho\;\; (\lambda_\gamma)\\
+&Z_\mu W^{\mu\nu}W_\nu\;\; (\delta_{g,z}) && Z_{\mu\nu}W^\mu W^\nu\;\; (k_z))\\
+&Z_{\mu\nu}W^{\nu\rho}W_\rho^\mu\;\; (\lambda_z)
+\end{aligned}
+\right.
+\]
+In the phase where EW symmetry is broken, we have only U$(1)_{\text{em}}$ as a gauge symmetry and we classify all the operators which are invariant under this symmetry which involve three fields. We do it either with one field, which is now not a gauge field anymore it is a spin-1 massless field, or the field strength, defined as $W_{\mu\nu}:=\partial_\mu W_\nu-\partial_\nu W_\mu$.\\
+The energy was enough to measure another process, $e^-e^+\to ZZ$, but in this case in the SM there is no possibility these two fields to another vector boson since it should be either a photon or another $Z$ but there are no such interactions in the SM so there is only one diagram.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/ZZ.pdf}
+    \caption*{}
+    \labfig{ZZ}
+\end{figure}\\
+Again, by measuring the cross section we can test the possible existence of anomalous TGC which can be written as:
+\[
+\partial_\rho\gamma^{\rho\mu}Z_{\mu\nu}Z^\nu\;\;(f_4^\gamma) \qquad \qquad \partial_\rho Z^{\rho\mu}Z_{\mu\nu}Z^\nu\;\;(f_4^Z)
+\]
+Beyond LEP and LEP2 there was also Tevatron which played an important role especially in measuring the mass of the $W$ and this is something that is still going on, the later results were published recently. At Tevatron the top quark was discovered, which is important for our EWPT, together with measurements on TGC and $m_W$.\\
+So far, we discussed the experimental data now we go and discuss the theoretical calculation. First of all, we have to remember that our theory has to be renormalized and instead of using the usual procedure we can do something quicker and use as renormalization parameters three of the observables. Denote now with $a^i_0$ the input observables at tree-level, we then go at one-loop and get some corrections:
+\[
+a_0^i\xrightarrow[\text{1-loop}]{}a^i=a_0^i+\delta a^i(a_o^i)\xleftrightarrow[\text{invert}]{}a_0^i=a^i-\delta a^i(a_o^i)
+\]
+Why do we invert such expression? Consider now any observable $S_0$ which is a function of the tree-level input observables:
+\[
+S_0(a_0^i)\xrightarrow[\text{1-loop}]{}S(a^i)=S_0(a_0^i)+\delta S(a_o^i)=S_0(a^i)-\underbrace{\sum_i\frac{\partial S}{\partial a^i}\delta a^i+\delta S(a^i)}_{\text{full 1-loop corrections}}
+\]
+The 1-loop corrections are finite, which means the theory is renormalizable: once we have these contributions all divergencies should cancel. Corrections at 1-loop enter in three different ways: corrections to the self-energy, corrections to vertices and then there is everything else to $\mu$-decay except self-energies. Self-energies are written as:
+\[
+\Pi_{\mu\nu}^{ij}(q)=\eta_{\mu\nu}\left[A^{ij}(0)+q^2F^{ij}(q^2)\right]+\cancel{q_\mu q_\nu\;\text{terms}}
+\]
+The $q_\mu q_\nu$ terms are negligible, they give a very small contribution proportional to the mass of the electron. The vertices are on-shell, so we are talking about the $Z$-pole and they are parametrized in this way:
+\[
+-i\frac{e}{s_0c_0}\overline{v}\gamma^\mu(\delta g_V-\gamma_5\delta g_A)u
+\]
+$s_0$ and $c_0$ are the tree-level expressions for sine and cosine of $\theta_w$, $g_V$ and $g_A$ denote respectively the vector and axial currents. For the corrections to $\mu$-decay they are written as follows:
+\[
+-i\delta G_{\text{V,B}}[e^-\gamma_\mu(1-\gamma_5)\nu_e][\overline{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu]
+\]
+All corrections means corrections from box, vertex and fermion self-energy and they are parametrized into the parameter $\delta G_{\text{V,B}}$.\\
+The 1-loop corrections are then encoded in $A^{ij}, F^{ij}, \delta g_V, \delta g_A$ and $\delta G_{\text{V,B}}$. Both the input observables $\{\alpha_{\text{em}}(0), G_{\text{F}}, m_Z \}$ and the final output observables will have an expression written in terms of these corrections. $i$ and $j$ can run either on 1,2,3 and $Y$ hypercharge in the SU$(2)\times$U(1) basis or sometimes it is more convenient to rotate to the physical basis where they run on $\pm W,\gamma$ and $Z$. Here we use the physical basis.
+\begin{align*}
+&\frac{\delta\alpha}{\alpha}=-F^{\gamma\gamma}(0)-2\frac{s}{c}\frac{A^{\gamma Z}(0)}{m_Z^2} \quad s^2=1-c^2=\frac{1}{2}\left[1-\left(1-\frac{4\pi\alpha(m_Z^2)}{\sqrt{2}G_{\text{F}}m_Z^2}\right)^{1/2}\right]\\
+&\delta m_Z^2=-A^{ZZ}(0)-m_Z^2F^{ZZ}(m_Z^2) \quad \frac{\delta G_{\text{F}}}{G_{\text{F}}}=\frac{A^{WW}(0)}{m_W^2}+\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}
+\end{align*}
 \end{document}
