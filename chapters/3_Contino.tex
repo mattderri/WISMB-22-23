@@ -1149,7 +1149,8 @@ Again, by measuring the cross section we can test the possible existence of anom
 \[
 \partial_\rho\gamma^{\rho\mu}Z_{\mu\nu}Z^\nu\;\;(f_4^\gamma) \qquad \qquad \partial_\rho Z^{\rho\mu}Z_{\mu\nu}Z^\nu\;\;(f_4^Z)
 \]
-Beyond LEP and LEP2 there was also Tevatron which played an important role especially in measuring the mass of the $W$ and this is something that is still going on, the later results were published recently. At Tevatron the top quark was discovered, which is important for our EWPT, together with measurements on TGC and $m_W$.\\
+Beyond LEP and LEP2 there was also Tevatron which played an important role especially in measuring the mass of the $W$ and this is something that is still going on, the later results were published recently. At Tevatron the top quark was discovered, which is important for our EWPT, together with measurements on TGC and $m_W$.
+\subsection{Theoretical Calculation}
 So far, we discussed the experimental data now we go and discuss the theoretical calculation. First of all, we have to remember that our theory has to be renormalized and instead of using the usual procedure we can do something quicker and use as renormalization parameters three of the observables. Denote now with $a^i_0$ the input observables at tree-level, we then go at one-loop and get some corrections:
 \[
 a_0^i\xrightarrow[\text{1-loop}]{}a^i=a_0^i+\delta a^i(a_o^i)\xleftrightarrow[\text{invert}]{}a_0^i=a^i-\delta a^i(a_o^i)
@@ -1256,9 +1257,49 @@ We can now write the expression of these parameters in the SM:
 \left\{
 \begin{aligned}
 &\varepsilon_1^{\text{SM}}=\frac{3G_{\text{F}}m_t^2}{8\pi^2\sqrt{2}}-3\frac{G_{\text{F}}m_W^2}{4\pi^2\sqrt{2}}\tan^2\theta_w\log(m_h/m_Z)+\cdots=(5.21\pm0.08)\cdot10^{-3}\\
-&\varepsilon_2^{\text{SM}}=-\frac{G_{\text{F}}m_W^2}{2\pi^2\sqrt{2}}\log(m_t/m_Z)+\cdots=(7.37\pm0.03)\cdot10^{-3}\\
+&\varepsilon_2^{\text{SM}}=-\frac{G_{\text{F}}m_W^2}{2\pi^2\sqrt{2}}\log(m_t/m_Z)+\cdots=-(7.37\pm0.03)\cdot10^{-3}\\
 &\varepsilon_3^{\text{SM}}=\frac{G_{\text{F}}m_W^2}{12\pi^2\sqrt{2}}\log(m_h/m_Z)-\frac{G_{\text{F}}m_W^2}{6\pi^2\sqrt{2}}\log(m_t/m_Z)+\cdots=(5.279\pm0.004)\cdot10^{-3}
 \end{aligned}
 \right.
 \]
+These are pseudo-observables, not theoretical parameters in such a way that in the SM the dependence on $m_t$ is quadratic only in $\varepsilon_1$. There is in fact a \nth{4} parameter due to the presence of the bottom quark which can be produced in the decay of the $Z$ boson. Moreover, new physics might want to couple preferentially to the bottom, the bottom left in particular, because it is in the same doublet as the top left. There are some models in which the mass of a quark has a relation with the strength of the interaction between the new physics and the SM sector. In other words, if the new physics has to do with EW symmetry breaking then the masses of fermions are coming from EW symmetry breaking, i.e. the larger the mass of a quark the stronger the interaction with the new physics would be. Large mass is possibly a hint of a large interaction and since bottom left is in the same doublet as the top left that means it will also couple strongly to the new sector. This motivates the introduction of an additional parameter $\varepsilon_b$ defined in the following ways:
+\[
+\rho^b=(1+\Delta\rho)(1+\varepsilon_b)^2 \quad k^b=\frac{1+\Delta k}{1+\varepsilon_b}
+\]
+Why were two formulas needed to introduce this new parameter and not just one? Because $\varepsilon_b$ parametrizes the shift in the coupling of $b_L$. Remember that we had two couplings, $g_V$ and $g_A$ (or equivalently $g_L$ and $g_R$), written in terms of $\rho$ and $\sin\theta_{\text{eff}}$ which depends on $k$. $\rho$ and $k$ are then functions of $g_L$ and $g_R$, now we want to introduce a non-universal correction only in $g_L$ therefore $\rho$ and $k$ have to be modified in that way. If we move from $V/A$ to $L/R$ only the coupling to bottom left will be modified, the one to bottom right remains untouched. This means that eventually the formula for $\varepsilon_b$ in terms of theoretical parameters which encapsulate one-loop corrections is just:
+\[
+\varepsilon_b=-2g_{Lb}
+\]
+In the SM, $\varepsilon_b$ is also proportional to $m_t^2$, which makes it particularly important:
+\[
+\varepsilon_b^{\text{SM}}=-\frac{G_{\text{F}}m_t^2}{4\pi^2\sqrt{2}}+\cdots=-(6.94\pm0.15)\cdot10^{-3}
+\]
+How is it possible to understand this quadratic dependence on $m_t$? We go to the gaugeless limit and this dependence is coming from a diagram which has the following form:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/bl.pdf}
+    \caption*{}
+    \labfig{bl}
+\end{figure}\\
+At one-loop, there is the exchange of a $\phi^+$ and if we started with $b_R$ instead the diagram would have been of the same kind but there would have been $y_b$ at the vertices, that is way we do not want to spend another parameter for the corrections to the coupling with $b_R$. To make it simpler, $b_R$ is not in the same multiplet with the top, it is a singlet.\\
+Finally, we provide the formulas for the $\varepsilon$ parameters expressed in terms of the theoretical parameters.
+\[
+\left\{
+\begin{aligned}
+&\varepsilon_1=e_1-e_5-\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}-4\delta g_A &&\varepsilon_3=e_3+c^2e_4-c^2e_5+\frac{c^2-s^2}{2s^2}\delta g_V-\frac{1+2s^2}{2s^2}\delta g_A\\
+&\varepsilon_2=e_2-s^2e_4-c^2e_5-\frac{\delta G_{\text{V,B}}}{G_{\text{V,B}}}-\delta g_V-3\delta g_A &&\varepsilon_b=-2\delta g_{Lb}
+\end{aligned}
+\right.
+\]
+On the right hand side of these formulas we know everything except for $e_1, e_2, e_3, e_4$ and $e_5$ which are just the self-energies written in this way:
+\[
+\left\{
+\begin{aligned}
+&e_1=\frac{A^{33}(0)-A^{WW}(0)}{m_W^2} &&e_2=F^{WW}(m_W^2)-F^{33}(m_Z^2) &&e_3=\frac{c}{s}F^{3B}(m_Z^2)\\
+&e_4=F^{\gamma\gamma}(0)-F^{\gamma\gamma}(m_Z^2) &&e_5=m_Z^2F'^{ZZ}(m_Z^2)
+\end{aligned}
+\right.
+\]
+These $\varepsilon$ parameters get contribution from all the corrections, not just self-energies. We want to stress again that these $\varepsilon$ parameters parametrize the experimental information in a compact way under the assumption of universality except for the bottom quark, there is no other assumption. This is important because there are also parameters parametrizing the new physics which unfortunately people confuse with these $\varepsilon$ parameters which are pseudo-observables. 
+\subsection{Corrections from Heavy New Physics}
 \end{document}
