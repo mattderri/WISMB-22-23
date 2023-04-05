@@ -1221,5 +1221,44 @@ There is a logarithmic dependence on $m_h$ and then there is also the observatio
 \[
 |D_\mu\chi^+-m_WW_\mu^+|^2
 \]
-Let's say now we are interested in the charged part $A^{WW}$, this would be covariant with respect to the photon
+How can we get this? We write the kinetic term in this way:
+\[
+\Tr{(D_\mu\Sigma^\dagger)(D^\mu\Sigma)} \quad \Sigma=\exp{i\frac{\chi}{v}}
+\]
+From one of these two terms we get a derivative and from the other we get the gauge fields by setting $\Sigma$ to the identity. There will be a term which will just be the square of the vector boson field and that is the mass term, but then there is with the same coefficient another term which is the kinetic term for the would-be Goldstone boson. The moral is that if we want to capture this coefficient we can either compute the two-point function of the vector boson or the two-point function of the would-be Goldstone boson in the $\xi$-gauge. In this specific case, this can be done by looking at the following diagrams:
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/chi.pdf}
+    \caption*{}
+    \labfig{chi}
+\end{figure}\\
+The difference between $A^{33}$ and $A^{WW}$ violates custodial symmetry, in other words it treats $W$ differently from $Z$. $Z$ is written in this strange way, if there was a broken custodial symmetry all components should be equal which means that if we take the difference we should get 0. The non-vanishing of this quantity is a consequence of explicit violation of custodial symmetry. We can get a contribution only if loop diagrams violate custodial symmetry as well. The violation comes because of hypercharge, if we switched it off and took the difference between these two diagrams there would be a perfect cancellation. We then have to exchange $B$ not $W$, because if we exchange something that does not convey the breaking of custodial symmetry we get 0. Remember that we have to look at the kinetic term so let's do power counting: there are two bosonic propagators, there are derivatives in the vertices and this leaves us a logarithmic divergence for both diagrams. If there is a divergence, there should be a counter term: which counter term violates custodial symmetry? There is no such counter term in the SM, the kinetic term for $\chi$ is custodial invariant. Violation of custodial invariance comes from the presence of hypercharge. Therefore, there can be no divergence and the difference must be invariant, and it actually is.\\
+Let's now look at the top which is slightly simpler but the argument is basically the same. We go and look at the kinetic term and the contribution from fermions:
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/topbottom.pdf}
+    \caption*{}
+    \labfig{topbottom}
+\end{figure}\\
+The vertex comes from the Yukawa coupling:
+\[
+\overline{q}_L\Sigma\left(\begin{array}{cc}
+    t_R & y_t \\
+    b_R & y_b
+\end{array}\right)
+\]
+The contribution from the bottom will be small, so we can neglect it and focus on the top. Each diagram will have a logarithmic divergence but the total contribution will be finite and proportional to $y_t^2/16\pi^2$. Here we do not need to gauge anything, this is the gaugeless limit. $y_t^2$ is nothing but $G_{\text{F}}^2m_t^2/16\pi^2$ and the quadratic dependence on the mass of the top is now clear, it comes from the Yukawa interaction not from the gauge one. Altarelli and Barbieri understood that out of these three quantities only one depends quadratically on the mass of the top and they proposed three parameters $\varepsilon_{1,2,3}$ in which only $\varepsilon_1$ depends quadratically on $m_t$ and the other two are combined in a way that there is no such quadratic dependence and they only depend logarithmically on $m_t$.
+\[
+\varepsilon_1=\Delta\rho \quad \varepsilon_2=c^2\Delta\rho+\frac{s^2}{c^2}\frac{\Delta r_w}{s^2-c^2}-2s^2\Delta k \quad \varepsilon_3=c^2\Delta\rho+(c^2-s^2)\Delta k
+\]
+We can now write the expression of these parameters in the SM:
+\[
+\left\{
+\begin{aligned}
+&\varepsilon_1^{\text{SM}}=\frac{3G_{\text{F}}m_t^2}{8\pi^2\sqrt{2}}-3\frac{G_{\text{F}}m_W^2}{4\pi^2\sqrt{2}}\tan^2\theta_w\log(m_h/m_Z)+\cdots=(5.21\pm0.08)\cdot10^{-3}\\
+&\varepsilon_2^{\text{SM}}=-\frac{G_{\text{F}}m_W^2}{2\pi^2\sqrt{2}}\log(m_t/m_Z)+\cdots=(7.37\pm0.03)\cdot10^{-3}\\
+&\varepsilon_3^{\text{SM}}=\frac{G_{\text{F}}m_W^2}{12\pi^2\sqrt{2}}\log(m_h/m_Z)-\frac{G_{\text{F}}m_W^2}{6\pi^2\sqrt{2}}\log(m_t/m_Z)+\cdots=(5.279\pm0.004)\cdot10^{-3}
+\end{aligned}
+\right.
+\]
 \end{document}
