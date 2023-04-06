@@ -1300,6 +1300,118 @@ On the right hand side of these formulas we know everything except for $e_1, e_2
 \end{aligned}
 \right.
 \]
-These $\varepsilon$ parameters get contribution from all the corrections, not just self-energies. We want to stress again that these $\varepsilon$ parameters parametrize the experimental information in a compact way under the assumption of universality except for the bottom quark, there is no other assumption. This is important because there are also parameters parametrizing the new physics which unfortunately people confuse with these $\varepsilon$ parameters which are pseudo-observables. 
+These $\varepsilon$ parameters get contribution from all the corrections, not just self-energies. We want to stress again that these $\varepsilon$ parameters parametrize the experimental information in a compact way under the assumption of universality except for the bottom quark, there is no other assumption. This is important because there are also parameters parametrizing the new physics which unfortunately people confuse with these $\varepsilon$ parameters which are pseudo-observables. Fits on the $\varepsilon$ parameters yield the following results, presented also in the plots on the side.\marginnote[-3.5cm]{\includegraphics[]{Images/eps1.pdf}
+\includegraphics[]{Images/eps2.pdf}\\
+Two-dimensional probability distributions for $\varepsilon_1$ and $\varepsilon_3$ in the fit, with floating $\varepsilon_{1,2,3,b}$
+(top), or with assuming $\varepsilon_2=\varepsilon_2^{\text{SM}}$ and $\varepsilon_b=\varepsilon_b^{\text{SM}}$ (bottom). In the top plot, the effect of non-universal
+vertex corrections is presented. In the bottom plot, we also show the impact of different constraints.
+The SM prediction at 95\% is denoted by a point with an error bar. Plots from \cite{Silv}.}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|cc}
+    \hline
+    \rowcolor{gray!45} & Fit $\varepsilon_{1,2,3,b}$ & Fit $\varepsilon_{1,3}$ and $\varepsilon_{2,b}=\varepsilon_{2,b}^{\text{SM}}$\\
+    \hline 
+    $\varepsilon_1\cdot10^3$ & $5.6\pm1.0$ & $6.0\pm0.6$\\
+    $\varepsilon_2\cdot10^3$ & $-7.8\pm0.9$ & $-$\\
+    $\varepsilon_3\cdot10^3$ & $5.6\pm0.9$ & $5.9\pm0.8$\\
+    $\varepsilon_b\cdot10^3$ & $-5.8\pm1.3$ & $-$\\
+    \hline
+    \end{tabular}
+    \caption*{}
+    \labtab{fit}
+\end{table}\\
+Here there is the assumption of universality but the plots also show effects of non-universal corrections. 
 \subsection{Corrections from Heavy New Physics}
+How can we improve the fit by including new physics? Remember that $\Gamma$ was proportional to $g_L^2+g_R^2$ while the forward-backward asymmetry $A_{\text{FB}}$ was proportional to $(g_L^2-g_R^2)/(g_L^2+g_R^2)$. For the bottom, the two couplings are equal to:
+\[
+g_L^b=T_{3L}(b)-Q\sin^2\theta\simeq-0.42 \quad g_R^b=-Q\sin^2\theta\simeq0.077
+\]
+Apart from the sign, it is clear that $|g_R^b|\ll|g_L^b|$. Hence, we can expand the forward-backward asymmetry as:
+\[
+A_{\text{FB}}\sim\frac{1-g_R^2/g_L^2}{1+g_R^2/g_L^2}\simeq1-2\frac{g_R^2}{g_L^2}
+\]
+This means that $g_L$ has to be close to the SM value while we have to find a new model which gives a contribution to the coupling of the bottom right. However, this ratio is small so the model has to give a large correction to $g_R^b$. We then have to find new physics which does not modify $g_L^b$ but gives a large correction to $g_R^b$. The simpler way to get this correction is to get it at tree-level, if we do loops then it becomes smaller. This would be difficult because the model should not destroy other predictions, in particular it does not enter at tree-level $g_L^b$. That is not trivial.\\
+We now discuss the corrections coming from new physics in the language of EFTs, i.e. with heavy new physics.\marginnote{Heavy in a sense that it is much heavier than the EW scale.} We are going to do it in a model independent way, considering the SM as an EFT. First of all we are making important assumptions: this new physics is heavy and it gives only oblique corrections, which means that it gives corrections only to vector bosons self-energies. This is not a physical statement, suppose now there is heavy new physics with only higher dimensional operators which affect the self-energies of vector bosons. However, it is always possible to change basis, i.e. make a field redefinition, and rewrite these operators in terms of other operators with the same dimensionality. If the corrections are oblique in one basis they will not be oblique in another basis so the statement is that we are assuming there exists some basis in which the corrections are only to the self-energies, that is the physical statement. Self-energies are parametrized as $\Pi_{\mu\nu}^{ij}(q)$ where $q$ is the incoming momentum, there will be several of these quantities and what we can do is write a sort of effective Lagrangian quadratic in the gauge fields in which we write all possible terms whose coefficients are $\Pi_{\mu\nu}$. Let's say that the scale of new physics is such that $\Lambda_{\text{NP}}\gg m_{W,Z,h}$, $\Pi_{\mu\nu}$ can always be expanded in powers of $q^2/\Lambda_{\text{NP}}^2$ and if we truncate the expansion we are left with an effective Lagrangian. Working in the base where EW symmetry is broken but electromagnetism is preserved, we have:
+\[
+\pazocal{L}_{\text{eff}}=W_\mu^+\Pi_{WW}^{\mu\nu}(q)W_\nu^-+W_\mu^3\Pi_{33}^{\mu\nu}W_\nu^3+B_\mu\Pi_{BB}^{\mu\nu}B_\nu+W_\mu^3\Pi_{3B}^{\mu\nu}B_\nu+\cdots
+\]
+where $\cdots$ represents terms higher in the number of fields. This is the most general effective Lagrangian we can write, invariant under electromagnetism and quadratic in the fields. How do these form factors look like? They can be written as:
+\[
+\Pi_{\mu\nu}^{ij}(q)=\eta_{\mu\nu}\Pi^{ij}(q^2)+\cancel{q_\mu q_\nu\;\text{terms}} \quad \Pi^{ij}(q^2)=A^{ij}(0)+q^2F^{ij}(q^2)
+\]
+The $q_\mu q_\nu$ terms can be neglected, so our form factors are just scalar functions of $q^2$. If the new physics is heavy, then we can think of expanding these form factors in powers of $q^2/\Lambda_{\text{NP}}^2$ and there will be some SM contributions but now we just want to focus on the new physics contribution. 
+\[
+\Pi(q^2)=\Pi(0)+q^2\Pi'(q^2)+\frac{(q^2)^2}{2}\Pi''(q^2)+\cdots
+\]
+Where should we stop in this expansion? Consider now the first piece in $\pazocal{L}_{\text{eff}}$: there are $\Pi_{WW}(0)$ and $\Pi_{WW}'(0)$.\marginnote{We will use a non-standard normalization of fields, in particular they will be normalized with the couplings in front of the kinetic terms: $-F_{\mu\nu}^2/4g^2$.} These quantities have to reproduce the $W$ mass, so if we look at 0 momentum we have:
+\[
+\Pi_{WW}(0)=\frac{v^2}{4} \quad \Pi_{WW}'(0)=\frac{1}{g^2}
+\]
+Similarly, $\Pi'_{BB}(0)=1/g'^2$ and we are not able to test new physics with these parameters. The other quantities we can consider are the remaining three form factors at 0 momentum which form a matrix:
+\[
+\left(\begin{array}{cc}
+    \Pi_{33}(0) & \Pi_{3B}(0) \\
+    \Pi_{3B}(0) & \Pi_{BB}(0) 
+\end{array}\right)
+\]
+This matrix has to satisfy some requirements:
+\begin{enumerate}[label=\roman*)]
+    \item there should be 0 as eigenvalue because these are the masses of the photon and the $Z$. This means that we are requiring that the photon must be massless:
+    \[
+    \Pi_{33}(0)\Pi_{BB}(0)-\Pi_{3B}^2(0)=0
+    \]
+    \item Photon must couple to the usual charge generator $Q=T_3+Y$
+\end{enumerate}
+This means in practice that this matrix has to be proportional to the following:\marginnote{In the standard normalization it will be:
+\[
+\left(\begin{array}{cc}
+    g^2 & gg' \\
+    gg' & g'^2 
+\end{array}\right)
+\]
+but now we are in the non-standard normalization so the couplings are removed.}
+\[
+\left(\begin{array}{cc}
+    \Pi_{33}(0) & \Pi_{3B}(0) \\
+    \Pi_{3B}(0) & \Pi_{BB}(0) 
+\end{array}\right)\propto\left(\begin{array}{cc}
+    1 & 1 \\
+    1 & 1 
+\end{array}\right)
+\]
+There will then be constraints on these parameters:
+\[
+\Pi_{33}(0)=\Pi_{BB}(0)=\Pi_{3B}(0)
+\]
+2 conditions for 3 quantities. If we truncated the series at second derivative, we would have $4\cdot3=12$ parameters, minus the 5 conditions leaves us with 7 parameters. These are the ones which parametrize the new physics, the others will receive contributions from them. Do we have to keep all of them? The idea is that there should be a hierarchy, some parameters will be smaller than the other ones so why would we want to keep them? Because some of the $\Pi'$ are already fixed, so if we want to consider corrections from new physics for such quantities we have to go to the second order which represents the first correction. It is not a matter of truncating the expansion a-priori, we have to see for each parameter what is the first leading order correction coming from new physics and that is when we stop. This first correction does not appear at the same level in all the channels. 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|cc}
+    \hline
+    \rowcolor{gray!45} Does it break: &SU$(2)_{\text{EW}}$ & Custodial symmetry \\
+    \hline 
+    $\Pi'_{3B}(0),\cancel{\Pi''_{3B}(0)}$ & \checkmark & \xmark\\
+    $\Pi_{33}(0)-\Pi_{WW}(0)$ & \checkmark & $\checkmark$\\
+    $\cancel{\Pi'_{33}(0)-\Pi'_{WW}(0)}$ & \checkmark & $\checkmark$\\
+    $\cancel{\Pi''_{33}(0)-\Pi''_{WW}(0)}$ & \checkmark & \checkmark\\
+    $\Pi_{BB}''(0)$ & \xmark & \xmark\\
+    $\Pi_{WW}''(0)$ & \xmark & \xmark\\
+    \hline
+    \end{tabular}
+    \caption*{}
+    \labtab{boh}
+\end{table}\\
+These are the 7 parameters written in this linear combination. Notice that some of them have been crossed out because they are not useful: $\Pi''_{3B}(0)$ can be ignored because if new physics contribute to $\Pi'_{3B}(0)$ then it will contribute to $\Pi''_{3B}(0)$ in a suppressed way. The same story applies for $[\Pi'_{33}(0)-\Pi'_{WW}(0)]$ and $[\Pi''_{33}(0)-\Pi''_{WW}(0)]$. We are then left with 4 parameters encoding the oblique  effects of new physics. These parameters have a name:
+\[
+\left\{
+\begin{aligned}
+&\frac{g^2}{m_W^2}\left\{[\Pi_{33}(0)-\Pi_{WW}(0)]-[\Pi_{33}^{\text{SM}}(0)-\Pi_{WW}^{\text{SM}}(0)]\right\}:=\hat{T}\\
+&g^2[\Pi_{33}'(0)-\Pi_{33}'^{\text{SM}}(0)]:=\hat{S}\\
+&\frac{g^2m_W^2}{2}[\Pi_{WW}'(0)-\Pi_{WW}'^{\text{SM}}(0)]:=\hat{W}\\
+&\frac{g'^2m_W^2}{2}[\Pi_{BB}''^{\text{SM}}(0)-\Pi_{BB}''^{\text{SM}}(0)]:=\hat{Y}
+\end{aligned}
+\right.
+\]
+The subtraction of the SM quantities are due to the fact that we want to keep only the new physics contribution. It is now possible to connect these quantities with the $\varepsilon$ parameters
 \end{document}
