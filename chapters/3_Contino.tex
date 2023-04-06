@@ -1406,12 +1406,92 @@ These are the 7 parameters written in this linear combination. Notice that some 
 \[
 \left\{
 \begin{aligned}
-&\frac{g^2}{m_W^2}\left\{[\Pi_{33}(0)-\Pi_{WW}(0)]-[\Pi_{33}^{\text{SM}}(0)-\Pi_{WW}^{\text{SM}}(0)]\right\}:=\hat{T}\\
-&g^2[\Pi_{33}'(0)-\Pi_{33}'^{\text{SM}}(0)]:=\hat{S}\\
-&\frac{g^2m_W^2}{2}[\Pi_{WW}'(0)-\Pi_{WW}'^{\text{SM}}(0)]:=\hat{W}\\
-&\frac{g'^2m_W^2}{2}[\Pi_{BB}''^{\text{SM}}(0)-\Pi_{BB}''^{\text{SM}}(0)]:=\hat{Y}
+&\hat{T}:=\frac{g^2}{m_W^2}\left\{[\Pi_{33}(0)-\Pi_{WW}(0)]-[\Pi_{33}^{\text{SM}}(0)-\Pi_{WW}^{\text{SM}}(0)]\right\}\\
+&\hat{S}:=g^2[\Pi_{33}'(0)-\Pi_{33}'^{\text{SM}}(0)]\\
+&\hat{W}:=\frac{g^2m_W^2}{2}[\Pi_{WW}''0)-\Pi_{WW}''^{\text{SM}}(0)]\\
+&\hat{Y}:=\frac{g'^2m_W^2}{2}[\Pi_{BB}''^{\text{SM}}(0)-\Pi_{BB}''^{\text{SM}}(0)]
 \end{aligned}
 \right.
 \]
-The subtraction of the SM quantities are due to the fact that we want to keep only the new physics contribution. It is now possible to connect these quantities with the $\varepsilon$ parameters
+The subtraction of the SM quantities are due to the fact that we want to keep only the new physics contribution. It is now possible to connect these quantities with the $\varepsilon$ parameters.
+\[
+\varepsilon_i=\varepsilon_i^{\text{SM}}+\varepsilon_i^{\text{NP}}\quad \Delta\varepsilon_i^{\text{NP}}=\Delta\varepsilon_i^{\text{SD}}+\Delta\varepsilon_i^{\text{LD}}
+\]
+The new physics contribution can be splitted in a term deriving from short distance (SD) and a term from long distance (LD). If we have diagrams in which only heavy particles circulate in the loops then we can see this effect as a point-like interaction, i.e. a local operator. That is the short distance but it could be that new physics modifies properties of the SM particles, in particular their couplings, and then there would be new physics effects in diagrams where there are SM particles circulating in the loop with modified couplings. This is long distance.\\
+The short distance contribution is parametrized in terms of the parameters $\hat{T}, \hat{S}, \hat{W}$ and $\hat{Y}$.
+\[
+\left\{
+\begin{aligned}
+&\Delta\varepsilon_1^{\text{SD}}=\hat{T}-\hat{W}-\frac{s^2}{c^2}\hat{Y} &&\Delta\varepsilon_2^{\text{SD}}=-\hat{W}\\
+&\Delta\varepsilon_3^{\text{SD}}=\hat{S}-\hat{W}-\hat{Y} &&\Delta\varepsilon_b^{\text{SD}}=0
+\end{aligned}
+\right.
+\]
+There is another approach done in the '90s by Peskin and Takeuchi.\marginnote{Some references: \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.964}{New constraint on a strongly interacting Higgs sector} and \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.46.381}{Estimation of oblique electroweak corrections}} They did something very similar but they made a conceptual mistake because they thought of truncating the expansion at first order independently on the channel they were looking at. Basically they were neglecting $\hat{W}$ and $\hat{Y}$, since they appear at second order derivatives, but they were including one more.
+\[
+\left\{
+\begin{aligned}
+&\hat{S}:=16\pi[\Pi'_{33}(0)-\Pi_{33}'^{\text{SM}}(0)]\\
+&\hat{T}:=\frac{4\pi}{s^2c^2m_Z^2}\left\{[\Pi_{11}(0)-\Pi_{33}(0)]-[\Pi_{11}^{\text{SM}}(0)-\Pi_{33}^{\text{SM}}(0)]\right\}\\
+&\hat{U}:=16\pi\left\{[\Pi'_{WW}(0)-\Pi'_{33}(0)]-[\Pi_{11}'^{\text{SM}}(0)-\Pi_{11}'^{\text{SM}}(0)]\right\}
+\end{aligned}
+\right.
+\]
+There are 3 parameters now instead of 4 but there is a problem because this basis is neither complete nor minimal, the $\hat{U}$ parameter is useless because if new physics contributes to $\hat{U}$ it will also contribute to $\hat{T}$, which is the leading effect. If new physics instead is not heavy we should not do this and look at the $\varepsilon$ parameters because they are capturing everything. The $\varepsilon$ parameters are pseudo-observables, they have nothing to do with theoretical calculations, they are not assuming that the new physics is heavy while here $\hat{S}, \hat{T}$ and $\hat{U}$ are parametrizing heavy new physics.\\
+We now want to show what are the dimension 6 operators which correspond to these parameters:
+\[
+\left\{
+\begin{aligned}
+&\hat{T}:\; O_T=(H^\dagger\overset{\leftrightarrow}{D_\mu}H)^2 \quad \hat{W}:\;O_{WW}=(D_\mu W^{\mu\nu,a})^2 \quad \hat{Y}:\; O_{BB}=(\partial_\mu B^{\mu\nu})^2\\
+&\hat{S}:\;O_W=H^\dagger T^a\overset{\leftrightarrow}{D_\mu}HD_\nu W^{\mu\nu,a} \quad O_B=H^\dagger\overset{\leftrightarrow}{D_\mu}H\partial_\nu B^{\mu\nu}\to\hat{S}\approx O_W-O_B
+\end{aligned}
+\right.
+\]
+\marginnote[-1cm]{There is also another basis in which we can introduce the operator: 
+\[
+O_{WB}:=H^\dagger T^aW_{\mu\nu}^aB^{\mu\nu}H
+\]
+}
+There are 4 parameters however under the assumption of universality there are only 3 $\varepsilon$ parameters, 3 pseudo-observables. Hence, it is not possible to use only LEP1 data to extract values of all these 4 parameters and we have to go to LEP2 which is measuring also the cross section of $e^-e^+\to f\overline{f}$ at different values of the energy and that gives other experimental inputs to fit the 4 parameters. It turns out that $\hat{W}$ and $\hat{Y}$ are like, within the precision we have, contact interaction among 4 fermions. We are doing this type of scattering:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/4fblob.pdf}
+    \caption*{}
+    \labfig{4fblob}
+\end{figure}\\
+The propagator in this diagram is given by:
+\[
+\frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}
+\]
+The new physics effects correct this self-energy at order $q^4$. We are at LEP, so we can pretend that $q^2\approx(200\,\text{GeV})^2\gg m_Z^2\simeq(90\,\text{GeV})^2$ and the corrections associated to $\hat{W}$ have to be much smaller than $q^2$ because we are assuming it is a small effect with respect to the SM contribution. It turns out that $\hat{W}$ is constrained to the level of $10^{-3}$ so it is a good approximation, everything is consistent. We can then expand this propagator:
+\begin{align*}
+\frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}&\simeq\frac{i}{q^2-m_Z^2}\left(1-\frac{q^4\hat{W}}{m_Z^2}\frac{i}{q^2-m_Z^2}\right)[1+\pazocal{O}(\hat{W})]\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
+&\simeq\frac{i}{q^2-m_Z^2}-\frac{\hat{W}}{m_Z^2}+\pazocal{O}(\hat{W}/q^2)
+\end{align*}
+Notice that now the second term does not depend on $q^2$ and it is a contact interaction and we can see it diagrammatically as:
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/contact.pdf}
+    \caption*{}
+    \labfig{contact}
+\end{figure}\\
+It is also possible to obtain the same result by doing a field redefinition and rewrite $O_{WW}$ in terms of a four-fermion operator which is still dimension 6. That is true, it is possible to exhibit such a field redefinition.\\
+We have seen that the $\Delta\varepsilon_i$ contribution to new physics came from two pieces, a short distance term and a long distance one. We computed the short distance term in the framework of EFT by saying that at tree-level there is one operator which contributes to each parameter. However, there was a simplification in this story because what we have said is true but who is stopping us from going at loop-level? We should also worry about the short distance contribution coming by making loops with insertions with higher dimension operators. For example, if we want to get a contribution to $\hat{T}$ we look at:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/t.pdf}
+    \caption*{}
+    \labfig{t}
+\end{figure}\\
+The higher dimension operator which have been inserted in the vertex above is $O_H:=(\partial_\mu H^\dagger H)^2$ and we get a correction to $\hat{T}$. However, if we make such a diagram we obtain a logarithmic divergence since there is one derivative in each of the remaining vertices. This diagram will then go like:
+\[
+\frac{1}{\epsilon}\log(\mu/m_Z)\frac{g'^2}{16\pi^2}C_H=\Delta C_T
+\]
+This means that we need a counter term to cancel this divergence, such counter term will be of the following form:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/ct.pdf}
+    \caption*{}
+    \labfig{ct}
+\end{figure}
 \end{document}
