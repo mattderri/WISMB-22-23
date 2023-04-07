@@ -1468,7 +1468,7 @@ The new physics effects correct this self-energy at order $q^4$. We are at LEP, 
 \frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}&\simeq\frac{i}{q^2-m_Z^2}\left(1-\frac{q^4\hat{W}}{m_Z^2}\frac{i}{q^2-m_Z^2}\right)[1+\pazocal{O}(\hat{W})]\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
 &\simeq\frac{i}{q^2-m_Z^2}-\frac{\hat{W}}{m_Z^2}+\pazocal{O}(\hat{W}/q^2)
 \end{align*}
-Notice that now the second term does not depend on $q^2$ and it is a contact interaction and we can see it diagrammatically as:
+Notice that now the second term does not depend on $q^2$ and it is a contact interaction, we can see it diagrammatically as:
 \begin{figure}[h]
     \centering
     \includegraphics{Images/contact.pdf}
@@ -1490,8 +1490,15 @@ The higher dimension operator which have been inserted in the vertex above is $O
 This means that we need a counter term to cancel this divergence, such counter term will be of the following form:
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.45\textwidth]{Images/ct.pdf}
+    \includegraphics[width=0.35\textwidth]{Images/ct.pdf}
     \caption*{}
     \labfig{ct}
-\end{figure}
+\end{figure}\\
+The counter term is $O_T$ itself so it appears by considering $C_T$ as a function of $\mu$, exactly like in QED. There is a simple argument using dimensional analysis which tells us that if in our theory there is no relevant operator\marginnote{Relevant means dimensionality smaller than 4.} then there are only dimensionless couplings in the Lagrangian at dimension 4. If we do a diagram where we insert a dimension 6 operator, there is a parameter which has dimension $-2$ and if this diagram gives a logarithmic divergence the counter term cancelling such divergence will necessarily be a dimension 6 operator. Of course if we do more than one insertion things change, e.g. for two insertions the dimension will be 8 and the effects will be suppressed. Making diagrams with one insertion of a dimension 6 operator is a normalization of other dimension 6 operators. When we do loops, we will be able to pull out powers of the mass, e.g. mass of the Higgs, and that term would somehow help us balance the presence of this coefficient. This in fact increases the degree of divergence at least in principle but since we are using dimensional regularization eventually everything will be inside the logarithmic divergence, which in this case would be proportional to $m_h^2C_H^2$ and that corresponds to a renormalization of $(H^\dagger H)^2$.\\
+The moral is that $C_T(\mu)$ is given by:
+\[
+C_T(\mu)=C_T(\Lambda)+\frac{g'^2}{16\pi^2}\log(\Lambda/\mu)C_H(\Lambda)
+\]
+We discovered that at tree-level $\varepsilon_1$ gets a contribution from $C_T$ but now we see that $C_T$ depends on $\mu$ so which scale should we use? There are effects which come from loops of SM particles but this effect is short distance because it comes from a divergence. The divergence is coming from high energies so we can use a formalism which is SU(2) invariant, we are not sensitive to the breaking of SU(2). We are looking at diagrams in which we use SU(2) quantum numbers, there is no need to go to the broken phase and because there are loops of light particles but with a divergent contribution, this divergent contribution is always coming from internal momenta. We can incorporate this in the short distance contribution and at this point $\hat{T}$ will be proportional to $C_T$ at some low scale, e.g. $m_Z$. We then incorporate the scale at which we match the full theory with the EFT, that is the scale at which the new particles will appear, and then we run the effective operators to the scale at which we do the experiment, in this case $m_Z$, and there will be a short distance contribution which we can incorporate by resolving the RGE equation.\\
+If we use a different scale, e.g. $m_W$ or $m_h$, this would differ by something which is finite and that contribution can always be incorporated into the long distance part which is still present. The way in which this short distance contribution is defined is a bit ambiguous but the ambiguity can be reabsorbed in the long distance contribution.  
 \end{document}
