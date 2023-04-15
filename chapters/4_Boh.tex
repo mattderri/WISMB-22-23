@@ -1,0 +1,142 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\setchapterimage[6.5cm]{Images/final.jpg}
+\setchapterpreamble[u]{\margintoc}
+\chapter[Final Topics]{Final Topics\footnotemark[0]}
+\labch{extra}
+These are the final topics of the course, objects of January lectures. The lectures about the hierarchy problem have been done by prof. Contino while prof. Nardecchia did the lectures about the CP violation. I did not know where to put these topics inside the chapters so I decided to give them a special extra chapter.
+\section{Hierarchy Problem of the Standard Model}
+\section{CP Violation in the $K$ Mesons}\marginnote{From \cite{Rid}}
+\textbf{Mixing} is a phenomenon we have when flavour eigenstates are different than mass eigenstates. Here we are going to mix states with the same unbroken quantum numbers. \textbf{Oscillation} is a phenomenon involving time evolution of flavour eigenstates, we are going to focus on the mixing of mesons, this discussion holds true for $K^0, D^0, B_d$ and $B_s$.\\
+We are interested in the time evolution of a $K^0 (\overline{s}d)$ or a $\overline{K}^0 (\overline{d}s)$ in its rest frame. $K^0$ mesons are produced by strong interaction processes, so at the initial time $t=0$ the quantum state describing the system has a definite value of strangeness, $S=+1$ for $K^0$ and $S=-1$ for $\overline{K}^0$. These mesons are stable with respect to strong interactions and decay only via weak interactions. The transition $K^0\to\overline{K}^0$ is allowed since strangeness is not conserved in weak interactions, therefore we introduce a two-dimensional space spanned by the two meson states:
+\[
+\ket{K^0}:=\begin{pmatrix}1\\0\end{pmatrix} \quad \ket{\overline{K}^0}:=\begin{pmatrix}0\\1\end{pmatrix}
+\]
+and study the Schr\"odinger equation for a generic state $\ket{\Psi(t)}$ given by:
+\[
+\ket{\Psi(t)}=\Psi_1(t)\ket{K^0}+\Psi_2(t)\ket{\overline{K}^0}
+\]
+The Schr\"odinger equation has the form:
+\begin{equation}
+\labeq{schreq} 
+i\frac{\partial}{\partial t}\ket{\Psi(t)}=H_{\text{eff}}\ket{\Psi(t)}
+\end{equation}
+where the effective Hamiltonian $H_{\text{eff}}$ is a $2\times2$ matrix accounting for the decays which can be decomposed as:
+\[
+H_{\text{eff}}=M-i\frac{\Gamma}{2} \quad M=\left(\begin{array}{cc}
+    M_{11} & M_{12} \\
+    M^*_{12} & M_{22}
+\end{array}\right) \quad \Gamma=\left(\begin{array}{cc}
+    \Gamma_{11} & \Gamma_{12} \\
+    \Gamma^*_{12} & \Gamma_{22}
+\end{array}\right)
+\]
+If weak interactions were switched off, the $\ket{K^0}$ and $\ket{\overline{K}^0}$ would be stationary degenerate states, with the matrix $\Gamma$ and the off-diagonal terms in $M$ equal to 0, while $M_{11}=M_{22}=m_K$. This is in general not true but it is possible to prove the equality between the diagonal terms in the two matrices, i.e. $M_{11}=M_{22}$ and $\Gamma_{11}=\Gamma_{22}$, even in presence of weak interactions due to CPT invariance. Firstly, we define the CP operator as follows:\marginnote{In general, the CP operator should be defined as:
+\[
+\hat{CP}\ket{K^0}=e^{i\alpha}\ket{\overline{K}^0}
+\]
+where $\alpha$ is an arbitrary phase which can be put to 0.}
+\[
+\hat{CP}\ket{K^0}=\ket{\overline{K}^0} \quad \hat{CP}\ket{\overline{K}^0}=\ket{K^0}
+\]
+In the two-dimensional space we introduced, CP is represented by a matrix $U_{CP}$ which transforms the vector $(1,0)$ in $(0,1)$ and vice-versa:
+\[
+U_{CP}=\left(\begin{array}{cc}
+    0 & 1 \\
+    1 & 0
+\end{array}\right) \quad U_{CP}=U_{CP}^{-1}
+\]
+Transforming $M$ and $\Gamma$ under CP gives us:
+\[
+M\to U_{CP}MU_{CP}^{-1}=\left(\begin{array}{cc}
+    M_{22} & M_{12}^* \\
+    M_{12} & M_{11}
+\end{array}\right) \quad \Gamma\to U_{CP}\Gamma U_{CP}^{-1}=\left(\begin{array}{cc}
+    \Gamma_{22} & \Gamma_{12}^* \\
+    \Gamma_{12} & \Gamma_{11}
+\end{array}\right)
+\]
+Time reversal operation T acts as complex conjugation of the observables, $M\to M^*$ and $\Gamma\to\Gamma^*$. We then conclude that under CPT we have:
+\[
+M\to\left(\begin{array}{cc}
+    M_{22} & M_{12} \\
+    M_{12}^* & M_{11}
+\end{array}\right) \quad \Gamma\to\left(\begin{array}{cc}
+    \Gamma_{22} & \Gamma_{12} \\
+    \Gamma_{12}^* & \Gamma_{11}
+\end{array}\right)
+\]
+Imposing that CPT is a good symmetry we get that:
+\[
+M_{11}=M_{22}=m_K \quad \Gamma_{11}=\Gamma_{22}=\gamma
+\]
+We now have to diagonalize $H_{\text{eff}}$:
+\[
+H_{\text{eff}}=\left(\begin{array}{cc}
+    M_{11}-i\frac{\Gamma_{11}}{2} & M_{12}-i\frac{\Gamma_{12}}{2} \\
+    M_{12}^*-i\frac{\Gamma_{12}^*}{2} & M_{22}-i\frac{\Gamma_{22}}{2}
+\end{array}\right)=\left(\begin{array}{cc}
+    m_K-i\frac{\gamma}{2} & M_{12}-i\frac{\Gamma_{12}}{2} \\
+    M_{12}^*-i\frac{\Gamma_{12}^*}{2} & m_K-i\frac{\gamma}{2}
+\end{array}\right)
+\]
+The eigenvalues of this matrix are $m_K-i\gamma/2\pm R$ where $R$ is defined as:
+\[
+R=\sqrt{\left(M_{12}-i\frac{\Gamma_{12}}{2}\right)\left(M_{12}^*-i\frac{\Gamma_{12}^*}{2}\right)}
+\]
+The mass and lifetime differences between the two eigenstates are:
+\[
+\Delta M=M_S-M_L=2\mathfrak{Re}\{R\} \quad \Delta\Gamma=\Gamma_S-\Gamma_L=-4\mathfrak{Im}\{R\}
+\]
+The two eigenvectors are given by:
+\begin{equation}
+\labeq{pq}
+\ket{K_S}=p\ket{K^0}+q\ket{\overline{K}^0} \quad \ket{K_L}=p\ket{K^0}-q\ket{\overline{K}^0}
+\end{equation}
+where the parameters $p$ and $q$ satisfy the following relations:
+\[
+|p|^2+|q|^2=1 \quad \frac{q}{p}=\sqrt{\frac{M_{12}^*-i\Gamma_{12}^*/2}{M_{12}-i\Gamma_{12}/2}}
+\]
+This fixes $p$ and $q$ up to a common phase, the indices $L$ for long and $S$ for short reflect the fact that the two eigenstates have different lifetimes. $p$ and $q$ are not physical quantities, in fact by performing a strangeness rotation on $\ket{K^0}$ and $\ket{\overline{K}^0}$, $p$ and $q$ gets redefined by a phase but the measurable quantities are not affected by this.\\
+We can now move our attention to the problem of time evolution of $K^0$ meson states. By integrating the Schr\"odinger equation defined in \refeq{schreq}, one obtains:
+\[
+\left\{
+\begin{aligned}
+&\ket{K_S(t)}=\exp{-i\left(M_S-i\frac{\Gamma_S}{2}\right)t}\ket{K_S(0)}\\
+&\ket{K_L(t)}=\exp{-i\left(M_L-i\frac{\Gamma_L}{2}\right)t}\ket{K_L(0)}
+\end{aligned}
+\right.
+\]
+The time evolution of a generic state $\ket{\Psi(t)}$ is obtained by expanding $\ket{\Psi(0)}$ on the $\ket{K_L}, \ket{K_S}$ basis and then using the above equations. Consider now at $t=0$ a beam of only $\ket{K^0}$ mesons. From \refeq{pq} we get:
+\[
+\ket{\Psi(0)}=\ket{K^0}=\frac{1}{2p}(\ket{K_S(0)}+\ket{K_L}(0))
+\]
+We now let this state evolve in time:
+\begin{align*}
+\ket{\Psi(t)}&=\frac{1}{2p}(\ket{K_S(t)}+\ket{K_L(t)})=\frac{1}{2p}\left[\exp{-i\left(M_S-i\frac{\Gamma_S}{2}\right)t}\ket{K_S(0)}+\exp{-i\left(M_L-i\frac{\Gamma_L}{2}\right)t}\ket{K_L(0)}\right]\\
+&=\frac{1}{2p}\left[\exp{-i\left(M_S-i\frac{\Gamma_S}{2}\right)t}(p\ket{K^0}+q\ket{\overline{K}^0})+\exp{-i\left(M_L-i\frac{\Gamma_L}{2}\right)t}(p\ket{K^0}-q\ket{\overline{K}^0})\right]\\
+&=f_+(t)\ket{K^0}+\frac{q}{p}f_-(t)\ket{\overline{K}^0}
+\end{align*}
+where the functions $f_\pm(t)$ which have been introduced have the following form:
+\[
+f_\pm(t)=\frac{1}{2}\left[\exp{-i\left(M_S-i\frac{\Gamma_S}{2}\right)t}\pm\exp{-i\left(M_L-i\frac{\Gamma_L}{2}\right)t}\right]
+\]
+The probability of finding a $K^0$ in the beam after a time $t$ is proportional to:
+\[
+|\braket{K^0|\Psi(t)}|^2=|f_+(t)|^2=\frac{1}{4}\left[e^{-\Gamma_St}+e^{-\Gamma_Lt}+2\exp{-\frac{\Gamma_S+\Gamma_L}{2}t}\cos(\Delta Mt)\right]
+\]
+Similarly, the probability of finding a $\overline{K}^0$ in the beam after a time $t$ is proportional to:
+\[
+|\braket{\overline{K}^0|\Psi(t)}|^2=\left|\frac{q}{p}\right|^2|f_-(t)|^2=\left|\frac{q}{p}\right|^2\frac{1}{4}\left[e^{-\Gamma_St}+e^{-\Gamma_Lt}-2\exp{-\frac{\Gamma_S+\Gamma_L}{2}t}\cos(\Delta Mt)\right]
+\]
+Neglecting for the moment CP-violating effects\marginnote{Neglecting CP-violating effects implies assuming that $|q/p|=1$.} and denoting with $N(K^0)$ and $N(\overline{K}^0)$ the amount of, respectively, $K^0$ and $\overline{K}^0$ mesons present in the beam at time $t$ we find:
+\[
+A(t):=\frac{N(K^0)-N(\overline{K}^0)}{N(K^0)+N(\overline{K}^0)}=\frac{2\cos(\Delta Mt)}{\exp{-\Delta\Gamma t/2}+\exp{+\Delta\Gamma t/2}}
+\]
+These numbers can be determined experimentally by studying the semileptonic decays of $K^0$ mesons. These decays follow the $\Delta S=\Delta Q$ rule, i.e. the variation of strangeness in the process is equal to the charge difference between hadrons in the final and initial state. Because of this rule, the following decay modes are allowed:
+\[
+K^0\to\pi^-e^+\nu_e \quad \overline{K}^0\to\pi^+e^-\overline{\nu}_e
+\]
+As a consequence, $N(K^0)$ is proportional to the number of observed positrons, consequently $N(\overline{K}^0)$ is proportional to the number of observed electrons and the quantity $A(t)$ can therefore be determined as a function of time.\\
+We now turn to the problem of CP violation and assume that $\ket{K_S}$ and $\ket{K_L}$ are eigenstates of the CP operator with eigenvalues $+1$ and $-1$ respectively.
+\end{document}

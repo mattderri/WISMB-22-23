@@ -66,7 +66,7 @@ For parity, charge conjugation and CP application, we have to keep in mind the f
     {\renewcommand{\arraystretch}{1}
     \begin{tabular}{c|c|c|c}
     \hline
-    Fields & $\hat{P}(x\xrightarrow[]{}\pazocal{P}x)$ & $\hat{C}$ & $\hat{CP}(x\xrightarrow[]{}\pazocal{P}x)$\\
+    \rowcolor{gray!45}Fields & $\hat{P}(x\xrightarrow[]{}\pazocal{P}x)$ & $\hat{C}$ & $\hat{CP}(x\xrightarrow[]{}\pazocal{P}x)$\\
     \hline
     $\overline{\Psi}\chi$ & $\overline{\Psi}\chi$ & $\overline{\chi}\Psi$ & $\overline{\chi}\Psi$\\
     $\overline{\Psi}_R\chi_L$ & $\overline{\Psi}_L\chi_R$ & $\overline{\chi}_R\Psi_L$ & $\overline{\chi}_L\Psi_R$\\
@@ -82,13 +82,15 @@ For parity, charge conjugation and CP application, we have to keep in mind the f
 \end{table}\\
 For every term there is a phase factor $e^{i(\phi_\chi-\phi_\Psi)}$ associated, for example we have the term $\overline{\Psi}\chi(x)\xrightarrow[]{\hat{CP}}e^{i(\phi_\chi-\phi_\Psi)}\overline{\chi}\Psi(\pazocal{P}x)$. Now we apply $\hat{CP}$ to all the stuff we already know.
 \[
+\left\{
 \begin{aligned}
-\hat{CP}W_\mu^+(x)\hat{CP}^\dagger&=-e^{+i\xi_W}\pazocal{P}_\mu^\nu W_\mu^-(\pazocal{P}x)\\   \hat{CP}W_\mu^-(x)\hat{CP}^\dagger &=-e^{-i\xi_W}\pazocal{P}_\mu^\nu W_\mu^+(\pazocal{P}x)\\
-\hat{CP}Z_\mu(x)\hat{CP}^\dagger &=-\eta_Z\pazocal{P}_\mu^\nu Z_\nu(\pazocal{P}x)\\ \hat{CP}A_\mu(x)\hat{CP}^\dagger &=-\pazocal{P}_\mu^\nu A_\nu(\pazocal{P}x)\\
-\hat{CP}G_\mu^a(x)\hat{CP}^\dagger &=-\eta_a\pazocal{P}_\mu^\nu G_\nu^a(\pazocal{P}x)\\ \hat{CP}h(x)\hat{CP}^\dagger &=\eta_h h(\pazocal{P}x)\\
-\hat{CP}u_i\hat{CP}^\dagger &=e^{i\phi_{u_i}}\gamma^0C\overline{u}_i^T\\
-\hat{CP}d_i\hat{CP}^\dagger &=e^{i\phi_{d_i}}\gamma^0C\overline{d}_i^T
+&\hat{CP}W_\mu^+(x)\hat{CP}^\dagger=-e^{+i\xi_W}\pazocal{P}_\mu^\nu W_\mu^-(\pazocal{P}x) \quad 
+&&\hat{CP}G_\mu^a(x)\hat{CP}^\dagger=-\eta_a\pazocal{P}_\mu^\nu G_\nu^a(\pazocal{P}x)\\   
+&\hat{CP}W_\mu^-(x)\hat{CP}^\dagger=-e^{-i\xi_W}\pazocal{P}_\mu^\nu W_\mu^+(\pazocal{P}x) \quad &&\hat{CP}h(x)\hat{CP}^\dagger=\eta_h h(\pazocal{P}x)\\
+&\hat{CP}Z_\mu(x)\hat{CP}^\dagger=-\eta_Z\pazocal{P}_\mu^\nu Z_\nu(\pazocal{P}x) \quad &&\hat{CP}u_i\hat{CP}^\dagger=e^{i\phi_{u_i}}\gamma^0C\overline{u}_i^T\\
+&\hat{CP}A_\mu(x)\hat{CP}^\dagger=-\pazocal{P}_\mu^\nu A_\nu(\pazocal{P}x) \quad &&\hat{CP}d_i\hat{CP}^\dagger=e^{i\phi_{d_i}}\gamma^0C\overline{d}_i^T
 \end{aligned}
+\right.
 \]
 Is the SM \textbf{invariant} under $\hat{CP}$ or not?  Is it possible to find $\xi_W, \eta_Z, \eta_h, \phi_{u_i},$ and $\phi_{d_i}$ such that $\hat{CP}\pazocal{L}(x)\hat{CP}^\dagger=\pazocal{L}(\pazocal{P}x)?$ The Standard Model Lagrangian can be decomposed as $\pazocal{L}_{\text{SM}}=\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}+\pazocal{L}_{\text{Yuk}}$.\\
 The typical term containing the $Z$ boson is in the form:
