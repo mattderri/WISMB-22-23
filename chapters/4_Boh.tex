@@ -6,6 +6,13 @@
 \labch{extra}
 These are the final topics of the course, objects of January lectures. The lectures about the hierarchy problem have been done by prof. Contino while prof. Nardecchia did the lectures about the CP violation. I did not know where to put these topics inside the chapters so I decided to give them a special extra chapter.
 \section{Hierarchy Problem of the Standard Model}
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/workinprogress.png}
+    \caption*{}
+    \label{fig:my_label}
+\end{figure}
+\newpage
 \section{CP Violation in the $K$ Mesons}\marginnote{From \cite{Rid}}
 \textbf{Mixing} is a phenomenon we have when flavour eigenstates are different than mass eigenstates. Here we are going to mix states with the same unbroken quantum numbers. \textbf{Oscillation} is a phenomenon involving time evolution of flavour eigenstates, we are going to focus on the mixing of mesons, this discussion holds true for $K^0, D^0, B_d$ and $B_s$.\\
 We are interested in the time evolution of a $K^0 (\overline{s}d)$ or a $\overline{K}^0 (\overline{d}s)$ in its rest frame. $K^0$ mesons are produced by strong interaction processes, so at the initial time $t=0$ the quantum state describing the system has a definite value of strangeness, $S=+1$ for $K^0$ and $S=-1$ for $\overline{K}^0$. These mesons are stable with respect to strong interactions and decay only via weak interactions. The transition $K^0\to\overline{K}^0$ is allowed since strangeness is not conserved in weak interactions, therefore we introduce a two-dimensional space spanned by the two meson states:
@@ -94,9 +101,10 @@ The two eigenvectors are given by:
 \ket{K_S}=p\ket{K^0}+q\ket{\overline{K}^0} \quad \ket{K_L}=p\ket{K^0}-q\ket{\overline{K}^0}
 \end{equation}
 where the parameters $p$ and $q$ satisfy the following relations:
-\[
-|p|^2+|q|^2=1 \quad \frac{q}{p}=\sqrt{\frac{M_{12}^*-i\Gamma_{12}^*/2}{M_{12}-i\Gamma_{12}/2}}
-\]
+\begin{equation}
+\labeq{pqrel}
+|p|^2+|q|^2=1 \qquad \frac{q}{p}=\sqrt{\frac{M_{12}^*-i\Gamma_{12}^*/2}{M_{12}-i\Gamma_{12}/2}}
+\end{equation}
 This fixes $p$ and $q$ up to a common phase, the indices $L$ for long and $S$ for short reflect the fact that the two eigenstates have different lifetimes. $p$ and $q$ are not physical quantities, in fact by performing a strangeness rotation on $\ket{K^0}$ and $\ket{\overline{K}^0}$, $p$ and $q$ gets redefined by a phase but the measurable quantities are not affected by this.\\
 We can now move our attention to the problem of time evolution of $K^0$ meson states. By integrating the Schr\"odinger equation defined in \refeq{schreq}, one obtains:
 \[
@@ -139,4 +147,65 @@ K^0\to\pi^-e^+\nu_e \quad \overline{K}^0\to\pi^+e^-\overline{\nu}_e
 \]
 As a consequence, $N(K^0)$ is proportional to the number of observed positrons, consequently $N(\overline{K}^0)$ is proportional to the number of observed electrons and the quantity $A(t)$ can therefore be determined as a function of time.\\
 We now turn to the problem of CP violation and assume that $\ket{K_S}$ and $\ket{K_L}$ are eigenstates of the CP operator with eigenvalues $+1$ and $-1$ respectively.
+\[
+\hat{CP}\ket{K_S}=p(\hat{CP}\ket{K^0})+q(\hat{CP}\ket{\overline{K}^0})=pe^{i\alpha}\ket{\overline{K}^0}+qe^{-i\alpha}\ket{K^0}\stackrel{?}{=}p\ket{K^0}+q\ket{\overline{K}^0}=\ket{K_S}
+\]
+The equation above is satisfied only if $q=pe^{i\alpha}$ or equivalently $|q/p|=1$. Using the second condition of \refeq{pqrel} this translates into:
+\[
+\left|\frac{q}{p}\right|^2=\frac{|M_{12}|^2+|\Gamma_{12}|^2/4+4\mathfrak{Im}(M_{12}\Gamma_{12}^*)}{|M_{12}|^2+|\Gamma_{12}|^2/4-4\mathfrak{Im}(M_{12}\Gamma_{12}^*)}
+\]
+The condition $|q/p|=1$, i.e. $\ket{K_S}$ and $\ket{K_L}$ CP eigenstates, implies having $\mathfrak{Im}(M_{12}\Gamma_{12}^*)=0$. Conversely, if $\mathfrak{Im}(M_{12}\Gamma_{12}^*)\neq0$ then there is CP violation.\\
+The $K^0$ mesons decay into two-pion states, $\ket{\pi^0\pi^0}$ or $\ket{\pi^+\pi^-}$, and three-pion states, $\ket{\pi^0\pi^0\pi^0}$ or $\ket{\pi^+\pi^-\pi^0}$. The two-pion states are CP eigenstates with eigenvalue $+1$ while the three-pion states are CP eigenstates with eigenvalue $-1$. As a consequence, if $K_S$ and $K_L$ are also CP eigenstates we then expect $K_S$ to decay into two pions and $K_L$ into three pions. The two-pion decays study is carried on in terms of states with definite isospin $I$. A two-pion state can have $I=0,1,2$  but $I=1$ is forbidden by Bose statistics so we are left with:
+\[
+\begin{aligned}
+&\ket{\pi^+\pi^-}=\sqrt{\frac{2}{3}}\ket{\pi\pi,I=0}+\sqrt{\frac{1}{3}}\ket{\pi\pi,I=2}\\
+&\ket{\pi^0\pi^0}=-\sqrt{\frac{1}{3}}\ket{\pi\pi,I=0}+\sqrt{\frac{2}{3}}\ket{\pi\pi,I=2}
+\end{aligned}
+\]
+From now on, to simplify the notation we will denote $\ket{\pi\pi,I=0}$ with $\ket{0}$ and $\ket{\pi\pi,I=2}$ with $\ket{2}$. What we want to compute now is the following ratio:
+\[
+\frac{\braket{\pi^+\pi^-|T|K_S}}{\braket{\pi^0\pi^0|T|K_S}}=\frac{\sqrt{2}\braket{0|T|K_S}+\braket{2|T|K_S}}{-\braket{0|T|K_S}+\sqrt{2}\braket{2|T|K_S}}
+\]
+where $T$ is the weak transition matrix. Experimentally, we know that weak amplitudes corresponding to processes with $\Delta I=1/2$ are strongly enhanced with respect to those with higher $\Delta I$. $K^0$ mesons belong to $I=1/2$ multiplets, so the amplitudes with the state $\ket{2}$ should be suppressed with respect to the ones with the state $\ket{0}$. If this rule was exact, we would have:
+\[
+\frac{\Gamma(K_S\to\pi^+\pi^-)}{\Gamma(K_S\to\pi^0\pi^0)}=2
+\]
+The observed value of this ratio is $2.18\pm0.03$, confirming that the $\Delta I=1/2$ rule is approximately valid. We now introduce the following two quantities:
+\[
+\eta_\pm=\frac{\braket{\pi^+\pi^-|T|K_L}}{\braket{\pi^+\pi^-|T|K_S}} \qquad \eta_{00}=\frac{\braket{\pi^0\pi^0|T|K_L}}{\braket{\pi^0\pi^0|T|K_S}}
+\]
+Both of these objects would vanish in case of CP conservation, since $K_L$ would be a CP eigenstate with eigenvalue $-1$ and could not decay into two pions. These are the appropriate quantities to investigate CP violation.\\
+We now want to derive an expression for the weak effective Hamiltonian $H_{\text{eff}}$ in the framework of perturbation theory. The unperturbed Hamiltonian $H$ is the sum of the strong and electromagnetic interaction Hamiltonians and the weak Hamiltonian $H_W$ represents the perturbation. The states $\ket{\alpha}$ with $\alpha=K^0,\overline{K}^0$ can be taken as unperturbed eigenstates. We want to compute elements of the S-matrix:
+\[
+S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(T)}\right]\ket{\alpha}
+\]
+Expanding the S-matrix up to second order we get:
+\begin{align*}
+S{\beta\alpha}\simeq&\braket{\beta|\alpha}-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}\\
+&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\theta(t-t')\ket{\alpha}\\
+&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\theta(t'-t)\ket{\alpha}\\
+=&S_{\beta\alpha}^{(0)}+S_{\beta\alpha}^{(1)}+S_{\beta\alpha}^{(2)}
+\end{align*}
+The first term is clearly equal to $S_{\beta\alpha}^{(0)}=\delta_{\beta\alpha}$ since the unperturbed eigenstates are orthogonal and normalized. The first-order term can be computed as:
+\[
+S_{\beta\alpha}^{(1)}=i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}=-2\pi i\delta(E_\beta-E_\alpha)\braket{\beta|H_W|\alpha}
+\]
+where $E_\alpha$ and $E_\beta$ are the unperturbed energy eigenvalues of $\ket{\alpha}$ and $\ket{\beta}$. To compute the second-order term we insert the identity operator $I=\sum_\lambda\ket{\lambda}\bra{\lambda}$, where $\{\ket{\lambda}\}$ is an orthonormal basis for the unperturbed Hamiltonian. The two terms are equal after exchanging $t$ and $t'$ so we get rid of the factor $1/2$ in front.\marginnote[2cm]{We redefined the variables as $t-t'=\tau$.}
+\begin{align*}
+S_{\beta\alpha}^{(2)}&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}dte^{i(E_\beta-E_\lambda)t}\int_{-\infty}^{+\infty}dt'e^{i(E_\lambda-E_\alpha)t'}\theta(t-t')\\
+&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}\theta(\tau)\int_{-\infty}^{+\infty}dt'e^{i(E_\beta-E_\alpha)t'}\\
+&=-2\pi\delta(E_\beta-E_\alpha)\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}
+\end{align*}
+The last integral can be evaluated by replacing $E_\beta-E_\lambda$ with $E_\beta-E_\lambda+i\eta$, where $\eta>0$, and then taking the limit $\eta\to0$:
+\[
+\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda+i\eta)\tau}=\frac{i}{E_\beta-E_\lambda+i\eta}
+\]
+Finally, we obtain:
+\[
+S_{\beta\alpha}^{(2)}=-2\pi i\delta(E_\beta-E_\alpha)\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
+\]
+Putting the three terms together one gets:
+\[
+S_{\beta\alpha}=\delta_{\beta\alpha}-2\pi i\delta(E_\beta-E_\alpha)\left[\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}\right]
+\]
 \end{document}
