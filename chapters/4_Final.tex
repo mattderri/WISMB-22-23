@@ -4,15 +4,29 @@
 \setchapterpreamble[u]{\margintoc}
 \chapter[Final Topics]{Final Topics\footnotemark[0]}
 \labch{extra}
-These are the final topics of the course, objects of January lectures. The lectures about the hierarchy problem have been done by prof. Contino while prof. Nardecchia did the lectures about the CP violation. I did not know where to put these topics inside the chapters so I decided to give them a special extra chapter.
+These are the final topics of the course, objects of January lectures. The lectures about the hierarchy problem have been done by prof. Contino while prof. Nardecchia did the lectures about the CP violation. I did not know where to put these topics inside the various chapters so I decided to give them a special extra chapter.
 \section{Hierarchy Problem of the Standard Model}
+To start our discussion, we first have to define what is a \textbf{natural theory}. If we take a list of observables and the theory describes their values in a natural way without requiring any cancellation, then the theory is called natural. A sublist of observables is used as input observables and since we need predictability the number of observables has to be larger than the number of input observables. We are usually interested in certain kinds of observables, e.g. masses, and we want to say whether the value of a certain observable is naturally reproduced by the theory then this observable should not be one of the input observables. If it is one of the input observables it is not possible to determine whether its value is naturally reproduced or not. For example, in QED the mass of the electron and the value of the coupling are input parameters, so it does not make much sense to ask ourselves if these values are natural or not. If we have a third observable and make a prediction, then at this point we can ask if they are naturally reproduced in the theory or not. We have predictions for these observables, so for each one we have relations of this kind:
+\[
+f_j(\{O_i\})=0 \quad j=1,\cdots,\text{\# predicted observables}
+\]
+There is one relation for every predicted observable, the function depends on all possible observables. These are relation among physical quantities, they have nothing to do on the dependence on the renormalization scheme. These predictions are naturally reproducing the experimental values if there is no cancellation among the different terms in the function $f_j$.\\
+Suppose to have only one observable as prediction while the others are input and we want to know if the theory predicts naturally the value of this observable. If, in order to obtain the value of this predicted observable, we have to choose very carefully the values of the input ones because otherwise the relation does not give us the desired value, then it means that the theory is not naturally reproducing this observable. This is the unnatural situation.\\
+Here everything is formulated in terms of observables although it is not what it is found in literature. This is because the perturbative series in QFT is never convergent, which means that eventually we have to truncate it and after truncation we will never get relations which are free from uncertainties and dependence on the renormalization scheme. They are never exactly physical quantities, they always have some degree of theoretical dependence. The second observation is that the theory will have a lot of theoretical parameters, so if we want to make several predictions and we want to vary the input observables consistently with the theory, that might be a bit cumbersome. We can instead vary directly the parameters in the Lagrangian in such a way that the input observables vary in the region we are interested in.\\
+The absence of tuning can be expressed by a criterion. Let's say that $a_i$ are the Lagrangian parameters and we want to taste whether the value of a certain observables $O_j$ is naturally reproduced or not. 
+\[
+\left|\frac{a_i}{O_j}\frac{\partial}{\partial a_i}O_j(\{a_i\})\right|<\Delta \quad \forall i,j
+\]
+This is the \textbf{Barbieri-Giudice criterion}. The naturalness is expressed in terms of variation of the observables with respect to the Lagrangian parameter but only because by varying the parameters we are varying the input observables. What we are interested in is whether this predicted observable is natural after varying the input observables, i.e. the parameters of the Lagrangian. An unnatural situation is the one in which in order to reproduce the value of $O$ we need to choose very carefully these $a_i$.\\
+There is another work which appeared before the one by Barbieri and Giudice and it was made by t'Hooft, who proposed another criterion to decide whether a theory was natural or not. He wanted to see if small values of a certain observable were natural or not and it is better to rephrase all the dimensionful parameters in terms of dimensionless ones. At this point, t'Hooft asked himself if the measured value for a certain quantity was natural or not. He proposed the rule which states that it is natural if, by sending to zero the value of that dimensionless parameter, the theory acquires a larger symmetry.\\
+We now want to apply this naturalness criterion to the electroweak scale since the hierarchy problem is a problem of naturalness of the EW scale in the Standard Model. For example, take the QCD scale. It can be predicted within the QCD theory in 
+%43:00
 \begin{figure}[h]
     \centering
     \includegraphics{Images/workinprogress.png}
     \caption*{}
     \label{fig:my_label}
 \end{figure}
-\newpage
 \section{CP Violation in the $K$ Mesons}\marginnote{From \cite{Rid}}
 \textbf{Mixing} is a phenomenon we have when flavour eigenstates are different than mass eigenstates. Here we are going to mix states with the same unbroken quantum numbers. \textbf{Oscillation} is a phenomenon involving time evolution of flavour eigenstates, we are going to focus on the mixing of mesons, this discussion holds true for $K^0, D^0, B_d$ and $B_s$.\\
 We are interested in the time evolution of a $K^0 (\overline{s}d)$ or a $\overline{K}^0 (\overline{d}s)$ in its rest frame. $K^0$ mesons are produced by strong interaction processes, so at the initial time $t=0$ the quantum state describing the system has a definite value of strangeness, $S=+1$ for $K^0$ and $S=-1$ for $\overline{K}^0$. These mesons are stable with respect to strong interactions and decay only via weak interactions. The transition $K^0\to\overline{K}^0$ is allowed since strangeness is not conserved in weak interactions, therefore we introduce a two-dimensional space spanned by the two meson states:
@@ -170,11 +184,7 @@ where $T$ is the weak transition matrix. Experimentally, we know that weak ampli
 \[
 \frac{\Gamma(K_S\to\pi^+\pi^-)}{\Gamma(K_S\to\pi^0\pi^0)}=2
 \]
-The observed value of this ratio is $2.18\pm0.03$, confirming that the $\Delta I=1/2$ rule is approximately valid. We now introduce the following two quantities:
-\[
-\eta_\pm=\frac{\braket{\pi^+\pi^-|T|K_L}}{\braket{\pi^+\pi^-|T|K_S}} \qquad \eta_{00}=\frac{\braket{\pi^0\pi^0|T|K_L}}{\braket{\pi^0\pi^0|T|K_S}}
-\]
-Both of these objects would vanish in case of CP conservation, since $K_L$ would be a CP eigenstate with eigenvalue $-1$ and could not decay into two pions. These are the appropriate quantities to investigate CP violation.\\
+The observed value of this ratio is $2.18\pm0.03$, confirming that the $\Delta I=1/2$ rule is approximately valid.\\ 
 We now want to derive an expression for the weak effective Hamiltonian $H_{\text{eff}}$ in the framework of perturbation theory. The unperturbed Hamiltonian $H$ is the sum of the strong and electromagnetic interaction Hamiltonians and the weak Hamiltonian $H_W$ represents the perturbation. The states $\ket{\alpha}$ with $\alpha=K^0,\overline{K}^0$ can be taken as unperturbed eigenstates. We want to compute elements of the S-matrix:
 \[
 S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(T)}\right]\ket{\alpha}
@@ -208,4 +218,99 @@ Putting the three terms together one gets:
 \[
 S_{\beta\alpha}=\delta_{\beta\alpha}-2\pi i\delta(E_\beta-E_\alpha)\left[\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}\right]
 \]
+We can now define an effective weak Hamiltonian $H_W^{\text{eff}}$ in such a way that the S-matrix computed with $H_W^{\text{eff}}$ at the first order has the same matrix elements found above. This gives us:
+\[
+H_W^{\text{eff}}=\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
+\]
+If both $K^0$ and $\overline{K}^0$ are in their rest frame $E_\alpha=E_\beta=m_K$ so that the full effective Hamiltonian can be written as:
+\[
+H_{\beta\alpha}^{\text{eff}}=m_K\delta_{\beta\alpha}+H_W^{\text{eff}}
+\]
+Notice that $H_{\beta\alpha}^{\text{eff}}$ is not hermitian since the following property holds true:
+\[
+\frac{1}{E_\beta-E_\lambda+i\eta}=\text{PV}\frac{1}{E_\beta-E_\lambda}-i\pi\delta(E_\beta-E_\lambda)
+\]
+where PV denotes the principal value. The full effective Hamiltonian now takes the form:
+\begin{align*}
+H_{\beta\alpha}^{\text{eff}}&={\color{green}{m_K\delta_{\beta\alpha}+\braket{\beta|H_W|\alpha}+\text{PV}\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{m_K-E_\lambda}}}-\frac{i}{2}{\color{blue}{2\pi\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\delta(m_K-E_\lambda)}}\\
+&={\color{green}{M_{\beta\alpha}}}-\frac{i}{2}{\color{blue}{\Gamma_{\beta\alpha}}}
+\end{align*}
+The sum is extended over on-shell amplitudes and it is therefore dominated by the contribution of the state $\ket{\pi\pi,I=0}=\ket{0}$ so that we have:
+\[
+\Gamma_{12}\simeq2\pi\braket{K^0|H_W|0}\braket{0|H_W|\overline{K}^0}\delta(m_K-E_0)
+\]
+We now introduce the following two quantities:
+\[
+\eta_\pm=\frac{\braket{\pi^+\pi^-|T|K_L}}{\braket{\pi^+\pi^-|T|K_S}} \qquad \eta_{00}=\frac{\braket{\pi^0\pi^0|T|K_L}}{\braket{\pi^0\pi^0|T|K_S}}
+\]
+Both of these objects would vanish in case of CP conservation, since $K_L$ would be a CP eigenstate with eigenvalue $-1$ and could not decay into two pions. These are the appropriate quantities to investigate CP violation. Using the two-pion states decomposition, these can be written as:
+\[
+\left\{
+\begin{aligned}
+&\eta_\pm=\frac{\epsilon_0+\omega\epsilon_2/\sqrt{2}}{1+\omega/\sqrt{2}}\\
+&\eta_{00}=\frac{\epsilon_0-\sqrt{2}\omega\epsilon_2}{1-\sqrt{2}\omega}
+\end{aligned}
+\right.
+\quad\text{where}\quad
+\left\{
+\begin{aligned}
+&\epsilon_I=\frac{\braket{I|T|K_L}}{\braket{I|T|K_S}}=\frac{1-\frac{q}{p}\frac{\braket{I|T|\overline{K}^0}}{\braket{I|T|K^0}}}{1+\frac{q}{p}\frac{\braket{I|T|\overline{K}^0}}{\braket{I|T|K^0}}} \quad I=0,2\\
+&\omega=\frac{\braket{2|T|K_S}}{\braket{0|T|K_S}}=\frac{1+\frac{q}{p}\frac{\braket{2|T|\overline{K}^0}}{\braket{2|T|K^0}}}{1+\frac{q}{p}\frac{\braket{0|T|\overline{K}^0}}{\braket{0|T|K^0}}}
+\end{aligned}
+\right.
+\]
+The weak Hamiltonian $H_W$ can be decomposed as the sum of two terms:
+\[
+H_W=H_W^{\Delta S=2}+H_W^{\Delta S=1}
+\]
+The first terms is responsible for the $K^0-\overline{K}^0$ mixing while the second gives rise to $K^0$ decays. The transition matrix T can be decomposed in an analogous way:
+\[
+T=T^{\Delta S=2}+T^{\Delta S=1}
+\]
+$T^{\Delta S=1}$ gives a contribution to the amplitudes $\braket{I|T|K^0}$ and $\braket{I|T|\overline{K}^0}$ while $T^{\Delta S=2}$ affects $\epsilon_I$ and $\omega$ through $q/p$.\\
+Assume for the moment that $H_W^{\Delta S=1}$ is CP-conserving and that all CP-violating effects are contained in $H_W^{\Delta S=2}$, i.e. in the mixing process. This means that:
+\[
+\hat{CP}T^{\Delta S=1}\hat{CP}^{-1}=T^{\Delta S=1}
+\]
+Exploiting now the fact that the two-pion states are CP eigenstates with eigenvalue $+1$, we find:
+\[
+\braket{I|T^{\Delta S=1}|K^0}=\braket{I|\hat{CP}^{-1}T^{\Delta S=1}\hat{CP}|K^0}=\braket{I|T^{\Delta S=1}|\overline{K}^0}e^{i\alpha}
+\]
+This means that $\epsilon_2=\epsilon_0$ and therefore $\eta_{00}=\eta_\pm=\epsilon_0$.\marginnote[-1.5cm]{The phase factor $e^{i\alpha}$ originates from the definition of the CP operator.} This situation in which CP-violating effects are confined in the $K^0-\overline{K}^0$ mixing is called \textbf{superweak CP violation}. Experimental data are consistent with this picture, in fact:
+\[
+\begin{aligned}
+&|\eta_\pm|=\sqrt{\frac{\Gamma(K_L\to\pi^+\pi^-)}{\Gamma(K_S\to\pi^+\pi^-)}}=(2.285\pm0.019)\cdot10^{-3}\\
+&|\eta_{00}|=\sqrt{\frac{\Gamma(K_L\to\pi^0\pi^0)}{\Gamma(K_S\to\pi^0\pi^0)}}=(2.275\pm0.019)\cdot10^{-3}
+\end{aligned}
+\]
+$\eta_\pm$ and $\eta_{00}$ are equal within one standard deviation.\\
+We can also consider the possibility that the CP symmetry is violated in the $K^0$ decays, i.e. by the $\Delta S=1$ term of the Hamiltonian. In this case, in general we have:
+\[
+\frac{\braket{2|T|\overline{K}^0}}{\braket{2|T|K^0}}\neq\frac{\braket{0|T|\overline{K}^0}}{\braket{0|T|K^0}}
+\]
+and the equalities $\epsilon_2=\epsilon_0$ and $\eta_{00}=\eta_\pm=\epsilon_0$ are no longer true. In view of the experimental results just presented, both $\eta_\pm$ and $\eta_{00}$ are written as $\epsilon_0$ plus some quantities which vanish in the superweak limit.
+\[
+\left\{
+\begin{aligned}
+&\eta_\pm=\epsilon_0+\frac{1}{1+\omega/\sqrt{2}}\frac{\omega}{\sqrt{2}}(\epsilon_2-\epsilon_0)\\
+&\eta_{00}=\epsilon_0-\frac{2}{1-\omega\sqrt{2}}\frac{\omega}{\sqrt{2}}(\epsilon_2-\epsilon_0)
+\end{aligned}
+\right.
+\quad\text{conventionally}\quad
+\left\{
+\begin{aligned}
+&\epsilon:=\epsilon_0\\
+&\epsilon':=\frac{\omega}{\sqrt{2}}(\epsilon_2-\epsilon_0)
+\end{aligned}
+\right.
+\]
+Neglecting terms of order $\omega^2$ because of the $\Delta I=1/2$ rule, these objects become:
+\[
+\eta_\pm=\epsilon+\epsilon' \qquad \eta_{00}=\epsilon-2\epsilon'
+\]
+The quantity $\epsilon'$ signals a new kind of CP violation called \textbf{direct CP violation}. From previous experimental results we know it must be very small, $\epsilon'\sim10^{-3}\epsilon$. Two collaborations have measured the following quantity:
+\[
+D=\frac{\text{BR}(K_L\to\pi^+\pi^-)/\text{BR}(K_S\to\pi^+\pi^-)}{\text{BR}(K_L\to\pi^0\pi^0)/\text{BR}(K_S\to\pi^0\pi^0)}=\left|\frac{\eta_\pm}{\eta_{00}}\right|^2\simeq1+6\mathfrak{Re}(\epsilon'/\epsilon)
+\]
+from which it is possible to extract a value of $\mathfrak{Re}(\epsilon'/\epsilon)$ which turns out to be $(1.65\pm0.26)\cdot10^{-3}$. A precise determination of this ratio is of great importance in order to test the predictions of the theory of electroweak interactions.
 \end{document}
