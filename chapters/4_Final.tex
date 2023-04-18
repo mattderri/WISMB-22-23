@@ -18,9 +18,51 @@ The absence of tuning can be expressed by a criterion. Let's say that $a_i$ are 
 \left|\frac{a_i}{O_j}\frac{\partial}{\partial a_i}O_j(\{a_i\})\right|<\Delta \quad \forall i,j
 \]
 This is the \textbf{Barbieri-Giudice criterion}. The naturalness is expressed in terms of variation of the observables with respect to the Lagrangian parameter but only because by varying the parameters we are varying the input observables. What we are interested in is whether this predicted observable is natural after varying the input observables, i.e. the parameters of the Lagrangian. An unnatural situation is the one in which in order to reproduce the value of $O$ we need to choose very carefully these $a_i$.\\
-There is another work which appeared before the one by Barbieri and Giudice and it was made by t'Hooft, who proposed another criterion to decide whether a theory was natural or not. He wanted to see if small values of a certain observable were natural or not and it is better to rephrase all the dimensionful parameters in terms of dimensionless ones. At this point, t'Hooft asked himself if the measured value for a certain quantity was natural or not. He proposed the rule which states that it is natural if, by sending to zero the value of that dimensionless parameter, the theory acquires a larger symmetry.\\
-We now want to apply this naturalness criterion to the electroweak scale since the hierarchy problem is a problem of naturalness of the EW scale in the Standard Model. For example, take the QCD scale. It can be predicted within the QCD theory in 
-%43:00
+There is another work which appeared before the one by Barbieri and Giudice and it was made by t'Hooft, who proposed another criterion to decide whether a theory was natural or not. He wanted to see if small values of a certain observable were natural or not and it is better to rephrase all the dimensionful parameters in terms of dimensionless ones. At this point, t'Hooft asked himself if the measured value for a certain quantity was natural or not. He proposed the rule which states that \textit{it is natural if, by sending to zero the value of that dimensionless parameter, the theory acquires a larger symmetry.}\\
+We now want to apply this naturalness criterion to the electroweak scale since the hierarchy problem is a problem of naturalness of the EW scale in the Standard Model.\\
+First of all, we make an example and take the QCD scale, which can be predicted within the QCD theory. It is a prediction in the sense that we can measure the value of the coupling at a certain scale $g_S(M)$, e.g. a very high-energy scale where QCD is perturbative, by measuring a scattering process. This is our input and it is dimensionless. At this point, we note that moving to lower energy the coupling becomes stronger and stronger until it gets non perturbative $g_S(\Lambda)\approx4\pi$, where this $\Lambda$ as usual is given by:
+\[
+\Lambda_{\text{QCD}}=M\exp{-\frac{8\pi^2}{\beta_0}\frac{1}{g_S(M)}}
+\]
+This is just an estimate for the QCD physical scale obtained at one-loop. From this, we can understand why $\Lambda_{\text{QCD}}\ll M$ is natural. Because here there is an exponential dependence on the value of the coupling, so if the coupling is small the exponential becomes very small and $\Lambda_{\text{QCD}}$ is exponentially suppressed with respect to $M$. There is no cancellation we require to get the situation of this kind, the theory in which $\Lambda_{\text{QCD}}$ is much smaller than another UV scale is naturally reproduced. In order to do this, it is crucial that the QCD scale is predictable otherwise if it had to be an input parameter then we could not ask whether this scale is natural or not. There is this mechanism which transforms a dimensionless quantity into a dimensionful one and it goes under the name of \textbf{dimensional transmutation}.\\
+Now we can require the same thing for the EW scale which is different from the previous example. First of all it is not predictable because the EW scale is set by the Higgs mass term, which can be defined in terms of the vev $v^2=\mu^2/\lambda$ and $\mu^2$ is the coefficient for the Higgs mass term, $-\mu^2H^\dagger H$. It is directly a parameter of the Lagrangian, so the scale we want to test is not calculable, it is an input parameter. The EW scale is not predictable within the SM so it does not make sense to ask whether it is natural or not. However, the SM is not a full theory, is an EFT. If we think of the SM as embedded in a larger UV completion there is a possibility that the mass term of the Higgs can be computed in the full theory. If it is not calculable then there is no problem, there is no naturalness, it is just an input parameter of the Lagrangian and end of the story. The question of whether it is natural or not stands only if the mass term of the EW scale is calculable in the full theory and at this point it makes sense to ask if it is natural or not.\\
+The question about its naturalness makes no sense at all in the SM since it is an input quantity, it has sense only if we think of the SM as part of a larger theory in which the mass term of the Higgs is, hopefully, calculable. There then should be other particles in the full theory, which have not been discovered yet, that cancel the quadratic divergence arising at loop level from the exchange of SM particles. We know the mass term of the Higgs is quadratically divergent within the SM, these are the one-loop corrections to it:\marginnote{Notice that we are not talking about the Higgs physical mass, only about the Higgs mass term.}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/hc1.pdf}
+    \caption*{}
+    \labfig{hc1}
+\end{figure}\\
+Since the contribution coming from loop of fermions is proportional to the square of the Yukawa coupling, we consider the contribution coming form the top. To be more precise, the contribution of this diagram is:
+\[
+\delta\mu^2=N_C\frac{y_t^2}{8\pi^2}\Lambda^2 \qquad y_t^2=\frac{2m_t^2}{v^2}
+\]
+where $v=246$\,GeV and $m_t=173$\,GeV. This formula is interpreting $\Lambda$ as a hard cut-off in the loop. There is also the correction coming from the gauge fields:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.5\textwidth]{Images/hc2.pdf}
+    \caption*{}
+    \labfig{hc2}
+\end{figure}\\
+Here the sign of the correction is negative. That is because first of all we are defining $\mu^2$ to be positive in presence of EW symmetry breaking. Moreover, there is a contribution from Higgs self interaction:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/hc3.pdf}
+    \caption*{}
+    \labfig{hc3}
+\end{figure}\\
+We are looking at these divergencies because we have a counter term in the theory, $H^\dagger H$, to reabsorb the divergencies. If the full theory is such that the EW scale is calculable it means there is no counter term: where there is a counter term there is a divergence and then $\mu^2$ is an input. In the full theory, the Higgs mass term should not be divergent, there should be some symmetry which forbids writing such term or at least forbids the occurrence of divergencies. Hence, if we relax the theory there would be necessary other particles which remove these divergencies. This is the SM contribution, if we add new particles then the sum has to be finite and the divergence will be canceled. The partners of the top will give a new contribution, each of these contribution will go like $\Lambda^2$ and in order for the sum to be finite they need to have opposite signs. If we integrate out these heavy partners at the scale $M$ and then do matching with an EFT which is the SM just below the scale $M$, we have a divergence. The divergence is removed exactly at the scale $M$, which will appear in the finite contribution and that is what we want to estimate.\\
+We have three sets of contribution, from the top, the gauge fields and self interaction, each of them going like some scale of heavy particles which remove the divergence. These three contribution, in the case $M$ is much larger than the EW scale, which is the hypothesis we want to test, are of order of this scale then there is a problem because they will be much much larger than the EW scale. 
+\[
+\left\{
+\begin{aligned}
+&\delta\mu^2(\text{top})+\delta\mu^2(\text{gauge})+\delta\mu^2(\text{Higgs})\simeq\lambda v^2\ll M^2\\
+&\delta m_h^2(\text{top})+\delta m_h^2(\text{gauge})+\delta m_h^2(\text{Higgs})=(125\,\text{GeV})^2
+\end{aligned}
+\right.
+\]
+This is the \textbf{hierarchy problem}, the sum of these contribution will have to cancel very precisely because each of them is of order $M^2$ times a loop factor which at best can be $10^{-3}$ in such a way that we get something of the order of the EW scale. It does not seem natural to get an EW scale which is much much smaller than some much heavier physical scale.\\
+%1:22.14
 \begin{figure}[h]
     \centering
     \includegraphics{Images/workinprogress.png}
