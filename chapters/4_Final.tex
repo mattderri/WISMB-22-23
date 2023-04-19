@@ -80,7 +80,7 @@ Only the contribution from the top was considered being it the largest one. $\La
 The moral is that if the full theory is one where the EW scale, hence the mass of the Higgs boson, is calculable in terms of other input quantities then there has to be new particles which remove the quadratic divergencies at the level of $(1-2)$\,TeV but not much higher. This was the motivation to build the LHC.
 \subsection{Applications of Naturalness Arguments}
 To see why we should trust this argument, we see two examples: the GIM mechanism and the electromagnetic corrections to the pion mass.\\
-Let's start with the GIM mechanism. At the time, there was an SU$(2)\times$U(1) electroweak theory proposed by Glashow and then Weinberg and Salam lately. However, it was a theory for leptons because at the time only three quarks were known: up, down and strange. The EW interactions of these quarks were still described by the Fermi theory, with an interaction of the form:
+Let's start with the \textbf{GIM mechanism}. At the time, there was an SU$(2)\times$U(1) electroweak theory proposed by Glashow and then Weinberg and Salam lately. However, it was a theory for leptons because at the time only three quarks were known: up, down and strange. The EW interactions of these quarks were still described by the Fermi theory, with an interaction of the form:
 \[
 \pazocal{L}=-\frac{G_{\text{F}}}{\sqrt{2}}(J_\mu^{\text{had}}+J_\mu^{\text{lep}})(J_\mu^{\text{had}}+J_\mu^{\text{lep}}) \quad \text{where:}\;\left\{
 \begin{aligned}
@@ -102,7 +102,7 @@ These diagrams are quadratically divergent but people knew this was an EFT but t
 \]
 The measurement of $\sin\theta_w$ came only in 1973 by the Gargamelle experiment at CERN. This came only later, at the time the value of $m_W$ was unknown but they knew that these relations held true.\\
 The real part of the amplitude of the scattering in the above diagrams, denoted by $A_{12}$, is connected with $\Delta m_K=m_{K_L}-m_{K_S}=3.5\cdot10^{-12}$\,MeV and if we use this estimate $\Lambda$ turns out to be of order 3\,GeV. This is a problem: if we know that $m_W$ is connected to $G_{\text{F}}$ then it is possible to see that $m_W$ can be interpreted in terms of $\Lambda$, resulting in $g\sim10^{-4}$. If $g$ is much much smaller than $e$, then this relation does not work anymore. This chain of logical consequences lead to a puzzle and the way out was the proposal that the cut-off is not $m_W$ but it is the mass of something much lighter, the charm quark.\\
-Glashow, Iliopoulos and Maiani then proceeded to extend the Fermi interaction to include the \nth{4} proposed quark, the hadronic current $J^\mu_{\text{had}}$ gets now modified as:
+Glashow, Iliopoulos and Maiani then proceeded to extend the Fermi interaction to include the \nth{4} proposed quark. The hadronic current $J^\mu_{\text{had}}$ gets now modified as:
 \[
 J^\mu_{\text{had}}=\begin{pmatrix}
     \overline{c} & \overline{u}
@@ -115,17 +115,18 @@ J^\mu_{\text{had}}=\begin{pmatrix}
 \]
 As it is possible to see, there is a part already known involving just $\overline{u}, d$ and $s$ and the extension which regards the charm quark. $V$ is a unitary, real, orthogonal matrix and it is now possible to reformulate the amplitude $\pazocal{A}$ of the $K\overline{K}$ oscillations in terms of elements of $V$:
 \[
-\pazocal{A}\propto G_{\text{F}}^2\sum_{i,j}V_{id}V_{is}^*V_{jd}V_{js}^*F(m_i,m_j)
+\pazocal{A}\propto G_{\text{F}}^2\sum_{i,j=u,c}V_{id}V_{is}^*V_{jd}V_{js}^*F(m_i,m_j)
 \]
-where $F$ is a loop function of dimension 2 such that $F(x,y)=F(y,x)$. It is common to define the following quantities:
+where $F$ is a loop function of dimension 2 such that $F(x,y)=F(y,x)$.\\
+It is common to define the following quantities:
 \[
 \lambda_u:=V_{ud}V_{us}^* \qquad \lambda_c:=V_{cd}V_{cs}^*
 \]
 The unitarity of $V$ implies that $\lambda_u+\lambda_c=0$:
 \[
-\lambda_u+\lambda_c=\sum_{i=u,c}V_{id}V_{is}^*=(V^\dagger V)_{sd}=0\Rightarow\lambda_u=-\lambda_c
+\lambda_u+\lambda_c=\sum_{i=u,c}V_{id}V_{is}^*=(V^\dagger V)_{sd}=0\Rightarrow\lambda_u=-\lambda_c
 \]
-Using this, the amplitude $A(K\overline{K})$ gets written as:
+Using this, the amplitude $\pazocal{A}$ gets written as:
 \begin{align*}
 \pazocal{A}&=G_{\text{F}}^2\left[\lambda_c^2F(m_c,m_c)+\lambda_u^2F(m_u,m_u)+2\lambda_c\lambda_uF(m_c,m_u)\right]\\
 &=G_{\text{F}}^2\lambda_c^2\left[F(m_c,m_c)+F(m_u,m_u)-2F(m_c,m_u)\right]
@@ -134,14 +135,60 @@ The loop function is quadratically divergent:
 \[
 F(m_i,m_j)\simeq\Lambda^2+m_im_j\log\Lambda f(m_i/m_j)+\text{finite terms}
 \]
-The amplitude however is not quadratically divergent, the divergence cancels out in virtue of the fact that:
+The amplitude however is not quadratically divergent, the quadratic divergence cancels out in virtue of the fact that:
 \[
 \lambda_u^2+\lambda_c^2+2\lambda_u\lambda_c=(\lambda_u+\lambda_c)^2=0
 \]
 Moreover, the log-divergence cancels out by accident therefore we are left only with the finite part. In the limit $m_u\ll m_c$, the amplitude becomes:
 \[
-\pazocal{A}=G_{\text{F}}^2\lambda_c^2m_c^2+\pazocal{O}(m_u)=G_{\text{F}}^2\sin^2\theta_c\cos^2\theta_cm_c^2
+\pazocal{A}=G_{\text{F}}^2\lambda_c^2m_c^2+\pazocal{O}(m_u)=G_{\text{F}}^2\sin^2\theta_c\cos^2\theta_cm_c^2+\pazocal{O}(m_u)
 \]
+This is exactly the same form we would find by having only the up quark since $\lambda_u=-\lambda_c$. Take for example the contribution  only of the up quark and forget about the charm quark: there is one quadratically divergent loop function with the same coefficient in front $\sin^2\theta_c\cos^2\theta_c$. If there is something which cancels out the divergence, this $\Lambda$ would be replaced by the physical scale of that particle. The particle which is cutting off the divergence is the charm quark.\\
+This could have left some logarithmic divergence as it happens in the decay $K_L^0\to\mu^+\mu^-$:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/kmu.pdf}
+    \caption*{}
+    \labfig{kmu}
+\end{figure}\\
+The amplitude of this process is of the form:
+\begin{align*}
+\pazocal{A}&\propto G_{\text{F}}^2\sum_{i=u,c}V_{id}V_{is}^*\Tilde{F}(m_i)=G_{\text{F}}^2\left[\lambda_c\Tilde{F}(m_c)+\lambda_u\Tilde{F}(m_u)\right]=G_{\text{F}}^2\lambda_c\left[\Tilde{F}(m_c)-\Tilde{F}(m_u)\right]\\
+&=G_{\text{F}}^2\sin\theta_c\cos\theta_c(m_c^2-m_u^2)\log\Lambda+\text{finite terms}
+\end{align*}
+In the limit $m_u=m_c$, all the amplitudes from flavour changing processes go to zero. This can be seen directly from the form of the amplitudes of the processes we just discussed but there is also a symmetry argument. If we have a Lagrangian which contains the following:
+\[
+\pazocal{L}\supset W_\mu\overline{u}_L^iV_{ij}\gamma^\mu d_L^j-\overline{u}_L^i\delta_{ij}mu_R^j-\overline{d}_L^i\delta_{ij}m_{di}d_R^j+\text{h.c.}
+\]
+Here the third generation has been ignored while the masses of the up and the charm have been put to be equal. Since this mass term $\delta_{ij}m$ is proportional to the identity it is possible to perform a rotation:
+\[
+u_L\to Vu_L \qquad u_R\to Vu_R
+\]
+This gives us:
+\[
+\pazocal{L}\supset W_\mu\overline{u}_L^i\delta_{ij}\gamma^\mu d_L^j-\overline{u}_L^i\delta_{ij}mu_R^j-\overline{d}_L^i\delta_{ij}m_{di}d_R^j+\text{h.c.}
+\]
+This Lagrangian now enjoys a U$(1)_1\times$U$(1)_2$ symmetry where the two symmetries are respectively the transformations of the first and the second generation:
+\[
+\text{U}(1)_1:\left\{
+\begin{aligned}
+&u_{L/R}\to e^{i\alpha}u _{L/R}\\
+&d_{L/R}\to e^{i\alpha}d_{L/R}
+\end{aligned}
+\right.
+\qquad
+\text{U}(1)_2:\left\{
+\begin{aligned}
+&c_{L/R}\to e^{i\beta}u _{L/R}\\
+&s_{L/R}\to e^{i\beta}d_{L/R}
+\end{aligned}
+\right.
+\]
+It is clear that there cannot be any process which mixes the two families and everything vanishes in this limit. The argument can be repeated for the three generations but the masses would have to be all equal.\\
+However, they were very lucky because these effects ignore the coupling, they are proportional to the mass of the quarks. GIM works successfully because they were looking at the difference of masses between $K_L$ and $K_S$ which comes form the real part of the amplitude. If we go and compute the same story for three families, we would have $\lambda_u, \lambda_c$ and $\lambda_t$. Looking at the real part, contributions proportional to $\lambda_t$ are small enough to be neglected but that is because of the structure of the CKM matrix, it is an accident. If we look at the imaginary part then this is not true anymore\marginnote{Remember that the imaginary part appears only if we include the \nth{3} family}, we have to go to higher orders for $\lambda_u$ and $\lambda_c$ but $\lambda_t$ has the imaginary part appearing at the same order of the real part so we do not pay an additional price for that.\\
+If we look at CP violation the contribution of the top quark is important but if we just look at the real part it is negligible. Since at the time they were looking only at the real part they were lucky.\\
+We can now move to the second example, the \textbf{electromagnetic corrections to the pion mass}.
+%1:12:49
 \begin{figure}[h]
     \centering
     \includegraphics{Images/workinprogress.png}
