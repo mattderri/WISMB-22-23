@@ -647,13 +647,14 @@ In the SM, there is no flavour violation because $g_Z^{d_L}=g_Z^{s_L}$. The left
 So far, we studied everything at tree-level. In the mass basis, the $W$ changes flavour while the other bosons do not, pretty simple. As it is often the case, the story is more subtle at loop-level. Loop-level contributions are usually small compared to the tree-level diagrams for the same process. A loop correction to a tree-level process is hard to observe, while a small effect which is the only source of signal has at least a chance of being measured well. A
 natural set of processes to look are those that generate FCNCs, since we already know that these vanish at tree-level in the Standard Model.\\
 The \href{https://en.wikipedia.org/wiki/GIM_mechanism}{Glashow-Iliopoulos-Maiani (GIM) mechanism} is the mechanism through which FCNCs are suppressed in loop diagrams. The underlying principle is that for a unitary matrix, any pair of columns (or rows) are orthogonal, the first non-trivial point is that
-loop-level FCNCs are most sensitive to the heavy quarks running in the loops, so that we can be sensitive to the top. As an example, we study the process $s\to de^+e^-$, which is represented at one-loop by the following diagrams:\\
+loop-level FCNCs are most sensitive to the heavy quarks running in the loops, so that we can be sensitive to the top. As an example, we study the process $s\to de^+e^-$, which is represented at one-loop by the following diagrams.\\
 \begin{figure}[h]
     \centering
     \includegraphics{Images/gim.pdf}
     \caption*{}
     \labfig{gim}
 \end{figure}\\
+\newline
 The amplitude is proportional to the CKM matrix, in particular:
 \[
 \pazocal{M}\propto\sum_{i=u,c,t}V_{is}^*f(m_i)V_{id}=\sum_{i=u,c,t}(V^\dagger)_{si}\Tilde{f}(x_i)V_{id}
@@ -716,13 +717,15 @@ It is customary to define $Z_1$ as:
 \[
 Z_1=Z_gZ_2Z_3^{1/2}=1+Z_1-1=1+\delta_1
 \]
-How do we compute these counter terms which cancel the divergencies? From quark self-energy, we get $\delta_2$ by computing the following diagrams:\\
+How do we compute these counter terms which cancel the divergencies? From quark self-energy, we get $\delta_2$ by computing the following diagrams.\\
 \begin{figure}[h]
     \centering
     \includegraphics{Images/delta2.pdf}
     \caption*{}
     \labfig{delta2}
 \end{figure}\\
+\newline
+\newline
 $\delta_3$ is obtained from the gluon self-energy:\\
 \begin{figure}[h]
     \centering
@@ -814,7 +817,7 @@ Moreover, keeping in mind the expression of $\alpha_s(\mu)$ we found in the prev
 \end{align*}
 Renormalization Group Invariance constraints the form of higher-order corrections and the higher-order logarithmic terms can be resummed by simply setting the scale of $\alpha_s$ to $s$. The final result will be in the form:
 \[
-R=1+a_1\alpha_s(2)+a_2\alpha_s(s)^2+a_3\alpha_s(s)^3+\cdots
+R=1+a_1\alpha_s(s)+a_2\alpha_s(s)^2+a_3\alpha_s(s)^3+\cdots
 \]
 From $\alpha_s(m_Z)=0.118$ we can extract:
 \[
@@ -933,7 +936,7 @@ From which we obtain the conserved currents associated with the transformations 
 \[
 L^{\mu,a}=\overline{q}_L\gamma^\mu\frac{\lambda^a}{2}q_L \quad R^{\mu,a}=\overline{q}_R\gamma^\mu\frac{\lambda^a}{2}q_R
 \]
-The eight currents $L^{\mu,a}$ transform under SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ as an (8,1) multiplet, i.e. as an octet under transformation of the left-handed fields and as a singlet under transformation of the right-handed fields. Analogously, $R^{\mu,a}$ transform as an (1,8) multiplet under SU$(3)_{\text{R}}\times$SU$(3)_{\text{L}}$. Instead of using these chiral currents, it is very common to work instead with linear combinations of them:
+The eight currents $L^{\mu,a}$ transform under SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ as an (8,1) multiplet, i.e. as an octet under transformation of the left-handed fields and as a singlet under transformation of the right-handed fields. Analogously, $R^{\mu,a}$ transform as an (1,8) multiplet under SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$. Instead of using these chiral currents, it is very common to work instead with linear combinations of them:
 \[
 \left\{
 \begin{aligned}
@@ -989,7 +992,7 @@ We can now summarize the symmetries of the strong interaction in combination wit
     \item For any value of the quark masses, the individual flavour currents $\overline{u}\gamma^\mu u$, $\overline{d}\gamma^\mu d$ and $\overline{s}\gamma^\mu s$ are conserved, reflecting the flavour independence of the strong coupling and the diagonality of the quark mass matrix. $V^\mu$ is conserved, while $A^\mu$ has, in addition to the anomaly, a divergence due to quark masses.
     \item For equal quark masses, $V^{\mu,a}$ are conserved since $[\mathbb{1},\lambda^a/2]=0$. However, $A^{\mu,a}$ are not conserved.
 \end{itemize}
-\subsection{Spontaneous Symmetry Breaking}\marginnote{From \cite{SS}, Chapter 2.}
+\subsection{Spontaneous Symmetry Breaking}\marginnote{From \cite{SS}, Chapter 3.}
 So far we have focused on the chiral symmetry of the QCD Lagrangian and the explicit symmetry breaking through the quark masses. It is now time to study an important aspect of low-energy QCD, which is the concept of spontaneous symmetry breaking. A continuous symmetry is said to be spontaneously broken if the ground state of the system is no longer invariant under the full symmetry group G of the Hamiltonian, which in the chiral limit, is equal to G=SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}\times$U$(1)_{\text{V}}$. The U$(1)_{\text{V}}$ symmetry results in baryon number $B$ conservation, leading to a classification of hadrons into baryons $(B=1)$ and mesons $(B=0)$. The charge operators $Q_A^a$ and $Q_V^a$ commute with $\hat{H}_{\text{QCD}}^0$ and have opposite parity.
 \[
 \left\{
