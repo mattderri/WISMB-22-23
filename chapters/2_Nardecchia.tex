@@ -104,21 +104,20 @@ The Yukawa sector does not give us a relevant contribution:
 \hat{CP}\pazocal{L}_{\text{Yuk}}\hat{CP}^\dagger=\hat{CP}Y_fh\overline{f}f\hat{CP}^\dagger=\hat{CP}Y_fh\hat{CP}^\dagger\hat{CP}\overline{f}f\hat{CP}^\dagger
 \]
 We apply $\hat{CP}$ to the $h$ and get $\eta_h=+1$ as seen before, while $\overline{f}f$ gives a +1 sign so everything is fine.\\
-We are now left with $\xi_W, \phi_{u_i}$ and $\phi_{d_i}$:
+We are now left with $\xi_W, \phi_{u_i}$ and $\phi_{d_i}$, i.e. the phases related to $W_\mu$, $u_i$ and $d_i$.
 \[
 \hat{CP}\left[\frac{g}{\sqrt{2}}W_\mu^+\overline{u}_L^i\gamma^\mu d^j_LV_{ij}+\frac{g}{\sqrt{2}}W_\mu^-\overline{d}_L^j\gamma^\mu u_L^iV_{ji}^*\right]\hat{CP}^\dagger
 \]
-We insert $\hat{CP}^\dagger\hat{CP}=1$ in the expression above and what we find is:
-\begin{align*}
-&\frac{g}{\sqrt{2}}V_{ij}\left[-e^{+i\xi_W}(W^-)^\mu e^{i(\phi_{d_j}-\phi_{u_i})}\left(-\overline{d}_L^j\gamma_\mu u_L^i\right)\right]\\
-+&\frac{g}{\sqrt{2}}V_{ji}^*\left[-e^{-i\xi_W}(W^+)^\mu e^{i(\phi_{u_i}-\phi_{d_j})}\left(-\overline{u}_L^i\gamma_\mu d_L^j\right)\right]
-\end{align*}
+We insert $\hat{CP}^\dagger\hat{CP}=\mathbb{1}$ in the expression above and what we find is:
+\[
+\frac{g}{\sqrt{2}}V_{ij}\left[-e^{+i\xi_W}(W^-)^\mu e^{i(\phi_{d_j}-\phi_{u_i})}\left(-\overline{d}_L^j\gamma_\mu u_L^i\right)\right]+\frac{g}{\sqrt{2}}V_{ji}^*\left[-e^{-i\xi_W}(W^+)^\mu e^{i(\phi_{u_i}-\phi_{d_j})}\left(-\overline{u}_L^i\gamma_\mu d_L^j\right)\right]
+\]
 In order to get CP invariance, it has to be 
 \[
-V_{ij}^*=V_{ij}\exp{i(\xi_W+\phi_{d_j}-\phi_{u_i})}
+V_{ji}^*=V_{ij}\exp{i(\xi_W+\phi_{d_j}-\phi_{u_i})}
 \]
-Can we fix these phases such that this combination becomes real?\\
-The matrix $V\in$U$(3)$ and we have 9 parameters: 3 angles+6 phases.\\
+Is it possible to fix these phases such that this combination becomes real?\\
+The matrix $V\in$U$(3)$ has 9 parameters: 3 angles+6 phases.\\
 However, in our case we have only 7 parameters: 
 \[
 \overset{(1)}{\xi_W} \quad \overset{(3)}{\phi_{u_i}} \quad \overset{(3)}{\phi_{d_j}}
@@ -140,7 +139,11 @@ This symmetry is broken by adding $\pazocal{L}_{\text{Yuk}}$, but before adding 
 \quad 
 K_L,K_u,K_d\in\text{U}(3)
 \]
-We can now consider $-\Tilde{H}\overline{Q}_L^i(Y_u)_{ij}u_R^j-\Tilde{H}\overline{Q}_L^i(Y_d)_{ij}d_R^j$ and focus on flavour indices: under CP we have that
+We can now consider $-\Tilde{H}\overline{Q}_L^i(Y_u)_{ij}u_R^j-\Tilde{H}\overline{Q}_L^i(Y_d)_{ij}d_R^j$ and focus on flavour indices. Applying CP to that term gives us:\marginnote{The phases defined in the previous transformation get reabsorbed in the $K$ matrices.}
+\[
+-\Tilde{H}\overline{Q}_L^iK_L^\dagger(Y_u)_{ij}K_uu_R^j-\Tilde{H}\overline{Q}_L^iK_L^\dagger(Y_d)_{ij}K_dd_R^j
+\]
+This can be seen as:
 \begin{equation}
 \labeq{p1}
 \left\{
@@ -230,6 +233,10 @@ The notation with a hat denotes that the matrix is diagonal. $L$ and $R$ have no
 \[
 q_L^i=(V_L^q)_{ij}q_L^{'^j} \quad q_R^i=(V_R^q)_{ij}q_R^{'^j}
 \]
+After these transformations, the off-diagonal entries remain only in the $W$ boson couplings term:
+\[
+\pazocal{L}_W=\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu d_LW^\mu\to\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu(V_{u_L}V_{d_L}^\dagger)W^\mu
+\]
 We are now able to identify the CKM matrix as $V=V_{u_L}V_{d_L}^\dagger$ and quickly have a look at its properties:
 \begin{itemize}
     \item it is \textbf{unitary}: $V^\dagger V=VV^\dagger=\mathbb{1}$. However, sometimes it is convenient to approximate it with a non-unitary matrix.
@@ -257,7 +264,7 @@ The three angles and the phase are such that we have:
 \end{aligned}
 \right.
 \]
-Notice that all the mixing angles are small and it would be nice suggesting us to make an approximation that captures the essential physics. The first person to make such an approximation was \href{https://en.wikipedia.org/wiki/Lincoln_Wolfenstein}{Wolfenstein}, who noticed that the orders of magnitude of the CKM matrix seem to follow a particular pattern:
+Notice that all the mixing angles are small and it would be nice to make an approximation that captures the essential physics. The first person to make such an approximation was \href{https://en.wikipedia.org/wiki/Lincoln_Wolfenstein}{Wolfenstein}, who noticed that the orders of magnitude of the CKM matrix seem to follow a particular pattern:
 \[
 |V|\sim
 \left(\begin{array}{ccc}
@@ -311,7 +318,7 @@ In this way, we obtain $\{V_{ud}V_{ub}^*,V_{cd}V_{cb}^*,V_{td}V_{tb}^*\}\sim\lam
 \[
 \frac{V_{ud}V_{ub}^*}{V_{cd}V_{cb}^*}+1+\frac{V_{td}V_{tb}^*}{V_{cd}V_{cb}^*}=0
 \]
-In the picture below, we introduced two new variables $R_u$ and $R_t$, namely:
+In the picture on the side, we defined two new variables $R_u$ and $R_t$, namely:
 \[
 R_u=\left|\frac{V_{ud}V_{ub}^*}{V_{cd}V_{cb}^*}\right| \quad R_t=\left|\frac{V_{td}V_{tb}^*}{V_{cd}V_{cb}^*}\right|
 \]
@@ -378,7 +385,9 @@ For the mass term we have $(m^u)_{ij}=(Y^u)_{ij}\frac{v}{\sqrt{2}}$, while for t
 \end{aligned}
 \right.
 \]
-The absence of FCNC at tree-level is due to the fact that we have only one Higgs and we are in 4 dimensions. When looking for new physics we can \textit{either} add non-renormalizable operators \textit{or} add another Higgs.\\
+The absence of FCNC at tree-level is due to the fact that we have only one Higgs and we are in 4 dimensions.
+\begin{kaobox}[frametitle=Two Higgs doublet model]
+When looking for new physics we can \textit{either} add non-renormalizable operators \textit{or} add another Higgs.\\
 We now proceed following the first idea, taking the usual Lagrangian and adding an extra-term:
 \[
 C_{ij}\frac{\Tilde{H}Q_L^iu_R^jH^\dagger H}{\Lambda^2}+(Y^u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}
@@ -503,8 +512,9 @@ The 2 Higgs model is important since we have two Higgs also in the SUSY model: o
 \[
 \pazocal{L}_{\text{Yuk}}=-(Y_u)_{ij}\overline{Q}_L^iu_R^jH_u+\text{h.c}-(Y_d)_{ij}\overline{Q}_L^id_R^jH_d+\text{h.c.}
 \]
-With this assumption, we removed two couplings. Here interactions and mass re-align, giving us no flavour violation. The realignment of mass and interaction is always present in the SM with 1 Higgs.\\
-How about the $Z$? it is a gauge boson but a gauge boson of a \textit{broken} gauge symmetry so there is no reason to expect gauge invariance to protect against FCNCs. Since there are no tree-level FCNCs in the SM, we then expect to be something else protecting the $Z$. The $Z$ is neutral so it only connects fermions with the same charge and colour. Colour is trivially satisfied since SU$(3)_{\text{C}}$ has nothing to do with SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$, on the other hand the electric charge is related to SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ by $Q=T_3+Y$. In the SM, all quarks with the same $Q$ also have the same $T_3$ and therefore the same $Y$. Recall that the $Z$ coupling only depends on these quantities:
+With this assumption, we removed two couplings. Here interactions and mass re-align, giving us no flavour violation. The realignment of mass and interaction is always present in the SM with 1 Higgs.
+\end{kaobox}
+How about the $Z$? It is a gauge boson but a gauge boson of a \textit{broken} gauge symmetry so there is no reason to expect gauge invariance to protect against FCNCs. Since there are no tree-level FCNCs in the SM, we then expect to be something else protecting the $Z$. The $Z$ is neutral so it only connects fermions with the same charge and colour. Colour is trivially satisfied since SU$(3)_{\text{C}}$ has nothing to do with SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$, on the other hand the electric charge is related to SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ by $Q=T_3+Y$. In the SM, all quarks with the same $Q$ also have the same $T_3$ and therefore the same $Y$. Recall that the $Z$ coupling only depends on these quantities:
 \[
 g_Z^f=g\cos\theta_wT_3-g'\sin\theta_wY
 \]
@@ -1032,7 +1042,7 @@ Q_A^a\ket{i,+}=Q_A^a\hat{a}_i^\dagger\ket{0}=(\underset{\mathclap{\tikz \node {$
 {[Q_A^a,\hat{a}_i^\dagger]}+\hat{a}_i^\dagger Q_A^a)\ket{0}
 \]
 Since the parity doubling is not observed, one assumes that $Q_A^a$ do not annihilate the ground state, i.e. the ground state of QCD is not invariant under axial transformation. $Q_A^a\ket{0}\neq0$, the ground state is not invariant under the full symmetry group of the Lagrangian , resulting in spontaneous symmetry breaking: G$\to$H$\subset$SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$.\\
-Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-\href{https://en.wikipedia.org/wiki/Jeffrey_Goldstone}{Goldstone} bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_A$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.\\
+Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-\href{https://en.wikipedia.org/wiki/Jeffrey_Goldstone}{Goldstone} bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.\\
 We know that there is symmetry breaking and we want to support this interpretation. Since the theory is spontaneously broken, there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that $\bra{0}[Q_A^a,\hat{O}]\ket{0}\neq0$.\marginnote{We might be tempted to study $Q_A^a\ket{0}$ instead but there are problems concerning the norm of this state.}\\
 The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that $\bra{0}J^0\ket{G}\bra{G}\hat{O}\ket{0}\neq0$. Who is the candidate to play the role of $\ket{G}$? This state has to be pseudo-scalar and transform under SU$(3)_{\text{V}}$. We know that $[Q_V^a,Q_A^b]=if_{abc}Q_A^c$, this tells us that the Goldstone boson transforms as the adjoint, so they form an octet of SU$(3)$, and the current is the axial one. The operator $\hat{O}$ is the following:
 \begin{align*}
