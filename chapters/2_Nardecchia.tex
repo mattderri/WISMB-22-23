@@ -29,7 +29,7 @@ We have seen in \refch{intro} how fields and operators behave under charge conju
 \[
 \hat{C}\ket{\gamma}=-\ket{\gamma}\xrightarrow[]{}\hat{C}\ket{n\gamma}=(-)^n\ket{n\gamma}
 \]
-Hence, the transition $\gamma\gamma\xrightarrow[]{}3\gamma$ is forbidden (\href{https://en.wikipedia.org/wiki/Furry's_theorem}{Furry Theorem}).
+Hence, the transition $\gamma\gamma\xrightarrow[]{}3\gamma$ is forbidden (Furry Theorem).
 
 We now bring our attention to the case of positronium, which is a bound state of:
 \[
@@ -92,13 +92,21 @@ For every term there is a phase factor $e^{i(\phi_\chi-\phi_\Psi)}$ associated, 
 \end{aligned}
 \right.
 \]
-Is the SM \textbf{invariant} under $\hat{CP}$ or not?  Is it possible to find $\xi_W, \eta_Z, \eta_h, \phi_{u_i},$ and $\phi_{d_i}$ such that $\hat{CP}\pazocal{L}(x)\hat{CP}^\dagger=\pazocal{L}(\pazocal{P}x)?$ The Standard Model Lagrangian can be decomposed as $\pazocal{L}_{\text{SM}}=\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}+\pazocal{L}_{\text{Yuk}}$.\\
+Is the SM \textbf{invariant} under $\hat{CP}$ or not?  Is it possible to find $\xi_W, \eta_Z, \eta_h, \phi_{u_i},$ and $\phi_{d_i}$ such that $\hat{CP}\pazocal{L}(x)\hat{CP}^\dagger=\pazocal{L}(\pazocal{P}x)?$\\
+The Standard Model Lagrangian can be decomposed as: 
+\[
+\pazocal{L}_{\text{SM}}=\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}+\pazocal{L}_{\text{Yuk}}
+\]
 The typical term containing the $Z$ boson is in the form:
 \[
 \sum_{f=u,d;A=L,R}\overline{f}_A\gamma^\mu f_AZ_\mu g_A^f\xleftarrow[]{}\text{real and constant coefficients}
 \]
-We apply $\hat{CP}$ to it: fermions appear as bilinears, the phase is cancelled because there is $\overline{f}_Af_A$ so we just focus on the sign. Under $\hat{CP}$ we get $\overline{f}_A\gamma^\mu f_A\xrightarrow[]{}(-\overline{f}_A\gamma^\mu f_A)e^{i\phi_{f_A}}e^{-i\phi_{f_A}}$. For the $Z$ we have $-(Z^\mu)\eta_Z$, therefore it has to be $\eta_Z=+1$.\\
-For the Higgs we have two pieces: $\pazocal{L}_{\text{Higgs}}=-m_h^2h^2+avh^3+\lambda h^4$ and the term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
+We apply $\hat{CP}$ to it: fermions appear as bilinears, the phase is cancelled because there is $\overline{f}_Af_A$ so we just focus on the sign. Under $\hat{CP}$ we get:
+\[
+\overline{f}_A\gamma^\mu f_A\xrightarrow[]{}(-\overline{f}_A\gamma^\mu f_A)e^{i\phi_{f_A}}e^{-i\phi_{f_A}}
+\]
+For the $Z$ we have $-(Z^\mu)\eta_Z$, therefore it has to be $\eta_Z=+1$.\\
+For the Higgs we have two pieces: $\pazocal{L}_{\text{Higgs}}=-m_h^2h^2+\lambda vh^3+\lambda h^4$ and the term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
 The Yukawa sector does not give us a relevant contribution:
 \[
 \hat{CP}\pazocal{L}_{\text{Yuk}}\hat{CP}^\dagger=\hat{CP}Y_fh\overline{f}f\hat{CP}^\dagger=\hat{CP}Y_fh\hat{CP}^\dagger\hat{CP}\overline{f}f\hat{CP}^\dagger
@@ -190,7 +198,7 @@ This tells us that if we have a $r$ odd such that $\Tr{[H_u,H_d]^r}\neq0$, CP is
 \[
 \Tr{[H_u,H_d]^3}=6i(y_t^2-y_c^2)(y_t^2-y_u^2)(y_c^2-y_u^2)(y_b^2-y_s^2)(y_b^2-y_d^2)(y_s^2-y_d^2)J
 \]
-$J$ is the \href{https://en.wikipedia.org/wiki/Cecilia_Jarlskog}{Jarlskog} invariant
+$J$ is the Jarlskog invariant
 \marginnote{When pronouncing \textit{Jarlskog}, you might accidentally summon a demon in the extra-dimension (bad thing).}. The global symmetry given by\\
 G=U$(3)_{Q_L}\times$U$(3)_{u_R}\times$U$(3)_{d_R}$, which comes from $\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}$, gets broken into H=U$(1)_B$ when we add $\pazocal{L}_{\text{Yuk}}$. The Yukawa sector takes the form:
 \[
@@ -209,9 +217,9 @@ A unitary matrix U(N) has $N^2$ parameters, an orthogonal matrix O(N) has $N(N-1
 \right.
 \]
 This corresponds to 6 masses of quarks+3 mixing angles+1 CP-violating phase.
-\section{\href{https://en.wikipedia.org/wiki/Cabibbo-Kobayashi-Maskawa_matrix}{CKM} Matrix}\marginnote{From \cite{GT}, Section 3.}
+\section{CKM Matrix}\marginnote{From \cite{GT}, Section 3.}
 The experimental goal of flavour physics is to measure these parameters in as many ways as possible to check for consistency and hope for a signal of a new physics.\\
-The CKM matrix (named after \href{https://it.wikipedia.org/wiki/Nicola_Cabibbo}{Cabibbo}, Kobayashi and Maskawa) comes from a basis rotation and from the fact that it is not possible to simultaneously diagonalize all of the flavour matrices in the SM. The CKM matrix is what is left over when moving from one basis to another and it is the source of \textbf{flavour mixing}. The
+The CKM matrix (named after Cabibbo, Kobayashi and Maskawa) comes from a basis rotation and from the fact that it is not possible to simultaneously diagonalize all of the flavour matrices in the SM. The CKM matrix is what is left over when moving from one basis to another and it is the source of \textbf{flavour mixing}. The
 particular matrices that cannot be simultaneously diagonalized are the $W$ boson couplings, the masses of the $d$-type quarks and the masses of the $u$-type quarks. At most it is possible to diagonalize two of these and we chose to diagonalize the masses and leave the $W$ coupling non-diagonal. It is
 important to emphasize that this is a totally arbitrary choice that we are free to make. The non-trivial quark interactions come form the Yukawa sector:
 \[
@@ -264,7 +272,7 @@ The three angles and the phase are such that we have:
 \end{aligned}
 \right.
 \]
-Notice that all the mixing angles are small and it would be nice to make an approximation that captures the essential physics. The first person to make such an approximation was \href{https://en.wikipedia.org/wiki/Lincoln_Wolfenstein}{Wolfenstein}, who noticed that the orders of magnitude of the CKM matrix seem to follow a particular pattern:
+Notice that all the mixing angles are small and it would be nice to make an approximation that captures the essential physics. The first person to make such an approximation was Wolfenstein, who noticed that the orders of magnitude of the CKM matrix seem to follow a particular pattern:
 \[
 |V|\sim
 \left(\begin{array}{ccc}
@@ -304,7 +312,7 @@ The new parameters have been calculated and they turn out to be:
 \right.
 \]
 $V$ is unitary, therefore we have that $\sum_{i=1}^3V_{id}V_{is}^*=0$ and we can construct 6 relations of this type using rows and columns. In this case, we have $V_{ud}V_{us}^*\sim\lambda$, $V_{cd}V_{cs}^*\sim\lambda$ and $V_{td}V_{ts}^*\sim\lambda^5$. We can represent this equality in the complex plane obtaining a \textbf{unitarity triangle}.
-\marginnote{
+\marginnote[-2cm]{
 \includegraphics{Images/uni_triangle_1.pdf}
 Representation of the unitarity triangle.
 }
@@ -312,7 +320,7 @@ We write the 6 possible relations using all the rows and columns in the matrix, 
 \[
 J=\cos\theta_{12}\cos\theta_{23}\cos^2\theta_{13}\sin\theta_{12}\sin\theta_{23}\sin\theta_{13}\sin\delta\simeq\lambda^6A^2\eta
 \]
-The most remarkable observation is that this quantity depends on \textit{every} physical mixing angle, therefore if \textit{any} of the mixing angles are zero there would be no CP violation. The CP violation in the SM is small but it is not small because the CP phase $\delta$ is small but it is small because of the mixing angles. We can see this in the Wolfenstein parameterization where the Jarlskog invariant comes along with six powers of $\lambda$.\\
+The most remarkable observation is that this quantity depends on \textit{every} physical mixing angle, therefore if \textit{any} of the mixing angle is zero there would be no CP violation. The CP violation in the SM is small but it is not small because the CP phase $\delta$ is small but it is small because of the mixing angles. We can see this in the Wolfenstein parameterization where the Jarlskog invariant comes along with six powers of $\lambda$.\\
 In the example we made, the sides of the triangles are of different scaling, a better choice instead is to use $\sum_{i=1}^3V_{id}V_{ib}^*=0$ defining \textbf{the} unitarity triangle.\\
 In this way, we obtain $\{V_{ud}V_{ub}^*,V_{cd}V_{cb}^*,V_{td}V_{tb}^*\}\sim\lambda^3$ and in order to have a better representation on the complex plane we can redefine everything as:
 \[
@@ -353,11 +361,19 @@ Let's look at this from the experimental side and suppose we know nothing about 
     \labtab{fcnc}
 \end{table}
 \newline
-Because the left-hand side of each decay is hadronic and the right-hand side is leptonic, we can determine that the processes on the left have a charged intermediate state (\textbf{charged current}) while the ones on the right have a neutral intermediate state (\textbf{neutral current}). Both processes change flavour but the charged current flavour changing process proceeds at a much larger rate. One would expect both processes to come from some flavour-violating structure so that they should be of the same order of magnitude. The charged current interaction is much larger than the neutral current and this pattern only shows up in flavour-changing processes. For the flavor-conserving processes, the weak interaction charged and neutral currents indeed occur at roughly the same rates.
+Because the left-hand side of each decay is hadronic and the right-hand side is leptonic, we can determine that the processes on the left have a charged intermediate state (\textbf{charged current}) while the ones on the right have a neutral intermediate state (\textbf{neutral current}).\\
+Both processes change flavour but the charged current flavour changing process proceeds at a much larger rate. One would expect both processes to come from some flavour-violating structure so that they should be of the same order of magnitude. The charged current interaction is much larger than the neutral current and this pattern only shows up in flavour-changing processes. For the flavor-conserving processes, the weak interaction charged and neutral currents indeed occur at roughly the same rates.
 \subsection{FCNC at Tree-Level}
-The relevant SM mediators are photons $\gamma$, gluons $g$, the Higgs $h$ and the $Z$ boson: \textit{why do these particles not have any tree-level FCNC?}\\
-Photons and gluons cannot give FCNC at tree-level because of \textbf{gauge invariance}. Gauge symmetry forces the kinetic terms to be universal, as long as QCD and QED are unbroken, all the down-type quarks will have the same gauge interactions, photons and gluons are safe from tree-level FCNCs.\\
-The Higgs $h$ is "accidentally" alone: how can it be flavour conserving? It couples to fermions via the Yukawa term, take for example\\ $(Y^u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}$ and expand $H$ around its vev, which in the unitary gauge means to consider:
+We know that the charged current, i.e. the one mediated by the $W$ boson, can change fermion flavours. How about flavour changing neutral currents (FCNC)? Let's start our discussion at tree-level. The relevant SM bosons are the photon $\gamma$, the gluon $g$, the Higgs $h$ and the $Z$ boson: \textit{why do these particles not have any tree-level FCNC?}\\
+\begin{kaobox}[frametitle=Remark]
+Flavour changing effects occur due to off-diagonal couplings, hence one might be tempted to say that couplings do not change flavour if they are diagonal. This is in general \underline{not true} since \textit{diagonal} is a basis dependent property. Only a \textbf{universal} matrix, i.e. one proportional to the identity, is diagonal in every basis.
+\end{kaobox}
+Photons and gluons cannot give FCNC at tree-level because of \textbf{gauge invariance}. Gauge symmetry forces the kinetic terms, where the gauge couplings live, to be universal. All the down-type quarks will have the same gauge interactions and as long as QCD and QED are unbroken photons and gluons are safe from tree-level FCNCs.\\
+The Higgs $h$ is "accidentally" alone: how can it be flavour conserving? It couples to fermions via the Yukawa term, take for example the up-type: 
+\[
+(Y^u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}
+\]
+Expand $H$ around its vev, which in the unitary gauge means to consider:
 \[
 H=\left(\begin{array}{c}
     \frac{v+h}{\sqrt{2}} \\
@@ -369,7 +385,7 @@ H=\left(\begin{array}{c}
     \frac{v+h}{\sqrt{2}}
 \end{array}\right)
 \]
-For the mass term we have $(m^u)_{ij}=(Y^u)_{ij}\frac{v}{\sqrt{2}}$, while for the coupling we obtain $(Y_u)_{ij}=\frac{(Y^u)_{ij}}{\sqrt{2}}$. Now we move to a basis in which the mass is diagonal:
+For the mass term we have $(m_u)_{ij}=(Y_u)_{ij}\frac{v}{\sqrt{2}}$, while for the coupling we obtain $(Y_u)_{ij}=\frac{(Y_u)_{ij}}{\sqrt{2}}$. Now we move to a basis in which the mass is diagonal:
 \[
 \left\{
 \begin{aligned}
@@ -380,12 +396,12 @@ For the mass term we have $(m^u)_{ij}=(Y^u)_{ij}\frac{v}{\sqrt{2}}$, while for t
 \Rightarrow
 \left\{
 \begin{aligned}
-&\hat{m}^u=V_L^umV_R^u\\
-&\hat{Y}^u=V_L^uY_u(V_R^u)^\dagger
+&\hat{m}_u=V_L^um_uV_R^u\\
+&\hat{Y}_u=V_L^uY_u(V_R^u)^\dagger
 \end{aligned}
 \right.
 \]
-The absence of FCNC at tree-level is due to the fact that we have only one Higgs and we are in 4 dimensions.
+Diagonalizing the mass matrix simultaneously diagonalize the coupling. This is one example when it is sufficient for a matrix to be diagonal in the mass basis but not universal, the absence of FCNC at tree-level is due to the fact that there is only one Higgs in the SM.
 \begin{kaobox}[frametitle=Two Higgs doublet model]
 When looking for new physics we can \textit{either} add non-renormalizable operators \textit{or} add another Higgs.\\
 We now proceed following the first idea, taking the usual Lagrangian and adding an extra-term:
@@ -500,25 +516,29 @@ By introducing $u_L=V_Lu_L'$ and $u_R=V_Ru_R'$ we obtain:
 \[
 \pazocal{L}_{\text{Yuk}}\supset-\frac{1}{\sqrt{2}}u_L'(V_L^\dagger m_uV_R)u_R'-\frac{1}{\sqrt{2}}u_L'h(V_L^\dagger Y_hV_R)u_R'
 \]
-The mass term gets diagonalized, however $Y_h$ does not get diagonalized and we can have interactions like:
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Images/Yh.pdf}
-    \caption*{}
-    \labfig{Yh}
-\end{figure}
-\newline
+The mass term gets diagonalized, however $Y_h$ does not get diagonalized and we can have interactions like the one depicted on the side.\marginnote[-2cm]{\centering
+\includegraphics{Images/Yh.pdf}
+\labfig{Yh}}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.45\textwidth]{Images/Yh.pdf}
+%     \caption*{}
+%     \labfig{Yh}
+% \end{figure}
+% \newline
 The 2 Higgs model is important since we have two Higgs also in the SUSY model: one Higgs couples only to up quarks $(\Tilde{H}_1\to H_u)$ and one couples only to down quarks $(H_2\to H_d)$.
 \[
 \pazocal{L}_{\text{Yuk}}=-(Y_u)_{ij}\overline{Q}_L^iu_R^jH_u+\text{h.c}-(Y_d)_{ij}\overline{Q}_L^id_R^jH_d+\text{h.c.}
 \]
 With this assumption, we removed two couplings. Here interactions and mass re-align, giving us no flavour violation. The realignment of mass and interaction is always present in the SM with 1 Higgs.
 \end{kaobox}
-How about the $Z$? It is a gauge boson but a gauge boson of a \textit{broken} gauge symmetry so there is no reason to expect gauge invariance to protect against FCNCs. Since there are no tree-level FCNCs in the SM, we then expect to be something else protecting the $Z$. The $Z$ is neutral so it only connects fermions with the same charge and colour. Colour is trivially satisfied since SU$(3)_{\text{C}}$ has nothing to do with SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$, on the other hand the electric charge is related to SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ by $Q=T_3+Y$. In the SM, all quarks with the same $Q$ also have the same $T_3$ and therefore the same $Y$. Recall that the $Z$ coupling only depends on these quantities:
+How about the $Z$? It is a gauge boson but a gauge boson of a \textit{broken} gauge symmetry so there is no reason to expect gauge invariance to protect against FCNCs. Since there are no tree-level FCNCs in the SM, we then expect to be something else protecting the $Z$.\\
+It is neutral so it only connects fermions with the same charge and colour. Colour is trivially satisfied since SU$(3)_{\text{C}}$ has nothing to do with SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$, on the other hand the electric charge is related to SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ by $Q=T_3+Y$. In the SM, all quarks with the same $Q$ also have the same $T_3$ and therefore the same $Y$. Recall that the $Z$ coupling only depends on these quantities:
 \[
 g_Z^f=g\cos\theta_wT_3-g'\sin\theta_wY
 \]
-Hence, particles of the same charge all have the same coupling to the $Z$. This is why the Standard Model $Z$ boson does not give FCNCs.\\
+Hence, particles of the same charge all have the same coupling to the $Z$, in other words the $Z$ coupling is universal for each of the up-type and, separately, down-type quarks. This is why the Standard Model $Z$ boson does not give FCNCs.
+\begin{kaobox}[frametitle=Toy model]
 Consider now the following toy model:
 \begin{enumerate}
     \item Group symmetry: G=G$_{\text{SM}}$
@@ -538,11 +558,11 @@ Consider now the following toy model:
     &\left.+m_s\overline{s}_Ls_R+m_d\overline{s}_Ld_r+\text{h.c.}\right]
     \end{align*}
 \end{enumerate}
-G has dimension 7=1+6 and gets broken into H=U$(1)_B$ which has dimension 1. We have 10 naive parameters, corresponding to 5 moduli+5 phases:
+G has dimension 7=1+6 and gets broken into H=U$(1)_{\text{B}}$ which has dimension 1. We have 10 naive parameters, corresponding to 5 moduli+5 phases:
 \[
 \text{\#physical parameters}=\text{\#naive}-\text{\#broken}=10-6=\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize moduli };}}{5}+\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  phases};}}{5}-\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize modulus};}}{1}-\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize phases };}}{5}=4
 \]
-BY removing all the phases, we obtained CP invariance. With a rotation inside U(2) we remove another parameter: $\overline{s}_L(m_ss_R+m_dd_R)=m_s\overline{s}_Ls_R$. We are now interested in diagonalizing the mass term:\marginnote{In the matrix $M$ there should have been $m_d$ instead of 0 but we killed it with the U(2) rotation.}
+By removing all the phases, we obtained CP invariance. With a rotation inside U(2) we remove another parameter: $\overline{s}_L(m_ss_R+m_dd_R)=m_s\overline{s}_Ls_R$. We are now interested in diagonalizing the mass term:\marginnote{In the matrix $M$ there should have been $m_d$ instead of 0 but we killed it with the U(2) rotation.}
 \[
 \pazocal{L}_{\text{mass}}=-\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $\frac{Y_uv}{\sqrt{2}}$};}}{m_u}\overline{u}_Lu_R-\left(\begin{array}{cc}
     \overline{d}_L & \overline{s}_L
@@ -623,40 +643,43 @@ V_L\left(\begin{array}{cc}
     (g_Z^{d_L}-g_Z^{s_L})c _\theta s _\theta & g_Z^{d_L}s^2 _\theta+g_Z^{s_L}c^2 _\theta
 \end{array}\right)\marginnote{$c_\theta=\cos\theta$ and $s_\theta=\sin\theta$.}
 \]
-The flavour violation is given by the terms proportional to $(g_Z^{d_L}-g_Z^{s_L})$.
-\begin{figure}[h]
-    \centering
-    \includegraphics{Images/feynmanabc.pdf}
-    \caption*{}
-    \labfig{feynmanabc}
-\end{figure}
-Diagram (a) refers to $g_Z^{d_L}\cos^2\theta+g_Z^{s_L}\sin^2\theta$, (b) to $g_Z^{d_L}\sin^2\theta+g_Z^{s_L}\cos^2\theta$ and the flavour violating one (c) to $(g_Z^{d_L}-g_Z^{s_L})\cos\theta\sin\theta$.\\ 
-In fact, in our toy model we have:
-\begin{table}[h]
-    \centering
-    \begin{tabular}{c|cc}
-    \hline
-     & G & H \\
-     \hline
-     Right sector & $\begin{cases}
-     d_R\sim(3,1,-1/3)\\
-     s_R\sim(3,1,-1/3)
-     \end{cases}$ & $(3,-1/3)$\\
-     \hline
-     Left sector & $\begin{cases}
-     d_L\sim(3,2,1/6)\\
-     s_L\sim(3,1,-1/3)
-     \end{cases}$ & $(3,-1/3)$\\
-     \hline
-    \end{tabular}
-    \caption{No flavour violation in the right sector, flavour violation in the left sector.}
-    \label{tab:my_label}
-\end{table}\\
+The flavour violation is given by the terms proportional to $(g_Z^{d_L}-g_Z^{s_L})$.\marginnote{\centering
+\includegraphics{Images/feynmanabc.pdf}
+\labfig{feynmanabc}}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{Images/feynmanabc.pdf}
+%     \caption*{}
+%     \labfig{feynmanabc}
+% \end{figure}
+Diagram (a) refers to $g_Z^{d_L}\cos^2\theta+g_Z^{s_L}\sin^2\theta$, (b) to $g_Z^{d_L}\sin^2\theta+g_Z^{s_L}\cos^2\theta$ and the flavour violating one (c) to $(g_Z^{d_L}-g_Z^{s_L})\cos\theta\sin\theta$.\\
+% In fact, in our toy model we have:
+% \begin{table}[h]
+%     \centering
+%     \begin{tabular}{c|cc}
+%     \hline
+%      & G & H \\
+%      \hline
+%      Right sector & $\begin{cases}
+%      d_R\sim(3,1,-1/3)\\
+%      s_R\sim(3,1,-1/3)
+%      \end{cases}$ & $(3,-1/3)$\\
+%      \hline
+%      Left sector & $\begin{cases}
+%      d_L\sim(3,2,1/6)\\
+%      s_L\sim(3,1,-1/3)
+%      \end{cases}$ & $(3,-1/3)$\\
+%      \hline
+%     \end{tabular}
+%     \caption{No flavour violation in the right sector, flavour violation in the left sector.}
+%     \label{tab:my_label}
+% \end{table}\\
 In the SM, there is no flavour violation because $g_Z^{d_L}=g_Z^{s_L}$. The left sector is a quark doublet (3,2,1/6) while in this toy model we have $s_L$ and $d_L$ coming from different irreps of the unbroken group.
+\end{kaobox}
 \subsection{FCNC at Loop-Level}\marginnote{From \cite{GT}, Section 5.}
 So far, we studied everything at tree-level. In the mass basis, the $W$ changes flavour while the other bosons do not, pretty simple. As it is often the case, the story is more subtle at loop-level. Loop-level contributions are usually small compared to the tree-level diagrams for the same process. A loop correction to a tree-level process is hard to observe, while a small effect which is the only source of signal has at least a chance of being measured well. A
-natural set of processes to look are those that generate FCNCs, since we already know that these vanish at tree-level in the Standard Model.\\
-The \href{https://en.wikipedia.org/wiki/GIM_mechanism}{Glashow-Iliopoulos-Maiani (GIM) mechanism} is the mechanism through which FCNCs are suppressed in loop diagrams. The underlying principle is that for a unitary matrix, any pair of columns (or rows) are orthogonal, the first non-trivial point is that
+natural set of processes to look at are those that generate FCNCs, since we already know that these vanish at tree-level in the Standard Model.\\
+The Glashow-Iliopoulos-Maiani (GIM) mechanism is the mechanism through which FCNCs are suppressed in loop diagrams. The underlying principle is that for a unitary matrix, any pair of columns (or rows) are orthogonal. The first non-trivial point is that
 loop-level FCNCs are most sensitive to the heavy quarks running in the loops, so that we can be sensitive to the top. As an example, we study the process $s\to de^+e^-$, which is represented at one-loop by the following diagrams.\\
 \begin{figure}[h]
     \centering
@@ -670,14 +693,14 @@ The amplitude is proportional to the CKM matrix, in particular:
 \pazocal{M}\propto\sum_{i=u,c,t}V_{is}^*f(m_i)V_{id}=\sum_{i=u,c,t}(V^\dagger)_{si}\Tilde{f}(x_i)V_{id}
 \]
 where $x_i=m_i^2/m_W^2$ and $\Tilde{f}(x_i)$ is the Inami-Lim function.\\
-When the GIM mechanism was proposed, there were only three quarks (up, down and strange). However, it required the existence of a \textbf{fourth quark}, the charm: the introduction of the fourth quark restored unitarity of the flavour mixing matrix, allowing to drop constant terms in $\Tilde{f}$. How? If $\Tilde{f}=$constant, then we have $\sum_{i=u,c,t}=(V^\dagger)_{si}V_{id}=\delta_{sd}=0$. This gives us a non-trivial information about the quarks running in the loop. Suppose to have only two families: the CKM matrix becomes:
+When the GIM mechanism was proposed, there were only three quarks (up, down and strange). However, it required the existence of a \textbf{fourth quark}, the charm: the introduction of the fourth quark restored unitarity of the flavour mixing matrix, allowing to drop constant terms in $\Tilde{f}$. How? If $\Tilde{f}=$constant, then we have $\sum_{i=u,c,t}=(V^\dagger)_{si}V_{id}=\delta_{sd}=0$. This gives us a non-trivial information about the quarks running in the loop. Suppose to have only two families, the CKM matrix becomes:
 \[
 V=\left(\begin{array}{cc}
     \cos\theta_c & \sin\theta_c \\
     -\sin\theta_c & \cos\theta_c
 \end{array}\right)
 \]
-In the loop we have $(m_{u/c}/m_W)^2\ll1$, we can expand $\Tilde{f}$ and compute the amplitude:
+In the loop we have $(m_{u/c}/m_W)^2\ll1$, so it is possible to expand $\Tilde{f}$ and compute the amplitude:
 \[
 \left\{
 \begin{aligned}
@@ -705,7 +728,7 @@ It turns out that the charm wins, so in this sense Gaillard and Lee got lucky on
 \section{Running of the Strong Coupling Constant}
 What we want to do is to renormalize divergencies in QFT, hence we use \textbf{dimensional regularization}. As seen in \refch{intro}, we know that in terms of energy $\left[\int d^Dx\pazocal{L}(x)\right]=0$, therefore $\left[\pazocal{L}\right]=D=4-2\varepsilon$. This implies that the terms $\partial^\mu\phi\partial_\mu\phi$, $\overline{\Psi}\slashed{\partial}\Psi$ and $g\overline{\Psi}\slashed{A}\Psi$ must all have dimension $D$:
 \[
-\left[\phi\right]=1-\varepsilon \quad \left[\Psi\right]=\frac{3}{2}-\varepsilon \quad \left[g\right]=\varepsilon\xleftarrow[]{}\text{no good}
+\left[\phi\right]=1-\varepsilon \quad \left[\Psi\right]=\frac{3}{2}-\varepsilon \quad \left[g\right]=\varepsilon\xleftarrow[]{}\text{no good \raisebox{-\mydepth}{{\includegraphics[height=1.1\baselineskip]{Images/sadsmile.jpg}}}}
 \]
 The gauge coupling constant acquires dimensions! This is a prelude to the non-trivial behaviour of the renormalized coupling constant as a function of the energy scale.\marginnote{From \cite{introQCD}, Section 3.} Before we come to that, let's write the bare Lagrangian of QCD, assuming for the moment that all the fields are massless:\marginnote{The assumption of massless fields is called \textbf{chiral limit}.}
 \[
@@ -766,32 +789,63 @@ Using these results and the definition of $Z_1$ we get:
 Z_g&=Z_g(\alpha_s)=\frac{Z_1}{Z_2Z_3^{1/2}}\simeq1+\delta_1-\delta_2-\frac{1}{2}\delta_3\\
 &=1+\frac{\alpha_s}{4\pi\varepsilon}\left(-\frac{11}{6}C_A+\frac{2}{3}n_fT_F\right):=1-\frac{\alpha_s}{\varepsilon}\frac{b_0}{2}
 \end{align*}
-At this point we may ask ourselves a totally legit question: why in the heavenly name of God do we need all this terms? The answer is that we would like to find a differential equation telling us how the coupling changes with $\mu$, arriving at the end to an expression of $\alpha_s(\mu)$.\\
-The starting point is to consider $\frac{d}{d\mu}g_B=0$, i.e. the bare coupling \textit{does not know} about $\mu$. The parameter $\mu$ is an artifact of the regularization prescription, introduced to define the dimensional coupling in $D$ dimensions, therefore it should not enter in measurable quantities. We know that $g_B=\mu^\varepsilon Z_g g_R$ and now we do what is called a pro gamer move: instead of differentiating with respect to $\mu$, we differentiate with respect to $\frac{d}{dt}=\mu^2\frac{d}{d\mu^2}=\frac{d}{d\log\mu^2}$. We then get:
-\[
-\varepsilon\mu^{2\varepsilon}Z_g^2\alpha_s+2\mu^{2\varepsilon}Z_g\alpha_s\frac{dZ_g}{dt}+\mu^{2\varepsilon}Z_g^2\frac{d\alpha_s}{dt}=0
-\]
-$Z_g$ depends on $\mu$ through $\alpha_s$, we can define $\beta(\alpha_s):=\frac{d\alpha_s}{dt}$ and write the previous expression as follows:
+At this point we may ask ourselves a totally legit question: \textit{why in the heavenly name of God do we need all this terms}? The answer is that we would like to find a differential equation telling us how the renormalized coupling $g_R$ evolves with $\mu$, arriving at the end to an expression of $\alpha_s(\mu)$.\\
+The starting point is to consider $\frac{d}{d\mu}g_B=0$, i.e. the bare coupling \textit{does not know} about $\mu$. The parameter $\mu$ is an artifact of the regularization prescription, introduced to define the dimensional coupling in $D$ dimensions, therefore it should not enter in measurable quantities. The bare coupling is given by $g_B=\mu^\varepsilon Z_g g_R$, so that when differentiating with respect to $\mu$ one gets:
 \begin{align*}
-&\varepsilon\alpha_s+2\frac{\alpha_s}{Z_g}\frac{dZ_g}{d\alpha_s}\frac{d\alpha_s}{dt}+\frac{d\alpha_s}{dt}=0\\
-&\varepsilon\alpha_s+2\alpha_s\left(-\frac{b_0}{2\varepsilon}\right)\beta(\alpha_s)+\beta(\alpha_s)=0\\
-&\beta(\alpha_s)=-\frac{\varepsilon\alpha_s}{1-b_0\alpha_s/\varepsilon}\simeq-\varepsilon\alpha_s\left(1+\frac{b_0\alpha_s}{\varepsilon}\right)+\pazocal{O}(\alpha_s^3)=-b_0\alpha_s^2
+\mu\frac{dg_B}{d\mu}=0&=\mu\left[\frac{dZ_g}{d\mu}\mu^\varepsilon g_R+\varepsilon\mu^{\varepsilon-1}Z_gg_R+Z_g\mu^\varepsilon\frac{dg_R}{d\mu}\right]\\
+&=\mu^\varepsilon Z_gg_R\left[\frac{\mu}{Z_g}\frac{dZ_g}{d\mu}+\varepsilon+\frac{\mu}{g_R}\frac{dg_R}{d\mu}\right]
 \end{align*}
-In this way, we obtain a differential equation for $\alpha_s$:
+At the leading order in $g_R$, $Z_g=1$ therefore:
 \[
-\frac{d\alpha_s}{dt}=-b_0\alpha_s^2 \quad \text{with}\,b_0\stackrel{N=3}{=}\frac{1}{12\pi}(33-2n_f)
+\mu\frac{dg_R}{d\mu}=-\varepsilon g_R
 \]
-The sign of $b_0$ tells us if we are going towards the infrared or the ultraviolet region. $b_0>0$ for $n_f<16$, which is our case since we are dealing with $n_f=6$. At 1-loop, the coupling gets smaller in the ultraviolet region and bigger in the infrared region:
+Moving to the next order we have:
+\[
+\mu\frac{dZ_g}{d\mu}=\mu\left(1-\frac{b_0g_R^2}{8\pi\varepsilon}\right)=-\frac{b_0g_R}{4\pi\varepsilon}\mu\frac{dg_R}{d\mu}=\frac{b_0g_R^2}{4\pi}
+\]
+where in the last step we used the relation obtained above. Putting everything together we get:
+\[
+\beta(g_R):=\mu\frac{dg_R}{d\mu}=-\varepsilon g_R-\frac{b_0g_R^3}{4\pi}
+\]
+Translating this into a function of $\alpha_s$ results in:
+\[
+\beta(\alpha_s):=\mu\frac{d\alpha_s}{d\mu}=\frac{g_R}{2\pi}\mu\frac{dg_R}{d\mu}=-\frac{\varepsilon g_R^2}{2\pi}-\frac{b_0g_R^4}{8\pi^2}=-2\varepsilon\alpha_s-2b_0\alpha_s^2
+\]
+For $\varepsilon=0$ we can solve the differential equation given by:
+\[
+\mu\frac{d\alpha_s}{d\mu}=-2b_0\alpha_s^2 \quad \text{with}\,b_0\stackrel{N=3}{=}\frac{1}{12\pi}(33-2n_f)
+\]
+% and now we do what is called a pro gamer move: instead of differentiating with respect to $\mu$, we differentiate with respect to $\frac{d}{dt}=\mu^2\frac{d}{d\mu^2}=\frac{d}{d\ln\mu^2}$. We then get:
+% \[
+% \varepsilon\mu^{2\varepsilon}Z_g^2\alpha_s+2\mu^{2\varepsilon}Z_g\alpha_s\frac{dZ_g}{dt}+\mu^{2\varepsilon}Z_g^2\frac{d\alpha_s}{dt}=0
+% \]
+% $Z_g$ depends on $\mu$ through $\alpha_s$, we can define $\beta(\alpha_s):=\frac{d\alpha_s}{dt}$ and write the previous expression as follows:
+% \begin{align*}
+% &\varepsilon\alpha_s+2\frac{\alpha_s}{Z_g}\frac{dZ_g}{d\alpha_s}\frac{d\alpha_s}{dt}+\frac{d\alpha_s}{dt}=0\\
+% &\varepsilon\alpha_s+2\alpha_s\left(-\frac{b_0}{2\varepsilon}\right)\beta(\alpha_s)+\beta(\alpha_s)=0\\
+% &\beta(\alpha_s)=-\frac{\varepsilon\alpha_s}{1-b_0\alpha_s/\varepsilon}\simeq-\varepsilon\alpha_s\left(1+\frac{b_0\alpha_s}{\varepsilon}\right)+\pazocal{O}(\alpha_s^3)=-b_0\alpha_s^2
+% \end{align*}
+% In this way, we obtain a differential equation for $\alpha_s$:
+% \[
+% \frac{d\alpha_s}{dt}=-b_0\alpha_s^2 \quad \text{with}\,b_0\stackrel{N=3}{=}\frac{1}{12\pi}(33-2n_f)
+% \]
+The sign of $b_0$ tells us if we are going towards the infrared or the ultraviolet region. $b_0>0$ for $n_f<16$, which is our case since we are dealing with $n_f=6$. We can now solve this equation:
+\[
+\int_{\alpha(\mu)}^{\alpha(\Lambda)}\frac{d\alpha_s}{\alpha_s^2}=-2b_0\int_\mu^\Lambda\frac{d\mu'}{\mu'}
+\]
+where $\Lambda$ is the boundary condition of the first order differential equation and corresponds to the scale at which the coupling becomes infinity. Computing the integral gives us:
+\[
+\frac{1}{\alpha_s(\mu)}-\frac{1}{\alpha_s(\Lambda)}=-2b_0\ln{(\Lambda/\mu)}=b_0\ln{(\mu^2/\Lambda^2)}
+\]
+At 1-loop, the coupling gets smaller in the ultraviolet region and bigger in the infrared region:
 \begin{equation}
 \labeq{alpha_s}
-\alpha_s(\mu)=\frac{1}{b_0\log(\mu^2/\Lambda_{\text{QCD}}^2)}
+\alpha_s(\mu)=\frac{1}{b_0\ln(\mu^2/\Lambda_{\text{QCD}}^2)}
 \end{equation}
-The parameter $\Lambda_{\text{QCD}}$ describes the boundary condition of the first order differential equation and corresponds to the scale at which the coupling becomes infinity.
 \marginnote[-5cm]{\includegraphics[]{Images/couplingconstant.png}\\
 From \href{https://commons.wikimedia.org/wiki/File:Strong_coupling_as_function_of_energy.svg}{WikiMedia}: strong coupling constant as a function of energy.}
 \section{Renormalization Group Invariance}
 The fact that the coupling constant $\alpha_s$ depends on the unphysical renormalization scale $\mu$ should not be a source of worry since the coupling constant is \textit{not} an observable. What we observe are instead decay rates, spectra or cross sections, given by the product of the coupling constant and some matrix element. The matrix element will in general acquire a non-trivial renormalization scale dependence through the renormalization procedure, therefore we just need to check that the $\mu$ dependence of the coupling constant and of the matrix element cancel each other.
-
 Consider now a physical observable, e.g. the ratio: 
 \[
 R=\frac{\sigma(e^+e^-\to\text{hadrons})}{\sigma(e^+e^-\to\mu^+\mu^-)}
@@ -802,28 +856,38 @@ R(\alpha_s(\mu),t=s/\mu^2)=1+\alpha_sf_1(t)+\alpha_s^2f_2(t)+\cdots=\sum_{n=0}^\
 \]
 $R$ has a clear dependence on $\alpha_s$ and on $\mu$ via the functions $f_n(t)$. Being it an observable, it should be independent on $\mu$:
 \begin{align*}
-0=\mu^2\frac{d}{d\mu^2}R(\alpha_s(\mu),t=s/\mu^2)=&\beta(\alpha_s)f_1(t)+\alpha_s\mu^2\frac{df_1(t)}{d\mu^2}\\
-&+2\alpha_s\beta(\alpha_s)f_2(t)+\alpha_s^2\mu^2\frac{df_2(t)}{d\mu^2}+\cdots
+0=\mu\frac{d}{d\mu}R(\alpha_s(\mu),t=s/\mu^2)=&\beta(\alpha_s)f_1(t)+\alpha_s\mu\frac{df_1(t)}{d\mu}\\
+&+2\alpha_s\beta(\alpha_s)f_2(t)+\alpha_s^2\mu\frac{df_2(t)}{d\mu}+\cdots
 \end{align*}
-At order $\alpha_s$ we have $\frac{df_1(t)}{d\mu^2}=0$ hence $f_1(t)=$ constant $=a_1$ and there is no dependence on $t$ (therefore on $\mu$). This is a non-trivial result, it is telling us that $R$ at 1-loop is finite and all infinities must cancel without charge renormalization. If they did not cancel, $f_1$ would depend explicitly on $\mu$: this is a consequence of the fact that colour interactions do not enter in the renormalization of the electric charge.\\
+At order $\alpha_s$ we have $\mu\frac{df_1(t)}{d\mu}=0$ hence $f_1(t)=$ constant $=a_1$ and there is no dependence on $t$ (therefore on $\mu$). This is a non-trivial result, it is telling us that $R$ at 1-loop is finite and all infinities must cancel without charge renormalization. If they did not cancel, $f_1$ would depend explicitly on $\mu$: this is a consequence of the fact that colour interactions do not enter in the renormalization of the electric charge.\\
 At order $\alpha_s^2$ we have:
 \[
-\beta(\alpha_s)a_1+\alpha_s^2\mu^2\frac{df_2(t)}{d\mu^2}=0\Rightarrow f_2(t)=a_2+b_0a_1\log(\mu^2/s)
+\beta(\alpha_s)a_1+\alpha_s^2\mu\frac{df_2(t)}{d\mu}=0\Rightarrow f_2(t)=a_2+b_0a_1\ln(\mu^2/s)
 \]
+\marginnote[-2cm]{Full calculation for $f_2(t)$:
+\begin{align*}
+&\beta(\alpha_s)a_1+\alpha_s^2\mu\frac{df_2(t)}{d\mu}=-2b_0\alpha_s^2a_1+\alpha_s^2\mu\frac{df_2(t)}{dt}\frac{dt}{d\mu}=\\
+&-\cancel{2}b_0a_1\cancel{\alpha_s^2}-\frac{\cancel{2}s}{\mu^2}\cancel{\alpha_s^2}\frac{df_2}{dt}=-b_0a_1-t\frac{df_2(t)}{dt}=0
+\end{align*}
+It follows that:
+\[
+df_2(t)=-\frac{dt}{t}b_0a_1
+\]
+and the result is obtained by integrating this quantity.}
 We obtained the leading log-effect at 2-loops using only 1-loop computations. So far, up to order $\alpha_s^2$ we obtained:
 \[
-R=1+\underbrace{a_1\alpha_s}_{\text{1-loop}}+\underbrace{b_0a_1\alpha_s^2\log(\mu^2/s)+a_2\alpha_s^2}_{\text{2-loops}}+\pazocal{O}(\alpha_s^3)
+R=1+\underbrace{a_1\alpha_s}_{\text{1-loop}}+\underbrace{b_0a_1\alpha_s^2\ln(\mu^2/s)+a_2\alpha_s^2}_{\text{2-loops}}+\pazocal{O}(\alpha_s^3)
 \]
-Carrying out the computations at higher orders allows us to express the generic function $f_n(t)$ as $f_n(t)=a_1[b_0\log(\mu^2/s)]^n$. Putting all the terms together, we arrive to the following expression of the ratio $R$:
+Carrying out the computations at higher orders allows us to express the generic function $f_n(t)$ as $f_n(t)=a_1[b_0\ln(\mu^2/s)]^n$. Putting all the terms together, we arrive to the following expression of the ratio $R$:
 \begin{align*}
-R&=1+a_1\alpha_s\left\{1+b_0\alpha_s\log\left(\frac{\mu^2}{s}\right)+\left[b_0\alpha_s\log\left(\frac{\mu^2}{s}\right)\right]^2+\cdots\right\}+a_2\alpha_s^2\\
-&=1+a_1\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\log(s/\mu^2)}+a_2\alpha_s^2+\cdots
+R&=1+a_1\alpha_s\left\{1+b_0\alpha_s\ln\left(\frac{\mu^2}{s}\right)+\left[b_0\alpha_s\ln\left(\frac{\mu^2}{s}\right)\right]^2+\cdots\right\}+a_2\alpha_s^2+\cdots\\
+&=1+a_1\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\ln(s/\mu^2)}+a_2\alpha_s^2+\cdots
 \end{align*}
 Moreover, keeping in mind the expression of $\alpha_s(\mu)$ we found in the previous section [\refeq{alpha_s}], the fraction above can be written as:
 \begin{align*}
-\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\log\left(\frac{s}{\mu^2}\right)}&=\frac{1}{b_0\log\left(\frac{\mu^2}{\Lambda_{\text{QCD}}^2}\right)}\frac{1}{1+\frac{1}{b_0\log(\mu^2/\Lambda_{\text{QCD}}^2)}b_0\log\left(\frac{s}{\mu^2}\right)}\\
-&=\frac{1}{b_0\log(\mu^2/\Lambda_{\text{QCD}}^2)+b_0\log(s/\mu^2)}\\
-&=\frac{1}{b_0\log(s/\Lambda_{\text{QCD}}^2)}=\alpha_s(s)
+\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\ln\left(\frac{s}{\mu^2}\right)}&=\frac{1}{b_0\ln\left(\frac{\mu^2}{\Lambda_{\text{QCD}}^2}\right)}\frac{1}{1+\frac{1}{b_0\ln(\mu^2/\Lambda_{\text{QCD}}^2)}b_0\ln\left(\frac{s}{\mu^2}\right)}\\
+&=\frac{1}{b_0\ln(\mu^2/\Lambda_{\text{QCD}}^2)+b_0\ln(s/\mu^2)}\\
+&=\frac{1}{b_0\ln(s/\Lambda_{\text{QCD}}^2)}=\alpha_s(s)
 \end{align*}
 Renormalization Group Invariance constraints the form of higher-order corrections and the higher-order logarithmic terms can be resummed by simply setting the scale of $\alpha_s$ to $s$. The final result will be in the form:
 \[
