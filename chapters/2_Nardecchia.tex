@@ -918,7 +918,7 @@ Our goal is to analyze the symmetry of the QCD Lagrangian with respect to indepe
 \overline{q}\Gamma_iq=\left\{
 \begin{aligned}
 &\overline{q}_R\Gamma_1q_R+\overline{q}_L\Gamma_1q_L \quad \text{for}\,\Gamma_1\in\{\gamma^\mu,\gamma^\mu\gamma_5\}\\
-&\overline{q}_R\Gamma_2q_L+\overline{q}_L\Gamma_2q_R \quad \text{for}\,\Gamma_1\in\{\mathbb{1},\gamma_5,\sigma^{\mu\nu}\}
+&\overline{q}_R\Gamma_2q_L+\overline{q}_L\Gamma_2q_R \quad \text{for}\,\Gamma_2\in\{\mathbb{1},\gamma_5,\sigma^{\mu\nu}\}
 \end{aligned}
 \right.
 \end{equation}
@@ -940,11 +940,11 @@ where $U_{L/R}$ is given by:
 \labeq{transformation}
 U_{L/R}=\exp{-i\sum_{a=1}^8\theta_a^{L/R}\frac{\lambda^a}{2}}e^{-i\theta_{L/R}}
 \end{equation}
-$U_{L/R}\in$U(3), for $\overline{q}_{L/R}$ we have that it transforms as $q_{L/R}\to\overline{q}_{L/R}'U_{L/R}^\dagger$. If we perform explicit computations, we easily obtain:
+$U_{L/R}\in$U(3), for $\overline{q}_{L/R}$ we have that it transforms as $\overline{q}_{L/R}\to\overline{q}_{L/R}'U_{L/R}^\dagger$. If we perform explicit computations, we easily obtain:
 \[
 \overline{q}_{L/R}i\slashed{D}q_{L/R}\to\overline{q}_{L/R}U_{L/R}^\dagger U_{L/R}i\slashed{D}q_{L/R}=\overline{q}_{L/R}i\slashed{D}q_{L/R} \quad \checkmark
 \]
-$\pazocal{L}_{\text{QCD}}^0$ is said to have a classical global U$(3)_{\text{L}}\times$U$(3)_{\text{R}}$ symmetry. Applying \href{https://en.wikipedia.org/wiki/Emmy_Noether}{N\"other}'s Theorem, one would expect then to have 2$\times$(8+1)=18 conserved currents.
+$\pazocal{L}_{\text{QCD}}^0$ is said to have a classical global U$(3)_{\text{L}}\times$U$(3)_{\text{R}}$ symmetry. Applying N\"other's Theorem, one would expect then to have 2$\times$(8+1)=18 conserved currents.
 \subsection{N\"other's Theorem}
 N\"other's Theorem establishes the connection between continuous symmetries of a dynamical system and conserved quantities. In order to identify the conserved currents associated with the transformation of \refeq{transformation}, we shortly recall the method of Gell-Mann and Levy which will then be applied to $\pazocal{L}_{\text{QCD}}^0$. We start with a Lagrangian depending on $n$ independent fields $\phi_i$ and their partial derivatives, from which we obtain $n$ equation of motions:
 \[
@@ -1030,11 +1030,12 @@ We then have a conserved singlet vector current $V^\mu$ originating from a trans
 \[
 \partial_\mu A^\mu=\frac{3g^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}G^{\mu\nu,a}G^{\rho\sigma}_a
 \]
-The SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}\times$U$(1)_{\text{V}}$ symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. As a consequence, we have that the charge operators are no longer time independent but the equal-time commutation relations still play an important role even when the symmetry gets explicitly broken. Let's consider the mass term now:
+The chiral symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. As a consequence, we have that the charge operators are no longer time independent but the equal-time commutation relations still play an important role even when the symmetry gets explicitly broken. Let's consider the mass term now:
 \[
 \pazocal{L}_{\text{M}}=-\overline{q}Mq \quad \text{with}\;M=\mqty(\dmat{m_u,m_d,m_s})
 \]
-By applying \refeq{gammarelations}, we observe that the quark mass terms mix left- and right-handed fields: $\pazocal{L}_{\text{M}}=-(\overline{q}_LMq_R+\overline{q}_RMq_L)$.\\
+By applying \refeq{gammarelations} we observe that the quark mass terms mix left- and right-handed fields:
+$\pazocal{L}_{\text{M}}=-(\overline{q}_LMq_R+\overline{q}_RMq_L)$.\\
 We can compute the variation of $\pazocal{L}_{\text{M}}$ due to the infinitesimal form of \refeq{transformation}:
 \begin{align*}
 \delta\pazocal{L}_M=&-i\left[\overline{q}_R\left(\sum_{a=1}^8\theta_a^R\frac{\lambda^a}{2}+\theta^R\right)Mq_L-\overline{q}_RM\left(\sum_{a=1}^8\theta_a^L\frac{\lambda^a}{2}+\theta^L\right)q_L\right.\\
@@ -1106,7 +1107,7 @@ Q_A^a\ket{i,+}=Q_A^a\hat{a}_i^\dagger\ket{0}=(\underset{\mathclap{\tikz \node {$
 {[Q_A^a,\hat{a}_i^\dagger]}+\hat{a}_i^\dagger Q_A^a)\ket{0}
 \]
 Since the parity doubling is not observed, one assumes that $Q_A^a$ do not annihilate the ground state, i.e. the ground state of QCD is not invariant under axial transformation. $Q_A^a\ket{0}\neq0$, the ground state is not invariant under the full symmetry group of the Lagrangian , resulting in spontaneous symmetry breaking: G$\to$H$\subset$SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$.\\
-Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-\href{https://en.wikipedia.org/wiki/Jeffrey_Goldstone}{Goldstone} bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.\\
+Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-Goldstone bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.\\
 We know that there is symmetry breaking and we want to support this interpretation. Since the theory is spontaneously broken, there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that $\bra{0}[Q_A^a,\hat{O}]\ket{0}\neq0$.\marginnote{We might be tempted to study $Q_A^a\ket{0}$ instead but there are problems concerning the norm of this state.}\\
 The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that $\bra{0}J^0\ket{G}\bra{G}\hat{O}\ket{0}\neq0$. Who is the candidate to play the role of $\ket{G}$? This state has to be pseudo-scalar and transform under SU$(3)_{\text{V}}$. We know that $[Q_V^a,Q_A^b]=if_{abc}Q_A^c$, this tells us that the Goldstone boson transforms as the adjoint, so they form an octet of SU$(3)$, and the current is the axial one. The operator $\hat{O}$ is the following:
 \begin{align*}
@@ -1402,7 +1403,8 @@ Using this result we finally get:
 \bra{p,q}J_A^\rho(x)\ket{0}=-\frac{g^2}{2\pi^2}\epsilon^{\mu\nu\alpha\beta}p_\alpha q_\beta\varepsilon_\mu\varepsilon_\nu'e^{-i(p+q)z}+\pazocal{O}(g^4)
 \]
 The right-hand side of this equation is exactly what we get in the free-field theory for the matrix element of the right-hand side of \refeq{curr}, which is correct up to possible higher order corrections.
-\section{Effective Field Theories (EFT)}\marginnote{From \cite{P}, Section 2 and Section 4.}
+\section{Effective Field Theory (EFT) for Goldstone Bosons}\marginnote{From \cite{P}, Section 2 and Section 4.}
+The Goldstone nature of the pseudoscalar mesons implies strong constraints on their interactions. Since there is a mass gap separating the pseudoscalar octet from the rest of the spectrum, it is possible to build an EFT containing only the Goldstone bosons.\\
 An EFT is characterized by some effective Lagrangian:
 \[
 \pazocal{L}_{\text{EFT}}=\pazocal{L}^{(4)}+\sum_n C^{(n)}O^{(n)}(x)
@@ -1427,16 +1429,16 @@ In an EFT, we have to specify the degrees of freedom, the symmetry group, the ra
     \item The UV theory is known but performing \textit{matching} is not possible
 \end{enumerate}
 We now want to study the case where the symmetry group is\\
-G=SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ which gets broken via spontaneous chiral symmetry breaking to H=SU$(3)_{\text{V}}$. Geometrically, the Goldstone bosons are the coordinates of the coset G/H denoted by $\phi^a(a=1,\cdots,8)$.\\
-Consider two elements, $g\in\text{G}$ and $h\in\text{H}$. Any $g\in\text{G}$ can be decomposed as $g=\xi\cdot h$ with $\xi\in\text{G}$. What we are interested in are transformation properties of $\xi(\phi)$:
-\[
-g\xi(\phi)=g'=\xi(\phi')h(g,\phi)\Rightarrow\xi(\phi)\to\xi(\phi')=g\xi(\phi)h^{-1}(g,\phi)
-\]
-Moreover, we choose a coset representative $\overline{\xi}(\phi)=(\xi_L(\phi),\xi_R(\phi))\in\text{G}$. The change of the Goldstone coordinates under a chiral transformation $g=(g_L,g_R)\in\text{G}$ is given by:
+G=SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ which gets broken via spontaneous chiral symmetry breaking to H=SU$(3)_{\text{V}}$. Geometrically, the Goldstone bosons are the coordinates of the coset G/H denoted by $\phi^a(a=1,\cdots,8)$ 
+% Consider two elements, $g\in\text{G}$ and $h\in\text{H}$. Any $g\in\text{G}$ can be decomposed as $g=\xi\cdot h$ with $\xi\in\text{G}$. What we are interested in are transformation properties of $\xi(\phi)$:
+% \[
+% g\xi(\phi)=g'=\xi(\phi')h(g,\phi)\Rightarrow\xi(\phi)\to\xi(\phi')=g\xi(\phi)h^{-1}(g,\phi)
+% \]
+and we choose a coset representative $\overline{\xi}(\phi)=(\xi_L(\phi),\xi_R(\phi))\in\text{G}$. The change of the Goldstone coordinates under a chiral transformation $g=(g_L,g_R)\in\text{G}$ is given by:
 \[
 \xi_L(\phi)\to g_L\xi_L(\phi)h^\dagger(\phi,g) \quad \xi_R(\phi)\to g_R\xi_R(\phi)h^\dagger(\phi,g)
 \]
-Since the same transformation $h(\phi,g)$ occurs both in the left and in the right sector we can get rid of it by combining the two chiral relations in a simpler form:
+where $h(\phi,g)\in\text{H}$. Since the same transformation $h(\phi,g)$ occurs both in the left and in the right sector we can get rid of it by combining the two chiral relations in a simpler form:
 \[
 U(\phi):=\xi_R(\phi)\xi_L^\dagger(\phi) \quad U(\phi)\to g_RU(\phi)g_L^\dagger
 \]
