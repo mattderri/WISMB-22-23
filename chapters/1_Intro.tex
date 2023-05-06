@@ -593,4 +593,59 @@ We can redefine $\eta'_A$ to be equal to 1. Doing this, we also define a new ope
     \caption*{}
     \labtab{boh}
 \end{table}
+\subsection{Symmetries at Quark Level}
+In the quark model, states are bound states of quarks and anti-quarks:
+\[
+\hat{P}\ket{\overline{q}q',s=0,l=0}=\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $\eta_q\eta_{q'}$};}}{(-1)}(-1)^l\ket{\overline{q}q',s=0,l=0}
+\]
+We have an intrinsic parity $(-)$ for $l=0$ and based just on parity conservation we have some processes which are not observed in nature:
+\[
+\left\{
+\begin{aligned}
+&0^-: \pi,k,\eta,\eta'\\
+&1^-: \rho,k^*,\phi,\omega
+\end{aligned}
+\right.
+\qquad
+\left\{
+\begin{aligned}
+&\rho\xrightarrow[]{}\pi^+\pi^- \quad (-)\xrightarrow[]{}(-)^2(-)^1\\
+&\rho\xrightarrow[]{}\pi^0\pi^0 \quad \text{ not observed in nature}
+\end{aligned}
+\right.
+\]
+We have previously seen how fields and operators behave under charge conjugation. If we apply this to the photons we get selection rules:
+\[
+\hat{C}\ket{\gamma}=-\ket{\gamma}\xrightarrow[]{}\hat{C}\ket{n\gamma}=(-)^n\ket{n\gamma}
+\]
+Hence, the transition $\gamma\gamma\xrightarrow[]{}3\gamma$ is forbidden (Furry Theorem).
+
+We now bring our attention to the case of positronium, which is a bound state of:
+\[
+\ket{e^-,\Vec{p},\sigma;e^+,\Vec{p}',\sigma'}=\hat{a}^\dagger_\sigma(\Vec{p})\hat{b}^\dagger_{\sigma'}(\Vec{p}')\ket{0}
+\]
+Is it possible to treat positronium as the hydrogen atom? The masses are different: for hydrogen, the relevant one is $m_e$ while for positronium we have $m_e/2$. Nevertheless, this does not force us to treat them separately:
+\[
+E_n(H)=\frac{m_e\alpha^2}{2} \quad E_n(Ps)=\frac{\mu\alpha^2}{2}=\frac{m_e\alpha^2}{4}
+\]
+We work in the center of mass, hence $\Vec{p}'=-\vec{p}$. The setup is clear and we can apply charge conjugation:
+\begin{align*}
+\hat{C}\ket{e^-,\Vec{p},\sigma;e^+,-\Vec{p},\sigma'}&=\underbrace{\xi_{e^-}\xi_{e^+}}_{=1}\ket{e^+,\Vec{p},\sigma;e^-,-\Vec{p},\sigma'}\\
+&=-\ket{e^-,-\Vec{p},\sigma';e^+,\Vec{p},\sigma}
+\marginnote{We swapped momenta and spin of the two particles to get a factor $(-)$.}
+\end{align*}
+Applying charge conjugation to a general state in the form $\ket{n,l,m,s,s_z}$ gives us a factor $(-)^{l+s}$. Positronium can decay into photons:
+\[
+\left\{
+\begin{aligned}
+&n=1,l=0,s=0: (-)^{l+s}=+1\xrightarrow[]{}2\gamma, \tau=0.125\,\text{ns}\\
+&n=1,l=1,s=1: (-)^{l+s}=-1\xrightarrow[]{}3\gamma, \tau=142.05\,\text{ns}
+\end{aligned}
+\right.
+\marginnote{For this particular decay:
+\[
+\Gamma_{3\gamma}=\frac{e^2}{16\pi^2}\Gamma_{2\gamma}\sim10^{-4}\Gamma_{2\gamma}
+\]}
+\]
+Moving back to our starting point, we observe how the decay channel of $\pi^0$ works: $\pi^0$ is a bound state of the form $\ket{q\overline{q},s=0,l=0}$ with a $(+)$ phase under charge conjugation. It then follows from this simple reasoning that the decay $\pi^0\xrightarrow[]{}3\gamma$ is forbidden (this has a branching ratio smaller than $10^{-8}$) while what we observe in nature is $\pi^0\xrightarrow[]{}2\gamma$.
 \end{document}

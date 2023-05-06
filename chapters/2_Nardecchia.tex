@@ -4,61 +4,6 @@
 \setchapterpreamble[u]{\margintoc}
 \chapter[Lectures by Prof. Nardecchia]{Lectures by Prof. Nardecchia\footnotemark[0]}
 \labch{mn}
-\section{Symmetries at Quark Level}
-In the quark model, states are bound states of quarks and anti-quarks:
-\[
-\hat{P}\ket{\overline{q}q',s=0,l=0}=\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $\eta_q\eta_{q'}$};}}{(-1)}(-1)^l\ket{\overline{q}q',s=0,l=0}
-\]
-We have an intrinsic parity $(-)$ for $l=0$ and based just on parity conservation we have some processes which are not observed in nature:
-\[
-\left\{
-\begin{aligned}
-&0^-: \pi,k,\eta,\eta'\\
-&1^-: \rho,k^*,\phi,\omega
-\end{aligned}
-\right.
-\qquad
-\left\{
-\begin{aligned}
-&\rho\xrightarrow[]{}\pi^+\pi^- \quad (-)\xrightarrow[]{}(-)^2(-)^1\\
-&\rho\xrightarrow[]{}\pi^0\pi^0 \quad \text{ not observed in nature}
-\end{aligned}
-\right.
-\]
-We have seen in \refch{intro} how fields and operators behave under charge conjugation. If we apply this to the photons we get selection rules:
-\[
-\hat{C}\ket{\gamma}=-\ket{\gamma}\xrightarrow[]{}\hat{C}\ket{n\gamma}=(-)^n\ket{n\gamma}
-\]
-Hence, the transition $\gamma\gamma\xrightarrow[]{}3\gamma$ is forbidden (Furry Theorem).
-
-We now bring our attention to the case of positronium, which is a bound state of:
-\[
-\ket{e^-,\Vec{p},\sigma;e^+,\Vec{p}',\sigma'}=\hat{a}^\dagger_\sigma(\Vec{p})\hat{b}^\dagger_{\sigma'}(\Vec{p}')\ket{0}
-\]
-Is it possible to treat positronium as the hydrogen atom? The masses are different: for hydrogen, the relevant one is $m_e$ while for positronium we have $m_e/2$. Nevertheless, this does not force us to treat them separately:
-\[
-E_n(H)=\frac{m_e\alpha^2}{2} \quad E_n(Ps)=\frac{\mu\alpha^2}{2}=\frac{m_e\alpha^2}{4}
-\]
-We work in the center of mass, hence $\Vec{p}'=-\vec{p}$. The setup is clear and we can apply charge conjugation:
-\begin{align*}
-\hat{C}\ket{e^-,\Vec{p},\sigma;e^+,-\Vec{p},\sigma'}&=\underbrace{\xi_{e^-}\xi_{e^+}}_{=1}\ket{e^+,\Vec{p},\sigma;e^-,-\Vec{p},\sigma'}\\
-&=-\ket{e^-,-\Vec{p},\sigma';e^+,\Vec{p},\sigma}
-\marginnote{We swapped momenta and spin of the two particles to get a factor $(-)$.}
-\end{align*}
-Applying charge conjugation to a general state in the form $\ket{n,l,m,s,s_z}$ gives us a factor $(-)^{l+s}$. Positronium can decay into photons:
-\[
-\left\{
-\begin{aligned}
-&n=1,l=0,s=0: (-)^{l+s}=+1\xrightarrow[]{}2\gamma, \tau=0.125\,\text{ns}\\
-&n=1,l=1,s=1: (-)^{l+s}=-1\xrightarrow[]{}3\gamma, \tau=142.05\,\text{ns}
-\end{aligned}
-\right.
-\marginnote{For this particular decay:
-\[
-\Gamma_{3\gamma}=\frac{e^2}{16\pi^2}\Gamma_{2\gamma}\sim10^{-4}\Gamma_{2\gamma}
-\]}
-\]
-Moving back to our starting point, we observe how the decay channel of $\pi^0$ works: $\pi^0$ is a bound state of the form $\ket{q\overline{q},s=0,l=0}$ with a $(+)$ phase under charge conjugation. It then follows from this simple reasoning that the decay $\pi^0\xrightarrow[]{}3\gamma$ is forbidden (this has a branching ratio smaller than $10^{-8}$) while what we observe in nature is $\pi^0\xrightarrow[]{}2\gamma$.
 \section{CP Violation in the Standard Model}
 For parity, charge conjugation and CP application, we have to keep in mind the following table:
 \begin{table}[h]
@@ -219,7 +164,7 @@ A unitary matrix U(N) has $N^2$ parameters, an orthogonal matrix O(N) has $N(N-1
 This corresponds to 6 masses of quarks+3 mixing angles+1 CP-violating phase.
 \section{CKM Matrix}\marginnote{From \cite{GT}, Section 3.}
 The experimental goal of flavour physics is to measure these parameters in as many ways as possible to check for consistency and hope for a signal of a new physics.\\
-The CKM matrix (named after Cabibbo, Kobayashi and Maskawa) comes from a basis rotation and from the fact that it is not possible to simultaneously diagonalize all of the flavour matrices in the SM. The CKM matrix is what is left over when moving from one basis to another and it is the source of \textbf{flavour mixing}. The
+The CKM matrix (named after Cabibbo, Kobayashi and Maskawa) comes from a basis rotation and from the fact that it is not possible to simultaneously diagonalize all of the flavour matrices in the SM. \marginnote[-1cm]{\includegraphics[]{Images/diagonalize.jpg}}The CKM matrix is what is left over when moving from one basis to another and it is the source of \textbf{flavour mixing}. The
 particular matrices that cannot be simultaneously diagonalized are the $W$ boson couplings, the masses of the $d$-type quarks and the masses of the $u$-type quarks. At most it is possible to diagonalize two of these and we chose to diagonalize the masses and leave the $W$ coupling non-diagonal. It is
 important to emphasize that this is a totally arbitrary choice that we are free to make. The non-trivial quark interactions come form the Yukawa sector:
 \[
@@ -676,6 +621,7 @@ Diagram (a) refers to $g_Z^{d_L}\cos^2\theta+g_Z^{s_L}\sin^2\theta$, (b) to $g_Z
 % \end{table}\\
 In the SM, there is no flavour violation because $g_Z^{d_L}=g_Z^{s_L}$. The left sector is a quark doublet (3,2,1/6) while in this toy model we have $s_L$ and $d_L$ coming from different irreps of the unbroken group.
 \end{kaobox}
+\newpage
 \subsection{FCNC at Loop-Level}\marginnote{From \cite{GT}, Section 5.}
 So far, we studied everything at tree-level. In the mass basis, the $W$ changes flavour while the other bosons do not, pretty simple. As it is often the case, the story is more subtle at loop-level. Loop-level contributions are usually small compared to the tree-level diagrams for the same process. A loop correction to a tree-level process is hard to observe, while a small effect which is the only source of signal has at least a chance of being measured well. A
 natural set of processes to look at are those that generate FCNCs, since we already know that these vanish at tree-level in the Standard Model.\\
@@ -1116,7 +1062,7 @@ The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that 
 \end{align*}
 The term $\bra{0}\overline{q}q\ket{0}$ is called \textbf{chiral condensate}, and it transforms like an $(\overline{3},3)_0$ under SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}\times$U$(1)_{\text{V}}$, it is the representation which breaks the symmetry. The symmetry that leaves this term invariant is SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$, this condensate is the most elementary version of the symmetry breaking in the Higgs mechanism. What we want to do next is writing the QCD Lagrangian and then add the mass as a perturbation: this is called the chiral Lagrangian.
 \section{Anomalies in Quantum Field Theory}\marginnote{From \cite{Sr}, Chapter 75.}\marginnote[1cm]{Nardecchia and I were both wearing a NASA shirt during this lecture. Basically we are best friends now.}
-What we have done so far was discussing gauge theories with Dirac fermion fields. The Dirac field $\Psi$ can be written in terms of two left-handed \href{https://en.wikipedia.org/wiki/Hermann_Weyl}{Weyl} fields $\chi$ and $\xi$:
+What we have done so far was discussing gauge theories with Dirac fermion fields. The Dirac field $\Psi$ can be written in terms of two left-handed Weyl fields $\chi$ and $\xi$:
 \[
 \Psi=\left(\begin{array}{c}
      \chi \\
@@ -1448,7 +1394,7 @@ U(\phi)=u^2(\phi)=\exp{i\sqrt{2}\frac{\Phi}{f}}
 \]
 This gives a very convenient parametrization of the Goldstone fields:
 \[
-\Phi(x):=\frac{\lambda^a}{\sqrt{2}}\phi^a=\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
+\Phi(x):=\sum_{a=1}^8\frac{\lambda^a}{\sqrt{2}}\phi^a=\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
     \phi_3+\phi_8/\sqrt{3} & \phi_1-i\phi_2 & \phi_4-i\phi_5 \\
     \phi_1+i\phi_2 & -\phi_3-\phi_8/\sqrt{3} & \phi_6-i\phi_7 \\
     \phi_4+i\phi_5 & \phi_6+i\phi_7 & -2\phi_8/\sqrt{3} \\
@@ -1548,14 +1494,15 @@ At lowest order in momenta, the generating functional reduces to the classical a
 \[
 \left\{
 \begin{aligned}
-&J_L^{\mu,a}=\frac{\delta S}{\delta l_\mu}=\frac{i}{2}f^2D_\mu U^\dagger U=\overline{q}_L\gamma^\mu\frac{\lambda^a}{2}q_L\\
-&J_R^{\mu,a}=\frac{\delta S}{\delta r_\mu}=\frac{i}{2}f^2D_\mu UU^\dagger=\overline{q}_R\gamma^\mu\frac{\lambda^a}{2}q_R
+&J_L^{\mu,a}=\frac{\delta S}{\delta l_\mu}=\frac{i}{2}f^2D_\mu U^\dagger U=\frac{f}{2}\partial^\mu\phi^a=\overline{q}_L\gamma^\mu\frac{\lambda^a}{2}q_L\\
+&J_R^{\mu,a}=\frac{\delta S}{\delta r_\mu}=\frac{i}{2}f^2D_\mu UU^\dagger=-\frac{f}{2}\partial^\mu\phi^a=\overline{q}_R\gamma^\mu\frac{\lambda^a}{2}q_R
 \end{aligned}
 \right.
 \]
+\begin{kaobox}[frametitle=Charged Pion Decay]
 A phenomenological application of all this machinery is the charged pion decay. What we are interested in is:\marginnote{From \cite{SS}, Section 3.7.}
 \[
-l_\mu=\frac{g}{\sqrt{2}}=(W_\mu^+T_++W_\mu^-T_-) \quad J_L^\mu=\frac{f}{\sqrt{2}}\partial^\mu\Phi
+l_\mu=\frac{g}{\sqrt{2}}(W_\mu^+T_++W_\mu^-T_-) \quad J_L^\mu=\frac{f}{\sqrt{2}}\partial^\mu\Phi
 \]
 which results in:
 \[
@@ -1572,11 +1519,11 @@ Computing the trace term gives us:
     \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
     K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}} \\
 \end{array}\right)\\
-&=V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-
+&=\frac{1}{\sqrt{2}}(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)
 \end{align*}
 Putting everything together we end up with:
 \[
-\pazocal{L}_{\text{int}}=\frac{gf}{2}[W_\mu^+(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)+W_\mu^-(V_{ud}^*\partial^\mu\pi^++V_{us}^*\partial^\mu K^+)]
+\pazocal{L}_{\text{int}}=\frac{gf}{2\sqrt{2}}[W_\mu^+(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)+W_\mu^-(V_{ud}^*\partial^\mu\pi^++V_{us}^*\partial^\mu K^+)]
 \]
 Neglecting higher order terms, the Feynman rule for the invariant amplitude of the pion decay reads:
 \marginnote{\includegraphics[]{Images/piondecay.pdf}}
@@ -1594,6 +1541,7 @@ operator between a one-Goldstone-boson state and the vacuum. Once we know the de
 \[
 R_{e\mu}:=\frac{\Gamma(\pi^+\to e^+\nu_e)}{\Gamma(\pi^+\to\mu^+\nu_\mu)}=\left(\frac{m_e}{m_\mu}\right)^2\left[\frac{1-m_e^2/m_\pi^2}{1-m_\mu^2/m_\pi^2}\right]=1.283\cdot10^{-4}
 \]
+\end{kaobox}
 Taking now $s=M$ and $p=0$, the $\chi$ terms in \refeq{l2} give rise to a
 quadratic pseudoscalar mass term plus additional interactions proportional to the quark masses. Expanding in powers of $\Phi$, one has:
 \[
@@ -1626,7 +1574,7 @@ m_u:m_d:m_s=0.55:1:20.3
 \]
 Quark-mass corrections are therefore dominated by $m_s$.
 \section{Semileptonic Decays of Light Hadrons}
-We can extract other important information also from nuclear physics, e.g. from decays of the type A$\to$B$l\nu$, like $^{14}$O$\to^{14}$N$e^+\nu_e$, where $A$ and $B$ are spin-0 particles. The hadronic current has the form:
+We can extract other important information also from nuclear physics, e.g. from decays of the type A$\to$B$l\nu$, like $^{14}$O$\to^{14}$N$e^+\nu_e$, where A and B are spin-0 particles. The hadronic current has the form:
 \[
 J_\mu^{\text{had}}\propto V_{ud}\overline{u}\gamma^\mu(1-\gamma_5)d
 \]
@@ -1662,6 +1610,7 @@ We are left with $C(q^2)(p_A+p_B)^\mu$ and it is possible to compute $C(q^2)$ at
 &=\int d^3xe^{i(p_B-p_A)x}\bra{B,p_B}J_V^\mu(0)\ket{A,p_A}\\
 &=(2\pi)^3\delta^3(\Vec{p}_A-\Vec{p}_B)e^{i(E_A-E_B)t}\bra{B,p_B}J_V^\mu(0)\ket{A,p_A}
 \end{align*}
+\subsection{Measuring $V_{ud}$}
 Phenomenologically, the key process to measure $V_{ud}$ is the $\beta$-decay, which comes in three different forms:\marginnote{From \cite{GT}, Section 8.}
 \begin{itemize}
     \item nuclear $\beta$-decay, e.g. $^3$H$\to^3$He or $^{14}$C$\to^{14}$N
@@ -1674,7 +1623,7 @@ The basic approach of determining $V_{ud}$ in each of these processes is the sam
     \includegraphics{Images/Vud.pdf}
     \caption*{}
     \labfig{Vud}
-\end{figure}
+\end{figure}\\
 The external states and the phase space integrals are different but the actual Feynman rules differ only by a factor $V_{ud}$.\\
 We now consider the semileptonic decay of the pion $\pi^-\to\pi^0e^-\overline{\nu}_e$ induced by the operator $\hat{O}$:\marginnote{From \cite{Sa}, Lecture 32.}
 \[
@@ -1690,11 +1639,11 @@ Looking at the hadronic matrix element, note that the axial current cannot contr
 \]
 where $v$ id the $\pi^-$ 4-velocity and we made the reasonable approximation that it is the same as the initial state since $m_{\pi^-}\simeq m_{\pi^0}$. The rate of the decay is finally given by:
 \[
-\Gamma=|V_{ud}|^2G_{\text{F}}^2\frac{(\Delta m)^5}{30\pi^3} \quad \Delta m=m_{\pi^-}-m_{\pi^0}\sim 4-5\,\text{MeV}
+\Gamma=|V_{ud}|^2G_{\text{F}}^2\frac{(\Delta m)^5}{30\pi^3} \quad \Delta m=m_{\pi^-}-m_{\pi^0}\sim (4-5)\,\text{MeV}
 \]
 Move now to the decay of baryon states, i.e. $n\to pe^-\overline{\nu}_e$ which is induced by the same weak operator as before $\hat{O}$. The matrix element factorizes again into leptonic and hadronic part but unlike the meson case, both vector and axial currents contribute to this decay and the most general form for the matrix element consistent with Lorentz invariance is:\marginnote{\textit{We parametrize our ignorance into form factors}}
 \begin{align*}
-\bra{p}\overline{u}(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\nu\right.\\
+\bra{p}\overline{u}\gamma^\mu(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\nu\right.\\
 &\left.+g_1(q^2)\gamma^\mu\gamma_5+g_2(q^2)i\sigma^{\mu\nu}q_\nu\gamma_5+g_3(q^2)q^\mu\gamma_5\right]u_n
 \end{align*}
 where $f_i$ comes from the vector current and $g_i$ from the axial one. The masses of the neutron and the proton are similar, so $q$ is small and in the limit $q\to0$ the form factors $f_2, f_3, g_2$ and $g_3$ are all equal to zero, while $f_1$ is equal to a fixed number and $g_1(0)=g_A$.\\
@@ -1708,6 +1657,7 @@ Summarizing, the values of $V_{ud}$ we obtain are then:\marginnote{From \cite{pd
 \end{aligned}
 \right.
 \]
+\subsection{Measuring $V_{us}$}
 As a test of \textbf{lepton flavour universality}, the idea is to study $V_{us}$ in a 3-body decay and see CKM unitarity anomalies. Kaons are the lightest mesons that contain a strange quark, the decays of kaons to states which do not contain an $s$ are an obvious place to measure $V_{us}$. The dominant semileptonic decay is $K\to\pi l\nu$:\\
 \begin{figure}[h]
     \centering
