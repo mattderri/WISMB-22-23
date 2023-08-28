@@ -851,10 +851,10 @@ From $\alpha_s(m_Z)=0.118$ we can extract:
 $\Lambda_{\text{QCD}}$ determines the separation between light and heavy quarks: below $\Lambda_{\text{QCD}}$ we have the light quarks ($u, d, s$), above we have the heavy quarks ($t, b, c$).
 \section{Symmetries of QCD}\marginnote{From \cite{SS}, Section 1.3.}
 The lightest meson and baryon containing a charm quark are $D^+=c\overline{d}$ and $\Lambda_c^+=udc$ with masses, respectively, of 1869.4 MeV and 2284.9 MeV. The threshold center of mass energy to produce a $D^+D^-$ pair in $e^+e^-$ collisions is approximately 3.74 GeV, way beyond the low-energy regime we are interested in. Therefore, we will approximate the full QCD Lagrangian with its light flavour version, i.e. ignoring effects due to heavy quark-antiquark pairs.\\
-By comparing the proton mass with the sum of the masses of its constituents, it is easy to see that $m_p\gg2m_u+m_d$, therefore an interpretation of the proton mass in terms of current-quark
-mass parameters must be very different from, say, the situation in the hydrogen atom, where the mass is essentially given by the sum of the electron
-and proton masses, corrected by a small amount of binding energy.\\
-This is suggesting us that the QCD Lagrangian containing only light flavours in the chiral limit ($m_u,m_d,m_s\to0$) is a good starting point in the discussion of low energy QCD:\marginnote{The covariant derivative acts on colour and Dirac indices only but it is independent of flavour.}
+% By comparing the proton mass with the sum of the masses of its constituents, it is easy to see that $m_p\gg2m_u+m_d$, therefore an interpretation of the proton mass in terms of current-quark
+% mass parameters must be very different from, say, the situation in the hydrogen atom, where the mass is essentially given by the sum of the electron
+% and proton masses, corrected by a small amount of binding energy.\\
+The QCD Lagrangian containing only light flavours in the chiral limit ($m_u,m_d,m_s\to0$) is a good starting point in the discussion of low energy QCD:\marginnote{The covariant derivative acts on colour and Dirac indices only but it is independent of flavour.}
 \[
 \pazocal{L}_{\text{QCD}}^0=\sum_{f=u,d,s}\overline{q}_fi\slashed{D}q_f-\frac{1}{2}\Tr{G_{\mu\nu}G^{\mu\nu}}
 \]
@@ -891,7 +891,7 @@ $U_{L/R}\in$U(3), for $\overline{q}_{L/R}$ we have that it transforms as $\overl
 \overline{q}_{L/R}i\slashed{D}q_{L/R}\to\overline{q}_{L/R}U_{L/R}^\dagger U_{L/R}i\slashed{D}q_{L/R}=\overline{q}_{L/R}i\slashed{D}q_{L/R} \quad \checkmark
 \]
 $\pazocal{L}_{\text{QCD}}^0$ is said to have a classical global U$(3)_{\text{L}}\times$U$(3)_{\text{R}}$ symmetry. Applying N\"other's Theorem, one would expect then to have 2$\times$(8+1)=18 conserved currents.
-\subsection{N\"other's Theorem}
+\begin{kaobox}[frametitle=N\"other's Theorem]
 N\"other's Theorem establishes the connection between continuous symmetries of a dynamical system and conserved quantities. In order to identify the conserved currents associated with the transformation of \refeq{transformation}, we shortly recall the method of Gell-Mann and Levy which will then be applied to $\pazocal{L}_{\text{QCD}}^0$. We start with a Lagrangian depending on $n$ independent fields $\phi_i$ and their partial derivatives, from which we obtain $n$ equation of motions:
 \[
 \pazocal{L}(\phi_i,\partial_\mu\phi_i)\to\frac{\partial\pazocal{L}}{\partial\phi_i}-\partial_\mu\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}=0 \quad i=1,\cdots,n
@@ -912,40 +912,41 @@ We chose the parameters of the transformation to be local but our starting point
 \[
 Q^a(t)=\int d^3xJ^{0,a}(\Vec{x},t)\to\int d^3x\partial_\mu j^{\mu,a}=\Dot{Q}(t)-\int d^3x\Vec{\nabla}\cdot\Vec{J}(\Vec{x},t)=0
 \]
-As a special case, we consider now an infinitesimal transformation linear in the fields:
-\[
-\phi_i(x)\to\phi_i'(x)=\phi_i(x)-i\varepsilon_a(x)t_{ij}^a\phi_j(x)
-\]
-with $t_{ij}^a$ constants generating a mixing of the fields. The current and the charge now becomes:
-\[
-\begin{aligned}
-&J^{\mu,a}(x)=-it_{ij}^a\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}\phi_j\\
-&Q^a(t)=-i\int d^3x\frac{\partial\pazocal{L}}{\partial(\partial_0\phi_i)}t_{ij}^a\phi_j(x)=-i\int d^3x\pi_i(x)t_{ij}^a\phi_j(x)
-\end{aligned}
-\]
-Current and charge are now operators and we would like to find equal-time commutation rules. \marginnote{Remember that in quantum field theory we have:
-\[
-\left\{
-\begin{aligned}
-&[\phi_i(\Vec{x},t),\phi_j(\Vec{y},t)]=0\\
-&[\pi_i(\Vec{x},t),\pi_j(\Vec{y},t)]=0\\
-&[\phi_i(\Vec{x},t),\pi_j(\Vec{y},t)]=i\delta^3(\Vec{x}-\Vec{y})\delta_{ij}
-\end{aligned}
-\right.
-\]
-}
-\begin{align*}
-[Q^a(t),\phi_k(\Vec{y},t)]&=-it_{ij}^a\int d^3x[\pi_i(\Vec{x},t)\phi_j(\Vec{x},t),\phi_k(\Vec{y},t)]\\
-&=-it_{ij}^a\int d^3x\left(-i\delta^3(\Vec{x}-\Vec{y})\delta_{ik}\right)\phi_j(\Vec{x},t)\\
-&=-t_{ik}^a\phi_j(\Vec{y},t)
-\end{align*}
-For the commutation relations between two generators, we have:
-\begin{align*}
-[Q^a(t),Q^b(t)]&=-i\left(t_{ij}^at_{jk}^b-t_{ij}^bt_{jk}^a\right)\int d^3x\pi_i(x)\phi_k(x)\\
-&=if_{abc}t_{ik}^c\int d^3x\pi_i(x)\phi_k(x)\\
-&=if_{abc}Q^c(t)
-\end{align*}
-The charge operators form a Lie algebra with structure constants $f_{abc}$. 
+\end{kaobox}
+% As a special case, we consider now an infinitesimal transformation linear in the fields:
+% \[
+% \phi_i(x)\to\phi_i'(x)=\phi_i(x)-i\varepsilon_a(x)t_{ij}^a\phi_j(x)
+% \]
+% with $t_{ij}^a$ constants generating a mixing of the fields. The current and the charge now becomes:
+% \[
+% \begin{aligned}
+% &J^{\mu,a}(x)=-it_{ij}^a\frac{\partial\pazocal{L}}{\partial(\partial_\mu\phi_i)}\phi_j\\
+% &Q^a(t)=-i\int d^3x\frac{\partial\pazocal{L}}{\partial(\partial_0\phi_i)}t_{ij}^a\phi_j(x)=-i\int d^3x\pi_i(x)t_{ij}^a\phi_j(x)
+% \end{aligned}
+% \]
+% Current and charge are now operators and we would like to find equal-time commutation rules. \marginnote{Remember that in quantum field theory we have:
+% \[
+% \left\{
+% \begin{aligned}
+% &[\phi_i(\Vec{x},t),\phi_j(\Vec{y},t)]=0\\
+% &[\pi_i(\Vec{x},t),\pi_j(\Vec{y},t)]=0\\
+% &[\phi_i(\Vec{x},t),\pi_j(\Vec{y},t)]=i\delta^3(\Vec{x}-\Vec{y})\delta_{ij}
+% \end{aligned}
+% \right.
+% \]
+% }
+% \begin{align*}
+% [Q^a(t),\phi_k(\Vec{y},t)]&=-it_{ij}^a\int d^3x[\pi_i(\Vec{x},t)\phi_j(\Vec{x},t),\phi_k(\Vec{y},t)]\\
+% &=-it_{ij}^a\int d^3x\left(-i\delta^3(\Vec{x}-\Vec{y})\delta_{ik}\right)\phi_j(\Vec{x},t)\\
+% &=-t_{ik}^a\phi_j(\Vec{y},t)
+% \end{align*}
+% For the commutation relations between two generators, we have:
+% \begin{align*}
+% [Q^a(t),Q^b(t)]&=-i\left(t_{ij}^at_{jk}^b-t_{ij}^bt_{jk}^a\right)\int d^3x\pi_i(x)\phi_k(x)\\
+% &=if_{abc}t_{ik}^c\int d^3x\pi_i(x)\phi_k(x)\\
+% &=if_{abc}Q^c(t)
+% \end{align*}
+% The charge operators form a Lie algebra with structure constants $f_{abc}$. 
 \subsection{Currents of the Light Quarks Sector}
 The method of Gell-Man and Levy can be now applied to the QCD Lagrangian by calculating the variation under the infinitesimal local form of \refeq{transformation}:
 \begin{align*}    
@@ -976,6 +977,7 @@ We then have a conserved singlet vector current $V^\mu$ originating from a trans
 \[
 \partial_\mu A^\mu=\frac{3g^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}G^{\mu\nu,a}G^{\rho\sigma}_a
 \]
+\subsection{Chiral Symmetry Breaking due to Quark Masses}
 The chiral symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. As a consequence, we have that the charge operators are no longer time independent but the equal-time commutation relations still play an important role even when the symmetry gets explicitly broken. Let's consider the mass term now:
 \[
 \pazocal{L}_{\text{M}}=-\overline{q}Mq \quad \text{with}\;M=\mqty(\dmat{m_u,m_d,m_s})
@@ -1350,7 +1352,7 @@ Using this result we finally get:
 \]
 The right-hand side of this equation is exactly what we get in the free-field theory for the matrix element of the right-hand side of \refeq{curr}, which is correct up to possible higher order corrections.
 \section{Effective Field Theory (EFT) for Goldstone Bosons}
-\labesc{eft}
+\labsec{eft}
 \marginnote{From \cite{P}, Section 2 and Section 4.}
 The Goldstone nature of the pseudoscalar mesons implies strong constraints on their interactions. Since there is a mass gap separating the pseudoscalar octet from the rest of the spectrum, it is possible to build an EFT containing only the Goldstone bosons.\\
 An EFT is characterized by some effective Lagrangian:

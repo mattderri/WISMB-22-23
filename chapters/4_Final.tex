@@ -362,10 +362,11 @@ These numbers can be determined experimentally by studying the semileptonic deca
 K^0\to\pi^-e^+\nu_e \quad \overline{K}^0\to\pi^+e^-\overline{\nu}_e
 \]
 As a consequence, $N(K^0)$ is proportional to the number of observed positrons, consequently $N(\overline{K}^0)$ is proportional to the number of observed electrons and the quantity $A(t)$ can therefore be determined as a function of time.\\
-We now turn to the problem of CP violation and assume that $\ket{K_S}$ and $\ket{K_L}$ are eigenstates of the CP operator with eigenvalues $+1$ and $-1$ respectively.
-\[
-\hat{CP}\ket{K_S}=p(\hat{CP}\ket{K^0})+q(\hat{CP}\ket{\overline{K}^0})=pe^{i\alpha}\ket{\overline{K}^0}+qe^{-i\alpha}\ket{K^0}\stackrel{?}{=}p\ket{K^0}+q\ket{\overline{K}^0}=\ket{K_S}
-\]
+We now turn to the problem of CP violation and assume that $\ket{K_S}$ and $\ket{K_L}$ are eigenstates of the CP operator with eigenvalues $+1$ and $-1$ respectively.\marginnote{The phase factor $e^{i\alpha}$ originates from the definition of the CP operator.}
+\begin{align*}
+\hat{CP}\ket{K_S}&=p(\hat{CP}\ket{K^0})+q(\hat{CP}\ket{\overline{K}^0})=pe^{i\alpha}\ket{\overline{K}^0}+qe^{-i\alpha}\ket{K^0}\\
+&\stackrel{?}{=}p\ket{K^0}+q\ket{\overline{K}^0}=\ket{K_S}
+\end{align*}
 The equation above is satisfied only if $q=pe^{i\alpha}$ or equivalently $|q/p|=1$. Using the second condition of \refeq{pqrel} this translates into:
 \[
 \left|\frac{q}{p}\right|^2=\frac{|M_{12}|^2+|\Gamma_{12}|^2/4+4\mathfrak{Im}(M_{12}\Gamma_{12}^*)}{|M_{12}|^2+|\Gamma_{12}|^2/4-4\mathfrak{Im}(M_{12}\Gamma_{12}^*)}
@@ -389,7 +390,7 @@ where $T$ is the weak transition matrix. Experimentally, we know that weak ampli
 The observed value of this ratio is $2.18\pm0.03$, confirming that the $\Delta I=1/2$ rule is approximately valid.\\ 
 We now want to derive an expression for the weak effective Hamiltonian $H_{\text{eff}}$ in the framework of perturbation theory. The unperturbed Hamiltonian $H$ is the sum of the strong and electromagnetic interaction Hamiltonians and the weak Hamiltonian $H_W$ represents the perturbation. The states $\ket{\alpha}$ with $\alpha=K^0,\overline{K}^0$ can be taken as unperturbed eigenstates. We want to compute elements of the S-matrix:
 \[
-S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(T)}\right]\ket{\alpha}
+S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(t)}\right]\ket{\alpha}
 \]
 Expanding the S-matrix up to second order we get:
 \begin{align*}
@@ -400,7 +401,7 @@ S{\beta\alpha}\simeq&\braket{\beta|\alpha}-i\bra{\beta}\int_{-\infty}^{+\infty}d
 \end{align*}
 The first term is clearly equal to $S_{\beta\alpha}^{(0)}=\delta_{\beta\alpha}$ since the unperturbed eigenstates are orthogonal and normalized. The first-order term can be computed as:
 \[
-S_{\beta\alpha}^{(1)}=i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}=-2\pi i\delta(E_\beta-E_\alpha)\braket{\beta|H_W|\alpha}
+S_{\beta\alpha}^{(1)}=-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}=-2\pi i\delta(E_\beta-E_\alpha)\braket{\beta|H_W|\alpha}
 \]
 where $E_\alpha$ and $E_\beta$ are the unperturbed energy eigenvalues of $\ket{\alpha}$ and $\ket{\beta}$. To compute the second-order term we insert the identity operator $I=\sum_\lambda\ket{\lambda}\bra{\lambda}$, where $\{\ket{\lambda}\}$ is an orthonormal basis for the unperturbed Hamiltonian. The two terms are equal after exchanging $t$ and $t'$ so we get rid of the factor $1/2$ in front.\marginnote[2cm]{We redefined the variables as $t-t'=\tau$.}
 \begin{align*}
@@ -457,7 +458,7 @@ Both of these objects would vanish in case of CP conservation, since $K_L$ would
 \left\{
 \begin{aligned}
 &\epsilon_I=\frac{\braket{I|T|K_L}}{\braket{I|T|K_S}}=\frac{1-\frac{q}{p}\frac{\braket{I|T|\overline{K}^0}}{\braket{I|T|K^0}}}{1+\frac{q}{p}\frac{\braket{I|T|\overline{K}^0}}{\braket{I|T|K^0}}} \quad I=0,2\\
-&\omega=\frac{\braket{2|T|K_S}}{\braket{0|T|K_S}}=\frac{1+\frac{q}{p}\frac{\braket{2|T|\overline{K}^0}}{\braket{2|T|K^0}}}{1+\frac{q}{p}\frac{\braket{0|T|\overline{K}^0}}{\braket{0|T|K^0}}}
+&\omega=\frac{\braket{2|T|K_S}}{\braket{0|T|K_S}}=\frac{1+\frac{q}{p}\frac{\braket{2|T|\overline{K}^0}}{\braket{2|T|K^0}}}{1+\frac{q}{p}\frac{\braket{0|T|\overline{K}^0}}{\braket{0|T|K^0}}}\frac{\braket{2|T|K^0}}{\braket{0|T|K^0}}
 \end{aligned}
 \right.
 \]
@@ -474,11 +475,11 @@ Assume for the moment that $H_W^{\Delta S=1}$ is CP-conserving and that all CP-v
 \[
 \hat{CP}T^{\Delta S=1}\hat{CP}^{-1}=T^{\Delta S=1}
 \]
-Exploiting now the fact that the two-pion states are CP eigenstates with eigenvalue $+1$, we find:
+Exploiting now the fact that the two-pion states are CP eigenstates with eigenvalue $+1$, we find:\marginnote{The phase factor $e^{i\alpha}$ originates from the definition of the CP operator.}
 \[
 \braket{I|T^{\Delta S=1}|K^0}=\braket{I|\hat{CP}^{-1}T^{\Delta S=1}\hat{CP}|K^0}=\braket{I|T^{\Delta S=1}|\overline{K}^0}e^{i\alpha}
 \]
-This means that $\epsilon_2=\epsilon_0$ and therefore $\eta_{00}=\eta_\pm=\epsilon_0$.\marginnote[-1.5cm]{The phase factor $e^{i\alpha}$ originates from the definition of the CP operator.} This situation in which CP-violating effects are confined in the $K^0-\overline{K}^0$ mixing is called \textbf{superweak CP violation}. Experimental data are consistent with this picture, in fact:
+This means that $\epsilon_2=\epsilon_0$ and therefore $\eta_{00}=\eta_\pm=\epsilon_0$. This situation in which CP-violating effects are confined in the $K^0-\overline{K}^0$ mixing is called \textbf{superweak CP violation}. Experimental data are consistent with this picture, in fact:
 \[
 \begin{aligned}
 &|\eta_\pm|=\sqrt{\frac{\Gamma(K_L\to\pi^+\pi^-)}{\Gamma(K_S\to\pi^+\pi^-)}}=(2.285\pm0.019)\cdot10^{-3}\\
