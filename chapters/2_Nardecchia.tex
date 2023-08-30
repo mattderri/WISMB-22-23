@@ -11,7 +11,7 @@ For parity, charge conjugation and CP application, we have to keep in mind the f
     {\renewcommand{\arraystretch}{1}
     \begin{tabular}{c|c|c|c}
     \hline
-    \rowcolor{gray!45}Fields & $\hat{P}(x\xrightarrow[]{}\pazocal{P}x)$ & $\hat{C}$ & $\hat{CP}(x\xrightarrow[]{}\pazocal{P}x)$\\
+    \rowcolor{blue!30}Fields & $\hat{P}(x\xrightarrow[]{}\pazocal{P}x)$ & $\hat{C}$ & $\hat{CP}(x\xrightarrow[]{}\pazocal{P}x)$\\
     \hline
     $\overline{\Psi}\chi$ & $\overline{\Psi}\chi$ & $\overline{\chi}\Psi$ & $\overline{\chi}\Psi$\\
     $\overline{\Psi}_R\chi_L$ & $\overline{\Psi}_L\chi_R$ & $\overline{\chi}_R\Psi_L$ & $\overline{\chi}_L\Psi_R$\\
@@ -291,7 +291,7 @@ Let's look at this from the experimental side and suppose we know nothing about 
     \centering
     \begin{tabular}{c|c}
     \hline
-    \rowcolor{gray!45}FCCC & FCNC\\
+    \rowcolor{blue!30}FCCC & FCNC\\
     \hline
     Br$(K^+\xrightarrow[]{}\mu^+\nu_\mu)=64\%$ & Br $(K_L^0\xrightarrow[]{}\mu^+\mu^-)=7\times10^{-3}$\\
     $|\Delta S|=1$ & $|\Delta S|=1$\\
@@ -1037,7 +1037,7 @@ Such current is only conserved on the classical level and this symmetry is not p
 \partial_\mu A^\mu=\frac{3g^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}G^{\mu\nu,a}G^{\rho\sigma}_a
 \]
 \subsection{Chiral Symmetry Breaking due to Quark Masses}
-The chiral symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. As a consequence, we have that the charge operators are no longer time independent but the equal-time commutation relations still play an important role even when the symmetry gets explicitly broken. Let's consider the mass term now:
+The chiral symmetry of the QCD Lagrangian gets broken by the up, down and strange quark masses, resulting in divergences of the currents. Let's consider the mass term now:
 \[
 \pazocal{L}_{\text{M}}=-\overline{q}Mq \quad \text{with}\;M=\mqty(\dmat{m_u,m_d,m_s})
 \]
@@ -1116,15 +1116,18 @@ Let's see what happens when we apply $Q_A^a$ to this newly defined state $\ket{i
 Q_A^a\ket{i,+}=Q_A^a\hat{a}_i^\dagger\ket{0}=(\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize this gives us a state with parity $(-)$ };}}
 {[Q_A^a,\hat{a}_i^\dagger]}+\hat{a}_i^\dagger Q_A^a)\ket{0}
 \]
-Since the parity doubling is not observed, one assumes that $Q_A^a$ does not annihilate the ground state, i.e. the ground state of QCD is not invariant under axial transformation. $Q_A^a\ket{0}\neq0$, the ground state is not invariant under the full symmetry group of the Lagrangian , resulting in spontaneous symmetry breaking: G$\to$H$\subset$SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$.\\
-Hadrons do not exactly fulfill this symmetry because on top of that there is another explicit symmetry breaking, the one caused by the mass term. If we look at the spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-Goldstone bosons. The symmetry group G with 8+8+1=17 generators gets broken into H which has 8+1=9 generators, resulting in 8 degrees of freedom, i.e. 8 Goldstone bosons. \marginnote[-2cm]{One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.}
-% We know that there is symmetry breaking and we want to support this interpretation. Since the theory is spontaneously broken, there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that $\bra{0}[Q_A^a,\hat{O}]\ket{0}\neq0$.\\
-% The Goldstone theorem tells us that exists a massless state $\ket{G}$ such that $\bra{0}J^0\ket{G}\bra{G}\hat{O}\ket{0}\neq0$. Who is the candidate to play the role of $\ket{G}$? This state has to be pseudo-scalar and transform under SU$(3)_{\text{V}}$. We know that $[Q_V^a,Q_A^b]=if_{abc}Q_A^c$, this tells us that the Goldstone boson transforms as the adjoint, so they form an octet of SU$(3)$, and the current is the axial one. The operator $\hat{O}$ is the following:
-% \begin{align*}
-% \bra{0}[Q_A^a,\overline{q}\gamma_5\lambda^aq]\ket{0}&=-\frac{1}{2}\bra{0}\overline{q}\{\lambda^a,\lambda^b\}q\ket{0}\\
-% &=-\frac{2}{3}\delta_{ab}\bra{0}\overline{q}q\ket{0}\sim\pazocal{O}(\Lambda_{\text{QCD}})
-% \end{align*}
-% The term $\bra{0}\overline{q}q\ket{0}$ is called \textbf{chiral condensate}, and it transforms like an $(\overline{3},3)_0$ under SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}\times$U$(1)_{\text{V}}$, it is the representation which breaks the symmetry. The symmetry that leaves this term invariant is SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$, this condensate is the most elementary version of the symmetry breaking in the Higgs mechanism. What we want to do next is writing the QCD Lagrangian and then add the mass as a perturbation: this is called the chiral Lagrangian.
+Since the parity doubling is not observed, one assumes that $Q_A^a$ does not annihilate the ground state, $Q_A^a\ket{0}\neq0$. In other words, the ground state of QCD is not invariant under axial transformations. According to Goldstone theorem, for each axial generator which does
+not annihilate the ground state, corresponds a massless Goldstone boson field with spin 0. In the present case, The symmetry group G with 8+8+1=17 generators gets broken into H=SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$ which has 8+1=9 generators, resulting in 8 unbroken generators, i.e. 8 Goldstone bosons.\marginnote{One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.}
+If we look at the hadron spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-Goldstone bosons.\\
+Since the theory is spontaneously broken, we know from Goldstone theorem that there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that:\marginnote{For more details about the Goldstone theorem, look at \cite{EW}, Section 2.4.}
+\[
+\bra{0}[Q_A^a,\hat{O}]\ket{0}\neq0
+\]
+The operator $\hat{O}$ is given by:\marginnote{For a more detailed and rigorous procedure on how to get this result, look at \cite{SS}, Section 3.2.2.}
+\[
+\hat{O}^a=\overline{q}\gamma_5\lambda^a q\to\bra{0}[Q_A^a,\hat{O}^a]\ket{0}=-\frac{2}{3}\bra{0}\overline{q}q\ket{0} \quad a=1,\cdots,8
+\]
+The term $\bra{0}\overline{q}q\ket{0}$ is called \textbf{scalar quark condensate}: a non-vanishing scalar quark condensate is a sufficient (but not necessary) condition for spontaneous symmetry breaking in QCD.
 \section{Anomalies in Quantum Field Theory}\marginnote{From \cite{Sr}, Chapter 75.}\marginnote[1cm]{Nardecchia and I were both wearing a NASA shirt during this lecture. Basically we are best friends now.}
 What we have done so far was discussing gauge theories with Dirac fermion fields. The Dirac field $\Psi$ can be written in terms of two left-handed Weyl fields $\chi$ and $\xi$:
 \[
@@ -1487,13 +1490,14 @@ S=\mqty(\dmat{0,0,1})\to[S,\Phi]=\left(\begin{array}{ccc}
 \end{array}\right)
 \]
 It then follows that:
-\[
+\begin{equation}
+\labeq{Phi}
 \Phi(x):=\frac{\lambda^a}{\sqrt{2}}\phi^a=\left(\begin{array}{ccc}
     \frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & \pi^+ & K^+ \\
     \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
     K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}}
 \end{array}\right)
-\]
+\end{equation}
 To get a low energy Lagrangian of QCD for the light quark sector $(u, d, s)$, we should write the most general Lagrangian involving the matrix $U(\phi)$ which is consistent with chiral symmetry. Due to the unitarity of the $U$ matrix, at least two derivative are required in order to generate a non-trivial interaction. To lowest order, this is given by:
 \[
 \pazocal{L}=\frac{f^2}{4}\Tr{\partial_\mu U\partial^\mu U^\dagger}
@@ -1545,13 +1549,15 @@ U(\partial_\mu U^\dagger)=-(\partial_\mu U)U^\dagger
 \end{aligned}
 \]
 Using \refeq{currents}, for the left currents we have:
-\[
+\begin{equation}
+\labeq{jl}
 J_L^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^L}=i\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}
-\]
+\end{equation}
 In the same way, by setting $\theta_a^L=0$, for the right currents one gets:
-\[
+\begin{equation}
+\labeq{jr}
 J_R^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^R}=-i\frac{f^2}{4}\Tr{\lambda_aU(\partial^\mu U^\dagger)}
-\]
+\end{equation}
 Combining these two results gives us the vector and axial currents:
 \[
 \left\{
@@ -1576,206 +1582,214 @@ M\to RML^\dagger
 \end{equation}
 The most general Lagrangian invariant under \refeq{t1} and \refeq{t2} is given, at lowest order in $M$, by:
 \[
-\pazocal{L}=\frac{f^2B_0}{2}\Tr{MU^\dagger+UM^\dagger}
+\pazocal{L}_{\text{s.b.}}=\frac{f^2B_0}{2}\Tr{MU^\dagger+UM^\dagger}
 \]
-The EFT technique becomes more powerful if one introduces couplings to external classical fields:
-\begin{equation}
-\labeq{lqcd}
-\pazocal{L}_{\text{QCD}}=\pazocal{L}_{\text{QCD}}^0+\overline{q}\gamma^\mu(v_\mu+\gamma_5a_\mu)q-\overline{q}(s-i\gamma_5p)q
-\end{equation}
-This is the most general possible Lagrangian including external currents. Moreover, these currents can be used to incorporate the electromagnetic and semileptonic weak interactions, and the explicit breaking of chiral symmetry through the quark masses:
+$B_0$ is a constant which, like $f$, is not fixed by symmetry requirements alone and cannot be predicted form the UV theory. Moreover, being $M=M^\dagger$, $\pazocal{L}_{\text{s.b.}}$ contains only terms even in the number of fields.\\
+In order to determine the masses of the Goldstone bosons, one expands the Lagrangian above in powers of $\Phi$ and look at the terms of second order in the fields:
+\[
+\pazocal{L}=\frac{f^2B_0}{2}\Tr{M(U+U^\dagger)}=B_0\left\{-\Tr{M\Phi^2}+\pazocal{O}(\Phi^4/f^2)\right\}
+\]
+Using \refeq{Phi}, after some slightly annoying calculations the trace term reads:
 \[
 \begin{aligned}
-&l_\mu:=v_\mu-a_\mu=eQA_\mu+\frac{e}{\sqrt{2}\sin\theta_w}(W_\mu^+ T_++\text{h.c.})+\cdots\\
-&r_\mu:=v_\mu+a_\mu=eQA_\mu+\cdots\\
-&s=M+\cdots
+\Tr{M\Phi^2}=&\pi^+\pi^-(m_u+m_d)+K^+K^-(m_u+m_s)+K^0\overline{K}^0(m_d+m_s)\\
+&+\pi^0\pi^0(m_u+m_d)+\frac{1}{3}\eta_8^2(m_u+m_d+4m_s)+\frac{2}{\sqrt{3}}\pi^0\eta_8(m_u-m_d)
 \end{aligned}
 \]
-where $Q$ and $M$ denotes the quark charges and masses and $T_+$ is a $3\times3$ matrix containing the relevant quark mixing factors:
+To lowest order, the masses of the Goldstone bosons are given by:
 \[
-Q=\mqty(\dmat{+\frac{2}{3},-\frac{1}{3},-\frac{1}{3}}) \quad M=\mqty(\dmat{m_u,m_d,m_s}) \quad 
-T_+=\left(\begin{array}{ccc}
-    0 & V_{ud} & V_{us} \\
-    0 & 0 & 0 \\
-    0 & 0 & 0
-\end{array}\right)
-\]
-The Lagrangian in \refeq{lqcd} is invariant under the following set of local SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ transformations:
-\[
+\marginnote{In the isospin-symmetric limit, $m_u=m_d$, so that there is no $\pi^0-\eta_8$ mixing and the parameter $\varepsilon$ vanishes.}
 \left\{
 \begin{aligned}
-&q_L\to g_Lq_L\\
-&q_R\to g_Rq_R\\
-&l_\mu\to g_Ll_\mu g_L^\dagger+ig_L\partial_\mu g_L^\dagger\\
-&r_\mu\to g_Rr_\mu g_R^\dagger+ig_R\partial_\mu g_R^\dagger\\
-&(s+ip)\to g_R(s+ip)g_L^\dagger
+&m_{\pi^\pm}^2=(m_u+m_d)B_0 &&m_{\pi^0}^2=(m_u+m_d)B_0-\varepsilon+\pazocal{O}(\varepsilon^2)\\
+&m_{K^\pm}^2=(m_u+m_s)B_0 &&m_{\eta^8}^2=\frac{1}{3}(m_u+m_d+4m_s)B_0+\varepsilon+\pazocal{O}(\varepsilon^2)\\
+&m_{K^0}^2=(m_d+m_s)B_0 &&\varepsilon=\frac{B_0}{2}\frac{(m_u-m_d)^2}{2m_s-m_u-m_d}
 \end{aligned}
 \right.
-\]
-It is possible to use this symmetry to build a generalized effective Lagrangian for the
-Goldstone bosons, in the presence of external sources. The gauge fields $v_\mu$ and $a_\mu$ can only appear through the covariant derivatives and the field strength tensors:
-\[
-\begin{aligned}
-&D_\mu U=\partial_\mu U-ir_\mu U+iUl_\mu \quad D_\mu U^\dagger=\partial_\mu U^\dagger+iU^\dagger r_\mu-il_\mu U^\dagger\\
-&F^{\mu\nu}_L=\partial^\mu l^\nu-\partial^\nu l^\mu-i[l^\mu,l^\nu] \quad F^{\mu\nu}_R=\partial^\mu r^\nu-\partial^\nu r^\mu-i[r^\mu,r^\nu]
-\end{aligned}
-\]
-At lowest order, the most general effective Lagrangian consistent with Lorentz invariance and local chiral symmetry has the form: 
-\begin{equation}
-\labeq{l2}    
-\pazocal{L}=\frac{f^2}{4}\Braket{D_\mu U^\dagger D^\mu U+U^\dagger\chi+\chi^\dagger U} \quad \chi=2B_0(s+ip)
-\end{equation}
-$B_0$ is a constant which, like $f$, is not fixed by symmetry requirements alone and cannot be predicted form the UV theory. The power of the external field technique becomes obvious when computing the chiral N\"other currents. The Green functions are obtained as
-functional derivatives of the generating functional $Z[v,a,s,p]$, defined via
-the path-integral:
-\begin{align*}
-Z[v,a,s,p]&=\int\pazocal{D}q\pazocal{D}\overline{q}\pazocal{D}G_\mu\exp{i\int d^4x\pazocal{L}_{\text{QCD}}}\\
-&=\int\pazocal{D}U\exp{i\int d^4x\pazocal{L}_{\text{eff}}}
-\end{align*}
-At lowest order in momenta, the generating functional reduces to the classical action $S=\int d^4x\pazocal{L}$, with $\pazocal{L}$ defined in \refeq{l2} and the currents can be computed by taking the appropriate derivatives with respect to the external fields:
-\[
-\left\{
-\begin{aligned}
-&J_L^{\mu,a}=\frac{\delta S}{\delta l_\mu}=\frac{i}{2}f^2D_\mu U^\dagger U=\frac{f}{2}\partial^\mu\phi^a=\overline{q}_L\gamma^\mu\frac{\lambda^a}{2}q_L\\
-&J_R^{\mu,a}=\frac{\delta S}{\delta r_\mu}=\frac{i}{2}f^2D_\mu UU^\dagger=-\frac{f}{2}\partial^\mu\phi^a=\overline{q}_R\gamma^\mu\frac{\lambda^a}{2}q_R
-\end{aligned}
-\right.
-\]
-\begin{kaobox}[frametitle=Charged Pion Decay]
-A phenomenological application of all this machinery is the charged pion decay. What we are interested in is:\marginnote{From \cite{SS}, Section 3.7.}
-\[
-l_\mu=\frac{g}{\sqrt{2}}(W_\mu^+T_++W_\mu^-T_-) \quad J_L^\mu=\frac{f}{\sqrt{2}}\partial^\mu\Phi
-\]
-which results in:
-\[
-\pazocal{L}_{\text{int}}=\Braket{l_\mu J^\mu_L}=\frac{gf}{2}[W_\mu^+\Braket{T_+\partial^\mu\Phi}+W_\mu^-\Braket{T_-\partial^\mu\Phi}]
-\]
-Computing the trace term gives us:
-\begin{align*}
-\Braket{T_+\partial^\mu\Phi}&=\left(\begin{array}{ccc}
-    0 & V_{ud} & V_{us} \\
-    0 & 0 & 0 \\
-    0 & 0 & 0
-\end{array}\right)\partial^\mu\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
-    \frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & \pi^+ & K^+ \\
-    \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
-    K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}} \\
-\end{array}\right)\\
-&=\frac{1}{\sqrt{2}}(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)
-\end{align*}
-Putting everything together we end up with:
-\[
-\pazocal{L}_{\text{int}}=\frac{gf}{2\sqrt{2}}[W_\mu^+(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)+W_\mu^-(V_{ud}^*\partial^\mu\pi^++V_{us}^*\partial^\mu K^+)]
-\]
-Neglecting higher order terms, the Feynman rule for the invariant amplitude of the pion decay reads:
-\marginnote{\includegraphics[]{Images/piondecay.pdf}}
-\begin{align*}
-\pazocal{M}&=\left(i\frac{g}{\sqrt{2}}\overline{u}_{\nu_\mu}\gamma^\beta\frac{1-\gamma_5}{2}v_{\mu^+}\right)i\frac{g_{\beta\alpha}}{m_W^2}\left(\frac{gf}{2}V_{ud}^*(-ip^\alpha)\right)\\
-&=iG_{\text{F}}V_{ud}f\overline{u}_{\nu_\mu}\slashed{p}(1-\gamma_5)v_{\mu^+}
-\end{align*}
-From this, it is possible to evaluate the decay rate by explicit calculations:
-\begin{align*}
-\Gamma=\frac{1}{\tau}&=\frac{1}{2m_{\pi^+}}\int\frac{d^3p_{\nu_\mu}}{2E_{\nu_\mu}}\frac{d^3p_{\mu^+}}{2E_{\mu^+}}\sum_{\text{pol}}|\pazocal{M}|^2(2\pi)^4\delta^4(p_{\pi^+}-p_{\nu_\mu}-p_{\mu^+})\\
-&=\frac{G_{\text{F}}|V_{ud}|^2}{4\pi}f^2m_\mu^2m_\pi\left[1-\frac{m_\mu^2}{m_\pi^2}\right]^2
-\end{align*}
-The constant $f$ is referred to as the pion-decay constant in the chiral limit, it measures the strength of the matrix element of the axial-vector current
-operator between a one-Goldstone-boson state and the vacuum. Once we know the decay, it is possible to test the lepton flavour universality:
-\[
-R_{e\mu}:=\frac{\Gamma(\pi^+\to e^+\nu_e)}{\Gamma(\pi^+\to\mu^+\nu_\mu)}=\left(\frac{m_e}{m_\mu}\right)^2\left[\frac{1-m_e^2/m_\pi^2}{1-m_\mu^2/m_\pi^2}\right]=1.283\cdot10^{-4}
-\]
-\end{kaobox}
-Taking now $s=M$ and $p=0$, the $\chi$ terms in \refeq{l2} give rise to a
-quadratic pseudoscalar mass term plus additional interactions proportional to the quark masses. Expanding in powers of $\Phi$, one has:
-\[
-\pazocal{L}=\frac{f^2}{4}2B_0\Braket{M(U+U^\dagger)}=B_0\left\{-\Braket{M\Phi^2}+\frac{1}{6f^2}\Braket{M\Phi^4}+\pazocal{O}(\Phi^6/f^4)\right\}
-\]
-The explicit evaluation of the trace in the quadratic mass term provides the relation between the physical meson masses and the quark masses:
-\[
-\begin{aligned}
-&m_{\pi^\pm}^2=2\hat{m}B_0 &&m_{\pi^0}^2=2\hat{m}B_0-\varepsilon+\pazocal{O}(\varepsilon^2)\\
-&m_{K^\pm}^2=(m_u+m_s)B_0 &&m_{K^0}^2=(m_d+m_s)B_0\\
-&m_{\eta^8}^2=\frac{2}{3}(\hat{m}+2m_s)B_0+\varepsilon+\pazocal{O}(\varepsilon^2)
-\end{aligned}
-\]
-where:
-\[
-\hat{m}=\frac{m_u+m_d}{2} \quad \varepsilon=\frac{B_0}{4}\frac{(m_u-m_d)^2}{m_s-\hat{m}}
 \]
 Although chiral symmetry alone cannot fix the absolute values of the
 quark masses, it gives information about quark–mass ratios. Neglecting
 the tiny $\pazocal{O}(\varepsilon)$ effects, one gets:
 \[
+\left\{
 \begin{aligned}
 &\frac{(m_{K^0}^2-m_{K^+}^2)-(m_{\pi^0}^2-m_{\pi^\pm}^2)}{m_{\pi^0}^2}=\frac{m_d-m_u}{m_d+m_u}=0.29\\
-&\frac{m_{K^0}^2-m_{\pi^0}^2}{m_{\pi^0}^2}=\frac{m_s-\hat{m}}{2\hat{m}}=12.6
+&\frac{m_{K^0}^2-m_{\pi^0}^2}{m_{\pi^0}^2}=\frac{2m_s-m_u-m_d}{2(m_u+m_d)}=12.6
 \end{aligned}
+\right.
 \]
 These two formulas imply the quark-mass ratios advocated by Weinberg:
 \[
 m_u:m_d:m_s=0.55:1:20.3
 \]
 Quark-mass corrections are therefore dominated by $m_s$.
-\section{Semileptonic Decays of Light Hadrons}
-We can extract other important information also from nuclear physics, e.g. from decays of the type A$\to$B$l\nu$, like $^{14}$O$\to^{14}$N$e^+\nu_e$, where A and B are spin-0 particles. The hadronic current has the form:
+\subsection{Coupling to External Currents}\marginnote{From \cite{SS}, Section 1.5.}
+We now introduce into the Lagrangian of QCD the couplings to the eight vector and axial currents as well as the scalar and pseudo-scalar quark densities:
+\begin{equation}
+\labeq{lqcd}
+\pazocal{L}_{\text{QCD}}=\pazocal{L}_{\text{QCD}}^0+\overline{q}\gamma^\mu(v_\mu+\gamma_5a_\mu)q-\overline{q}(s-i\gamma_5p)q
+\end{equation}
+This is the most general possible Lagrangian including external currents, the ordinary QCD Lagrangian is recovered by setting $v_\mu=a_\mu=p=0$ and $s=\text{diag}(m_u,m_d,m_s)$. Moreover, these currents can be used to incorporate the electromagnetic and semileptonic weak interactions, and the explicit breaking of chiral symmetry through the quark masses. The coupling of quarks to an external electromagnetic field $A_\mu$ is given by:
 \[
-J_\mu^{\text{had}}\propto V_{ud}\overline{u}\gamma^\mu(1-\gamma_5)d
+r_\mu=v_\mu+a_\mu=eQA_\mu \quad l_\mu=v_\mu-a_\mu=eQA_\mu \quad Q=\text{diag}(+2/3,-1/3,-1/3)
 \]
-What we want to compute now is the following matrix element:
+In the description of semileptonic interactions such as pion or neutron decay, one needs the interaction of quarks with the massive charged weak bosons $W_\mu^\pm$:
+\begin{equation}
+\labeq{lmu}
+r_\mu=0 \quad l_\mu=-\frac{g}{\sqrt{2}}(W_\mu^+T_++\text{h.c.}) \quad T_+=\left(\begin{array}{ccc}
+    0 & V_{ud} & V_{us} \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{array}\right)
+\end{equation}
+By using projection operators, the Lagrangian in \refeq{lqcd} can be written as:
 \[
-\bra{A,p_A}|J_A^\mu(0)\ket{B,p_B}=A(q^2)p_A^\mu+B(q^2)p_B^\mu
+\begin{aligned}
+\pazocal{L}_{\text{QCD}}=&\pazocal{L}_{\text{QCD}}^0+\overline{q}_L\gamma^\mu l_\mu q_L+\overline{q}_R\gamma^\mu r_\mu q_R-\overline{q}_R(s+ip)q_L-\overline{q}_L(s-ip)q_R
+\end{aligned}
 \]
-where $A$ and $B$ are functions of the non-trivial scalar quantity\\
-$q=p_A-p_B$. We can apply a parity transformation on this matrix element which can act on the states or on the current:
-\[
-\bra{A,p_A}|\pazocal{P}J_A^\mu(0)\pazocal{P}\ket{B,p_B}
-\]
+Inserting now the current $l_\mu$ relative to the interaction of quarks with massive charged weak bosons into the Lagrangian above one obtains the standard
+charged-current weak interaction in the light quark sector:
+\begin{equation}
+\labeq{weakinteraction}
+\pazocal{L}=-\frac{g}{2\sqrt{2}}\left\{W_\mu^+[V_{ud}\overline{u}\gamma^\mu(1-\gamma_5)d+V_{us}\overline{u}\gamma^\mu(1-\gamma_5)s]+\text{h.c.}\right\}
+\end{equation}
+In presence of such currents, we define the covariant derivative and the field strength tensors as follows:
 \[
 \left\{
 \begin{aligned}
-&\eta_A\eta_B\bra{A,\eta p_A}J_A^\mu(0)\ket{B,\eta p_B}=\eta_A\eta_B[A(q^2)(\eta p_A)^\mu+B(q^2)(\eta p_B)^\mu]\\
-&\pazocal{P}J_A^\mu(0)\pazocal{P}=-(\eta J_A)^\mu\Rightarrow-\eta^{\mu\nu}\bra{A,p_A}|J_A^\nu(0)\ket{B,p_B}
+&D_\mu U=\partial_\mu U-ir_\mu U+iUl_\mu &&D_\mu U^\dagger=\partial_\mu U^\dagger+iU^\dagger r_\mu-il_\mu U^\dagger\\
+&F_{\mu\nu}^L=\partial_\mu l_\nu-\partial_\nu l_\mu-i[l_\mu,l_\nu] &&F^{\mu\nu}_R=\partial_\mu r_\nu-\partial_\nu r_\mu-i[r_\mu,r_\nu]
 \end{aligned}
 \right.
 \]
-If $\eta_A\eta_B=1$, then it follows that the matrix element is equal to zero.\\
-Focus now on $J_V^\mu(0)$:
-\[
-\bra{A,p_A}|J_V^\mu(0)\ket{B,p_B}=C(q^2)(p_A+p_B)^\mu+D(q^2)q^\mu
-\]
-Instead of parity, now we use isospin symmetry:
-\[
-q_\mu\bra{A,p_A}|J_V^\mu(0)\ket{B,p_B}=C(q^2)q_\nu(p_A+p_B)^\nu+\cancelto{0}{D(q^2)}q^2=0
-\]
-We are left with $C(q^2)(p_A+p_B)^\mu$ and it is possible to compute $C(q^2)$ at zero-momenta by using some symmetry arguments, knowing that $J_V^\mu=\overline{u}\gamma^\mu d=\overline{\Psi}\gamma^\mu T_+\Psi$.
-\begin{align*}
-\bra{B,p_B}\int d^3xJ_V^\mu(x)\ket{A,p_A}&=\int d^3x\bra{B,p_B}|e^{ipx}J_V^\mu(0)e^{-ipx}\ket{A,p_A}\\
-&=\int d^3xe^{i(p_B-p_A)x}\bra{B,p_B}J_V^\mu(0)\ket{A,p_A}\\
-&=(2\pi)^3\delta^3(\Vec{p}_A-\Vec{p}_B)e^{i(E_A-E_B)t}\bra{B,p_B}J_V^\mu(0)\ket{A,p_A}
-\end{align*}
-\subsection{Measuring $V_{ud}$}
-Phenomenologically, the key process to measure $V_{ud}$ is the $\beta$-decay, which comes in three different forms:\marginnote{From \cite{GT}, Section 8.}
-\begin{itemize}
-    \item nuclear $\beta$-decay, e.g. $^3$H$\to^3$He or $^{14}$C$\to^{14}$N
-    \item neutron $\beta$-decay, $n\to pe^-\overline{\nu}_e$
-    \item pion $\beta$-decay, $\pi^+\to\pi^0e^+\nu_e$ or $\pi^-\to\pi^0e^-\overline{\nu}_e$
-\end{itemize}
-The basic approach of determining $V_{ud}$ in each of these processes is the same, i.e. taking the amplitude and compare it to the muon decay.
+Lastly, we introduce the linear combination with the scalar and the pseudo-scalar external fields $\chi=2B_0(s+ip)$. The most
+general, locally invariant, effective Lagrangian at lowest chiral order is finally given by:
+\begin{equation}
+\labeq{l2}    
+\pazocal{L}=\frac{f^2}{4}\Tr{D_\mu UD^\mu U^\dagger}+\frac{f^2}{4}\Tr{\chi U^\dagger+U\chi^\dagger} 
+\end{equation}
+which contains two free parameters: the pion decay constant $f$ and $B_0$, hidden in $\chi$.
+\subsection{Charged Pion Decay}
+A phenomenological application of all this machinery is the charged pion decay $\pi^+\to\mu^+\nu_\mu$. This is described by the annihilation of a $u$ quark and a $\overline{d}$ anti-quark into a $W^+$ boson, propagation of the $W^+$ boson and creation of $\mu^+$ and $\nu_\mu$ in the final state.
 \begin{figure}[h]
-    \centering
-    \includegraphics{Images/Vud.pdf}
+    \centering\includegraphics[width=0.45\textwidth]{Images/piondecay.pdf}
     \caption*{}
-    \labfig{Vud}
+    \labfig{piondecay}
 \end{figure}\\
-The external states and the phase space integrals are different but the actual Feynman rules differ only by a factor $V_{ud}$.\\
-We now consider the semileptonic decay of the pion $\pi^-\to\pi^0e^-\overline{\nu}_e$ induced by the operator $\hat{O}$:\marginnote{From \cite{Sa}, Lecture 32.}
+Consider now the first term of \refeq{l2}, set $r_\mu=0$ with arbitrary $l_\mu$ which gets parametrized as:
 \[
-\hat{O}=V_{ud}\frac{G_{\text{F}}}{\sqrt{2}}\overline{u}\gamma_\alpha(1-\gamma_5)d\overline{e}\gamma^\alpha(1-\gamma_5)\nu
+l_\mu=\sum_{a=1}^8\frac{\lambda_a}{2}l_\mu^a
+\]
+By explicitly computing the trace, the term linear in $l_\mu$ reads:
+\[
+\pazocal{L}_{\text{int}}=\sum_{a=1}^8l_\mu^ai\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}=\sum_{a=1}^8l_\mu^aJ_L^{\mu,a}
+\]
+where in the last step we used \refeq{jl} to define $J_L^{\mu,a}$. Expanding $U$ to first order $\Phi$ and using \refeq{Phi}, $J_L^{\mu,a}$ gets written as:
+\[
+\begin{aligned}
+J_L^{\mu,a}&=i\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}\simeq i\frac{f^2}{4}\Tr{\lambda_a\left(-i\frac{\sqrt{2}}{f}\partial^\mu\Phi\right)}=\frac{f}{2}\partial^\mu\phi^a
+\end{aligned}
+\]
+Inserting now the expression of $l_\mu$ from \refeq{lmu}, we get that the interaction term of a single Goldstone boson with a $W$ is the following:
+\[
+\pazocal{L}_{W\phi}=\Tr{l_\mu J^\mu_L}=-\frac{gf}{2\sqrt{2}}[W_\mu^+\Tr{T_+\partial^\mu\phi}+W_\mu^-\Tr{T_-\partial^\mu\phi}]
+\]
+Computing the trace term gives us:
+\begin{align*}
+\Tr{T_+\partial^\mu\phi}&=\left(\begin{array}{ccc}
+    0 & V_{ud} & V_{us} \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{array}\right)\partial^\mu\left(\begin{array}{ccc}
+    \frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & \pi^+ & K^+ \\
+    \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
+    K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}} \\
+\end{array}\right)\\
+&=(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)
+\end{align*}
+Putting everything together we end up with:
+\[
+\pazocal{L}_{W\phi}=-\frac{gf}{2\sqrt{2}}[W_\mu^+(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)+W_\mu^-(V_{ud}^*\partial^\mu\pi^++V_{us}^*\partial^\mu K^+)]
+\]
+Neglecting higher order terms, the Feynman rule for the invariant amplitude of the pion decay reads:
+\begin{align*}
+\pazocal{M}&=\left(-i\frac{g}{\sqrt{2}}\overline{u}_{\nu_\mu}\gamma^\beta\frac{1-\gamma_5}{2}v_{\mu^+}\right)i\frac{g_{\beta\alpha}}{m_W^2}\left(-i\frac{gf}{2}V_{ud}^*(-ip^\alpha)\right)\\
+&=-G_{\text{F}}V_{ud}f\overline{u}_{\nu_\mu}\slashed{p}(1-\gamma_5)v_{\mu^+}
+\end{align*}
+where $p$ denotes the pion four-momentum.
+From this, it is possible to evaluate the decay rate by explicit calculations:
+\begin{align*}
+\Gamma=\frac{1}{\tau}&=\frac{1}{2m_{\pi^+}}\int\frac{d^3p_{\nu_\mu}}{2E_{\nu_\mu}}\frac{d^3p_{\mu^+}}{2E_{\mu^+}}\sum_{\text{pol}}|\pazocal{M}|^2(2\pi)^4\delta^4(p_{\pi^+}-p_{\nu_\mu}-p_{\mu^+})\\
+&=\frac{G_{\text{F}^2}|V_{ud}|^2}{4\pi}f^2m_\mu^2m_\pi\left[1-\frac{m_\mu^2}{m_\pi^2}\right]^2
+\end{align*}
+The constant $f$ is referred to as the pion-decay constant in the chiral limit, it measures the strength of the matrix element of the axial current
+operator between a one-Goldstone-boson state and the vacuum. From the measurement of the decay rate, one gets for the pion-decay constant the value of $f=92.4$\,MeV.
+Once we know the decay, it is also possible to test the lepton flavour universality:
+\[
+R_{e\mu}:=\frac{\Gamma(\pi^+\to e^+\nu_e)}{\Gamma(\pi^+\to\mu^+\nu_\mu)}=\left(\frac{m_e}{m_\mu}\right)^2\left[\frac{1-m_e^2/m_\pi^2}{1-m_\mu^2/m_\pi^2}\right]=1.283\cdot10^{-4}
+\]
+\section{Semileptonic Decays of Light Hadrons}\marginnote{From \cite{GT}, Section 7.3 and Section 8.}
+\subsection{Measuring $V_{ud}$}
+Phenomenologically, the key process to measure the $d\to u$ transitions is the $\beta$-decay, which comes in three different forms:
+\begin{itemize}
+    \item nuclear $\beta$ decay, e.g. $^3$H$\to^3$He or $^{14}$C$\to^{14}$N
+    \item neutron $\beta$ decay, $n\to pe^-\overline{\nu}_e$
+    \item pion $\beta$ decay, $\pi^+\to\pi^0e^+\nu_e$ or $\pi^-\to\pi^0e^-\overline{\nu}_e$
+\end{itemize}
+We start our discussion by considering the \textbf{nuclear $\mathbf{\beta}$ decay} and it is possible to use symmetry arguments in order to make our life easier. The idea is to determine the matrix element of an operator $O_\beta$ sandwiched between two spin-0 states $N$ and $N'$.
+\[
+\bra{N}O_\beta\ket{N'}
+\]
+$O_\beta$ comes from $W$ exchange, so it can be vector or axial. The vector and axial currents are, respectively, even and odd under parity. The external states have a definite parity and, since QCD respects parity, only one of the vector or axial currents can be non-vanishing. This means fewer matrix elements to calculate which makes us happy. \raisebox{-\mydepth}{{\includegraphics[height=1.1\baselineskip]{Images/smile.jpg}}}\\
+The hadronic current has the form:
+\[
+J_\mu^{\text{had}}\propto V_{ud}\overline{u}\gamma^\mu(1-\gamma_5)d\sim J_\mu^A+J_\mu^V
+\]
+The idea is now to compute the matrix elements associated with the axial and the vector current. Start with the axial current:
+\[
+\bra{N,p}|J_A^\mu\ket{N',p'}=A(q^2)p^\mu+B(q^2)p'^\mu
+\]
+where the coefficients $A$ and $B$ are form factors depending on the Lorentz scalar $q=p-p'$.
+We can apply a parity transformation on this matrix element which can act on the states or on the current:
+\[
+\bra{N,p}|\pazocal{P}^\dagger J_A^\mu\pazocal{P}\ket{N',p'}
+\]
+This results in:
+\[
+\left\{
+\begin{aligned}
+&\eta_N\eta_{N'}\bra{N,\eta p}J_A^\mu\ket{N',\eta p'}=\eta_N\eta_{N'}[A(q^2)(\eta p)^\mu+B(q^2)(\eta p')^\mu]\\
+&\pazocal{P}^\dagger J_A^\mu\pazocal{P}=-(\eta J_A)^\mu\Rightarrow-\eta^{\mu\nu}\bra{N,p}|J_{A,\nu}\ket{N',p'}
+\end{aligned}
+\right.
+\]
+If $\eta_N\eta_{N'}=1$, i.e. if the two states have the same parity, it follows that the matrix element is equal to zero. In our case, having chosen spinless initial and final states, this results in a vanishing matrix element for the axial current.\\
+Move now to $J_V^\mu$:
+\[
+\bra{N,p}|J_V^\mu\ket{N',p'}=f_+(q^2)(p+p')^\mu+f_-(q^2)q^\mu
+\]
+Instead of parity, now we use isospin symmetry and work in the limit where $m_N=m_{N'}$. In this limit, $q^2$ is very close to zero, more precisely $q^2\ll\Lambda_{\text{QCD}}$ so that $f_\pm(q^2)\approx f_\pm(0)$. In this limit, there is another important simplification coming from the Ward identity:
+\[
+q_\mu\pazocal{M}^\mu=0=f_+(q^2)(p^2-p'^2)+f_-(q^2)q^2=f_+(q^2)(m_N^2-m_{N'}^2)+f_-(q^2)q^2
+\]
+The exact isospin limit implies $m_N=m_{N'}$ so that the term associated with $f_+(q^2)$ vanishes and this means that $f_-(q^2)q^2=0$. Although we have used the $q^2\to0$ limit, we are not saying that $q^2=0$ hence it is possible to conclude that $f_-(q^2)=0$, leaving us with a single form factor $f_+(q^2)$.\\
+Another possible way to measure $V_{ud}$ is \textbf{neutron $\mathbf{\beta}$ decay}, $n\to pe^-\overline{\nu}_e$. This seems to be very similar to the previous case, but the external states are necessarily spin-1/2 states so we cannot get rid of the axial current contribution. One has to take into account all the matrix elements, resulting in:\marginnote{\textit{We parametrize our ignorance into form factors}}
+\begin{align*}
+\bra{p}\overline{u}\gamma^\mu(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\nu\right.\\
+&\left.+g_1(q^2)\gamma^\mu\gamma_5+g_2(q^2)i\sigma^{\mu\nu}q_\nu\gamma_5+g_3(q^2)q^\mu\gamma_5\right]u_n
+\end{align*}
+$f_i$ comes from the vector current and $g_i$ from the axial one.\\
+The masses of the neutron and the proton are similar, so $q$ is small and in the limit $q\to0$ the form factors $f_2, f_3, g_2$ and $g_3$ are all equal to zero, while $f_1$ is equal to a fixed number and $g_1(0)=g_A$ which is the ratio between the vector and the axial matrix element. Since there is no symmetry imposing some hierarchy between the two terms, one expects $g_A\sim\pazocal{O}(1)$ and indeed it turns out to be $g_A=1.27$.\\
+Lastly, we have the semileptonic \textbf{pion $\mathbf{\beta}$ decay}  $\pi^-\to\pi^0e^-\overline{\nu}_e$ induced by the operator $O_\beta$:\marginnote{From \cite{Sa}, Lecture 32.}
+\[
+O_\beta=V_{ud}\frac{G_{\text{F}}}{\sqrt{2}}\overline{u}\gamma_\alpha(1-\gamma_5)d\overline{e}\gamma^\alpha(1-\gamma_5)\nu
 \]
 This matrix element factorizes into the matrix element of the quark current between the meson states and the lepton current. Leptons do not interact strongly, hence:
 \[
 \pazocal{M}=\bra{e^-\overline{\nu}_e\pi^0}\hat{O}\ket{\pi^-}=V_{ud}\frac{G_{\text{F}}}{\sqrt{2}}\overline{u}_e\gamma^\alpha(1-\gamma_5)v_\nu\bra{\pi^0}\overline{u}\gamma_\alpha(1-\gamma_5)d\ket{\pi^-}
 \]
-Looking at the hadronic matrix element, note that the axial current cannot contribute to the transition as a quantity of unnatural parity cannot be constructed from the available vectors. The matrix element is then given by:
+Looking at the hadronic matrix element, note that the axial current cannot contribute to the transition being parity odd. The matrix element is then given by:
 \[
 |\pazocal{M}|^2=32|V_{ud}|^2G_{\text{F}}^2m_{\pi^-}[2(v\cdot p_e)(v\cdot p_\nu)-p_e\cdot p_\nu]
 \]
@@ -1783,12 +1797,8 @@ where $v$ id the $\pi^-$ 4-velocity and we made the reasonable approximation tha
 \[
 \Gamma=|V_{ud}|^2G_{\text{F}}^2\frac{(\Delta m)^5}{30\pi^3} \quad \Delta m=m_{\pi^-}-m_{\pi^0}\sim (4-5)\,\text{MeV}
 \]
-Move now to the decay of baryon states, i.e. $n\to pe^-\overline{\nu}_e$ which is induced by the same weak operator as before $\hat{O}$. The matrix element factorizes again into leptonic and hadronic part but unlike the meson case, both vector and axial currents contribute to this decay and the most general form for the matrix element consistent with Lorentz invariance is:\marginnote{\textit{We parametrize our ignorance into form factors}}
-\begin{align*}
-\bra{p}\overline{u}\gamma^\mu(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\nu\right.\\
-&\left.+g_1(q^2)\gamma^\mu\gamma_5+g_2(q^2)i\sigma^{\mu\nu}q_\nu\gamma_5+g_3(q^2)q^\mu\gamma_5\right]u_n
-\end{align*}
-where $f_i$ comes from the vector current and $g_i$ from the axial one. The masses of the neutron and the proton are similar, so $q$ is small and in the limit $q\to0$ the form factors $f_2, f_3, g_2$ and $g_3$ are all equal to zero, while $f_1$ is equal to a fixed number and $g_1(0)=g_A$.\\
+This is the cleanest way to measure $V_{ud}$ but it is hugely suppressed by phase space. The branching ratio is of order $10^{-8}$ and we are experimentally limited by the total number of measured decays.\\
+\begin{kaobox}[frametitle=Measuring $V_{ud}$]
 Summarizing, the values of $V_{ud}$ we obtain are then:\marginnote{From \cite{pdg}, Review 79.}
 \[
 \left\{
@@ -1799,6 +1809,7 @@ Summarizing, the values of $V_{ud}$ we obtain are then:\marginnote{From \cite{pd
 \end{aligned}
 \right.
 \]
+\end{kaobox}
 \subsection{Measuring $V_{us}$}
 As a test of \textbf{lepton flavour universality}, the idea is to study $V_{us}$ in a 3-body decay and see CKM unitarity anomalies. Kaons are the lightest mesons that contain a strange quark, the decays of kaons to states which do not contain an $s$ are an obvious place to measure $V_{us}$. The dominant semileptonic decay is $K\to\pi l\nu$:\\
 \begin{figure}[h]
