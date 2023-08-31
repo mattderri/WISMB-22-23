@@ -9,35 +9,40 @@ At this point, we should be familiar with the fact that the \textbf{gauge group}
 \[
 \text{G=SU$(3)_{\text{C}}\times$SU$(2)_{\text{EW}}\times$U$(1)_{\text{Y}}$}
 \]
-When we write the Lagrangian, we know that the rules of the game are that we should write every single term allowed by this symmetry and by Lorentz invariance. When writing all the terms we may discover that, in addition to the invariance under this symmetry and under Lorentz, there is also invariance under some global symmetry group which comes for free because we did not impose it. Of course we could have imposed the requirement of invariance under some global group by hand, i.e. for phenomenological reasons. But in the SM we do not do it, we do not require invariance under any global symmetry group. The only thing we do is to impose invariance under G and under Lorentz, these are the only two requirements.\\
-Now the question is: \textit{is this Lagrangian invariant under some global symmetry?} Obviously, the answer is \textbf{yes}. There are two discrete symmetries, parity and charge conjugation which are then violated, but it turns out there are actually also \textbf{continuous symmetries} which are invariant transformations of the Lagrangian. How is it possible to see these symmetries? We try to transform fields in a way which has to respect gauge invariance. This means that if we have a certain representation under the gauge group, we have several fields transforming under this representation and it is possible to mix them among themselves and that could be a symmetry transformations. Do we have replicas? Yes, we have three families. It is possible to transform fields by mixing these families and this is something which respects Lorentz and gauge invariance. That is the global symmetry that we might have, whether we have it or not depends on the Lagrangian, more precisely whether such transformations leave the Lagrangian invariant or not.\\ 
+When writing the Lagrangian, we know that the rules of the game are that we should write every single term allowed by this symmetry and by Lorentz invariance. After writing all the terms according to that rules, we may discover that, in addition to the invariance under this symmetry and under Lorentz, there is also invariance under some global symmetry group which comes for free because we did not impose it. Of course we could have imposed the requirement of invariance under some global group by hand, i.e. for phenomenological reasons. But in the SM we do not do it, we do not require invariance under any global symmetry group. The only thing we do is to impose invariance under G and under Lorentz, these are the only two requirements.\\
+Now the question is: \textit{is this Lagrangian invariant under some global symmetry?} Obviously, the answer is \textbf{yes}. There are two discrete symmetries: parity and charge conjugation which are then violated. Moreover, there are also \textbf{continuous symmetries} which are invariant transformations of the Lagrangian. How is it possible to see these symmetries? We try to transform fields in a way which has to respect gauge invariance. This means that if we have a certain representation under the gauge group, we have several fields transforming under this representation and it is possible to mix them among themselves and that could be a symmetry transformations. Having three families, it is possible to transform fields by mixing these families and this is something which respects Lorentz and gauge invariance. That is the global symmetry that we might have, whether we have it or not depends on the Lagrangian, more precisely whether such transformations leave the Lagrangian invariant or not.
+\subsection{Baryon Number}
 The kinetic term for the $q_L$ for example can be written in such a way that it is diagonal in flavour:
 \[
-\overline{q}_L^ii\slashed{D}\delta^{ij}q^j_L
+\overline{q}_L^ji\slashed{D}q^j_L
 \]
 which is symmetric under $\text{U}(3)$. However, there are additional terms like the Yukawa coupling which breaks this symmetry. It turns out that there is some symmetry leftover. If we restrict it to the quark sector, we have a $[\text{U}(3)]^3$ symmetry:
 \[
-\pazocal{L}_{\text{kin}}=\overline{q}_L^ii\slashed{D}\delta^{ij}q_L^j+\overline{u}_R^ii\slashed{D}\delta^{ij}u_R^j+\overline{d}_R^ii\slashed{D}\delta^{ij}d_R^j
+\pazocal{L}_{\text{kin}}=\overline{q}_L^ji\slashed{D}q_L^j+\overline{u}_R^ji\slashed{D}u_R^j+\overline{d}_R^ji\slashed{D}d_R^j
 \]
 If we move to the basis where the Yukawa matrices are diagonal we have:
 % Each quark has \textbf{baryon number} $B(q)=+1/3$ which results for protons and neutrons in $B(p)=B(n)=1$ being $p=uud$ and $n=udd$. Moving to the basis where the Yukawa term is diagonal we have:
 \[
-\frac{1}{\sqrt{2}}\overline{u}_L^i\delta^{ij}(v+h)u_R^j+\frac{1}{\sqrt{2}}\overline{d}_L^i\delta^{ij}(v+h)d_R^j+\text{h.c.}+g\overline{u}_L^iV^{ij}W_\mu^-\gamma^\mu d_L^j+\text{h.c.}\marginnote{We are not including leptons just for simplicity.}
+\frac{1}{\sqrt{2}}\overline{u}_L^iY_u^{ij}(v+h)u_R^j+\frac{1}{\sqrt{2}}\overline{d}_L^iY_d^{ij}(v+h)d_R^j+\text{h.c.}+\frac{g}{\sqrt{2}}\overline{u}_L^iV^{ij}\gamma^\mu W_\mu^+ d_L^j+\text{h.c.}\marginnote{We are not including leptons just for simplicity.}
 \]
 There are U(1) factors which are unbroken and in particular for the quarks there is a U(1) \textbf{baryon number} which is unbroken by the Yukawa terms. How can we see it? By diagonalizing the Yukawa matrices, we see that the Yukawa terms couple quarks with the same charge and if we do a transformation under which all the quarks go like:
 \[
 q\to e^{i\alpha/3}q
 \]
-this leaves the Yukawa terms, and in general the Lagrangian, invariant. If we do transformations of $[\text{U}(3)]^3$ these terms are not invariant but if we do transformations like the one above which is a subgroup of the larger symmetry,  U$(1)_{\text{B}}\subset[\text{U}(3)]^3$, all the quarks have the same charge, i.e. baryon number $B(q)=+1/3$.\marginnote{This +1/3 is arbitrary, the important thing is that it is the same for all the quarks. It is taken to be +1/3 because in this way protons and neutrons for example have $B(p)=B(n)=+1$.}\\
-This is the only leftover global symmetry which remains in this Lagrangian, it is not broken by any term and the best way to see it is by going to the basis in which the Yukawa couplings are diagonal.
-
+this leaves the Yukawa terms, and in general the Lagrangian, invariant. If we do transformations of $[\text{U}(3)]^3$ these terms are not invariant but if we do transformations like the one above which is a subgroup of the larger symmetry,  U$(1)_{\text{B}}\subset[\text{U}(3)]^3$, all the quarks have the same charge, i.e. baryon number $B(q)=+1/3$. For anti-quarks instead, $B(\overline{q})=-1/3.$\marginnote{This +1/3 is arbitrary, the important thing is that it is the same for all the quarks. It is taken to be +1/3 because in this way protons and neutrons for example have $B(p)=B(n)=+1$.}
+\subsection{Mass of the Neutrinos}
+This is the only leftover global symmetry which remains in this Lagrangian, it is not broken by any term and the best way to see it is by going to the basis in which the Yukawa couplings are diagonal.\\
 If we try do to the same with leptons there is a complication and a simplification. The simplification is due to the fact that we do not have a right-handed neutrino because up to now there is no experimental evidence that we need it but the complication is that we do observe oscillations between different flavours of neutrinos. This is possible only if the neutrinos have a mass and in the Lagrangian that we wrote neutrinos \textit{do not} have a mass, there is no term which gives the mass of the neutrinos.\\
-How do we fix this problem? There are two possibilities: we \textit{either} extend the model by adding a new light degree of freedom, the right-handed neutrino $\nu_R$, \textit{or}, since the SM is an EFT, then we can consider higher dimension operators. We only wrote dimension 4 operators which do not give a mass to the neutrinos but moving to higher dimensions there are new operators which do give a mass to the neutrinos.\\
+How do we fix this problem? There are two possibilities:
+\begin{itemize}
+    \item extend the model by adding a new light degree of freedom, the right-handed neutrino $\nu_R$
+    \item since the SM is an EFT, it is possible to consider higher dimension operators. We only wrote dimension 4 operators which do not give a mass to the neutrinos but moving to higher dimensions there are new operators which do give a mass to the neutrinos.
+\end{itemize}
 The next dimensionality is $D=5$ and the only operator we have is the \textbf{Weinberg operator}. How can we write a dimension 5 operator? The only possibility is to put two fermions and two scalars but it also has to be gauge and Lorentz invariant. Since we know that the hypercharge for a doublet of leptons is $-1/2$ and for the Higgs is $+1/2$, the following combination is neutral under the hypercharge:
 \[
 (l_L^{\alpha,i} H)(l_L^{\beta,j} H)\epsilon_{\alpha\beta}
 \]
-where the $\epsilon$ tensor is required to make this object a singlet, $\alpha$ and $\beta$ are Lorentz indices and $i,j$ are SU$(2)_{\text{EW}}$ indices. The thing we need to check is whether the exchange of these two leptons imply the right symmetry\marginnote{Another possible way to see it is by using the functional integral where the two fermionic fields are Grassmann variables.}. The fermionic nature gives us a $(-)$ sign under exchange and the $\epsilon$ tensor gives another $(-)$ sign so there is an overall $(+)$. Contracting this with another $\epsilon$ tensor gives a final $(-)$ sign which is bad so this possibility is not allowed. \raisebox{-\mydepth}{{\includegraphics[height=1.1\baselineskip]{Images/sadsmile.jpg}}}\\
+where the $\epsilon$ tensor is required to make this object a singlet, $\alpha$ and $\beta$ are Lorentz indices and $i,j$ are SU$(2)_{\text{EW}}$ indices. The thing we need to check is whether the exchange of these two leptons implies the right symmetry\marginnote{Another possible way to see it is by using the functional integral where the two fermionic fields are Grassmann variables.}. The fermionic nature gives us a $(-)$ sign under exchange and the $\epsilon$ tensor gives another $(-)$ sign so there is an overall $(+)$. Contracting this with another $\epsilon$ tensor gives a final $(-)$ sign which is bad so this possibility is not allowed. \raisebox{-\mydepth}{{\includegraphics[height=1.1\baselineskip]{Images/sadsmile.jpg}}}\\
 What we can do is the following:
 \[
 O_{\text{Weinberg}}:=\frac{1}{M}\epsilon^{ik}(l_L^{\alpha,i}H^k)R(l_L^{\beta,j}H^s)\epsilon_{\alpha\beta}\epsilon_{js}
@@ -46,7 +51,7 @@ This is the Weinberg operator which is an invariant. If we go to the unitary gau
 \[
 O_{\text{Weinberg}}=\nu_L^{\alpha,a}\nu_L^{\beta,b}v^2\frac{R^{ab}_{\text{Weinberg}}}{2M}\epsilon_{\alpha\beta}+\cdots
 \]
-where $a$ and $b$ are flavour indices. This is the mass term for neutrinos, $1/M$ is a coefficient required for dimensionality reasons. $R$ is a matrix which scales like a coupling squared because there are four fields.\\ 
+where $a$ and $b$ are flavour indices. This is the mass term for neutrinos, $1/M$ is a coefficient required for dimensionality reasons and $R$ is a matrix which scales like a coupling squared because there are four fields.\\ 
 This tells us that if the extension of the SM is in the form of heavy new physics, it is possible to interpret this operator as arising from some new particles which are integrated out. With this supposed new heavy physics, it turns out that we do see effects of this higher dimensional operators through the observation of the neutrino masses.\\
 The other possibility is to add the right-handed neutrino which is light and that is not captured by this story. This argument is okay if there is heavy new physics, in other words if the light right-handed neutrino cannot be integrated out. Of course there is the mixed possibility that the new physics which gives rise to this operator is a heavy right-handed neutrino.\\
 This goes under the name of \textbf{seesaw mechanism}.\marginnote{\includegraphics[]{Images/seesaw.png}\\From \href{https://www.symmetrymagazine.org/article/neutrinos-on-a-seesaw}{Symmetry Magazine}, a funny representation of the seesaw mechanism.} The right-handed neutrino $\nu_R$ is neutral under G, it is a singlet both under SU$(3)_{\text{C}}$ and SU$(2)_{\text{EW}}$ and it has zero hypercharge. This should ring a bell, if we have something which is a Weyl fermion and completely neutral it is possible to write a \textbf{Majorana mass term}:
@@ -54,104 +59,132 @@ This goes under the name of \textbf{seesaw mechanism}.\marginnote{\includegraphi
 \nu_R^{\alpha,a}M^{ab}\nu_R^{\beta,b}\epsilon_{\alpha\beta}
 \]
 where $M^{ab}$ has to be symmetric.\\
-Majorana particles have two polarizations but particle and anti-particle are identical. This is the main difference between a Weyl fermion and a Majorana fermion, strictly speaking we should talk about Weyl fermions only for massless fermions. Weyl fermions have only one polarization, which corresponds to helicity since it is massless, and then particle and anti-particle, hence two degrees of freedom. When imposing the condition that allows us to write the Majorana mass term, then we are identifying particle with anti-particle which means that there will be two degrees of freedom interpreted as particle with polarization $+1/2$ and particle with polarization $-1/2$. The point is that this mass term can be interpreted as an interaction between two $\nu_R$.\\
-What is the value of $M^{ab}$? Naively, we could interpret our theory as an EFT, not including $\nu_R$ so it will be valid up to some cut-off scale above which there will be new physics. What are the coefficients in front of the terms in the Lagrangian? The mass term has dimension 3, so these terms will have coefficients of dimension 1. Remember that there is another term which has dimension smaller than 4, the Higgs term $H^\dagger H$ which has a coefficient $\mu^2$ of dimension 2. These are the only two relevant operators\marginnote{Relevant in a sense that they are the only operators with dimension strictly smaller than 4 [See \refsec{eft}].}. If we set these coefficients to values much smaller than the scale of new physics we want to see whether radiative corrections will give a noticeable contributions to them.\\
+Majorana particles have two polarizations but particle and anti-particle are identical. This is the main difference between a Weyl fermion and a Majorana fermion, strictly speaking we should talk about Weyl fermions only for massless fermions. Weyl fermions have only one polarization, which corresponds to helicity since it is massless, and then particle and anti-particle, hence two degrees of freedom. When imposing the condition that allows us to write the Majorana mass term, then we are identifying particle with anti-particle which means that there will be two degrees of freedom interpreted as particle with polarization $+1/2$ and particle with polarization $-1/2$. The point is that this mass term can be interpreted as an interaction between two $\nu_R$.
+\begin{kaobox}[frametitle=Quick Introduction to the Hierarchy Problem in the Standard Model]
+The neutrino mass term has dimension 3, so it will have coefficients of dimension 1. Remember that there is another term which has dimension smaller than 4, the Higgs term $H^\dagger H$ which has a coefficient $\mu^2$ of dimension 2. These are the only two relevant operators\marginnote{Relevant in a sense that they are the only operators with dimension strictly smaller than 4 [See \refsec{eft}].}. If we set these coefficients to values much smaller than the scale of new physics we want to see whether radiative corrections will give a noticeable contributions to them.\\
 In other words: \textit{if we set these two terms to be much smaller than the cut-off scale will radiative corrections destroy the assumptions we made?} The answer is \textbf{yes}, there will be huge radiative corrections and the idea of setting $\mu$ to a small value is hopeless.\\
-This problem is known as the \textbf{hierarchy problem} which can be summarized as follows: we need $\mu$ of order $v$, $v$ is of order of the electroweak scale 246 GeV so we say \textit{okay, we write $\mu$ and say it is of order 246 GeV}. But then we go to one-loop level to include radiative corrections of this form:\\
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{Images/higgscorrections.pdf}
-    \caption*{}
-    \labfig{higgscorrections}
-\end{figure}\\
-Doing the calculations, we see that this diagram is quadratically divergent and it goes like $\Lambda^2\frac{y_\Psi^2}{16\pi^2}$. If we assume that $\Lambda$ is of order of the Planck scale, the suppression coming from the Yukawa coupling is small\marginnote{(Not so) technical term: \textit{this suppression is peanuts}} so if we set $\mu$ to be of order 246 GeV at tree-level, at one-loop it will become of order Planck. There is no hope to get a light Higgs.\\
+This problem is known as the \textbf{hierarchy problem} which can be summarized as follows: we need $\mu$ of order $v$, $v$ is of order of the electroweak scale 246 GeV so we say \textit{okay, we write $\mu$ and say it is of order 246 GeV}. But then we go to one-loop level to include radiative corrections (portrayed on the side).\marginnote[-1cm]{\includegraphics{Images/higgscorrections.pdf}}
+Doing the calculations, we see that this diagram is quadratically divergent and it goes like $\Lambda^2y_\Psi^2/16\pi^2$. If we assume that $\Lambda$ is of order of the Planck scale, the suppression coming from the Yukawa coupling is small\marginnote{(Not so) technical term: \textit{this suppression is peanuts}} so if we set $\mu$ to be of order 246 GeV at tree-level, at one-loop it will become of order Planck. There is no hope to get a light Higgs.\\
 This problem requires a precise cancellation between the radiative corrections and the tree-level term.\\
-The $\nu_R$ is a fermionic field with chiral invariance associated broken by the mass term proportional to the one-loop corrections, so if the mass is light the corrections will be small. This is called \textbf{technical naturalness}. There is no danger in saying that this mass is much smaller than the cut-off scale so it will remain small even after radiative corrections are turned on. If this mass is heavy then we will have the seesaw mechanism: there is a heavy state that integrated out gives us very light state, because the mass of $\nu_L$ is suppressed. This is why it is called seesaw. However, we can also say that the mass is small, much smaller than the Planck scale, in which case this $\nu_R$ is an addition to the SM, it is not heavy new physics but rather light new physics.\\
-We said there is an accidental U$(1)_{\text{B}}$ symmetry under which leptons do not transform. Is there an accidental symmetry regarding the lepton sector? Without $\nu_R$, the Yukawa term has the following form:
+The $\nu_R$ is a fermionic field with chiral invariance associated broken by the mass term proportional to the one-loop corrections, so if the mass is light the corrections will be small. This is called \textbf{technical naturalness}. There is no danger in saying that this mass is much smaller than the cut-off scale so it will remain small even after radiative corrections are turned on. If this mass is heavy then we will have the seesaw mechanism: there is a heavy state that integrated out gives us very light state, because the mass of $\nu_L$ is suppressed. This is why it is called seesaw. However, we can also say that the mass is small, much smaller than the Planck scale, in which case this $\nu_R$ is an addition to the SM, it is not heavy new physics but rather light new physics.
+\end{kaobox}
+\subsection{Lepton Number}
+We said there is an accidental U$(1)_{\text{B}}$ symmetry under which leptons do not transform. Is there an accidental symmetry regarding the lepton sector? Without $\nu_R$, the Yukawa term regarding leptons has the following form:
 \[
 \overline{l}_L^iY_l^{ij}He_R^j
 \]
 We can transform the doublet and the singlet with two unitary transformations and diagonalize $Y$ without touching the kinetic terms. Without inserting the additional structure for the mass of the neutrinos we do not have any counterpart of the CKM matrix, at this level there is no flavour mixing. We can then go to a basis in which $Y$ is diagonal and at this point then we can change the phases of the three different families independently. There is not one \textbf{lepton number} but there are three: $L_e, L_\mu$ and $L_\tau$. Under $L_e$, both the electron and the electronic neutrino transform with the same charge which is equal to 1 and the others do not transform. Under $L_\mu$ only the muon and the muonic neutrino transform with the same charge while the others do not transform and the same applies for $L_\tau$. It is possible to transform the fermion fields with different phases and this will keep every single term in the Lagrangian invariant. This accidental symmetry is a product of U$(1)_{\text{B}}$ and [U$(1)]^3$.\\
 At least at the classical level, these are the exact global symmetries which emerge. Why are they called \textit{accidental}? Because they come as an accident at low energy, in the sense that the UV physics might not have them. In fact, if we write higher dimensional terms, e.g. $O_{\text{Weinberg}}$, we notice that they violate lepton number. If we say that the new physics has this symmetry then such a term is not allowed. But we are not imposing this symmetry by hand, we are just looking at low-energy and see which symmetries come out. This is the power of accidental symmetries: even if the UV theory is not invariant under that symmetry, at low-energy it emerges as an accident, it comes for free. They emerge because the theory is an EFT and because there is a large gap between the scale at which we do the experiments and the UV scale, which is much higher. Higher dimensional operators contribute to the experiments with the inverse power of the cut-off scale, they all violate these symmetries but their effects will be largely suppressed.\\
 These symmetries are not truly \textit{exact} symmetries, they are exact only at $D=4$ but if we consider the theory as a whole they are \textit{approximate}. Accidental symmetries are important because they might be the only global symmetries that are allowed in nature because of gravity. This is an important issue when we try to include dark matter in our theory because as far as we can tell is not coming from the SM so we have the extend the theory. Where does the stability of DM come from? People would say \textit{okay, we introduce a global symmetry and make it stable}. Well, there is a problem. One possible way of arguing is that if such global symmetry exist, it is accidental.
-\section{Fujikawa Approach to Anomalies}
+\section{Fujikawa Approach to Anomalies}\marginnote{From \cite{We2}, Section 22.2 and 22.4.}
 A more direct connection between the anomaly and the violation of a symmetry uses the \textbf{path integral}. The idea, due to Fujikawa, is that anomalies arise when there are symmetries of the action that are not symmetries of the functional measure in the path integral. 
 \[
-Z[J]=\int\pazocal{D}\phi\exp{iS[\phi]+i\int d^4xJ(x)\phi(x)} 
+I=\int\pazocal{D}\phi e^{iS[\phi]} 
 \]
-If the symmetry is anomalous, then the measure $\pazocal{D}\phi$ is not invariant. Consider now a fermionic field $\Psi(x)$ which transforms as:
+% \[
+% Z[J]=\int\pazocal{D}\phi\exp{iS[\phi]+i\int d^4xJ(x)\phi(x)} 
+% \]
+If the symmetry is anomalous, then the measure $\pazocal{D}\phi$ is not invariant.\\
+Take now a massless fermionic field $\Psi(x)$ interacting electromagnetically with $A_\mu(x)$ as:
 \[
-\Psi(x)\to e^{i\alpha^aT^a}\Psi(x)
+\pazocal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}+\overline{\Psi}i\gamma^\mu D_\mu\Psi \qquad \left\{
+\begin{aligned}
+&F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu\\
+&\overline{\Psi}=\Psi^\dagger\gamma^0\\
+&D_\mu=\partial_\mu-iet^aA_\mu^a
+\end{aligned}
+\right.
 \]
-and assume that $\delta S=0$ for constant $\alpha^a$. For a local transformation, i.e. $\alpha^a=\alpha^a(x)$, we then have:
+Consider the case in which $\Psi(x)$ transforms as follows:
 \[
-\delta S=\int d^4x\partial_\mu\alpha^a(x)J^{\mu,a}(x)
+\Psi(x)\to \Psi'(x)=e^{i\alpha(x)}\Psi(x)
 \]
-The functional integral has to be invariant under the following change of variables:
+Under such transformation, the action $S=\int d^4x\pazocal{L}$ is invariant for constant $\alpha(x)$. For a local transformation instead we have:
 \[
-d\Psi d\overline{\Psi}\to\exp{i\int d^4x\alpha^a(x)\pazocal{A}^a(x)}d\Psi d\overline{\Psi}
+\delta S=\int d^4xJ^{\mu}(x)\partial_\mu\alpha(x) \quad \text{with}\;J^{\mu}=\overline{\Psi}\gamma^\mu\Psi
 \]
-where $\pazocal{A}^a(x)$ is the anomaly, given by:
+The path integral measure now has the transformation property:
 \[
-\pazocal{A}^a(x)=\frac{1}{16\pi^2}D^{abc}F_{\mu\nu}^b\Tilde{F}^{\mu\nu,c} \quad \left\{\begin{aligned}
-&D^{abc}=\frac{1}{2}\Tr{T^a\{T^b,T^c\}}\\
-&\Tilde{F}^{\mu\nu,c}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}^a
-\end{aligned}\right.
+\pazocal{D}\Psi\pazocal{D}\overline{\Psi}\to\exp{i\int d^4x\alpha(x)\pazocal{A}(x)}\pazocal{D}\Psi\pazocal{D}\overline{\Psi}
 \]
-Therefore, we write:
+where $\pazocal{A}(x)$ is the \textbf{anomaly function}. The measure $\pazocal{D}\Psi\pazocal{D}\overline{\Psi}$ appears in the path integral weighted with a factor $\exp{i\int d^4x\pazocal{L}}$ so the factor which appears in the transformation rule for the integral measure has the same effect as if the Lagrangian was not invariant under such transformation:
 \[
-i\int d^4xd\Psi d\overline{\Psi}e^{iS}[\partial_\mu\alpha^aJ^{\mu,a}+\alpha^a\pazocal{A}^a]=0
+\pazocal{L}\to\pazocal{L}+\alpha(x)\pazocal{A}(x)
 \]
-from which it follows:
+After calculations that we do not perform, one obtains for the anomaly function:
 \[
-\int d\Psi d\overline{\Psi}e^{iS}\partial_\mu J^{\mu,a}=\pazocal{A}^a\int d\Psi d\overline{\Psi}e^{iS}
+\pazocal{A}(x)=-\frac{1}{16\pi^2}\epsilon_{\mu\nu\rho\sigma}F^{\mu\nu}_aF^{\rho\sigma}_bD^{abc} \qquad \text{with}\;D^{abc}=\frac{1}{2}\Tr{t^a\{t^b,t^c\}}
 \]
-To simplify the notation, it is possible to define:
+% \[
+% \pazocal{A}^a(x)=\frac{1}{16\pi^2}D^{abc}F_{\mu\nu}^b\Tilde{F}^{\mu\nu,c} \quad \left\{\begin{aligned}
+% &D^{abc}=\frac{1}{2}\Tr{T^a\{T^b,T^c\}}\\
+% &\Tilde{F}^{\mu\nu,c}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}^a
+% \end{aligned}\right.
+% \]
+The change in the path integral over the fermionic fields then become:
 \[
-\Braket{O}_{A_\mu}:=\frac{\int d\Psi d\overline{\Psi}O(x)e^{iS}}{\int d\Psi d\overline{\Psi}e^{iS}}
+i\int d^4x\pazocal{D}\Psi\pazocal{D}\overline{\Psi}e^{iS}[\partial_\mu J^{\mu}(x)\alpha(x)+\alpha(x)\pazocal{A}(x)]
+\]
+This is just a change of variables so the path integral cannot be affected, so it has to be:\marginnote{
+To get this result, keep in mind that it is possible to write: 
+\[
+J^\mu\partial_\mu\alpha(x)=\partial_\mu(J^\mu\alpha(x))-\alpha(x)\partial_\mu J^\mu
+\]
+The total derivative term vanishes when integrating in $d^4x$ and the common factor $\alpha(x)$ can be simplified between the $\partial_\mu J^\mu$ term and the $\pazocal{A}(x)$ term.
+}
+\[
+\int\pazocal{D}\Psi\pazocal{D}\overline{\Psi}e^{iS}\partial_\mu J^{\mu}=\pazocal{A}(x)\int\pazocal{D}\Psi\pazocal{D}\overline{\Psi}e^{iS}
+\]
+To simplify the notation, for a generic operator $O$ it is possible to define its quantum average in a fixed background field $A^\mu(x)$ as:
+\[
+\Braket{O}_{A_\mu}:=\frac{\int\pazocal{D}\Psi\pazocal{D}\overline{\Psi}O(x)e^{iS}}{\int \pazocal{D}\Psi\pazocal{D}\overline{\Psi}e^{iS}}
 \]
 and the previous identity becomes:
 \[
-\Braket{\partial_\mu J^{\mu,a}}_{A_\mu}=\pazocal{A}^a=\frac{1}{16\pi^2}D^{abc}F_{\mu\nu}^b\Tilde{F}^{\mu\nu,c}
+\Braket{\partial_\mu J^\mu}_{A_\mu}=\pazocal{A}(x)=-\frac{1}{16\pi^2}\epsilon_{\mu\nu\rho\sigma}F^{\mu\nu}_aF^{\rho\sigma}_bD^{abc}
 \]
-Anomalies come from the fact that we cannot exhibit a regulator which respects global symmetry and gauge invariance, global symmetry gets broken. \marginnote{e.g. dimensional regularization breaks axial symmetry.} $D^{abc}$ automatically vanishes when:
-\begin{enumerate}
-    \item fields are in vector-like representations of the entire symmetry group, $\Psi_L$ in a representation $r$ and $\Psi_R$ in the same $r$.
+The anomaly function vanishes when $D^{abc}=0$. This happens when:
+\begin{itemize}
+    \item fields are in vector-like representations of the entire symmetry group, i.e. $\Psi_L$ in a certain representation $r$ and $\Psi_R$ in the same $r$.
     \[
     \Psi_R\to U\Psi_R\Rightarrow\Psi_R^C=U^*\Psi_R^C \quad U=\exp{i\alpha^aT^a}
     \]
     The generators can be written as $T^a=\text{diag}(t_L^a, -t_R^{aT})$ but in a vector-like representation we know that $t_L=t_R$:
     \begin{align*}
-    D^{abc}&=\frac{1}{2}\Tr{t_L^a\{t_L^b,t_L^c\}}-\frac{1}{2}\Tr{(t_R^a)^T\{(t_R^b)^T,(t_R^c)^T\}}\\
+    D^{abc}&=\frac{1}{2}\Tr{T^a\{T^b,T^c\}}=\frac{1}{2}\Tr{t_L^a\{t_L^b,t_L^c\}}-\frac{1}{2}\Tr{(t_R^a)^T\{(t_R^b)^T,(t_R^c)^T\}}\\
     &=\frac{1}{2}\Tr{t_L^a\{t_L^b,t_L^c\}}-\frac{1}{2}\Tr{t_R^a\{t_R^b,t_R^c\}}=0
     \end{align*}
     This tells us that QCD is anomaly free, [SU$(3)_{\text{C}}]^3=0$ because it is vector-like.
     \item fields are in (pseudo-) real representations.\\
-    This means that given a matrix $U$ such that $U^*=SUS^{-1}$, if the representation $r$ transforms under $U$ then $r$ is pseudo-real. If $T^a$ are purely imaginary then $r$ is real, the fundamental of SU(2) is a real representation: $(T^a)^T=-ST^aS^{-1}$. It then follows that:
+    This means that given a matrix $U$ such that $U^*=SUS^{-1}$, the representation $r$ is pseudo-real if it transforms under $U$. Moreover, if $T^a$ are purely imaginary then the representation $r$ is real. We know that the fundamental of SU(2) is a real representation:
+    \[
+    (T^a)^T=-ST^aS^{-1}
+    \]
+    It then follows that:
     \begin{align*}
     D^{abc}&=\frac{1}{2}\Tr{T^a\{T^b,T^c\}}=\frac{1}{2}\Tr{(T^a)^T\{(T^b)^T,(T^c)^T\}}(-1)^3\\
     &=-D^{abc}\Rightarrow D^{abc}=0
     \end{align*}
-\end{enumerate}
-Groups with only real or pseudo-real representations are SO$(2n+1)$, SO$(2n)$ for $n\ge2$ and Sp$(2n)$ for $n\ge3$. Moreover, groups with complex representations but vanishing anomalies are SO$(4n+2)$ except for SO(2)=U(1) and SO(6)=SU(4).\\
-Given this discussion about anomalies, we ask ourselves: \textit{is baryon number a good symmetry?} We can compute it:
-\[
-\left\{
-\begin{aligned}
-&q_L=\Box_{1/3}\,\text{of SU$(3)_{\text{C}}\times$U$(1)_{\text{B}}$} &&q_L=\begin{pmatrix}u_L\\d_L\end{pmatrix}\to q_L=\overbrace{(\Box,1/3)}^{r}\\
-&q_R=\Box_{1/3}\,\text{of SU$(3)_{\text{C}}\times$U$(1)_{\text{B}}$} &&q_R=u_r,d_R\to q_R^c=\overbrace{(\overline{\Box},1/3)}^{\overline{r}}
-\end{aligned}
-\right.
-\]
-There is no anomaly of baryon number under SU$(3)_{\text{C}}$. How about under SU$(2)_{\text{EW}}$?
+\end{itemize}
+Groups with only real or pseudo-real representations are SO$(2n+1)$, SO$(4n)$ for $n\ge2$ and Sp$(2n)$ for $n\ge3$. Moreover, groups with complex representations but vanishing anomalies are SO$(4n+2)$ except for SO(2)=U(1) and SO(6)=SU(4). Anomalies are then possible only for algebras that include SU$(n)$ (for $n\ge3$) or U$(1)$ factors. As we know, this is the case of the Standard Model, so we must rely on cancellation among quarks and leptons to make the group anomaly free.\\
+Given this discussion about anomalies, we ask ourselves: \textit{is baryon number a good symmetry? Does it have any anomaly?}\\
+% \[
+% \left\{
+% \begin{aligned}
+% &q_L=\Box_{1/3}\,\text{of SU$(3)_{\text{C}}\times$U$(1)_{\text{B}}$} &&q_L=\begin{pmatrix}u_L\\d_L\end{pmatrix}\to q_L=\overbrace{(\Box,1/3)}^{r}\\
+% &q_R=\Box_{1/3}\,\text{of SU$(3)_{\text{C}}\times$U$(1)_{\text{B}}$} &&q_R=(u_R,d_R)\to q_R^c=\overbrace{(\overline{\Box},1/3)}^{\overline{r}}
+% \end{aligned}
+% \right.
+% \]
+There is no anomaly of baryon number under SU$(3)_{\text{C}}$ because they transform under a real representation. Under SU$(2)_{\text{EW}}$ we have:
 \[
 D^{Bbc}=\frac{1}{2}\Tr{B}_{\text{weak doublets}}\Tr{\{T^b,T^c\}}=\frac{1}{2}\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  charge};}}{\frac{1}{3}}\cdot\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  colour};}}{3}N_f\delta^{bc}=N_f\frac{\delta^{bc}}{2}\marginnote{In the weak doublets, only $q_L$ contributes and it is factored out because it acts on a different space.}
 \]
 With the same strategy, we can compute the anomaly content under U$(1)_{\text{Y}}$:
 \begin{align*}
-D^{Byy}&=\frac{1}{2}\Tr{B}_{\text{quarks}}\Tr{\{Y,Y\}}\xleftarrow[]{}=2Y^2\\
-&=N_f\left[\frac{1}{3}\cdot3\cdot2\left(\frac{1}{6}\right)^2+\left(-\frac{1}{3}\right)^2\cdot3\left(-\frac{2}{3}\right)^2+\left(-\frac{1}{3}\right)\cdot3\left(\frac{1}{3}\right)^2\right]\\
-&=N_f\left[\frac{1}{2}\cdot\frac{1}{9}-\frac{4}{9}-\frac{1}{9}\right]=\frac{N_f}{9}\left(\frac{1}{2}-5\right)=-\frac{N_f}{2}
+D^{Byy}&=\frac{1}{2}\Tr{B}_{\text{quarks}}\Tr{\{Y,Y\}}\xleftarrow[]{}\;=2Y^2\\
+&=3N_f\left[\frac{1}{3}\cdot2\cdot\left(-\frac{1}{6}\right)^2+\left(-\frac{1}{3}\right)\cdot\left(-\frac{2}{3}\right)^2+\left(-\frac{1}{3}\right)\cdot\left(\frac{1}{3}\right)^2\right]\\
+&=N_f\left[\frac{1}{18}-\frac{4}{9}-\frac{1}{9}\right]=-\frac{N_f}{2}
 \end{align*}
 This results in:
 \[

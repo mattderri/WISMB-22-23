@@ -25,33 +25,37 @@ For parity, charge conjugation and CP application, we have to keep in mind the f
     \caption*{}
     \labtab{CP}
 \end{table}\\
-For every term there is a phase factor $e^{i(\phi_\chi-\phi_\Psi)}$ associated, for example we have the term $\overline{\Psi}\chi(x)\xrightarrow[]{\hat{CP}}e^{i(\phi_\chi-\phi_\Psi)}\overline{\chi}\Psi(\pazocal{P}x)$. Now we apply $\hat{CP}$ to all the stuff we already know.
+For every term there is a phase factor $e^{i(\phi_\chi-\phi_\Psi)}$ associated, for example we have the term $\overline{\Psi}\chi(x)\xrightarrow[]{\hat{CP}}e^{i(\phi_\chi-\phi_\Psi)}\overline{\chi}\Psi(\pazocal{P}x)$. Now we apply $\hat{CP}$ to all the relevant stuff we already know.
 \[
 \left\{
 \begin{aligned}
-&\hat{CP}W_\mu^+(x)\hat{CP}^\dagger=-e^{+i\xi_W}\pazocal{P}_\mu^\nu W_\mu^-(\pazocal{P}x) \quad 
-&&\hat{CP}G_\mu^a(x)\hat{CP}^\dagger=-\eta_a\pazocal{P}_\mu^\nu G_\nu^a(\pazocal{P}x)\\   
-&\hat{CP}W_\mu^-(x)\hat{CP}^\dagger=-e^{-i\xi_W}\pazocal{P}_\mu^\nu W_\mu^+(\pazocal{P}x) \quad &&\hat{CP}h(x)\hat{CP}^\dagger=\eta_h h(\pazocal{P}x)\\
-&\hat{CP}Z_\mu(x)\hat{CP}^\dagger=-\eta_Z\pazocal{P}_\mu^\nu Z_\nu(\pazocal{P}x) \quad &&\hat{CP}u_i\hat{CP}^\dagger=e^{i\phi_{u_i}}\gamma^0C\overline{u}_i^T\\
-&\hat{CP}A_\mu(x)\hat{CP}^\dagger=-\pazocal{P}_\mu^\nu A_\nu(\pazocal{P}x) \quad &&\hat{CP}d_i\hat{CP}^\dagger=e^{i\phi_{d_i}}\gamma^0C\overline{d}_i^T
+&W_\mu^+(x)\to-e^{+i\xi_W}\pazocal{P}_\mu^\nu W_\mu^-(\pazocal{P}x)
+&&G_\mu^a(x)\to-\eta_a\pazocal{P}_\mu^\nu G_\nu^a(\pazocal{P}x)\\   
+&W_\mu^-(x)\to-e^{-i\xi_W}\pazocal{P}_\mu^\nu W_\mu^+(\pazocal{P}x) &&h(x)\to\eta_h h(\pazocal{P}x)\\
+&Z_\mu(x)\to-\eta_Z\pazocal{P}_\mu^\nu Z_\nu(\pazocal{P}x) &&u_i\to e^{i\phi_{u_i}}\gamma^0C\overline{u}_i^T\\
+&A_\mu(x)\to-\pazocal{P}_\mu^\nu A_\nu(\pazocal{P}x) &&d_i\to e^{i\phi_{d_i}}\gamma^0C\overline{d}_i^T
 \end{aligned}
 \right.
 \]
-Is the SM \textbf{invariant} under $\hat{CP}$ or not?  Is it possible to find $\xi_W, \eta_Z, \eta_h, \phi_{u_i},$ and $\phi_{d_i}$ such that $\hat{CP}\pazocal{L}(x)\hat{CP}^\dagger=\pazocal{L}(\pazocal{P}x)?$\\
-The Standard Model Lagrangian can be decomposed as: 
+At this point we ask ourselves whether the SM is \textbf{invariant} under $\hat{CP}$ or not. In other words, we would like to know if it is possible to find the parameters $\xi_W, \eta_Z, \eta_h, \phi_{u_i},$ and $\phi_{d_i}$ such that $\hat{CP}\pazocal{L}(x)\hat{CP}^\dagger=\pazocal{L}(\pazocal{P}x)$.\\
+The Standard Model Lagrangian can be decomposed into: 
 \[
 \pazocal{L}_{\text{SM}}=\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}+\pazocal{L}_{\text{Yuk}}
 \]
 The typical term containing the $Z$ boson is in the form:
 \[
-\sum_{f=u,d;A=L,R}\overline{f}_A\gamma^\mu f_AZ_\mu g_A^f\xleftarrow[]{}\text{real and constant coefficients}
+\sum_{f=u,d;A=L,R}\overline{f}_A\gamma^\mu f_AZ_\mu g_A^f
 \]
-We apply $\hat{CP}$ to it: fermions appear as bilinears, the phase is cancelled because there is $\overline{f}_Af_A$ so we just focus on the sign. Under $\hat{CP}$ we get:
+where $g_A^f$ are real and constant coefficients. We now apply $\hat{CP}$ to it: the fermions appear as bilinears and the phase is cancelled because there is $\overline{f}_Af_A$, so we just focus on the sign. Under $\hat{CP}$ we get:
 \[
 \overline{f}_A\gamma^\mu f_A\xrightarrow[]{}(-\overline{f}_A\gamma^\mu f_A)e^{i\phi_{f_A}}e^{-i\phi_{f_A}}
 \]
-For the $Z$ we have $-(Z^\mu)\eta_Z$, therefore it has to be $\eta_Z=+1$.\\
-For the Higgs we have two pieces: $\pazocal{L}_{\text{Higgs}}=-m_h^2h^2+\lambda vh^3+\lambda h^4$ and the term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
+For the $Z$ we have $-\eta_ZZ^\mu$, therefore in order to have the $Z$ boson term invariant under $\hat{CP}$ it has to be $\eta_Z=+1$.\\
+We move to the Higgs: 
+\[
+\pazocal{L}_{\text{Higgs}}=-m_h^2h^2+\lambda vh^3+\lambda h^4
+\]
+The term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
 The Yukawa sector does not give us a relevant contribution:
 \[
 \hat{CP}\pazocal{L}_{\text{Yuk}}\hat{CP}^\dagger=\hat{CP}Y_fh\overline{f}f\hat{CP}^\dagger=\hat{CP}Y_fh\hat{CP}^\dagger\hat{CP}\overline{f}f\hat{CP}^\dagger
@@ -70,8 +74,7 @@ In order to get CP invariance, it has to be
 V_{ji}^*=V_{ij}\exp{i(\xi_W+\phi_{d_j}-\phi_{u_i})}
 \]
 Is it possible to fix these phases such that this combination becomes real?\\
-The matrix $V\in$U$(3)$ has 9 parameters: 3 angles+6 phases.\\
-However, in our case we have only 7 parameters: 
+The matrix $V\in\text{U}(3)$ has 9 parameters: 3 angles+6 phases. However, in our case we have only 7 parameters: 
 \[
 \overset{(1)}{\xi_W} \quad \overset{(3)}{\phi_{u_i}} \quad \overset{(3)}{\phi_{d_j}}
 \]
@@ -84,17 +87,21 @@ This symmetry is broken by adding $\pazocal{L}_{\text{Yuk}}$, but before adding 
 \[
 \left\{
 \begin{aligned}
-&\hat{CP}Q_L^i\hat{CP}^\dagger=(K_L)^i_je^{i\phi_{Q_L^i}}\gamma^0C(\overline{Q}_L^i)^T\\
-&\hat{CP}u_R^i\hat{CP}^\dagger=(K_u)^i_je^{i\phi_{u_R^i}}\gamma^0C(\overline{u}_R^i)^T\\
-&\hat{CP}d_R^i\hat{CP}^\dagger=(K_d)^i_je^{i\phi_{d_R^i}}\gamma^0C(\overline{d}_R^i)^T
+&\hat{CP}Q_L^i\hat{CP}^\dagger=(K_L)^i_je^{i\phi_{Q_L^i}}\gamma^0C(\overline{Q}_L^j)^T\\
+&\hat{CP}u_R^i\hat{CP}^\dagger=(K_u)^i_je^{i\phi_{u_R^i}}\gamma^0C(\overline{u}_R^j)^T\\
+&\hat{CP}d_R^i\hat{CP}^\dagger=(K_d)^i_je^{i\phi_{d_R^i}}\gamma^0C(\overline{d}_R^j)^T
 \end{aligned}
 \right.
 \quad 
 K_L,K_u,K_d\in\text{U}(3)
 \]
-We can now consider $-\Tilde{H}\overline{Q}_L^i(Y_u)_{ij}u_R^j-\Tilde{H}\overline{Q}_L^i(Y_d)_{ij}d_R^j$ and focus on flavour indices. Applying CP to that term gives us:\marginnote{The phases defined in the previous transformation get reabsorbed in the $K$ matrices.}
+Consider now the Yukawa term relative to the up and down quarks:
 \[
--\Tilde{H}\overline{Q}_L^iK_L^\dagger(Y_u)_{ij}K_uu_R^j-\Tilde{H}\overline{Q}_L^iK_L^\dagger(Y_d)_{ij}K_dd_R^j
+-H^c\overline{Q}_L^i(Y_u)_{ij}u_R^j-H\overline{Q}_L^i(Y_d)_{ij}d_R^j+\text{h.c.}
+\]
+Applying CP to that term gives us:\marginnote{The phases defined in the previous transformation get reabsorbed in the $K$ matrices.}
+\[
+-H^cQ_L^iK_L^\dagger(Y_u)_{ij}K_u\overline{u}_R^j-HQ_L^iK_L^\dagger(Y_d)_{ij}K_d\overline{d}_R^j+\text{h.c.}
 \]
 This can be seen as:
 \begin{equation}
@@ -143,25 +150,25 @@ This tells us that if we have a $r$ odd such that $\Tr{[H_u,H_d]^r}\neq0$, CP is
 \[
 \Tr{[H_u,H_d]^3}=6i(y_t^2-y_c^2)(y_t^2-y_u^2)(y_c^2-y_u^2)(y_b^2-y_s^2)(y_b^2-y_d^2)(y_s^2-y_d^2)J
 \]
-$J$ is the Jarlskog invariant
-\marginnote{When pronouncing \textit{Jarlskog}, you might accidentally summon a demon in the extra-dimension (bad thing).}. The global symmetry given by\\
-G=U$(3)_{Q_L}\times$U$(3)_{u_R}\times$U$(3)_{d_R}$, which comes from $\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}$, gets broken into H=U$(1)_B$ when we add $\pazocal{L}_{\text{Yuk}}$. The Yukawa sector takes the form:
+$J$ is the Jarlskog invariant and it is used to quantify the amount of CP violation\marginnote{When pronouncing \textit{Jarlskog}, you might accidentally summon a demon in the extra-dimension (bad thing).}. The global U$(3)^3$ symmetry given by:
 \[
-\pazocal{L}_{\text{Yuk}}\sim\overline{Q}_L^i(Y_u)^{ij}H^cu_R^i+\overline{Q}_L^i(Y_d)^{ij}Hd_r^j
+\text{G=U$(3)_{Q_L}\times$U$(3)_{u_R}\times$U$(3)_{d_R}$}
 \]
-Between $Y_u$ and $Y_d$ there are 36 real parameters, the generational symmetry of the kinetic term is U$(3)^3$, which gives 27 generators. When we consider the Yukawa terms, the only generator which survives is the one related to the baryon number U$(1)_{\text{B}}$. Hence, we have 36-26=10 physical parameters.\\ 
+which comes from $\pazocal{L}_{\text{kin}}+\pazocal{L}_{\text{Higgs}}$, gets broken into H=U$(1)_{\text{B}}$ when we add $\pazocal{L}_{\text{Yuk}}$. We have seen that the Yukawa sector takes the form:
+\[
+\pazocal{L}_{\text{Yuk}}\sim\overline{Q}_L^i(Y_u)_{ij}H^cu_R^i+\overline{Q}_L^i(Y_d)_{ij}Hd_r^j+\text{h.c.}
+\]
+Between $Y_u$ and $Y_d$ there are 36 real parameters, the generational symmetry of the kinetic term is U$(3)^3$, which gives 27 generators. When we consider the Yukawa terms, the only generator which survives is the one related to the baryon number U$(1)_{\text{B}}$. Hence, we have 36-26=10 physical parameters.
+\[
+\text{\# physical parameters}=\#\text{naive}-\#\text{broken}=36-26=10
+\]
 Moreover, we can separate the real physical parameters from the physical phases. A generic Yukawa matrix has 9 real parameters and 9 phases: how many real parameters and phases are in a unitary matrix?\\
-A unitary matrix U(N) has $N^2$ parameters, an orthogonal matrix O(N) has $N(N-1)/2$ parameters. An orthogonal matrix is just a unitary matrix without the phases, therefore we subtract these two quantities to obtain that a unitary matrix U(N) has $N(N+1)/2$ phases and $N(N-1)/2$ real parameters. Our U$(3)^3$ symmetry of the kinetic term gives 18 phases and 9 real parameters. The Yukawa term breaks it to U$(1)_{\text{B}}$ so that there are 9 broken real generators and 17 broken phases.
+A unitary matrix U(N) has $N^2$ parameters, an orthogonal matrix O(N) has $N(N-1)/2$ parameters. An orthogonal matrix is just a unitary matrix without the phases, therefore we subtract these two quantities to obtain the number of phases of a unitary matrix U(N):
 \[
-\left\{
-\begin{aligned}
-%&\text{\# physical real parameters}=2\times9\text{ real parameters}-9\text{ broken real generators}=9\\
-&\text{\# physical phases}=2\times9\text{ phases}-17\text{ broken phases}=1\\
-&\text{\# physical parameters}=\#\text{naive}-\#\text{broken}=36-26=10=6+3+1
-\end{aligned}
-\right.
+N^2-\frac{N(N-1)}{2}=\frac{N(N+1)}{2}\,\;\text{\# phases}
 \]
-This corresponds to 6 masses of quarks+3 mixing angles+1 CP-violating phase.
+For our case, the U$(3)^3$ symmetry of the kinetic term gives 18 phases and 9 real parameters. The Yukawa term breaks it to U$(1)_{\text{B}}$ which has 0 real parameters and 1 phase. This results in 9 broken real generators and 17 broken phases.\\
+The 10 physical parameters correspond to the 6 masses of quarks + the 3 mixing angles + 1 CP-violating phase.
 \section{CKM Matrix}\marginnote{From \cite{GT}, Section 3.}
 The experimental goal of flavour physics is to measure these parameters in as many ways as possible to check for consistency and hope for a signal of a new physics.\\
 The CKM matrix (named after Cabibbo, Kobayashi and Maskawa) comes from a basis rotation and from the fact that it is not possible to simultaneously diagonalize all of the flavour matrices in the SM. \marginnote[-1cm]{\includegraphics[]{Images/diagonalize.jpg}}The CKM matrix is what is left over when moving from one basis to another and it is the source of \textbf{flavour mixing}. The
@@ -316,7 +323,7 @@ Flavour changing effects occur due to off-diagonal couplings, hence one might be
 Photons and gluons cannot give FCNC at tree-level because of \textbf{gauge invariance}. Gauge symmetry forces the kinetic terms, where the gauge couplings live, to be universal. All the down-type quarks will have the same gauge interactions and as long as QCD and QED are unbroken photons and gluons are safe from tree-level FCNCs.\\
 The Higgs $h$ is "accidentally" alone: how can it be flavour conserving? It couples to fermions via the Yukawa term, take for example the up-type: 
 \[
-(Y^u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}
+(Y^u)_{ij}H^c\overline{Q}_L^iu^j+\text{h.c.}
 \]
 Expand $H$ around its vev, which in the unitary gauge means to consider:
 \[
@@ -621,12 +628,11 @@ Diagram (a) refers to $g_Z^{d_L}\cos^2\theta+g_Z^{s_L}\sin^2\theta$, (b) to $g_Z
 % \end{table}\\
 In the SM, there is no flavour violation because $g_Z^{d_L}=g_Z^{s_L}$. The left sector is a quark doublet (3,2,1/6) while in this toy model we have $s_L$ and $d_L$ coming from different irreps of the unbroken group.
 \end{kaobox}
-\newpage
 \subsection{FCNC at Loop-Level}\marginnote{From \cite{GT}, Section 5.}
 So far, we studied everything at tree-level. In the mass basis, the $W$ changes flavour while the other bosons do not, pretty simple. As it is often the case, the story is more subtle at loop-level. Loop-level contributions are usually small compared to the tree-level diagrams for the same process. A loop correction to a tree-level process is hard to observe, while a small effect which is the only source of signal has at least a chance of being measured well. A
 natural set of processes to look at are those that generate FCNCs, since we already know that these vanish at tree-level in the Standard Model.\\
 The Glashow-Iliopoulos-Maiani (GIM) mechanism is the mechanism through which FCNCs are suppressed in loop diagrams. The underlying principle is that for a unitary matrix, any pair of columns (or rows) are orthogonal. The first non-trivial point is that
-loop-level FCNCs are most sensitive to the heavy quarks running in the loops, so that we can be sensitive to the top. As an example, we study the process $s\to de^+e^-$, which is represented at one-loop by the following diagrams.\\
+loop-level FCNCs are most sensitive to the heavy quarks running in the loops, so that we can be sensitive to the top. As an example, we study the process $s\to de^+e^-$, which is represented at one-loop by the following diagram.\\
 \begin{figure}[h]
     \centering
     \includegraphics{Images/gim.pdf}
@@ -639,7 +645,7 @@ The amplitude is proportional to the CKM matrix, in particular:
 \pazocal{M}\propto\sum_{i=u,c,t}V_{is}^*f(m_i)V_{id}=\sum_{i=u,c,t}(V^\dagger)_{si}\Tilde{f}(x_i)V_{id}
 \]
 where $x_i=m_i^2/m_W^2$ and $\Tilde{f}(x_i)$ is the Inami-Lim function.\\
-When the GIM mechanism was proposed, there were only three quarks (up, down and strange). However, it required the existence of a \textbf{fourth quark}, the charm: the introduction of the fourth quark restored unitarity of the flavour mixing matrix, allowing to drop constant terms in $\Tilde{f}$. How? If $\Tilde{f}=$constant, then we have $\sum_{i=u,c,t}=(V^\dagger)_{si}V_{id}=\delta_{sd}=0$. This gives us a non-trivial information about the quarks running in the loop. Suppose to have only two families, the CKM matrix becomes:
+When the GIM mechanism was proposed, there were only three quarks (up, down and strange). However, it required the existence of a \textbf{fourth quark}, the charm: the introduction of the fourth quark restored unitarity of the flavour mixing matrix, allowing to drop constant terms in $\Tilde{f}$. How? If $\Tilde{f}=$ constant, then we have $\sum_{i=u,c,t}=(V^\dagger)_{si}V_{id}=\delta_{sd}=0$. This gives us a non-trivial information about the quarks running in the loop. Suppose to have only two families, the CKM matrix becomes:
 \[
 V=\left(\begin{array}{cc}
     \cos\theta_c & \sin\theta_c \\
@@ -655,18 +661,15 @@ In the loop we have $(m_{u/c}/m_W)^2\ll1$, so it is possible to expand $\Tilde{f
 \end{aligned}
 \right.
 \]
-Recall that if someone with no knowledge of the Standard Model
-stared at the PDG for a long enough time, that person might realize that it was very curious that
-neutral current processes like $K_L^0\to\mu^+\mu^-$ were heavily suppressed relative to the charged current
-processes. In the 60s people could not reach the precision to see this decay while its charged current
-cousin was readily measurable. The GIM mechanism gives a way to understand this: the neutral current process is
-suppressed by a loop factor \textit{and} by a GIM factor:
+If $m_u=m_c$, the contribution of the diagram with the up quark running in the loop would be perfectly canceled by the one with the charm quark running in the loop. The amplitude can be expressed as a function of $m_u/m_c$ and it is something which goes like:
+\[
+\pazocal{M}\sim\frac{m_c^2}{m_W^2}\left(1-\frac{m_u^2}{m_c^2}\right)
+\]
+The term between parentheses is much closer to zero than it is to one but it is multiplied by a very small factor. In fact, the GIM mechanism tells us that the neutral current process is suppressed by a loop factor \textit{and} by a GIM factor:
 \[
 \pazocal{M}\sim\frac{g^2}{16\pi^2}\frac{m_c^2}{m_W^2}
 \]
-Gaillard and T.D. Lee calculated $K\overline{K}$ mixing, keeping and dropping factors of two somewhat
-haphazardly. Their calculations gave a prediction the mass of the charm quark of $m_c=1.5$\,GeV which is remarkably close. It turns out that Gaillard and Lee
-had luck on their side, since if one follows their calculation somewhat more honestly, one obtains a value between 0.5 and 10. The charm was finally observed in 1974 at SLAC and Brookhaven. Which quarks dominate the mixing? By comparing the loops with an internal top and charm we get:
+The calculations from Gaillard and T.D. Lee gave a prediction for the mass of the charm quark of $m_c=1.5$\,GeV which is remarkably close. It turns out that they had luck on their side, since if one follows their calculation more honestly, one obtains a value between 0.5 and 10. The charm was finally observed in 1974 at SLAC and Brookhaven. Which quarks dominate the mixing? By comparing the loops with an internal top and charm we get:
 \[
 \pazocal{M}_t\propto\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $\pazocal{O}(1)$};}}{\frac{m_t^2}{m_W^2}}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize $\sim\lambda^5$};}}{V_{td}V_{ts}^*} \quad \pazocal{M}_c\propto\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  $\sim(10^{-2})^2$};}}{\frac{m_c^2}{m_W^2}}\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize $\sim\lambda$};}}{V_{cd}V_{cs}^*}
 \]
@@ -696,29 +699,35 @@ It is customary to define $Z_1$ as:
 \[
 Z_1=Z_gZ_2Z_3^{1/2}=1+Z_1-1=1+\delta_1
 \]
-How do we compute these counter terms which cancel the divergencies? From quark self-energy, we get $\delta_2$ by computing the following diagrams.\\
-\begin{figure}[h]
-    \centering
-    \includegraphics{Images/delta2.pdf}
-    \caption*{}
-    \labfig{delta2}
-\end{figure}\\
-\newline
-\newline
-$\delta_3$ is obtained from the gluon self-energy:\\
-\begin{figure}[h]
-    \centering
-    \includegraphics{Images/delta3.pdf}
-    \caption*{}
-    \labfig{delta3}
-\end{figure}\\
-For $\delta_1$ we have to consider $\overline{q}qg$ vertex corrections:\\
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Images/delta1.pdf}
-    \caption*{}
-    \labfig{delta1}
-\end{figure}\\
+How do we compute these counter terms which cancel the divergencies? $\delta_2$ is obtained from quark self-energy, while gluon self-energy gives $\delta_3$. The $q\overline{q}g$ vertex corrections gives us $\delta_1$.\marginnote{
+Quark self-energy:\\
+\includegraphics{Images/delta2.pdf}\\
+Gluon self-energy:\\      
+\includegraphics{Images/delta3.pdf}\\
+$q\overline{q}g$ vertex corrections:\\
+\includegraphics{Images/delta1.pdf}
+}
+% \begin{figure}[h]
+%     \centering    \includegraphics{Images/delta2.pdf}
+%     \caption*{}
+%     \labfig{delta2}
+% \end{figure}\\
+% \newline
+% \newline
+% $\delta_3$ is obtained from the gluon self-energy:\\
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{Images/delta3.pdf}
+%     \caption*{}
+%     \labfig{delta3}
+% \end{figure}\\
+% For $\delta_1$ we have to consider $\overline{q}qg$ vertex corrections:\\
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.45\textwidth]{Images/delta1.pdf}
+%     \caption*{}
+%     \labfig{delta1}
+% \end{figure}\\
 Summarizing, we get:
 \[
 \left\{
@@ -747,7 +756,7 @@ At the leading order in $g_R$, $Z_g=1$ therefore:
 \]
 Moving to the next order we have:
 \[
-\mu\frac{dZ_g}{d\mu}=\mu\left(1-\frac{b_0g_R^2}{8\pi\varepsilon}\right)=-\frac{b_0g_R}{4\pi\varepsilon}\mu\frac{dg_R}{d\mu}=\frac{b_0g_R^2}{4\pi}
+\mu\frac{dZ_g}{d\mu}=\mu\frac{d}{d\mu}\left(1-\frac{b_0g_R^2}{8\pi\varepsilon}\right)=-\frac{b_0g_R}{4\pi\varepsilon}\mu\frac{dg_R}{d\mu}=\frac{b_0g_R^2}{4\pi}
 \]
 where in the last step we used the relation obtained above. Putting everything together we get:
 \[
@@ -1811,18 +1820,19 @@ Summarizing, the values of $V_{ud}$ we obtain are then:\marginnote{From \cite{pd
 \]
 \end{kaobox}
 \subsection{Measuring $V_{us}$}
-As a test of \textbf{lepton flavour universality}, the idea is to study $V_{us}$ in a 3-body decay and see CKM unitarity anomalies. Kaons are the lightest mesons that contain a strange quark, the decays of kaons to states which do not contain an $s$ are an obvious place to measure $V_{us}$. The dominant semileptonic decay is $K\to\pi l\nu$:\\
+What we did for $V_{ud}$ can be repeated to measure other CKM elements, as $V_{us}$. Kaons are the lightest mesons that contain a strange quark, the decays of kaons to states which do not contain an $s$ are an obvious place to measure $V_{us}$. The dominant semileptonic decay is $K\to\pi l\nu$:\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/kaondecay.pdf}
     \caption*{}
     \labfig{kaondecay}
 \end{figure}\\
-We would like to apply the same tricks used for determining $V_{ud}$ and to do this we need an approximate symmetry that simplifies the analysis. The generalization of isospin to include the strange quark is SU$(3)_{\text{F}}$. The SU(3) symmetry breaking is of order $m_s/\Lambda_{\text{QCD}}\sim20\%$, therefore we expect the precision to be rather poor compared to the precision of our experiments. Moreover, in the measurement of $V_{ud}$, we assumed $f(q^2)\approx f(0)$ since $q^2\ll\Lambda_{\text{QCD}}$. In this case, the kaon and pion masses are much different so the momentum transfer will not be small and, again, this approximation should be very poor. The decays we are interested in are:
+We would like to apply the same tricks used for determining $V_{ud}$ and to do this we need an approximate symmetry that simplifies the analysis. The generalization of isospin to include the strange quark is SU$(3)_{\text{F}}$. The SU(3) symmetry breaking is of order $m_s/\Lambda_{\text{QCD}}\sim20\%$, therefore we expect the precision to be rather poor compared to the precision of our experiments. Moreover, in the measurement of $V_{ud}$, we assumed $f(q^2)\approx f(0)$ since $q^2\ll\Lambda_{\text{QCD}}$. In this case, the kaon and pion masses are much different so the momentum transfer will not be small and, again, this approximation should be very poor.\\
+The decays we are interested in are:
 \[
 K^+\to\pi^0e^+\nu_e \quad K^0\to\pi^-e^+\nu_e
 \]
-What is the difference between these two decays? They have different charges, the $K^0$ decay has a spectator $\overline{d}$ quark while the $K^+$ decay has a spectator $\overline{u}$ quark. The two decays are then related by \textbf{isospin}. To the extent that isospin is approximately true, it is sufficient to determine the form factor for only one of these process since the other will be related by symmetry. The matrix element is given by:
+The two decays have different charges, the $K^0$ decay has a spectator $\overline{d}$ quark while the $K^+$ decay has a spectator $\overline{u}$ quark. The two decays are then related by \textbf{isospin}. To the extent that isospin is approximately true, it is sufficient to determine the form factor for only one of these process since the other will be related by symmetry. The matrix element is given by:
 \[
 \bra{\pi(p_\pi)}\overline{s}\gamma^\mu(1-\gamma_5)u\ket{K(p_K)}=f_+(q^2)(p_\pi+p_K)^\mu+f_-(q^2)q^\mu
 \]
@@ -1834,14 +1844,24 @@ It follows that:
 \[
 \frac{f_+^{K^+}(0)}{f_+^{K^0}(0)}=\frac{1}{\sqrt{2}}
 \]
-What about $f_-(q^2)$? The contribution of this form factor to the kaon decay is proportional to the lepton mass so for the decays with electrons there is a suppression of a factor $\frac{m_e}{m_K}$. The amplitude associated with this term goes like:
+What about $f_-(q^2)$? Previously, we could use isospin symmetry to explain why this term vanishes in nuclear $\beta$ decay. In the present case, replacing isospin with SU$(3)_{\text{F}}$ does not allow us to neglect $f_-(q^2)$. There is another important argument to neglect it: the contribution of this form factor to the kaon decay is proportional to the lepton mass so for the decays with electrons there is a suppression of a factor $m_e/m_K$. The amplitude associated with this term goes like:
 \[
-\pazocal{M}(f_-)\sim f_-(q^2)(p_e+p_\nu)_\mu\overline{u}_e\gamma^\mu u_\nu\marginnote{$p_\pi-p_K=p_e-p_\nu$}
+\pazocal{M}(f_-)\sim f_-(q^2)(p_e+p_\nu)_\mu\overline{u}_e\gamma^\mu u_\nu\marginnote{We make use of the fact that:
+\[
+p_K-p_\pi=p_e+p_\nu
+\]}
 \]
 Contracting now the Lorentz indices gives us:
 \[
-\pazocal{M}(f_-)\sim f_-(q^2)\overline{u}_e(\slashed{p}_e+\slashed{p}_\nu)u_\nu=f_-(q^2)m_e\overline{u}_eu_\nu\marginnote{$\slashed{p}_eu(p_e)=m_eu(p_e) \quad \slashed{p}_\nu u(p_\nu)=0$}
+\pazocal{M}(f_-)\sim f_-(q^2)\overline{u}_e(\slashed{p}_e+\slashed{p}_\nu)u_\nu=f_-(q^2)m_e\overline{u}_eu_\nu\marginnote{Remember that for leptons we have:
+\[
+\slashed{p}_eu(p_e)=m_eu(p_e) \quad \slashed{p}_\nu u(p_\nu)=0
+\]}
 \]
+\begin{kaobox}[frametitle=Remark]
+In pion $\beta$ decay we used isospin symmetry to conclude that $f_-(q^2)=0$. For kaon decay, we observed that SU$(3)_{\text{F}}$ is not as precise as isospin so we found another reason why the contribution mediated by this term is suppressed. A totally legit question would be: \textit{why haven't we applied this reasoning to the pion decay?} For kaon decay, one easily notices that $m_e\ll(m_K-m_\pi)$ which is not true in the case of pion decay, where $m_e$ is not much smaller than $(m_{\pi^+}-m_{\pi^0})$.\\
+Another totally legit question is: \textit{would this still work if we considered decays into muons, $K\to\pi\mu\nu$?} Obviously, the answer is no being $m_\mu$ not small compared with $(m_K-m_\pi)$. For semileptonic decays, $f_-(q^2)$ cannot be neglected and instead we are sensitive to it.
+\end{kaobox}
 To get to this point, we assumed that $q^2\ll\Lambda_{\text{QCD}}$ and that SU(3) breaking is small. These two assumptions manifest into:
 \[
 f(q^2)=f(0) \quad f(0)=1
@@ -1859,7 +1879,7 @@ This argument does not work for $f_-(q^2)$ but, as mentioned before, there is al
 \[
 V_{us}=0.2257(21)
 \]
-Moving on from the mesons, another way to measure $V_{us}$ is to look at the decays of \textbf{hyperons}, baryons containing strange quarks and no heavier quarks. As we looked at neutron $\beta$-decay to measure $V_{ud}$, it is possible to measure $\Lambda\to pe\overline{\nu}_e$ in an analogous way to obtain $V_{us}$. Another possibility is to look at the decays of the $\tau$. The $\tau$ is so heavy that its quark decays hadronize, in this sense it is \textit{almost} a hadron. The strategy is to look at the ratio of two decay rates:
+Moving on from the mesons, another way to measure $V_{us}$ is to look at the decays of \textbf{hyperons}, baryons containing strange quarks and no heavier quarks. As we looked at neutron $\beta$ decay to measure $V_{ud}$, it is possible to measure $\Lambda\to pe\overline{\nu}_e$ in an analogous way to obtain $V_{us}$. Another possibility is to look at the decays of the $\tau$. The $\tau$ is so heavy that its quark decays hadronize, in this sense it is \textit{almost} a hadron. The strategy is to look at the ratio of two decay rates:
 \[
 \tau^-\to K^-\nu_\tau \quad \tau^-\to\pi^-\nu_\tau
 \]
