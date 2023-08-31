@@ -199,7 +199,7 @@ which is an accidental symmetry of the SM. In particular, B$-$L is anomalous and
 \section{SU(5) Grand Unification Theory}\marginnote[-1cm]{From \cite{CL}, Chapter 14.}
 Elementary particle interactions are correctly described by the gauge group SU$(3)\times$SU$(2)\times$U$(1)$ down to distances as small as $10^{-16}$\,cm: QCD is the strong interaction theory and the Glashow-Weinberg-Salam model provides the theory of weak and electromagnetic interaction. It is desirable to have a more unified theory which can combine all three of these interactions as components of a single force, a theory with only one gauge coupling.\\
 Georgi and Glashow showed that for the Standard Model the simplest unification gauge group of colour and flavour is SU(5) but because of the large differences in coupling strengths of strong and electroweak interactions, this unification would not become apparent until the energy scale of $10^{14}$ \,GeV, i.e. a distance of $10^{-28}$\,cm.\\
-A general representation under an SU(5) transformation may be expressed as:
+A general representation under an SU(5) transformation may be expressed in tensor notation as:\marginnote{For more details about the tensor notation, see \cite{CL}, Section 4.3.}
 \[
 \Psi^{ij\cdots}_{kl\cdots}\to U^i_mU^j_nU^s_kU^t_l\cdots\Psi^{mn\cdots}_{st\cdots}
 \]
@@ -213,11 +213,11 @@ i=(\alpha,r) \quad \alpha=1,2,3 \quad r=4,5
 \]
 One family of fermions can be accommodated in an SU(5) reducible representation of $\overline{5}+10$:
 \[
-\overline{5}:\left(\begin{array}{c}
-d_1^c\\d_2^c\\d_3^c\\l=\begin{pmatrix}\nu\\e
-\end{pmatrix}
-\end{array}\right) \quad
-10: \left(\begin{array}{ccc:cc}
+\begin{aligned}
+\overline{5}:&\left(\begin{array}{ccccc}
+d_1^c&d_2^c&d_3^c&e^-&\nu_e
+\end{array}\right)_L\\
+10: &\left(\begin{array}{ccc:cc}
 0 & u_3^c & -u_2^c & u_1 & d_1\\
 -u_3^c & 0 & u_1^c & u_2 & d_2\\
 u_2^c & -u_1^c & 0 & u_3 & d_3\\
@@ -225,6 +225,7 @@ u_2^c & -u_1^c & 0 & u_3 & d_3\\
 -u_1 & -u_2 & -u_3 & 0 & e^+\\
 -d_1 & -d_2 & -d_3 & -e^+ & 0
 \end{array}\right)
+\end{aligned}
 \]
 One consequence of the SU(5) scheme is an explanation for the experimentally observed charge quantization. This is because the eigenvalues of the generators of a simple non-abelian group are discrete while those corresponding to the abelian U(1) group are continuous.\marginnote{e.g. in the SO(3) group of rotations, the eigenvalues of the third component of the angular momentum can take only integer or half-integer values while in the U(1) symmetry of translation invariance in time there is no restriction on the eigenvalues of the corresponding generators.} Therefore in the SU(5) theory, since the electric charge $Q$ is one of the generators, its eigenvalues are discrete and hence quantized. The electric charge is an additive quantum number, so $Q$ must be some linear combination of the diagonal generators in SU(5). We then have:
 \[
@@ -234,15 +235,15 @@ where $T_3$ and $T_0$ are the diagonal generators belonging to the SU(2) and U(1
 \[
 T_3=\frac{\lambda_3}{2}=\mqty(\dmat{0,0,0,\frac{1}{2},-\frac{1}{2}}) \quad T_0=\frac{\lambda_0}{2}=\frac{1}{\sqrt{15}}\mqty(\dmat{1,1,1,-\frac{3}{2},-\frac{3}{2}})
 \]
-The coefficient $c$ can be obtained by comparing the values of $T_0$ provided above and the hypercharge of the particles in the $\overline{5}$, giving us:
+The coefficient $c$ can be obtained by comparing the values of $T_0$ provided above and the hypercharge of the particles in the $\overline{5}$, i.e. $Y(5)=(-2/3,-2/3,-2/3,+1,+1)$, giving us:
 \[
 c=-\sqrt{\frac{5}{3}}
 \]
-To check this result, we note that for the fundamental representation, combining all our knowledge discussed here we get:
+To check this result, we note that for the fundamental representation, combining all our knowledge discussed here, we get:
 \[
 Q=\mqty(\dmat{-\frac{1}{3},-\frac{1}{3},-\frac{1}{3},1,0}):=Q_i\delta_{ij}
 \]
-and it follows that the fundamental conjugate representation $\overline{5}$ has $Q=-Q_i\delta-{ij}$. The most interesting aspect of charge quantization is the relation between colour SU(3) and charge. The traceless condition for the charge operator requires, for three colours:
+and it follows that the fundamental conjugate representation $\overline{5}$ has $Q=-Q_i\delta_{ij}$. The most interesting aspect of charge quantization is the relation between colour SU(3) and charge. The traceless condition for the charge operator requires, for three colours:
 \[
 3Q_d+Q_{e^+}=0
 \]
@@ -268,42 +269,49 @@ One prominent feature of the Grand Unification Theory is the non conservation of
     \labfig{bnumber}
 \end{figure}\\
 In the case on the left, they couple to quarks and leptons so they are referred as \textbf{leptoquarks} while in the case on the right they transform quarks to antiquarks and they are called \textbf{diquarks}.\\
-Consequently, through the mediation of a $X$ boson a $B=-1/3$ channel can be converted into a $B=2/3$ one, i.e. a baryon number changing process $(\Delta B=1)$ occurs at tree-level.\\
+Consequently, through the mediation of a $X$ boson a $B=-1/3$ channel can be converted into a $B=2/3$ one, i.e. a baryon number changing process $(\Delta B=1)$ occurs at tree-level.
+\newpage
 \begin{figure}[h]
     \centering
     \includegraphics{Images/xyy.pdf}
     \caption*{}
     \labfig{xyy}
 \end{figure}\\
-$B-L$ is conserved, so a process like $p\to\pi^0e^+$ is allowed but not $n\to\pi^+e^-$. $B+L$ is instead violated, what are the operators accounting for such violation? These are dimension 6 $(B+L)$-violating operators:
+$B-L$ is conserved, so a process like $p\to\pi^0e^+$ is allowed but not $n\to\pi^+e^-$. $B+L$ is instead violated, what are the operators accounting for such violation? These are the dimension 6 $(B+L)$-violating operators:
 \[
-\frac{g^2_{\text{GUT}}}{M^2_{\text{GUT}}}u^{c\dagger}qe^{c\dagger}q \quad \frac{g^2_{\text{GUT}}}{M^2_{\text{GUT}}}u^{c\dagger}qd^{c\dagger}l 
+\frac{g^2_{\text{GUT}}}{M^2_{\text{GUT}}}u^{c\dagger}qe^{c\dagger}q \qquad \frac{g^2_{\text{GUT}}}{M^2_{\text{GUT}}}u^{c\dagger}qd^{c\dagger}l 
 \]
-At Super-Kamiokande they measured $\tau(p\to\pi^0e^+)\ge1.4\cdot10^{34}$\,years resulting in $M_{\text{GUT}}\gtrsim10^{16}$\,GeV\marginnote[-2cm]{I am 0\% sure of what is written here because my notes on this part are terrible and there was someone using a drill in this exact moment so even the recording of the lecture is useless.}
-\section{Custodial Symmetry}
-\textbf{Custodial symmetry} is defined as a symmetry which remains after spontaneous symmetry breaking and that can prevent higher-order radiative corrections from spoiling some property of the theory.\\
-In the SM, this is a residue global SU(2) symmetry of the Higgs potential:
+At Super-Kamiokande they measured $\tau(p\to\pi^0e^+)\ge1.4\cdot10^{34}$\,years resulting in $M_{\text{GUT}}\gtrsim10^{16}$\,GeV\marginnote[-2cm]{I am 0\% sure of what is written here because my notes on this part are terrible and there was someone using a drill in this exact moment so also the recording of the lecture is useless.}
+\section{Custodial Symmetry}\marginnote{From \cite{custodial}.}
+\textbf{Custodial symmetry} is defined as a symmetry which remains after spontaneous symmetry breaking and that prevents higher-order radiative corrections from spoiling some property of the theory.\\
+In the SM, before the breaking of SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$, the Higgs potential has a global SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ symmetry which reduces to SU$(2)_{\text{V}}$ when the symmetry is broken. This residual symmetry is called custodial symmetry and it protects the mass relation between the $W$ and the $Z$ bosons:
+\[
+\rho:=\frac{m_W}{m_Z\cos\theta_w}
+\]
+The Higgs potential $V(H)$ has the form:
 \[
 V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2 \quad H=\begin{pmatrix}\phi_1+i\phi_2\\\phi_3+i\phi_4\end{pmatrix}
 \]
-The potential is invariant under SO(4), with a transformation of the form:
+This is invariant under an SO(4) transformations, such as:
 \[
 \phi_i\to\phi_i'=R_{ij}\phi_j \quad RR^T=\mathbb{1}
 \]
 When $H$ acquires a vev, SO(4) is spontaneously broken to SO(3):
 \[
-\Braket{H}=\begin{pmatrix}0\\\frac{v}{\sqrt{2}}\end{pmatrix}\xleftrightarrow[]{}\Braket{\Phi}=\begin{pmatrix}0\\0\\\frac{v}{\sqrt{2}}\\0\end{pmatrix} \;\text{where}\;\Phi=\begin{pmatrix}\phi_1\\\phi_2\\\phi_3\\\phi_4\end{pmatrix}
+\Braket{H}=\begin{pmatrix}0\\\frac{v}{\sqrt{2}}\end{pmatrix}\xleftrightarrow[]{}\Braket{\Phi}=\begin{pmatrix}\phi_1\\\phi_2\\\phi_3\\\phi_4\end{pmatrix}=\begin{pmatrix}0\\0\\\frac{v}{\sqrt{2}}\\0\end{pmatrix}
 \]
-There exists an unbroken SO(3) that acts on entries 1,2 and 4 of $\Phi$. Remember that for SO$(n)$ there are $n(n-1)/2$ generators:
-\[
-\begin{cases}
-n=4 \;\text{has 6 generators}\\
-n=3 \;\text{has 3 generators}
-\end{cases}
-\Rightarrow 3\,\text{NGB}
-\]
+There exists an unbroken SO(3) transformation that acts on entries 1, 2 and 4 of $\Phi$.\\
+SO$(4)$ is isomorphic to SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ and SO$(3)$ instead is isomorphic to its diagonal part, SU$(2)_{\text{V}}$. It is then possible to conclude that the symmetry breaking pattern SO(4)$\to$SO(3) is equivalent to SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ broken to SU$(2)_{\text{V}}$, but this is something we are already familiar with: it is the chiral symmetry breaking in QCD with 2 flavours.
+% Remember that for SO$(n)$ there are $n(n-1)/2$ generators:
+% \[
+% \begin{cases}
+% n=4 \;\text{has 6 generators}\\
+% n=3 \;\text{has 3 generators}
+% \end{cases}
+% \Rightarrow 3\,\text{NGB}
+% \]
+\begin{kaobox}[frametitle=Remarks on SO(4) Algebra]
 Looking at the algebras, we know that $\mathfrak{so}(3)\sim\mathfrak{su}(2)$ while the relation for SO(4) is given by $\mathfrak{so}(4)\sim\mathfrak{su}(2)\times\mathfrak{su}(2)$.
-\begin{kaobox}[frametitle=More on SO(4) algebra]
 It is also possible to write an exact relation of the previous one:
 \[
 \text{SO}(4)=\frac{\text{SU}(2)_{\text{L}}\times\text{SU}(2)_{\text{R}}}{\mathbb{Z}_2}
@@ -332,23 +340,24 @@ which transforms as:
 v'^a=\Tr{T^{a\dagger}V'}=\underbrace{\Tr{T^{a\dagger}LT^bR^\dagger}}_{:=R^{ab}}v^b
 \]
 \end{kaobox}
-The point is that for each element of SO(4) we have two elements of SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$. SO(4) broken to SO(3) is the same as SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ broken to SU$(2)_{\text{V}}$ but this is something familiar: it is the chiral symmetry breaking in QCD with 2 flavours.\\
-In the SM the masses of the $W$ and the $Z$ bosons are known and given by:%\marginnote{From \cite{schwartz}, Section 31.2.}
+% The main point is that for each element of SO(4) we have two elements of SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$. SO(4) broken to SO(3) is the same as SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ broken to SU$(2)_{\text{V}}$ but this is something familiar: it is the chiral symmetry breaking in QCD with 2 flavours.\\
+% In the SM the masses of the $W$ and the $Z$ bosons are known and given by:%\marginnote{From \cite{schwartz}, Section 31.2.}
+% \[
+% m_W^2=\frac{v^2}{4}g^2 \quad m_Z^2=\frac{v^2}{4}(g^2+g'^2)
+% \]
+% It turns out that $m_Z=m_W$ if $g'=0$ but it is not the case. However, their ratio is determined by the relative strengths of the weak and electromagnetic gauge couplings:
+% \[
+% \frac{m_W^2}{m_Z^2}=\frac{g^2}{g^2+g'^2}=\cos^2\theta_w
+% \]
+% This is a consequence of the way the SU$(2)\times$U(1) symmetry is spontaneously broken through the Higgs mechanism with a single SU(2) doublet. If the Higgs sector was more complicated, there might be deviations from this even at tree-level. It is therefore useful to define the $\rho$-parameter:
+% \[
+% \rho:=\frac{m_W}{m_Z\cos\theta_w}
+% \]
+% Denoting the tree-level value of $\rho$ as $\rho_0$ we see that $\rho_0=1$ in the Standard Model. What exactly guarantees that $\rho_0=1$? This is guaranteed by the symmetry we just discussed: the Higgs potential is invariant under SO(4), which has 6 generators, and when $H$ gets a vev the SO(4) symmetry is broken to SO(3). There is a residual global SU(2) symmetry after electroweak symmetry breaking which is known as \textbf{custodial isospin}, or \textbf{custodial SU(2)}.\\
+Denoting the tree-level value of $\rho$ as $\rho_0$ we see that $\rho_0=1$ in the Standard Model and the custodial symmetry we just discussed actually protects this value.\\
+In order to see corrections to the $\rho$-parameter, we can exploit the similarity with the Sigma model and rewrite the Higgs sector in terms of a new field $\pazocal{H}$:\marginnote{For more details about the Sigma model, take a look at the examples in \cite{EW}, Section 2.3.}
 \[
-m_W^2=\frac{v^2}{4}g^2 \quad m_Z^2=\frac{v^2}{4}(g^2+g'^2)
-\]
-It turns out that $m_Z=m_W$ if $g'=0$ but it is not the case. However, their ratio is determined by the relative strengths of the weak and electromagnetic gauge couplings:
-\[
-\frac{m_W^2}{m_Z^2}=\frac{g^2}{g^2+g'^2}=\cos^2\theta_w
-\]
-This is a consequence of the way the SU$(2)\times$U(1) symmetry is spontaneously broken through the Higgs mechanism with a single SU(2) doublet. If the Higgs sector was more complicated, there might be deviations from this even at tree-level. It is therefore useful to define the $\rho$-parameter:
-\[
-\rho:=\frac{m_W}{m_Z\cos\theta_w}
-\]
-Denoting the tree-level value of $\rho$ as $\rho_0$ we see that $\rho_0=1$ in the Standard Model. What exactly guarantees that $\rho_0=1$? This is guaranteed by the symmetry we just discussed: the Higgs potential is invariant under SO(4), which has 6 generators, and when $H$ gets a vev the SO(4) symmetry is broken to SO(3). There is a residual global SU(2) symmetry after electroweak symmetry breaking which is known as \textbf{custodial isospin}, or \textbf{custodial SU(2)}.\\
-In order to see corrections to the $\rho$-parameter, we can exploit the similarity with the Sigma model and rewrite the Higgs sector in terms of a new field $\pazocal{H}$:
-\[
-\pazocal{H}:=\frac{v+h(x)}{\sqrt{2}}\Sigma(x) \quad \Sigma(x)=\exp{i\frac{\chi^a\sigma^a}{v}}
+\pazocal{H}:=\frac{v+h(x)}{\sqrt{2}}\Sigma(x) \qquad \text{with}\;\;\Sigma(x)=\exp{i\frac{\chi^a\sigma^a}{v}}
 \]
 This is nothing but the product of the doublet $H$ and $H^c$ both seen as columns, i.e. $\pazocal{H}=[(H)(H^c)]$. In fact, it is possible to see that:
 \[
@@ -363,7 +372,7 @@ V(H)=-\frac{\mu^2}{2}\Tr{\pazocal{H^\dagger\pazocal{H}}}+\frac{\lambda}{4}\left(
 \]
 For the kinetic term instead we write:
 \begin{align*}
-\partial_\mu H^\dagger\partial^\mu H&=\frac{1}{2}\Tr{(\partial_\mu\pazocal{H}^\dagger)(\partial^\mu\pazocal{H}^\dagger)}\\
+\partial_\mu H^\dagger\partial^\mu H&=\frac{1}{2}\Tr{(\partial_\mu\pazocal{H}^\dagger)(\partial^\mu\pazocal{H})}\\
 &=\frac{1}{2}(\partial_\mu h)^2+\frac{(v+h)^2}{4}\Tr{(\partial_\mu\Sigma^\dagger)(\partial^\mu\Sigma)}
 \end{align*}
 It turns out that it is possible to covariantize it and what we obtain is:
@@ -374,21 +383,37 @@ where the covariant derivative is defined as:
 \[
 D_\mu\Sigma=\partial_\mu\Sigma-igW_\mu^a\frac{\sigma^a}{2}\Sigma+ig'\Sigma YB_\mu
 \]
-What is left to write is the Yukawa term, e.g. for quarks:\marginnote{For leptons is the same thing.}
+When this covariant derivative acts on the Higgs field vev, we get the gauge boson masses which in the basis $(W_\mu^1,W_\mu^2,W_\mu^3,B_\mu)$ can be written in matrix form as:
 \[
-\pazocal{L}_{\text{Yuk}}\supset-\overline{q}_L^iY_u^{ij}H^cu_R^j-\overline{q}_L^iY_d^{ij}Hd_r^j+\text{h.c.}=-\overline{q}_L^i\pazocal{H}\left(\begin{array}{cc}
+M^2=\frac{v^2}{4}\left(\begin{array}{cccc}
+g^2 & 0 & 0 & 0 \\
+0 & g^2 & 0 & 0 \\
+0 & 0 & g^2 & -gg' \\
+0 & 0 & -gg' & g^2
+\end{array}\right)
+\]
+$W_\mu^\pm=(W_\mu^1\mp W_\mu^2)/\sqrt{2}$ have the same mass given by $m_W=gv/2$ and do not mix with anything else.\\
+On the other hand, $W_\mu^3$ and $B_\mu$ mix by a factor $\theta_w=\tan^{-1}(g'/g)$ to produce the massive $Z$ boson, with mass equal to $m_Z=v\sqrt{g^2+g'^2}/2$, and the massless photon. Custodial symmetry manifests here in the limit $g'\to0$ as an invariance under an SO$(3)$ rotation among $(W_\mu^1,W_\mu^2,W_\mu^3)$.\\
+The last thing left to consider is the Yukawa term, take for example the one relative to the quarks:\marginnote{For the leptons is the same thing.}
+\[
+\pazocal{L}_{\text{Yuk}}\supset-\overline{q}_L^i(Y_u)_{ij}H^cu_R^j-\overline{q}_L^i(Y_d)_{ij}Hd_r^j+\text{h.c.}=-\overline{q}_L^i\pazocal{H}\left(\begin{array}{cc}
     Y_u^{ij} & u_R^j \\
     Y_d^{ij} & d_R^j
 \end{array}\right)+\text{h.c.}
 \]
-The fact that $m_u-m_d\neq0$ is another explicit breaking of SU$(2)_{\text{R}}$, hence of the custodial of SO(3). In particular, the most important effects come from top and bottom so we can consider the corrections at one-loop to the $W$ and $Z$ bosons coming from the virtual exchange of the top and bottom.
-\begin{figure}[h]
-    \centering
-    \includegraphics{Images/wztb.pdf}
-    \caption*{}
-    \labfig{wztb}
-\end{figure}\\
-If the masses of the top and the bottom were the same, these contributions would be the same but since the masses are different we have different corrections, $\delta m_Z\neq\delta m_W$. This implies $\Delta\rho\neq0$, in particular $\rho=1+\Delta\rho$. We can actually forget about the bottom, it is the top contribution which is relevant. $\Delta\rho\approx1/200$ which is in very good agreement with data, in fact experimentally we have $|\rho-1-\Delta\rho^{\text{SM}}|\lesssim10^{-3}$. This means that if we want to extend the SM we better not screw up with custodial symmetry because if we construct a new physics theory which violates at order one the custodial symmetry then that is ruled out. The custodial symmetry violation should be small, this is the message from data.
+This is invariant under SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ if the quarks transform as:
+\[
+q_L\to q_L'=U_Lq_L \qquad q_R\to q_R'=U_Rq_R
+\]
+After spontaneous symmetry breaking, the quarks acquire mass and the global symmetry is broken to SU$(2)_{\text{V}}$. It is the same pattern that lead us to custodial symmetry.\\
+The fact that $m_u\neq m_d$ is another explicit breaking of SU$(2)_{\text{R}}$, hence of the custodial of SO(3). In particular, the most important effects come from heavier quarks, i.e. the top and the bottom, so we can consider the corrections at one-loop to the $W$ and $Z$ bosons induced by the virtual exchange of the top and bottom quarks(look at the diagrams on the side)\marginnote{
+\includegraphics[width=0.55\textwidth]{Images/wztb.pdf}
+}.\\
+Being the masses of the two quarks different, we have different corrections, $\delta m_Z\neq\delta m_W$. This brings a correction $\Delta\rho$ to the $\rho$-parameter, $\rho=1+\Delta\rho$. The contribution of the bottom can be neglected, the most relevant one comes from the top quark and it is telling us that $\Delta\rho\approx1/200$ ,which is in very good agreement with data. In fact experimentally we have:
+\[
+\rho=1.00039\pm0.00019
+\]
+This means that if we want to extend the SM we better not screw up with custodial symmetry because if we construct a new physics theory which violates at order one the custodial symmetry then that is ruled out. The custodial symmetry violation should be small, this is the main message from the data.
 \section{Non-Linear EW Lagrangian}
 Since the custodial symmetry is an accidental symmetry, there should be some higher dimensional operators which accounts for its breaking. Which operator is breaking the symmetry? If we focus on the Higgs sector there is only one operator of dimension 6, given by $(H^\dagger\overset{\leftrightarrow}{D_\mu}H)^2$. In the unitary gauge, this would give a contribution to the mass of the $Z$ boson because the covariant derivative is sandwiched between two $H$ and we would get only the neutral component not the charged one. This means that custodial symmetry is violated.\\
 There is another way to see that this operator breaks custodial symmetry. The theory can be reformulated in the following way:
