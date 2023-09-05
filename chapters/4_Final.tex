@@ -246,7 +246,7 @@ i\frac{\partial}{\partial t}\ket{\Psi(t)}=H_{\text{eff}}\ket{\Psi(t)}
 \end{equation}
 where the effective Hamiltonian $H_{\text{eff}}$ is a $2\times2$ matrix accounting for the decays which can be decomposed as:
 \[
-H_{\text{eff}}=M-i\frac{\Gamma}{2} \quad M=\left(\begin{array}{cc}
+H_{\text{eff}}=M-i\frac{\Gamma}{2} \qquad M=\left(\begin{array}{cc}
     M_{11} & M_{12} \\
     M^*_{12} & M_{22}
 \end{array}\right) \quad \Gamma=\left(\begin{array}{cc}
@@ -296,11 +296,11 @@ M_{11}=M_{22}=m_K \quad \Gamma_{11}=\Gamma_{22}=\gamma
 We now have to diagonalize $H_{\text{eff}}$:
 \[
 H_{\text{eff}}=\left(\begin{array}{cc}
-    M_{11}-i\frac{\Gamma_{11}}{2} & M_{12}-i\frac{\Gamma_{12}}{2} \\
-    M_{12}^*-i\frac{\Gamma_{12}^*}{2} & M_{22}-i\frac{\Gamma_{22}}{2}
+    M_{11}-i\Gamma_{11}/2 & M_{12}-i\Gamma_{12}/2 \\
+    M_{12}^*-i\Gamma_{12}^*/2 & M_{22}-i\Gamma_{22}/2
 \end{array}\right)=\left(\begin{array}{cc}
-    m_K-i\frac{\gamma}{2} & M_{12}-i\frac{\Gamma_{12}}{2} \\
-    M_{12}^*-i\frac{\Gamma_{12}^*}{2} & m_K-i\frac{\gamma}{2}
+    m_K-i\gamma/2 & M_{12}-i\Gamma_{12}/2 \\
+    M_{12}^*-i\Gamma_{12}^*/2 & m_K-i\gamma/211
 \end{array}\right)
 \]
 The eigenvalues of this matrix are $m_K-i\gamma/2\pm R$ where $R$ is defined as:
