@@ -53,7 +53,7 @@ where $g_A^f$ are real and constant coefficients. We now apply $\hat{CP}$ to it:
 For the $Z$ we have $-\eta_ZZ^\mu$, therefore in order to have the $Z$ boson term invariant under $\hat{CP}$ it has to be $\eta_Z=+1$.\\
 We move to the Higgs: 
 \[
-\pazocal{L}_{\text{Higgs}}=-m_h^2h^2+\lambda vh^3+\lambda h^4
+\pazocal{L}_{\text{Higgs}}=\sim m_h^2h^2+\lambda vh^3+\lambda h^4
 \]
 The term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
 The Yukawa sector does not give us a relevant contribution:
@@ -61,7 +61,7 @@ The Yukawa sector does not give us a relevant contribution:
 \hat{CP}\pazocal{L}_{\text{Yuk}}\hat{CP}^\dagger=\hat{CP}Y_fh\overline{f}f\hat{CP}^\dagger=\hat{CP}Y_fh\hat{CP}^\dagger\hat{CP}\overline{f}f\hat{CP}^\dagger
 \]
 We apply $\hat{CP}$ to the $h$ and get $\eta_h=+1$ as seen before, while $\overline{f}f$ gives a +1 sign so everything is fine.\\
-We are now left with $\xi_W, \phi_{u_i}$ and $\phi_{d_i}$, i.e. the phases related to $W_\mu$, $u_i$ and $d_i$.
+We are now left with $\xi_W, \phi_{u_i}$ and $\phi_{d_i}$, i.e. the phases related to $W_\mu$, $u_i$ and $d_i$, so we look at the kinetic term $\overline{Q}_L^ii\slashed{D}Q_L^i$ \textit{after} the rotation to diagonalize the Yukawa terms and apply $\hat{CP}$ to it:
 \[
 \hat{CP}\left[\frac{g}{\sqrt{2}}W_\mu^+\overline{u}_L^i\gamma^\mu d^j_LV_{ij}+\frac{g}{\sqrt{2}}W_\mu^-\overline{d}_L^j\gamma^\mu u_L^iV_{ji}^*\right]\hat{CP}^\dagger
 \]
@@ -146,7 +146,7 @@ It then follows that:
 \[
 \Tr{K_L^\dagger[H_u,H_d]^rK_L}=\Tr{[H_u,H_d]^r}=(-1)^r\Tr{[H_u,H_d]^r}
 \]
-This tells us that if we have a $r$ odd such that $\Tr{[H_u,H_d]^r}\neq0$, CP is violated. For $N_F=3$, we have that CP violation$\Rightarrow\Tr{[H_u,H_d]^3}=0$, while in all the other cases we just have $\Tr{[H_u,H_d]^3}\neq0\Rightarrow$CP violation. We can explicitly compute it for $r=3, N_F=3$:
+This tells us that if we have a $r$ odd such that $\Tr{[H_u,H_d]^r}\neq0$, CP is violated. For $N_F=3$, we have that CP violation$\Rightarrow\Tr{[H_u,H_d]^3}\neq0$, while in all the other cases we just have $\Tr{[H_u,H_d]^3}\neq0\Rightarrow$CP violation. We can explicitly compute it for $r=3, N_F=3$:
 \[
 \Tr{[H_u,H_d]^3}=6i(y_t^2-y_c^2)(y_t^2-y_u^2)(y_c^2-y_u^2)(y_b^2-y_s^2)(y_b^2-y_d^2)(y_s^2-y_d^2)J
 \]
@@ -175,7 +175,7 @@ The CKM matrix (named after Cabibbo, Kobayashi and Maskawa) comes from a basis r
 particular matrices that cannot be simultaneously diagonalized are the $W$ boson couplings, the masses of the $d$-type quarks and the masses of the $u$-type quarks. At most it is possible to diagonalize two of these and we chose to diagonalize the masses and leave the $W$ coupling non-diagonal. It is
 important to emphasize that this is a totally arbitrary choice that we are free to make. The non-trivial quark interactions come form the Yukawa sector:
 \[
-\pazocal{L}_{\text{Yuk}}=\overline{Q}_L^i(Y_u)^{ij}H^cu_R^j+\overline{Q}_L^i(Y_d)^{ij}Hd_r^j+\overline{l}_L^i(Y_e)^{ij}He_R^j+\text{h.c}
+\pazocal{L}_{\text{Yuk}}=-\left[\overline{Q}_L^i(Y_u)_{ij}H^cu_R^j+\overline{Q}_L^i(Y_d)_{ij}Hd_r^j+\overline{l}_L^i(Y_e)_{ij}He_R^j+\text{h.c}\right]
 \]
 The Higgs vacuum expectation value (vev) $v$ turns these into mass matrices, giving mass terms of the form:
 \[
@@ -183,7 +183,7 @@ The Higgs vacuum expectation value (vev) $v$ turns these into mass matrices, giv
 \]
 where the mass terms are related to the Yukawa and to the Higgs vev by:
 \[
-m_{ij}^q=\frac{v}{\sqrt{2}}(Y_q)^{ij}
+m_{ij}^q=\frac{v}{\sqrt{2}}(Y_q)_{ij}
 \]
 These are in general \textbf{not diagonal} and contain unphysical parameters: to remove them we have to move to the mass basis. $m$ is an arbitrary complex matrix, to diagonalize it we perform a unitary transformation acting on the left and a unitary transformation acting on the right:
 \[
@@ -191,7 +191,7 @@ These are in general \textbf{not diagonal} and contain unphysical parameters: to
 \]
 The notation with a hat denotes that the matrix is diagonal. $L$ and $R$ have nothing to do with left- and right-handed fermions, but one can see that the $i$ index is associated with the left-quark and the $j$ index with the right-quark. Diagonalizing $m$ rotates the left- and right-handed fields:
 \[
-q_L^i=(V_L^q)_{ij}q_L^{'^j} \quad q_R^i=(V_R^q)_{ij}q_R^{'^j}
+q_L^i=(V_L^q)_{ij}q_L^{'^j} \qquad q_R^i=(V_R^q)_{ij}q_R^{'^j}
 \]
 After these transformations, the off-diagonal entries remain only in the $W$ boson couplings term:
 \[
@@ -323,7 +323,7 @@ Flavour changing effects occur due to off-diagonal couplings, hence one might be
 Photons and gluons cannot give FCNC at tree-level because of \textbf{gauge invariance}. Gauge symmetry forces the kinetic terms, where the gauge couplings live, to be universal. All the down-type quarks will have the same gauge interactions and as long as QCD and QED are unbroken photons and gluons are safe from tree-level FCNCs.\\
 The Higgs $h$ is "accidentally" alone: how can it be flavour conserving? It couples to fermions via the Yukawa term, take for example the up-type: 
 \[
-(Y^u)_{ij}H^c\overline{Q}_L^iu^j+\text{h.c.}
+\overline{Q}_L^i(Y^u)_{ij}H^cu_R^j+\text{h.c.}
 \]
 Expand $H$ around its vev, which in the unitary gauge means to consider:
 \[
@@ -331,8 +331,8 @@ H=\left(\begin{array}{c}
     \frac{v+h}{\sqrt{2}} \\
     0
 \end{array}\right)
-\quad
-\Tilde{H}=\left(\begin{array}{c}
+\qquad
+H^c=\left(\begin{array}{c}
     0\\
     \frac{v+h}{\sqrt{2}}
 \end{array}\right)
@@ -657,7 +657,7 @@ In the loop we have $(m_{u/c}/m_W)^2\ll1$, so it is possible to expand $\Tilde{f
 \left\{
 \begin{aligned}
 &\Tilde{f}(x)=\cancelto{\text{constant}}{\Tilde{f}(0)}+\Tilde{f}'(0)x+\pazocal{O}(x^2)\\
-&\pazocal{M}\propto V_{us}^*V_{ud}\frac{m_u^2}{m_W^2}+V_{cs}^*V_{cd}\frac{m_c^2}{m_W^2}=\cos\theta_c\sin\theta_c\left(\frac{m_c^2-m_u^2}{m_W^2}\right)
+&\pazocal{M}\propto V_{us}^*V_{ud}\frac{m_u^2}{m_W^2}+V_{cs}^*V_{cd}\frac{m_c^2}{m_W^2}=\sin\theta_c\cos\theta_c\left(\frac{m_c^2-m_u^2}{m_W^2}\right)
 \end{aligned}
 \right.
 \]
