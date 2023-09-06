@@ -814,7 +814,7 @@ $R$ has a clear dependence on $\alpha_s$ and on $\mu$ via the functions $f_n(t)$
 0=\mu\frac{d}{d\mu}R(\alpha_s(\mu),t=s/\mu^2)=&\beta(\alpha_s)f_1(t)+\alpha_s\mu\frac{df_1(t)}{d\mu}\\
 &+2\alpha_s\beta(\alpha_s)f_2(t)+\alpha_s^2\mu\frac{df_2(t)}{d\mu}+\cdots
 \end{align*}
-At order $\alpha_s$ we have $\mu\frac{df_1(t)}{d\mu}=0$ hence $f_1(t)=$ constant $=a_1$ and there is no dependence on $t$ (therefore on $\mu$). This is a non-trivial result, it is telling us that $R$ at 1-loop is finite and all infinities must cancel without charge renormalization. If they did not cancel, $f_1$ would depend explicitly on $\mu$: this is a consequence of the fact that colour interactions do not enter in the renormalization of the electric charge.\\
+At order $\alpha_s$ we have $\mu df_1(t)/d\mu=0$ hence $f_1(t)=$ constant $=a_1$ and there is no dependence on $t$ (therefore on $\mu$). This is a non-trivial result, it is telling us that $R$ at 1-loop is finite and all infinities must cancel without charge renormalization. If they did not cancel, $f_1$ would depend explicitly on $\mu$: this is a consequence of the fact that colour interactions do not enter in the renormalization of the electric charge.\\
 At order $\alpha_s^2$ we have:
 \[
 \beta(\alpha_s)a_1+\alpha_s^2\mu\frac{df_2(t)}{d\mu}=0\Rightarrow f_2(t)=a_2+b_0a_1\ln(\mu^2/s)
@@ -885,8 +885,8 @@ P_L=\frac{1-\gamma_5}{2}=P_L^\dagger \qquad P_R=\frac{1+\gamma_5}{2}=P_R^\dagger
 \labeq{gammarelations}
 \overline{q}\Gamma_iq=\left\{
 \begin{aligned}
-&\overline{q}_R\Gamma_1q_R+\overline{q}_L\Gamma_1q_L \quad \text{for}\,\Gamma_1\in\{\gamma^\mu,\gamma^\mu\gamma_5\}\\
-&\overline{q}_R\Gamma_2q_L+\overline{q}_L\Gamma_2q_R \quad \text{for}\,\Gamma_2\in\{\mathbb{1},\gamma_5,\sigma^{\mu\nu}\}
+&\overline{q}_L\Gamma_1q_L+\overline{q}_R\Gamma_1q_R \quad \text{for}\,\Gamma_1\in\{\gamma^\mu,\gamma^\mu\gamma_5\}\\
+&\overline{q}_L\Gamma_2q_R+\overline{q}_R\Gamma_2q_L \quad \text{for}\,\Gamma_2\in\{\mathbb{1},\gamma_5,\sigma^{\mu\nu}\}
 \end{aligned}
 \right.
 \end{equation}
@@ -1000,8 +1000,8 @@ U_{L}\simeq1-i\sum_{a=1}^8\theta_a^{L}\frac{\lambda^a}{2}-i\theta_{L} \qquad U_{
 \]
 The variation of the Lagrangian is then given by:
 \begin{align*}    
-\delta\pazocal{L}_{\text{QCD}}^0=&\overline{q}_R\left(\sum_{a=1}^8\partial_\mu\theta_a^R\frac{\lambda^a}{2}+\partial_\mu\theta^R\right)\gamma^\mu q_R\\
-&+\overline{q}_L\left(\sum_{a=1}^8\partial_\mu\theta_a^L\frac{\lambda^a}{2}+\partial_\mu\theta^L\right)\gamma^\mu q_L
+\delta\pazocal{L}_{\text{QCD}}^0=&\overline{q}_L\left(\sum_{a=1}^8\partial_\mu\theta_a^L\frac{\lambda^a}{2}+\partial_\mu\theta^L\right)\gamma^\mu q_L\\
+&+\overline{q}_R\left(\sum_{a=1}^8\partial_\mu\theta_a^R\frac{\lambda^a}{2}+\partial_\mu\theta^R\right)\gamma^\mu q_R
 \end{align*}
 By applying \refeq{currents}, we obtain the conserved currents associated with the transformations of the left- and right-handed quarks:
 \[
@@ -1065,8 +1065,8 @@ This results in the following divergencies:
 \[
 \left\{
 \begin{aligned}
-&\partial_\mu L^{\mu,a}=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\partial_\mu\theta_a^L}=-i\left(\overline{q}_L\frac{\lambda^a}{2}Mq_R-\overline{q}_RM\frac{\lambda^a}{2}q_L\right) &&\partial_\mu R^{\mu,a}=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\partial_\mu\theta_a^R}=-i\left(\overline{q}_R\frac{\lambda^a}{2}Mq_L-\overline{q}_LM\frac{\lambda^a}{2}q_R\right)\\
-&\partial_\mu L^\mu=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\partial_\mu\theta^L}=-i(\overline{q}_LMq_R+\overline{q}_RMq_L) &&\partial_\mu R^\mu=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\partial_\mu\theta^R}=-i(\overline{q}_RMq_L+\overline{q}_LMq_R)
+&\partial_\mu L^{\mu,a}=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\theta_a^L}=-i\left(\overline{q}_L\frac{\lambda^a}{2}Mq_R-\overline{q}_RM\frac{\lambda^a}{2}q_L\right) &&\partial_\mu R^{\mu,a}=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\theta_a^R}=-i\left(\overline{q}_R\frac{\lambda^a}{2}Mq_L-\overline{q}_LM\frac{\lambda^a}{2}q_R\right)\\
+&\partial_\mu L^\mu=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\theta^L}=-i(\overline{q}_LMq_R+\overline{q}_RMq_L) &&\partial_\mu R^\mu=\frac{\partial\delta\pazocal{L}_{\text{M}}}{\partial\theta^R}=-i(\overline{q}_RMq_L+\overline{q}_LMq_R)
 \end{aligned}
 \right.
 \]
@@ -1092,7 +1092,7 @@ So far we have focused on the chiral symmetry of the QCD Lagrangian and the expl
 \left\{
 \begin{aligned}
 &Q_V^a=Q_L^a+Q_R^a\\
-&Q_A^a=Q_L^a-Q_R^a
+&Q_A^a=Q_R^a-Q_L^a
 \end{aligned}
 \right.
 \qquad [Q_V^a,\hat{H}_{\text{QCD}}^0]=[Q_A^a,\hat{H}_{\text{QCD}}^0]=0
@@ -1126,7 +1126,7 @@ Q_A^a\ket{i,+}=Q_A^a\hat{a}_i^\dagger\ket{0}=(\underset{\mathclap{\tikz \node {$
 {[Q_A^a,\hat{a}_i^\dagger]}+\hat{a}_i^\dagger Q_A^a)\ket{0}
 \]
 Since the parity doubling is not observed, one assumes that $Q_A^a$ does not annihilate the ground state, $Q_A^a\ket{0}\neq0$. In other words, the ground state of QCD is not invariant under axial transformations. According to Goldstone theorem, for each axial generator which does
-not annihilate the ground state, corresponds a massless Goldstone boson field with spin 0. In the present case, The symmetry group G with 8+8+1=17 generators gets broken into H=SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$ which has 8+1=9 generators, resulting in 8 unbroken generators, i.e. 8 Goldstone bosons.\marginnote{One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.}
+not annihilate the ground state, corresponds a massless Goldstone boson field with spin 0. In the present case, the symmetry group G gets broken into H=SU$(3)_{\text{V}}\times$U$(1)_{\text{V}}$. This was shown by Vafa and Witten: in the chiral limit, the ground state is necessarily invariant under H, i.e. the eight vector charges $Q_V^a$ and the baryon number operator $Q_V/3$ annihilate the ground state. G has 8+8+1=17 generators, while H has 8+1=9 generators, resulting in 8 unbroken generators, i.e. 8 Goldstone bosons.\marginnote{One argument about this story is that in QCD, if we forget about the anomaly we should get also U$(1)_{\text{A}}$, expecting then 9 Goldstone bosons. The fact that we do not see 9 Goldstone bosons is an indication that the axial symmetry at the beginning was not really there.}
 If we look at the hadron spectrum in QCD, we see that there are particles with masses around the GeV and others below or around hundreds of MeV: these are $\pi, K$ and $\eta$ mesons. The fact that these are all lighter than the typical scale indicates that there is clearly a separation, they are special and get interpreted as pseudo-Goldstone bosons.\\
 Since the theory is spontaneously broken, we know from Goldstone theorem that there exists an operator $\hat{O}$ responsible for the axial symmetry breaking such that:\marginnote{For more details about the Goldstone theorem, look at \cite{EW}, Section 2.4.}
 \[
@@ -1498,10 +1498,11 @@ S=\mqty(\dmat{0,0,1})\to[S,\Phi]=\left(\begin{array}{ccc}
     +\Phi_{31} & +\Phi_{32} & 0
 \end{array}\right)
 \]
-It then follows that:
+Again, only the non-zero entries correspond with Goldstone bosons with a non-zero value of strangeness.
+Combining these two results it is possible to express $\Phi(x)$ as follows:
 \begin{equation}
 \labeq{Phi}
-\Phi(x):=\frac{\lambda^a}{\sqrt{2}}\phi^a=\left(\begin{array}{ccc}
+\Phi(x):=\sum_{a=1}^8\frac{\lambda^a}{\sqrt{2}}\phi^a=\left(\begin{array}{ccc}
     \frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & \pi^+ & K^+ \\
     \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
     K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}}
@@ -1576,7 +1577,7 @@ Combining these two results gives us the vector and axial currents:
 \end{aligned}
 \right.
 \]
-Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_\V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_V^{\mu,a}$.}\\
+Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_V^{\mu,a}$.}\\
 % \[
 % \pazocal{L}=\frac{1}{2}\Braket{\partial_\mu\Phi\partial^\mu\Phi}+\frac{1}{12f^2}\Braket{(\Phi\overset{\leftrightarrow}{\partial_\mu}\Phi)(\Phi\overset{\leftrightarrow}{\partial^\mu}\Phi)}+\pazocal{O}(\Phi^6/f^4)
 % \]
@@ -1685,7 +1686,8 @@ A phenomenological application of all this machinery is the charged pion decay $
     \centering\includegraphics[width=0.45\textwidth]{Images/piondecay.pdf}
     \caption*{}
     \labfig{piondecay}
-\end{figure}\\
+\end{figure}
+\newpage
 Consider now the first term of \refeq{l2}, set $r_\mu=0$ with arbitrary $l_\mu$ which gets parametrized as:
 \[
 l_\mu=\sum_{a=1}^8\frac{\lambda_a}{2}l_\mu^a
