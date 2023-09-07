@@ -53,7 +53,7 @@ where $g_A^f$ are real and constant coefficients. We now apply $\hat{CP}$ to it:
 For the $Z$ we have $-\eta_ZZ^\mu$, therefore in order to have the $Z$ boson term invariant under $\hat{CP}$ it has to be $\eta_Z=+1$.\\
 We move to the Higgs: 
 \[
-\pazocal{L}_{\text{Higgs}}=\sim m_h^2h^2+\lambda vh^3+\lambda h^4
+\pazocal{L}_{\text{Higgs}}\sim m_h^2h^2+\lambda vh^3+\lambda h^4
 \]
 The term $\sim h^3$ tells us that it has to be $\eta_h=+1$.\\
 The Yukawa sector does not give us a relevant contribution:
@@ -1478,7 +1478,7 @@ This gives a very convenient parametrization of the Goldstone fields:
 \[
 \Phi(x):=\sum_{a=1}^8\frac{\lambda^a}{\sqrt{2}}\phi^a=\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
     \phi_3+\phi_8/\sqrt{3} & \phi_1-i\phi_2 & \phi_4-i\phi_5 \\
-    \phi_1+i\phi_2 & -\phi_3-\phi_8/\sqrt{3} & \phi_6-i\phi_7 \\
+    \phi_1+i\phi_2 & -\phi_3+\phi_8/\sqrt{3} & \phi_6-i\phi_7 \\
     \phi_4+i\phi_5 & \phi_6+i\phi_7 & -2\phi_8/\sqrt{3} \\
 \end{array}\right)
 \]
@@ -1577,13 +1577,13 @@ Combining these two results gives us the vector and axial currents:
 \end{aligned}
 \right.
 \]
-Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_V^{\mu,a}$.}\\
+Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_A{\mu,a}$.}\\
 % \[
 % \pazocal{L}=\frac{1}{2}\Braket{\partial_\mu\Phi\partial^\mu\Phi}+\frac{1}{12f^2}\Braket{(\Phi\overset{\leftrightarrow}{\partial_\mu}\Phi)(\Phi\overset{\leftrightarrow}{\partial^\mu}\Phi)}+\pazocal{O}(\Phi^6/f^4)
 % \]
 So far, we assumed a perfect SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry but we have seen in \refsec{symmqcd} that the quark mass term results in explicit symmetry breaking.
 \[
-M=\mqty(\dmat{m_u,m_d,m_s}) \qquad \pazocal{L}_{\text{M}}=-\overline{q}_RMq_L-\overline{q}_LMq_R
+M=\mqty(\dmat{m_u,m_d,m_s}) \qquad \pazocal{L}_{\text{M}}=-\overline{q}_LM^\dagger q_R-\overline{q}_RMq_L
 \]
 $M$ is just a constant matrix and does not transform with the quark fields, but $\pazocal{L}_{\text{M}}$ would be invariant if $M$ transformed as:
 \begin{equation}
@@ -1603,7 +1603,7 @@ Using \refeq{Phi}, after some slightly annoying calculations the trace term read
 \[
 \begin{aligned}
 \Tr{M\Phi^2}=&\pi^+\pi^-(m_u+m_d)+K^+K^-(m_u+m_s)+K^0\overline{K}^0(m_d+m_s)\\
-&+\pi^0\pi^0(m_u+m_d)+\frac{1}{3}\eta_8^2(m_u+m_d+4m_s)+\frac{2}{\sqrt{3}}\pi^0\eta_8(m_u-m_d)
+&+\frac{1}{2}\pi^0\pi^0(m_u+m_d)+\frac{1}{6}\eta_8^2(m_u+m_d+4m_s)+\frac{1}{\sqrt{3}}\pi^0\eta_8(m_u-m_d)
 \end{aligned}
 \]
 To lowest order, the masses of the Goldstone bosons are given by:
@@ -1690,16 +1690,16 @@ A phenomenological application of all this machinery is the charged pion decay $
 \newpage
 Consider now the first term of \refeq{l2}, set $r_\mu=0$ with arbitrary $l_\mu$ which gets parametrized as:
 \[
-l_\mu=\sum_{a=1}^8\frac{\lambda_a}{2}l_\mu^a
+l_\mu=\sum_{a=1}^8\frac{\lambda^a}{2}l_{\mu,a}
 \]
 By explicitly computing the trace, the term linear in $l_\mu$ reads:
 \[
-\pazocal{L}_{\text{int}}=\sum_{a=1}^8l_\mu^ai\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}=\sum_{a=1}^8l_\mu^aJ_L^{\mu,a}
+\pazocal{L}_{\text{int}}=\sum_{a=1}^8l_{\mu,a}i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U^\dagger)U}=\sum_{a=1}^8l_{\mu,a}J_L^{\mu,a}
 \]
 where in the last step we used \refeq{jl} to define $J_L^{\mu,a}$. Expanding $U$ to first order $\Phi$ and using \refeq{Phi}, $J_L^{\mu,a}$ gets written as:
 \[
 \begin{aligned}
-J_L^{\mu,a}&=i\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}\simeq i\frac{f^2}{4}\Tr{\lambda_a\left(-i\frac{\sqrt{2}}{f}\partial^\mu\Phi\right)}=\frac{f}{2}\partial^\mu\phi^a
+J_L^{\mu,a}&=i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U^\dagger)U}\simeq i\frac{f^2}{4}\Tr{\lambda^a\left(-i\frac{\sqrt{2}}{f}\partial^\mu\Phi\right)}=\frac{f}{2}\partial^\mu\phi^a
 \end{aligned}
 \]
 Inserting now the expression of $l_\mu$ from \refeq{lmu}, we get that the interaction term of a single Goldstone boson with a $W$ is the following:
@@ -1708,7 +1708,7 @@ Inserting now the expression of $l_\mu$ from \refeq{lmu}, we get that the intera
 \]
 Computing the trace term gives us:
 \begin{align*}
-\Tr{T_+\partial^\mu\phi}&=\left(\begin{array}{ccc}
+\Tr{T_+\partial^\mu\phi}&=\Tr{\left(\begin{array}{ccc}
     0 & V_{ud} & V_{us} \\
     0 & 0 & 0 \\
     0 & 0 & 0
@@ -1716,7 +1716,7 @@ Computing the trace term gives us:
     \frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & \pi^+ & K^+ \\
     \pi^- & -\frac{\pi^0}{\sqrt{2}}+\frac{\eta_8}{\sqrt{6}} & K^0 \\
     K^- & \overline{K}^0 & -2\frac{\eta_8}{\sqrt{6}} \\
-\end{array}\right)\\
+\end{array}\right)}\\
 &=(V_{ud}\partial^\mu\pi^-+V_{us}\partial^\mu K^-)
 \end{align*}
 Putting everything together we end up with:
@@ -1725,7 +1725,7 @@ Putting everything together we end up with:
 \]
 Neglecting higher order terms, the Feynman rule for the invariant amplitude of the pion decay reads:
 \begin{align*}
-\pazocal{M}&=\left(-i\frac{g}{\sqrt{2}}\overline{u}_{\nu_\mu}\gamma^\beta\frac{1-\gamma_5}{2}v_{\mu^+}\right)i\frac{g_{\beta\alpha}}{m_W^2}\left(-i\frac{gf}{2}V_{ud}^*(-ip^\alpha)\right)\\
+\pazocal{M}&=\left(-i\frac{g}{\sqrt{2}}\overline{u}_{\nu_\mu}\gamma^\beta\frac{1-\gamma_5}{2}v_{\mu^+}\right)i\frac{\eta_{\beta\alpha}}{m_W^2}\left(-i\frac{gf}{2}V_{ud}^*(-ip^\alpha)\right)\\
 &=-G_{\text{F}}V_{ud}f\overline{u}_{\nu_\mu}\slashed{p}(1-\gamma_5)v_{\mu^+}
 \end{align*}
 where $p$ denotes the pion four-momentum.
@@ -1738,8 +1738,9 @@ The constant $f$ is referred to as the pion-decay constant in the chiral limit, 
 operator between a one-Goldstone-boson state and the vacuum. From the measurement of the decay rate, one gets for the pion-decay constant the value of $f=92.4$\,MeV.
 Once we know the decay, it is also possible to test the lepton flavour universality:
 \[
-R_{e\mu}:=\frac{\Gamma(\pi^+\to e^+\nu_e)}{\Gamma(\pi^+\to\mu^+\nu_\mu)}=\left(\frac{m_e}{m_\mu}\right)^2\left[\frac{1-m_e^2/m_\pi^2}{1-m_\mu^2/m_\pi^2}\right]=1.283\cdot10^{-4}
+R_{e\mu}:=\frac{\Gamma(\pi^+\to e^+\nu_e)}{\Gamma(\pi^+\to\mu^+\nu_\mu)}=\left(\frac{m_e}{m_\mu}\right)^2\left[\frac{1-m_e^2/m_\pi^2}{1-m_\mu^2/m_\pi^2}\right]^2=1.283\cdot10^{-4}
 \]
+The suppression of the electronic decay with respect to the muonic decay is due to helicity: in the $\pi^+$ reference frame, the momenta of $l^+$ and $\nu_l$ must be opposite. Since $\pi^+$ has spin 0, also the spins of $l^+$ and $\nu_l$ must be opposite, therefore the two particles must have the same helicity. The neutrino must have a negative helicity, so the lepton is also forced to have a negative helicity: the transition is then suppressed by a factor $(1-\beta_l)$. The $e^+$ is ultra-relativistic while the $\mu^+$ has a smaller $\beta$ due to its larger mass.
 \section{Semileptonic Decays of Light Hadrons}\marginnote{From \cite{GT}, Section 7.3 and Section 8.}
 \subsection{Measuring $V_{ud}$}
 Phenomenologically, the key process to measure the $d\to u$ transitions is the $\beta$-decay, which comes in three different forms:
@@ -1787,7 +1788,7 @@ q_\mu\pazocal{M}^\mu=0=f_+(q^2)(p^2-p'^2)+f_-(q^2)q^2=f_+(q^2)(m_N^2-m_{N'}^2)+f
 The exact isospin limit implies $m_N=m_{N'}$ so that the term associated with $f_+(q^2)$ vanishes and this means that $f_-(q^2)q^2=0$. Although we have used the $q^2\to0$ limit, we are not saying that $q^2=0$ hence it is possible to conclude that $f_-(q^2)=0$, leaving us with a single form factor $f_+(q^2)$.\\
 Another possible way to measure $V_{ud}$ is \textbf{neutron $\mathbf{\beta}$ decay}, $n\to pe^-\overline{\nu}_e$. This seems to be very similar to the previous case, but the external states are necessarily spin-1/2 states so we cannot get rid of the axial current contribution. One has to take into account all the matrix elements, resulting in:\marginnote{\textit{We parametrize our ignorance into form factors}}
 \begin{align*}
-\bra{p}\overline{u}\gamma^\mu(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\nu\right.\\
+\bra{p}\overline{u}\gamma^\mu(1-\gamma_5)d\ket{n}=&\overline{u}_p\left[f_1(q^2)\gamma^\mu+f_2(q^2)i\sigma^{\mu\nu}q_\nu+f_3(q^2)q^\mu\right.\\
 &\left.+g_1(q^2)\gamma^\mu\gamma_5+g_2(q^2)i\sigma^{\mu\nu}q_\nu\gamma_5+g_3(q^2)q^\mu\gamma_5\right]u_n
 \end{align*}
 $f_i$ comes from the vector current and $g_i$ from the axial one.\\
@@ -1836,7 +1837,7 @@ K^+\to\pi^0e^+\nu_e \quad K^0\to\pi^-e^+\nu_e
 \]
 The two decays have different charges, the $K^0$ decay has a spectator $\overline{d}$ quark while the $K^+$ decay has a spectator $\overline{u}$ quark. The two decays are then related by \textbf{isospin}. To the extent that isospin is approximately true, it is sufficient to determine the form factor for only one of these process since the other will be related by symmetry. The matrix element is given by:
 \[
-\bra{\pi(p_\pi)}\overline{s}\gamma^\mu(1-\gamma_5)u\ket{K(p_K)}=f_+(q^2)(p_\pi+p_K)^\mu+f_-(q^2)q^\mu
+\bra{\pi,p_\pi}\overline{s}\gamma^\mu(1-\gamma_5)u\ket{K,p_K}=f_+(q^2)(p_\pi+p_K)^\mu+f_-(q^2)q^\mu
 \]
 Isospin tells us that it is possible to relate the two form factors. $K^0$ is a $\ket{\frac{1}{2},-\frac{1}{2}}$ isospin state, related to $K^+$ by:
 \[
