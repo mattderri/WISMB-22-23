@@ -23,7 +23,7 @@ which is symmetric under $\text{U}(3)$. However, there are additional terms like
 If we move to the basis where the Yukawa matrices are diagonal we have:
 % Each quark has \textbf{baryon number} $B(q)=+1/3$ which results for protons and neutrons in $B(p)=B(n)=1$ being $p=uud$ and $n=udd$. Moving to the basis where the Yukawa term is diagonal we have:
 \[
-\frac{1}{\sqrt{2}}\overline{u}_L^iY_u^{ij}(v+h)u_R^j+\frac{1}{\sqrt{2}}\overline{d}_L^iY_d^{ij}(v+h)d_R^j+\text{h.c.}+\frac{g}{\sqrt{2}}\overline{u}_L^iV^{ij}\gamma^\mu W_\mu^+ d_L^j+\text{h.c.}\marginnote{We are not including leptons just for simplicity.}
+\frac{1}{\sqrt{2}}\overline{u}_L^i(Y_u)_{ij}(v+h)u_R^j+\frac{1}{\sqrt{2}}\overline{d}_L^i(Y_d)_{ij}(v+h)d_R^j+\text{h.c.}+\frac{g}{\sqrt{2}}\overline{u}_L^iV_{ij}\gamma^\mu W_\mu^+ d_L^j+\text{h.c.}\marginnote{We are not including leptons just for simplicity.}
 \]
 There are U(1) factors which are unbroken and in particular for the quarks there is a U(1) \textbf{baryon number} which is unbroken by the Yukawa terms. How can we see it? By diagonalizing the Yukawa matrices, we see that the Yukawa terms couple quarks with the same charge and if we do a transformation under which all the quarks go like:
 \[
@@ -71,7 +71,7 @@ The $\nu_R$ is a fermionic field with chiral invariance associated broken by the
 \subsection{Lepton Number}
 We said there is an accidental U$(1)_{\text{B}}$ symmetry under which leptons do not transform. Is there an accidental symmetry regarding the lepton sector? Without $\nu_R$, the Yukawa term regarding leptons has the following form:
 \[
-\overline{l}_L^iY_l^{ij}He_R^j
+\overline{l}_L^i(Y_l)_{ij}He_R^j
 \]
 We can transform the doublet and the singlet with two unitary transformations and diagonalize $Y$ without touching the kinetic terms. Without inserting the additional structure for the mass of the neutrinos we do not have any counterpart of the CKM matrix, at this level there is no flavour mixing. We can then go to a basis in which $Y$ is diagonal and at this point then we can change the phases of the three different families independently. There is not one \textbf{lepton number} but there are three: $L_e, L_\mu$ and $L_\tau$. Under $L_e$, both the electron and the electronic neutrino transform with the same charge which is equal to 1 and the others do not transform. Under $L_\mu$ only the muon and the muonic neutrino transform with the same charge while the others do not transform and the same applies for $L_\tau$. It is possible to transform the fermion fields with different phases and this will keep every single term in the Lagrangian invariant. This accidental symmetry is a product of U$(1)_{\text{B}}$ and [U$(1)]^3$.\\
 At least at the classical level, these are the exact global symmetries which emerge. Why are they called \textit{accidental}? Because they come as an accident at low energy, in the sense that the UV physics might not have them. In fact, if we write higher dimensional terms, e.g. $O_{\text{Weinberg}}$, we notice that they violate lepton number. If we say that the new physics has this symmetry then such a term is not allowed. But we are not imposing this symmetry by hand, we are just looking at low-energy and see which symmetries come out. This is the power of accidental symmetries: even if the UV theory is not invariant under that symmetry, at low-energy it emerges as an accident, it comes for free. They emerge because the theory is an EFT and because there is a large gap between the scale at which we do the experiments and the UV scale, which is much higher. Higher dimensional operators contribute to the experiments with the inverse power of the cut-off scale, they all violate these symmetries but their effects will be largely suppressed.\\
@@ -194,7 +194,7 @@ which is not a symmetry. At the classical level, there is a symmetry given by th
 \[
 \text{U}(1)_{\text{B$-$L}}\times\text{U}(1)_{L_e-L_\mu}\times\text{U}(1)_{L_e-L_\tau}
 \]
-which is an accidental symmetry of the SM. In particular, B$-$L is anomalous and this is important if we want to extend the SM because it is not possible to gauge it.
+which is an accidental symmetry of the SM. In particular, B$+$L is anomalous and this is important if we want to extend the SM because it is not possible to gauge it.
 % Suppose now that B$-$L is promoted to a gauge symmetry, what we need to check is [U$(1)_{\text{B$-$L}}]^3$ which is different from 0 in the SM but equal to 0 when we add $\nu_R$.
 \section{SU(5) Grand Unification Theory}\marginnote[-1cm]{From \cite{CL}, Chapter 14.}
 Elementary particle interactions are correctly described by the gauge group SU$(3)\times$SU$(2)\times$U$(1)$ down to distances as small as $10^{-16}$\,cm: QCD is the strong interaction theory and the Glashow-Weinberg-Salam model provides the theory of weak and electromagnetic interaction. It is desirable to have a more unified theory which can combine all three of these interactions as components of a single force, a theory with only one gauge coupling.\\
@@ -389,7 +389,7 @@ M^2=\frac{v^2}{4}\left(\begin{array}{cccc}
 g^2 & 0 & 0 & 0 \\
 0 & g^2 & 0 & 0 \\
 0 & 0 & g^2 & -gg' \\
-0 & 0 & -gg' & g^2
+0 & 0 & -gg' & g'^2
 \end{array}\right)
 \]
 $W_\mu^\pm=(W_\mu^1\mp W_\mu^2)/\sqrt{2}$ have the same mass given by $m_W=gv/2$ and do not mix with anything else.\\
@@ -479,7 +479,7 @@ The two kinetic terms invariant under SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ 
 % \]
 The second term is invariant under SU$(2)_{\text{L}}\times$U$(1)_{\text{Y}}$ but not under SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ and it is what breaks custodial symmetry. Moving to the unitary gauge, where $\Sigma$ is equal to the identity, from the second trace term we get the mass terms of the $W$ and $Z$ bosons:
 \[
-m_W^2=\frac{v^2}{4}g^2 \quad m_Z^2=\frac{v^2}{4}(g^2+g'^2)v^2(1+\alpha_T)
+m_W^2=\frac{v^2}{4}g^2 \quad m_Z^2=\frac{v^2}{4}(g^2+g'^2)(1+\alpha_T)
 \]
 The $\rho$-parameter now gets modified:
 \[
@@ -1662,7 +1662,9 @@ The propagator in this diagram is given by:
 The new physics effects correct this self-energy at order $q^4$. We are at LEP, so we can pretend that $q^2\approx(200\,\text{GeV})^2\gg m_Z^2\simeq(90\,\text{GeV})^2$ and the corrections associated to $\hat{W}$ have to be much smaller than $q^2$ because we are assuming it is a small effect with respect to the SM contribution. It turns out that $\hat{W}$ is constrained to the level of $10^{-3}$ so it is a good approximation, everything is consistent. We can then expand this propagator:
 \begin{align*}
 \frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}&\simeq\frac{i}{q^2-m_Z^2}\left(1-\frac{q^4\hat{W}}{m_Z^2}\frac{i}{q^2-m_Z^2}\right)[1+\pazocal{O}(\hat{W})]\\
-&\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
+& mimmo 
+2019-20: dybala lautaro zapata
+2020-21: miki morata luka\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
 &\simeq\frac{i}{q^2-m_Z^2}-\frac{\hat{W}}{m_Z^2}+\pazocal{O}(\hat{W}/q^2)
 \end{align*}
 Notice that now the second term does not depend on $q^2$ and it is a contact interaction, we can see it diagrammatically as:
