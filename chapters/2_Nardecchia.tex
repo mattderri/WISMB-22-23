@@ -187,7 +187,7 @@ m_{ij}^q=\frac{v}{\sqrt{2}}(Y_q)_{ij}
 \]
 These are in general \textbf{not diagonal} and contain unphysical parameters: to remove them we have to move to the mass basis. $m$ is an arbitrary complex matrix, to diagonalize it we perform a unitary transformation acting on the left and a unitary transformation acting on the right:
 \[
-\hat{m}_{ij}^q=(V_L^q)_{ik}m_{kl}^q(V_R^{q\dagger})_{lj}
+\hat{m}_{ij}^q=(V_L^{q\dagger})_{ik}m_{kl}^q(V_R^q)_{lj}
 \]
 The notation with a hat denotes that the matrix is diagonal. $L$ and $R$ have nothing to do with left- and right-handed fermions, but one can see that the $i$ index is associated with the left-quark and the $j$ index with the right-quark. Diagonalizing $m$ rotates the left- and right-handed fields:
 \[
@@ -195,9 +195,9 @@ q_L^i=(V_L^q)_{ij}q_L^{'^j} \qquad q_R^i=(V_R^q)_{ij}q_R^{'^j}
 \]
 After these transformations, the off-diagonal entries remain only in the $W$ boson couplings term:
 \[
-\pazocal{L}_W=\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu d_LW^\mu\to\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu(V_{u_L}V_{d_L}^\dagger)W^\mu
+\pazocal{L}_W=\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu d_LW^\mu\to\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu(V_{u_L}^\dagger V_{d_L})W^\mu
 \]
-We are now able to identify the CKM matrix as $V=V_{u_L}V_{d_L}^\dagger$ and quickly have a look at its properties:
+We are now able to identify the CKM matrix as $V=V_{u_L}^\dagger V_{d_L}$ and quickly have a look at its properties:
 \begin{itemize}
     \item it is \textbf{unitary}: $V^\dagger V=VV^\dagger=\mathbb{1}$. However, sometimes it is convenient to approximate it with a non-unitary matrix.
     \item The number of physical parameters is four (3 mixing angles+1 complex phase) even though there are many possible parameterizations.
@@ -323,7 +323,7 @@ Flavour changing effects occur due to off-diagonal couplings, hence one might be
 Photons and gluons cannot give FCNC at tree-level because of \textbf{gauge invariance}. Gauge symmetry forces the kinetic terms, where the gauge couplings live, to be universal. All the down-type quarks will have the same gauge interactions and as long as QCD and QED are unbroken photons and gluons are safe from tree-level FCNCs.\\
 The Higgs $h$ is "accidentally" alone: how can it be flavour conserving? It couples to fermions via the Yukawa term, take for example the up-type: 
 \[
-\overline{Q}_L^i(Y^u)_{ij}H^cu_R^j+\text{h.c.}
+\overline{Q}_L^i(Y_u)_{ij}H^cu_R^j+\text{h.c.}
 \]
 Expand $H$ around its vev, which in the unitary gauge means to consider:
 \[
@@ -358,22 +358,22 @@ Diagonalizing the mass matrix simultaneously diagonalize the coupling. This is o
 When looking for new physics we can \textit{either} add non-renormalizable operators \textit{or} add another Higgs.\\
 We now proceed following the first idea, taking the usual Lagrangian and adding an extra-term:
 \[
-C_{ij}\frac{\Tilde{H}Q_L^iu_R^jH^\dagger H}{\Lambda^2}+(Y^u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}
+C_{ij}\frac{H^cQ_L^iu_R^jH^\dagger H}{\Lambda^2}+(Y_u)_{ij}\Tilde{H}\overline{Q}_L^iu^j+\text{h.c.}
 \]
 This modifies both the mass and the coupling:
 \[
 \left\{
 \begin{aligned}
-&m_u=Y^u\frac{v}{\sqrt{2}}+C\left(\frac{v}{\sqrt{2}}\right)^3\frac{1}{\Lambda^2}\\
-&Y_u=\frac{Y^u}{\sqrt{2}}+C\left(\frac{v}{\sqrt{2}}\right)^2\frac{1}{\Lambda^2}3\xleftarrow[]{}\text{possible combinations}
+&m_u=Y_u\frac{v}{\sqrt{2}}+C\left(\frac{v}{\sqrt{2}}\right)^3\frac{1}{\Lambda^2}\\
+&Y_u=\frac{Y_u}{\sqrt{2}}+C\left(\frac{v}{\sqrt{2}}\right)^2\frac{1}{\Lambda^2}3\xleftarrow[]{}\text{possible combinations}
 \end{aligned}
 \right.
 \]
 If we try to diagonalize it as before, for the mass we obtain the same result while for the interaction we get:
 \[
-Y_h=V_L^u\left(\frac{Y^u}{\sqrt{2}}+C\frac{v^2}{2\Lambda^2}\right)(V_R^u)^\dagger+2V_L^uC\frac{v^2}{2\Lambda^2}(V_R^u)^\dagger
+Y_h=V_L^u\left(\frac{Y_u}{\sqrt{2}}+C\frac{v^2}{2\Lambda^2}\right)(V_R^u)^\dagger+2V_L^uC\frac{v^2}{2\Lambda^2}(V_R^u)^\dagger
 \]
-This is not diagonal: non-renormalizable operators can give rise to FCNC at tree-level. $C_{ij}\xrightarrow[]{}(Y^u)_{ij}$ apparently cures the problem of flavour violation since $m_u\propto Y_u$ and $Y_h\propto Y_u$.\\
+This is not diagonal: non-renormalizable operators can give rise to FCNC at tree-level. $C_{ij}\xrightarrow[]{}(Y_u)_{ij}$ apparently cures the problem of flavour violation since $m_u\propto Y_u$ and $Y_h\propto Y_u$.\\
 Now we explore the possibility of adding a second Higgs to the SM and see what happens. \marginnote{Models with two Higgs fields are important since the minimal supersymmetric models require at least two Higgs fields.}
 \[
 \left\{
@@ -383,7 +383,7 @@ Now we explore the possibility of adding a second Higgs to the SM and see what h
 \end{aligned}
 \right.
 \]
-The potential $V(H)$ gets modified into $V(H_1,H_2)$, with the most general vev pattern give by:
+The potential $V(H)$ gets modified into $V(H_1,H_2)$, with the most general vev pattern given by:
 \[
 \langle H_1 \rangle=\left(\begin{array}{c}
      0 \\
@@ -1873,7 +1873,7 @@ Consider the first one. By plotting the decay spectrum with respect to the energ
 \[
 f(q^2)=f(0)+\lambda q^2
 \]
-where $\lambda\sim0.04$\,fm$^2$ and the higher order terms are not measured. \marginnote{Why should the coefficient be so small? A not-so-satisfactory answer is that to good approximation kaon and pion are point-like. Since the form factors really probe the structure of the particles, the small coefficient is telling us that the process is not sensitive to any meson substructure. As long as $q^2\ll\Lambda_{\text{QCD}}$ this is what we expect.} For $f(0)=1$, the value we find is:
+where $\lambda\sim0.04$\,fm$^2$ and the higher order terms are not measured. \marginnote{Why should the coefficient be so small? A not-so-satisfactory answer is that to good approximation kaons and pions are point-like. Since the form factors really probe the structure of the particles, the small coefficient is telling us that the process is not sensitive to any meson substructure. As long as $q^2\ll\Lambda_{\text{QCD}}$ this is what we expect.} For $f(0)=1$, the value we find is:
 \[
 f(0)=0.961\pm0.008
 \]

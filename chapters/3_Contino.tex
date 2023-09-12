@@ -430,7 +430,7 @@ If we put only the three NGBs coming from the breaking then the scattering ampli
 We did this thinking for example in terms of QCD. In QCD there are these three pions and we can try to do the same: is it possible to make things well behaved at high energies? We introduce an extra degree of freedom and make a linear sigma model instead of a non-linear one. There is such a particle with the quantum numbers of the radial mode, which is the sigma particle, but this sigma particle does not couple in this way. First of all, it has a very large mass and second of all the mass is even complicated to define.\\ 
 % If we do an experiment and see the resonance then it is really broad, that's why it is useful to define a mass, which means that eventually we will not have small couplings.\\
 \end{kaobox}
-At the level of the global symmetry breaking there is the same pattern both in QCD and in the electroweak sector but the latter is including one degree of freedom which completes the theory into something renormalizable, while in the case of QCD this is not true. In QCD the theory becomes strongly coupled as we increase the energy while if we do the same scattering with $\chi$ the amplitude grows but at a certain point it is saturated by the Higgs boson which maintains the theory weakly coupled.\\
+At the level of the global symmetry breaking there is the same pattern both in QCD and in the electroweak sector but the latter is including one degree of freedom which completes the theory into something renormalizable, while in the case of QCD this is not true. In QCD the theory becomes strongly coupled as we increase the energy while if we do the same scattering with $\chi$ the amplitude grows with the energy but at a certain point it is saturated by the Higgs boson which maintains the theory weakly coupled.\\
 Experimentally, how precisely do we know the Higgs coupling? It seems that having couplings exactly equal to those of this Lagrangian is crucial because otherwise such a cancellation does not occur anymore. So the question is: \textit{does the Standard Model reproduce nature or not?} The couplings could be equal to the SM values plus small corrections. In order to write a theory where the Higgs boson has a different coupling we can simply relax some of our assumptions. Here the assumption is:
 \[
 \text{SU$(2)_{\text{EW}}\times$U$(1)_{\text{Y}}$ linearly realized at $E\gg v$}
@@ -689,7 +689,7 @@ How can the Higgs boson be produced at LHC? It has couplings with the quarks so 
     \labfig{qqhiggs}
 \end{figure}
 \newpage
-However, this vertex is proportional to $m_q/v$ so it is large if we have the top quark but unfortunately the top quark is not one of the valence quarks. But in addition to the valence quarks there are also the sea quarks, i.e. quarks that are produced by fluctuations in the vacuum coming from the facts that these quarks radiate  virtual gluons which split and in principle it is possible to have everything. We can even think of having a top out of this but it is very difficult, it has a very small probability to happen. Creating a bottom is more feasible, the probability of having a bottom inside a proton is not entirely negligible. It turns out that at the energy of the LHC, the probability to get a gluon inside the partons is very large, so one of the main process that it is possible to have is \textbf{gluon-gluon fusion} (GGF). These two gluons can meet and interact: 
+However, this vertex is proportional to $m_q/v$ so it is large if we have the top quark but unfortunately the top quark is not one of the valence quarks. But in addition to the valence quarks there are also the sea quarks, i.e. quarks that are produced by fluctuations in the vacuum coming from the facts that these quarks radiate  virtual gluons which split and in principle it is possible to have everything. We can even think of having a top out of this but it is very difficult, it has a very small probability to happen. Creating a bottom is more feasible, the probability of having a bottom inside a proton is not entirely negligible. It turns out that at the energy of the LHC, the probability to get a gluon inside the partons is very large, so one of the main processes that it is possible to have is \textbf{gluon-gluon fusion} (GGF). These two gluons can meet and interact: 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.45\textwidth]{Images/ggf.pdf}
@@ -723,7 +723,7 @@ Here it has to be $Z$ when the initial state is neutral, so final state has to b
 The price to pay is that the top appears also in the final state of other processes so it is possible to have the gluons and then a $t\overline{t}$ pair to which we attach the Higgs. This is $t\overline{t}h$ production which requires a very large $\sqrt{s}$ so its cross section is one of the smallest ones.\\
 \marginnote[-2cm]{\includegraphics{Images/higgsplot.pdf}\\NNLO is the Next to Next Leading Order and represents some important corrections.}In the plot on the side, a summary of the various cross sections for different values of $m_h$ is shown. The Higgs mass is 125 GeV so we should look at the hierarchy highlighted by the cyan arrow. The total cross section is the sum of all cross sections of these processes and at $\sqrt{s}=13$\,TeV it turns out to be 56 pb. How many Higgs bosons are produced at LHC? In Run 1 there were something like 70k Higgs bosons while in Run 2 almost a million were produced, 900k. Be careful because these are the ones which were produced, they have to be detected and at this point it depends on how the Higgs boson decay.
 \subsection{Decay}
-The Higgs boson decays into two quarks $H\to q\overline{q}$ but it cannot go into two tops since $m_t=173$\,GeV$>m_h=125$\,GeV, so the largest decay channel into quarks is $b\overline{b}$. This has a branching ratio of something like 60\%. However, detecting $b\overline{b}$ and distinguishing it from all the other quarks that can be produced at LHC is a very difficult challenge. These quarks transform themselves into jets and when the energy decreases they start to form hadrons. This transition is called \textbf{hadronization}, some hadrons can be unstable and they will decay.\\
+The Higgs boson decays into two quarks $h\to q\overline{q}$ but it cannot go into two tops since $m_t=173$\,GeV$>m_h=125$\,GeV, so the largest decay channel into quarks is $b\overline{b}$. This has a branching ratio of something like 60\%. However, detecting $b\overline{b}$ and distinguishing it from all the other quarks that can be produced at LHC is a very difficult challenge. These quarks transform themselves into jets and when the energy decreases they start to form hadrons. This transition is called \textbf{hadronization}, some hadrons can be unstable and they will decay.\\
 What are the other possible processes? The Higgs cannot go into two $W$ but one of the two can be virtual and can decay either in $l\overline{\nu}$ or $q\overline{q}$.
 \begin{figure}[h]
     \centering
@@ -914,19 +914,19 @@ There is then a propagator given by $-i/p^2$ and the contribution for the exchan
 \]
 Remember that the $W$ gauges the left current and the hypercharge gauges the right current, so here there is a matrix of possibility: left and right can be chosen in 4 possible ways and this gives a mass matrix.
 \[
-M_0^2=\left(\begin{array}{cc}
+M_0^2=\frac{f_\pi^2}{4}\left(\begin{array}{cc}
     g^2 & -gg' \\
     -gg' & g'^2
-\end{array}\right)\frac{f_\pi^2}{4}
+\end{array}\right)
 \]
 % Here, for simplicity, we fixed $a=3$ and in this case there are both left and right. For $a=1,2$ there is no right, $g'=0$ and there is only $g^2$.
 The one above is the neutral mass matrix but at the same time there is the charged mass matrix:
 \[
-M_\pm^2=g^2\frac{f_\pi^2}{4}
+M_\pm^2=\frac{f_\pi^2}{4}g^2
 \]
 We now recognize the form of the masses in the SM. There is 0 eigenvalue, i.e. the photon, and then there is another eigenvalue which is the mass of the $Z$.
 \[
-m_W=g\frac{f_\pi}{2} \quad m_Z=\sqrt{g^2+g'^2}\frac{f_\pi}{2} \quad m_\gamma=0
+m_W=\frac{f_\pi}{2}g \quad m_Z=\frac{f_\pi}{2}\sqrt{g^2+g'^2} \quad m_\gamma=0
 \]
 So the $W$ and the $Z$ have acquired their mass, the photon has remained massless and that is exactly the same of the SM with the only difference that instead of $v$ there is $f_\pi$. It is the same because the global symmetry breaking is the same: in the Higgs sector it was SU$(2)\times$SU$(2)\to$SU(2) which is the same in the QCD sector. Moreover, the $\rho$-parameter is equal to 1. In principle, we do not need the Higgs boson to give a mass to the $W$ and the $Z$ bosons: we remove the Higgs from the theory, decrease the energy until we reach the QCD scale and then there are the three NGBs which are eaten.\\
 We have seen that QCD breaks down the electroweak gauge group in the right pattern. However, it fails to be realistic because if we compute the value of the masses we get:
@@ -936,7 +936,7 @@ m_W\approx28\,\text{MeV} \qquad m_Z\approx32\,\text{MeV}
 Moreover, the fermions remain massless.
 % The values are not quite correct because we should run the coupling $g$ down to the QCD scale, in this calculation the value of $g$ at a hundred GeV is used.
 \section{Technicolor}
-As anticipated, the masses we just found are too small but qualitatively everything is fine so this gives us the following idea: replicating this story by saying that the fundamental Higgs field which gives the electroweak symmetry breaking at 246 GeV is a copy of QCD. Why should we do this perverse complication? Because this UV dynamics does not have a fundamental scalar inside and fundamental scalars imply hierarchy problems.
+As anticipated, the masses we just found are too small but qualitatively everything is fine so this gives us an idea: \raisebox{-\mydepth}{{\includegraphics[height=1.1\baselineskip]{Images/lamp.png}}}\\ replicating this story by saying that the fundamental Higgs field which gives the electroweak symmetry breaking at 246 GeV is a copy of QCD. Why should we do this perverse complication? Because this UV dynamics does not have a fundamental scalar inside and fundamental scalars imply hierarchy problems.
 % Such fundamental scalar has to be much lighter than this UV dynamics but at the moment we do not know the reason why it is like that.
 For QCD there is no such problem since there are no mass terms of fundamental scalars in the Lagrangian, so what we have is just the Lagrangian of QCD replicated at ten times the energy.\\
 This goes under the name of \textbf{technicolor}: take the SM, remove the Higgs and replace it with the QCD part. The orthogonal combinations of the uneaten NGBs remain in the spectrum plus the \nth{4} degree of freedom, which does not play the usual role of the Higgs boson. These 4 degrees of freedom are pretty light, the Higgs has its own usual mass $\mu^2=\lambda^2v^2$ but with a smaller $v$. The other three guys, the $\chi$, get a mass given by gauge interactions and Yukawa terms, which are small effects. By changing parameter, the part of electroweak symmetry breaking now is coming from QCD dynamics and qualitatively it works, so it is possible to think of technicolor\marginnote{This was before the Higgs discovery.}.\\
