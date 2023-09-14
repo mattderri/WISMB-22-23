@@ -381,14 +381,15 @@ D_\mu H^\dagger D^\mu H=\frac{1}{2}(\partial_\mu h)^2+\frac{(v+h)^2}{4}\Tr{(D_\m
 \]
 where the covariant derivative is defined as:
 \[
-D_\mu\Sigma=\partial_\mu\Sigma-igW_\mu^a\frac{\sigma^a}{2}\Sigma+ig'\Sigma YB_\mu
+D_\mu\Sigma=\partial_\mu\Sigma-igW_\mu^a\frac{\sigma^a}{2}\Sigma-ig'\Sigma YB_\mu
 \]
 When this covariant derivative acts on the Higgs field vev, we get the gauge boson masses which in the basis $(W_\mu^1,W_\mu^2,W_\mu^3,B_\mu)$ can be written in matrix form as:
 \[
-M^2=\frac{v^2}{4}\left(\begin{array}{cccc}
+M^2=\frac{v^2}{4}\left(\begin{array}{ccc:c}
 g^2 & 0 & 0 & 0 \\
 0 & g^2 & 0 & 0 \\
 0 & 0 & g^2 & -gg' \\
+\hdashline
 0 & 0 & -gg' & g'^2
 \end{array}\right)
 \]
@@ -406,7 +407,7 @@ This is invariant under SU$(2)_{\text{L}}\times$SU$(2)_{\text{R}}$ if the quarks
 q_L\to q_L'=U_Lq_L \qquad q_R\to q_R'=U_Rq_R
 \]
 After spontaneous symmetry breaking, the quarks acquire mass and the global symmetry is broken to SU$(2)_{\text{V}}$. It is the same pattern that lead us to custodial symmetry.\\
-The fact that $m_u\neq m_d$ is another explicit breaking of SU$(2)_{\text{R}}$, hence of the custodial of SO(3). In particular, the most important effects come from heavier quarks, i.e. the top and the bottom, so we can consider the corrections at one-loop to the $W$ and $Z$ bosons induced by the virtual exchange of the top and bottom quarks(look at the diagrams on the side)\marginnote{
+The fact that $m_u\neq m_d$ is another explicit breaking of SU$(2)_{\text{R}}$, hence of the custodial of SO(3). In particular, the most important effects come from heavier quarks, i.e. the top and the bottom, so we can consider the corrections at one-loop to the $W$ and $Z$ bosons induced by the virtual exchange of the top and bottom quarks (look at the diagrams on the side)\marginnote{
 \includegraphics[width=0.55\textwidth]{Images/wztb.pdf}
 }.\\
 Being the masses of the two quarks different, we have different corrections, $\delta m_Z\neq\delta m_W$. This brings a correction $\Delta\rho$ to the $\rho$-parameter, $\rho=1+\Delta\rho$. The contribution of the bottom can be neglected, the most relevant one comes from the top quark and it is telling us that $\Delta\rho\approx1/200$ ,which is in very good agreement with data. In fact experimentally we have:

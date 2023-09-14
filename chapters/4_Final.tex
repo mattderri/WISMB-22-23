@@ -230,6 +230,7 @@ $\Lambda$ has to be interpreted as a physical scale and if we pretend it is the 
     \label{fig:my_label}
 \end{figure}
 \section{CP Violation in the $K$ Mesons}\marginnote{From \cite{Rid}}
+\subsection{General Features}
 \textbf{Mixing} is a phenomenon we have when flavour eigenstates are different than mass eigenstates. Here we are going to mix states with the same unbroken quantum numbers. \textbf{Oscillation} is a phenomenon involving time evolution of flavour eigenstates, we are going to focus on the mixing of mesons, this discussion holds true for $K^0, D^0, B_d$ and $B_s$.\\
 We are interested in the time evolution of a $K^0 (\overline{s}d)$ or a $\overline{K}^0 (\overline{d}s)$ in its rest frame. $K^0$ mesons are produced by strong interaction processes, so at the initial time $t=0$ the quantum state describing the system has a definite value of strangeness, $S=+1$ for $K^0$ and $S=-1$ for $\overline{K}^0$. These mesons are stable with respect to strong interactions and decay only via weak interactions. The transition $K^0\to\overline{K}^0$ is allowed since strangeness is not conserved in weak interactions, therefore we introduce a two-dimensional space spanned by the two meson states:
 \[
@@ -361,7 +362,8 @@ These numbers can be determined experimentally by studying the semileptonic deca
 \[
 K^0\to\pi^-e^+\nu_e \quad \overline{K}^0\to\pi^+e^-\overline{\nu}_e
 \]
-As a consequence, $N(K^0)$ is proportional to the number of observed positrons, consequently $N(\overline{K}^0)$ is proportional to the number of observed electrons and the quantity $A(t)$ can therefore be determined as a function of time.\\
+As a consequence, $N(K^0)$ is proportional to the number of observed positrons, consequently $N(\overline{K}^0)$ is proportional to the number of observed electrons and the quantity $A(t)$ can therefore be determined as a function of time.
+\subsection{CP Violation}
 We now turn to the problem of CP violation and assume that $\ket{K_S}$ and $\ket{K_L}$ are eigenstates of the CP operator with eigenvalues $+1$ and $-1$ respectively.\marginnote{The phase factor $e^{i\alpha}$ originates from the definition of the CP operator.}
 \begin{align*}
 \hat{CP}\ket{K_S}&=p(\hat{CP}\ket{K^0})+q(\hat{CP}\ket{\overline{K}^0})=pe^{i\alpha}\ket{\overline{K}^0}+qe^{-i\alpha}\ket{K^0}\\
@@ -388,60 +390,6 @@ where $T$ is the weak transition matrix. Experimentally, we know that weak ampli
 \frac{\Gamma(K_S\to\pi^+\pi^-)}{\Gamma(K_S\to\pi^0\pi^0)}=2
 \]
 The observed value of this ratio is $2.18\pm0.03$, confirming that the $\Delta I=1/2$ rule is approximately valid.\\ 
-We now want to derive an expression for the weak effective Hamiltonian $H_{\text{eff}}$ in the framework of perturbation theory. The unperturbed Hamiltonian $H$ is the sum of the strong and electromagnetic interaction Hamiltonians and the weak Hamiltonian $H_W$ represents the perturbation. The states $\ket{\alpha}$ with $\alpha=K^0,\overline{K}^0$ can be taken as unperturbed eigenstates. We want to compute elements of the S-matrix:
-\[
-S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(t)}\right]\ket{\alpha}
-\]
-Expanding the S-matrix up to second order we get:
-\begin{align*}
-S{\beta\alpha}\simeq&\braket{\beta|\alpha}-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}\\
-&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\theta(t-t')\ket{\alpha}\\
-&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\theta(t'-t)\ket{\alpha}\\
-=&S_{\beta\alpha}^{(0)}+S_{\beta\alpha}^{(1)}+S_{\beta\alpha}^{(2)}
-\end{align*}
-The first term is clearly equal to $S_{\beta\alpha}^{(0)}=\delta_{\beta\alpha}$ since the unperturbed eigenstates are orthogonal and normalized. The first-order term can be computed as:
-\[
-S_{\beta\alpha}^{(1)}=-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}=-2\pi i\delta(E_\beta-E_\alpha)\braket{\beta|H_W|\alpha}
-\]
-where $E_\alpha$ and $E_\beta$ are the unperturbed energy eigenvalues of $\ket{\alpha}$ and $\ket{\beta}$. To compute the second-order term we insert the identity operator $I=\sum_\lambda\ket{\lambda}\bra{\lambda}$, where $\{\ket{\lambda}\}$ is an orthonormal basis for the unperturbed Hamiltonian. The two terms are equal after exchanging $t$ and $t'$ so we get rid of the factor $1/2$ in front.\marginnote[2cm]{We redefined the variables as $t-t'=\tau$.}
-\begin{align*}
-S_{\beta\alpha}^{(2)}&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}dte^{i(E_\beta-E_\lambda)t}\int_{-\infty}^{+\infty}dt'e^{i(E_\lambda-E_\alpha)t'}\theta(t-t')\\
-&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}\theta(\tau)\int_{-\infty}^{+\infty}dt'e^{i(E_\beta-E_\alpha)t'}\\
-&=-2\pi\delta(E_\beta-E_\alpha)\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}
-\end{align*}
-The last integral can be evaluated by replacing $E_\beta-E_\lambda$ with $E_\beta-E_\lambda+i\eta$, where $\eta>0$, and then taking the limit $\eta\to0$:
-\[
-\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda+i\eta)\tau}=\frac{i}{E_\beta-E_\lambda+i\eta}
-\]
-Finally, we obtain:
-\[
-S_{\beta\alpha}^{(2)}=-2\pi i\delta(E_\beta-E_\alpha)\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
-\]
-Putting the three terms together one gets:
-\[
-S_{\beta\alpha}=\delta_{\beta\alpha}-2\pi i\delta(E_\beta-E_\alpha)\left[\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}\right]
-\]
-We can now define an effective weak Hamiltonian $H_W^{\text{eff}}$ in such a way that the S-matrix computed with $H_W^{\text{eff}}$ at the first order has the same matrix elements found above. This gives us:
-\[
-H_W^{\text{eff}}=\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
-\]
-If both $K^0$ and $\overline{K}^0$ are in their rest frame $E_\alpha=E_\beta=m_K$ so that the full effective Hamiltonian can be written as:
-\[
-H_{\beta\alpha}^{\text{eff}}=m_K\delta_{\beta\alpha}+H_W^{\text{eff}}
-\]
-Notice that $H_{\beta\alpha}^{\text{eff}}$ is not hermitian since the following property holds true:
-\[
-\frac{1}{E_\beta-E_\lambda+i\eta}=\text{PV}\frac{1}{E_\beta-E_\lambda}-i\pi\delta(E_\beta-E_\lambda)
-\]
-where PV denotes the principal value. The full effective Hamiltonian now takes the form:
-\begin{align*}
-H_{\beta\alpha}^{\text{eff}}&={\color{green}{m_K\delta_{\beta\alpha}+\braket{\beta|H_W|\alpha}+\text{PV}\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{m_K-E_\lambda}}}-\frac{i}{2}{\color{blue}{2\pi\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\delta(m_K-E_\lambda)}}\\
-&={\color{green}{M_{\beta\alpha}}}-\frac{i}{2}{\color{blue}{\Gamma_{\beta\alpha}}}
-\end{align*}
-The sum is extended over on-shell amplitudes and it is therefore dominated by the contribution of the state $\ket{\pi\pi,I=0}=\ket{0}$ so that we have:
-\[
-\Gamma_{12}\simeq2\pi\braket{K^0|H_W|0}\braket{0|H_W|\overline{K}^0}\delta(m_K-E_0)
-\]
 We now introduce the following two quantities:
 \[
 \eta_\pm=\frac{\braket{\pi^+\pi^-|T|K_L}}{\braket{\pi^+\pi^-|T|K_S}} \qquad \eta_{00}=\frac{\braket{\pi^0\pi^0|T|K_L}}{\braket{\pi^0\pi^0|T|K_S}}
@@ -516,4 +464,59 @@ The quantity $\epsilon'$ signals a new kind of CP violation called \textbf{direc
 D=\frac{\text{BR}(K_L\to\pi^+\pi^-)/\text{BR}(K_S\to\pi^+\pi^-)}{\text{BR}(K_L\to\pi^0\pi^0)/\text{BR}(K_S\to\pi^0\pi^0)}=\left|\frac{\eta_\pm}{\eta_{00}}\right|^2\simeq1+6\mathfrak{Re}(\epsilon'/\epsilon)
 \]
 from which it is possible to extract a value of $\mathfrak{Re}(\epsilon'/\epsilon)$ which turns out to be $(1.65\pm0.26)\cdot10^{-3}$. A precise determination of this ratio is of great importance in order to test the predictions of the theory of electroweak interactions.
+\subsection{Effective Hamiltonian}
+We now want to derive an expression for the weak effective Hamiltonian $H_{\text{eff}}$ in the framework of perturbation theory. The unperturbed Hamiltonian $H$ is the sum of the strong and electromagnetic interaction Hamiltonians and the weak Hamiltonian $H_W$ represents the perturbation. The states $\ket{\alpha}$ with $\alpha=K^0,\overline{K}^0$ can be taken as unperturbed eigenstates. We want to compute elements of the S-matrix:
+\[
+S_{\beta\alpha}=\bra{\beta}T\left[\exp{-i\int_{-\infty}^{+\infty}dtH_W(t)}\right]\ket{\alpha}
+\]
+Expanding the S-matrix up to second order we get:
+\begin{align*}
+S_{\beta\alpha}\simeq&\braket{\beta|\alpha}-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}\\
+&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\theta(t-t')\ket{\alpha}\\
+&-\frac{1}{2}\bra{\beta}\int_{-\infty}^{+\infty}dt'e^{iHt'}H_We^{-iHt'}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\theta(t'-t)\ket{\alpha}\\
+=&S_{\beta\alpha}^{(0)}+S_{\beta\alpha}^{(1)}+S_{\beta\alpha}^{(2)}
+\end{align*}
+The first term is clearly equal to $S_{\beta\alpha}^{(0)}=\delta_{\beta\alpha}$ since the unperturbed eigenstates are orthogonal and normalized. The first-order term can be computed as:
+\[
+S_{\beta\alpha}^{(1)}=-i\bra{\beta}\int_{-\infty}^{+\infty}dte^{iHt}H_We^{-iHt}\ket{\alpha}=-2\pi i\delta(E_\beta-E_\alpha)\braket{\beta|H_W|\alpha}
+\]
+where $E_\alpha$ and $E_\beta$ are the unperturbed energy eigenvalues of $\ket{\alpha}$ and $\ket{\beta}$. To compute the second-order term we insert the identity operator $I=\sum_\lambda\ket{\lambda}\bra{\lambda}$, where $\{\ket{\lambda}\}$ is an orthonormal basis for the unperturbed Hamiltonian. The two terms are equal after exchanging $t$ and $t'$ so we get rid of the factor $1/2$ in front.\marginnote[2cm]{We redefined the variables as $t-t'=\tau$.}
+\begin{align*}
+S_{\beta\alpha}^{(2)}&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}dte^{i(E_\beta-E_\lambda)t}\int_{-\infty}^{+\infty}dt'e^{i(E_\lambda-E_\alpha)t'}\theta(t-t')\\
+&=-\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_{-\infty}^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}\theta(\tau)\int_{-\infty}^{+\infty}dt'e^{i(E_\beta-E_\alpha)t'}\\
+&=-2\pi\delta(E_\beta-E_\alpha)\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda)\tau}
+\end{align*}
+The last integral can be evaluated by replacing $E_\beta-E_\lambda$ with $E_\beta-E_\lambda+i\eta$, where $\eta>0$, and then taking the limit $\eta\to0$:
+\[
+\int_0^{+\infty}d\tau e^{i(E_\beta-E_\lambda+i\eta)\tau}=\frac{i}{E_\beta-E_\lambda+i\eta}
+\]
+Finally, we obtain:
+\[
+S_{\beta\alpha}^{(2)}=-2\pi i\delta(E_\beta-E_\alpha)\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
+\]
+Putting the three terms together one gets:
+\[
+S_{\beta\alpha}=\delta_{\beta\alpha}-2\pi i\delta(E_\beta-E_\alpha)\left[\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}\right]
+\]
+We can now define an effective weak Hamiltonian $H_W^{\text{eff}}$ in such a way that the S-matrix computed with $H_W^{\text{eff}}$ at the first order has the same matrix elements found above. This gives us:
+\[
+H_W^{\text{eff}}=\braket{\beta|H_W|\alpha}+\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{E_\beta-E_\lambda+i\eta}
+\]
+If both $K^0$ and $\overline{K}^0$ are in their rest frame $E_\alpha=E_\beta=m_K$ so that the full effective Hamiltonian can be written as:
+\[
+H_{\beta\alpha}^{\text{eff}}=m_K\delta_{\beta\alpha}+H_W^{\text{eff}}
+\]
+Notice that $H_{\beta\alpha}^{\text{eff}}$ is not hermitian since the following property holds true:
+\[
+\frac{1}{E_\beta-E_\lambda+i\eta}=\text{PV}\frac{1}{E_\beta-E_\lambda}-i\pi\delta(E_\beta-E_\lambda)
+\]
+where PV denotes the principal value. The full effective Hamiltonian now takes the form:
+\begin{align*}
+H_{\beta\alpha}^{\text{eff}}&={\color{green}{m_K\delta_{\beta\alpha}+\braket{\beta|H_W|\alpha}+\text{PV}\frac{\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}}{m_K-E_\lambda}}}-\frac{i}{2}{\color{blue}{2\pi\sum_\lambda\braket{\beta|H_W|\lambda}\braket{\lambda|H_W|\alpha}\delta(m_K-E_\lambda)}}\\
+&={\color{green}{M_{\beta\alpha}}}-\frac{i}{2}{\color{blue}{\Gamma_{\beta\alpha}}}
+\end{align*}
+The sum is extended over on-shell amplitudes and it is therefore dominated by the contribution of the state $\ket{\pi\pi,I=0}=\ket{0}$ so that we have:
+\[
+\Gamma_{12}\simeq2\pi\braket{K^0|H_W|0}\braket{0|H_W|\overline{K}^0}\delta(m_K-E_0)
+\]
 \end{document}
