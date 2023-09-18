@@ -139,7 +139,7 @@ K_L^\dagger[H_u,H_d]K_L&=K_L^\dagger H_uH_dK_L-K_L^\dagger H_dH_uK_L\\
 \end{align*}
 It follows that $\Tr{[H_u,H_d]}=-\Tr{[H_u,H_d]}=0$. This was the case for $r=1$, now we generalize to any value of $r$:
 \begin{align*}
-\left(K_L^\dagger[H_u,H_d]K_L\right)^r&=K_L^\dagger[H_u,H_d]K_LK_L^\dagger[H_u,H_d]K_L\dots K_L^\dagger[H_u,H_d]K_L\\
+\left(K_L^\dagger[H_u,H_d]K_L\right)^r&=K_L^\dagger[H_u,H_d]K_LK_L^\dagger[H_u,H_d]K_L\cdots K_L^\dagger[H_u,H_d]K_L\\
 &=K_L^\dagger[H_u,H_d]^rK_L=(-1)^r\left([H_u,H_d]^T\right)^r
 \end{align*}
 It then follows that: 
@@ -195,7 +195,7 @@ q_L^i=(V_L^q)_{ij}q_L^{'^j} \qquad q_R^i=(V_R^q)_{ij}q_R^{'^j}
 \]
 After these transformations, the off-diagonal entries remain only in the $W$ boson couplings term:
 \[
-\pazocal{L}_W=\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu d_LW^\mu\to\frac{g}{\sqrt{2}}\overline{u}_Li\gamma_\mu(V_{u_L}^\dagger V_{d_L})W^\mu
+\pazocal{L}_W\sim\frac{g}{\sqrt{2}}\overline{u}_L\gamma_\mu d_LW^\mu\to\frac{g}{\sqrt{2}}\overline{u}_L\gamma_\mu(V_{u_L}^\dagger V_{d_L})W^\mu
 \]
 We are now able to identify the CKM matrix as $V=V_{u_L}^\dagger V_{d_L}$ and quickly have a look at its properties:
 \begin{itemize}
@@ -348,8 +348,8 @@ For the mass term we have $(m_u)_{ij}=(Y_u)_{ij}\frac{v}{\sqrt{2}}$, while for t
 \Rightarrow
 \left\{
 \begin{aligned}
-&\hat{m}_u=V_L^um_uV_R^u\\
-&\hat{Y}_u=V_L^uY_u(V_R^u)^\dagger
+&\hat{m}_u=(V_L^u)^\dagger m_u(V_R^u)\\
+&\hat{Y}_u=(V_L^u)^\dagger Y_u(V_R^u)
 \end{aligned}
 \right.
 \]
@@ -833,7 +833,7 @@ We obtained the leading log-effect at 2-loops using only 1-loop computations. So
 \[
 R=1+\underbrace{a_1\alpha_s}_{\text{1-loop}}+\underbrace{b_0a_1\alpha_s^2\ln(\mu^2/s)+a_2\alpha_s^2}_{\text{2-loops}}+\pazocal{O}(\alpha_s^3)
 \]
-Carrying out the computations at higher orders allows us to express the generic function $f_n(t)$ as $f_n(t)=a_1[b_0\ln(\mu^2/s)]^n$. Putting all the terms together, we arrive to the following expression of the ratio $R$:
+Carrying out the computations at higher orders allows us to express the generic function $f_n(t)$ as $f_n(t)=a_1[b_0\ln(\mu^2/s)]^{n-1}$. Putting all the terms together, we arrive to the following expression of the ratio $R$:
 \begin{align*}
 R&=1+a_1\alpha_s\left\{1+b_0\alpha_s\ln\left(\frac{\mu^2}{s}\right)+\left[b_0\alpha_s\ln\left(\frac{\mu^2}{s}\right)\right]^2+\cdots\right\}+a_2\alpha_s^2+\cdots\\
 &=1+a_1\frac{\alpha_s(\mu)}{1+\alpha_s(\mu)b_0\ln(s/\mu^2)}+a_2\alpha_s^2+\cdots
@@ -1091,7 +1091,7 @@ So far we have focused on the chiral symmetry of the QCD Lagrangian and the expl
 \[
 \left\{
 \begin{aligned}
-&Q_V^a=Q_L^a+Q_R^a\\
+&Q_V^a=Q_R^a+Q_L^a\\
 &Q_A^a=Q_R^a-Q_L^a
 \end{aligned}
 \right.
@@ -1835,7 +1835,8 @@ The decays we are interested in are:
 \[
 K^+\to\pi^0e^+\nu_e \quad K^0\to\pi^-e^+\nu_e
 \]
-The two decays have different charges, the $K^0$ decay has a spectator $\overline{d}$ quark while the $K^+$ decay has a spectator $\overline{u}$ quark. The two decays are then related by \textbf{isospin}. To the extent that isospin is approximately true, it is sufficient to determine the form factor for only one of these process since the other will be related by symmetry. The matrix element is given by:
+% The two decays have different charges, the $K^0$ decay has a spectator $\overline{d}$ quark while the $K^+$ decay has a spectator $\overline{u}$ quark.
+The two decays are related by \textbf{isospin}: to the extent that isospin is approximately true, it is sufficient to determine the form factor for only one of these process since the other will be related by symmetry. The matrix element is given by:
 \[
 \bra{\pi,p_\pi}\overline{s}\gamma^\mu(1-\gamma_5)u\ket{K,p_K}=f_+(q^2)(p_\pi+p_K)^\mu+f_-(q^2)q^\mu
 \]
