@@ -1468,9 +1468,9 @@ and we choose a coset representative $\overline{\xi}(\phi)=(\xi_L(\phi),\xi_R(\p
 \]
 where $h(\phi,g)\in\text{H}$. Since the same transformation $h(\phi,g)$ occurs both in the left and in the right sector we can get rid of it by combining the two chiral relations in a simpler form:
 \[
-U(\phi):=\xi_R(\phi)\xi_L^\dagger(\phi) \quad U(\phi)\to g_RU(\phi)g_L^\dagger
+U(\phi):=\xi_L(\phi)\xi_R^\dagger(\phi) \quad U(\phi)\to g_LU(\phi)g_R^\dagger
 \]
-Without loss of generality, we can take a canonical choice of coset representative such that $\xi_L^\dagger(\phi)=\xi_R(\phi):=u(\phi)$. The $3\times3$ unitary matrix $U(\phi)$ becomes:
+Without loss of generality, we can take a canonical choice of coset representative such that $\xi_L(\phi)=\xi_R^\dagger(\phi):=u(\phi)$. The $3\times3$ unitary matrix $U(\phi)$ becomes:
 \[
 U(\phi)=u^2(\phi)=\exp{i\sqrt{2}\frac{\Phi}{f}}
 \]
@@ -1492,10 +1492,10 @@ Q=\mqty(\dmat{+2/3,-1/3,-1/3})\to[Q,\Phi]=\left(\begin{array}{ccc}
 \]
 The entries with zero correspond to Goldstone bosons with zero charge while the non-zero entries are charged Goldstone bosons. To correctly associate entries with Goldstone bosons we can use the strangeness generator:
 \[
-S=\mqty(\dmat{0,0,1})\to[S,\Phi]=\left(\begin{array}{ccc}
-    0 & 0 & -\Phi_{13} \\
-    0 & 0 & -\Phi_{23} \\
-    +\Phi_{31} & +\Phi_{32} & 0
+S=\mqty(\dmat{0,0,-1})\to[S,\Phi]=\left(\begin{array}{ccc}
+    0 & 0 & +\Phi_{13} \\
+    0 & 0 & +\Phi_{23} \\
+    -\Phi_{31} & -\Phi_{32} & 0
 \end{array}\right)
 \]
 Again, only the non-zero entries correspond with Goldstone bosons with a non-zero value of strangeness.
@@ -1527,7 +1527,7 @@ This results in:
 Our Lagrangian is invariant under a global SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ transformation:
 \begin{equation}
 \labeq{t1}
-U\to RUL^\dagger \qquad U^\dagger\to LU^\dagger R^\dagger
+U\to LUR^\dagger \qquad U^\dagger\to RU^\dagger L^\dagger
 \end{equation}
 and we now want to see the vector and axial currents associated with this symmetry just like we did in \refsec{symmqcd}. To this purpose, we parametrize $L$ and $R$ as:
 \[
@@ -1537,58 +1537,58 @@ To get $J_L^{\mu,a}$, set $\theta_a^R=0$. At first order in $\theta_a^L$ we get:
 \[
 \left\{
 \begin{aligned}
-&U\to RUL^\dagger=U\left(1+i\theta_a^L\frac{\lambda_a}{2}\right) &&U^\dagger\to LU^\dagger R^\dagger=\left(1-i\theta_a^L\frac{\lambda_a}{2}\right)U^\dagger\\
-&\partial_\mu U\to\partial_\mu U\left(1+i\theta_a^L\frac{\lambda_a}{2}\right)+Ui\partial_\mu\theta_a^L\frac{\lambda_a}{2} && \partial^\mu U^\dagger\to\left(1-i\theta_a^L\frac{\lambda_a}{2}\right)\partial^\mu U^\dagger-i\partial^\mu\theta^L_a\frac{\lambda_a}{2}U^\dagger
+&U\to LUR^\dagger=\left(1-i\theta_a^L\frac{\lambda_a}{2}\right)U &&U^\dagger\to RU^\dagger L^\dagger=\left(1+i\theta_a^L\frac{\lambda_a}{2}\right)U^\dagger\\
+&\partial_\mu U\to\left(1-i\theta_a^L\frac{\lambda_a}{2}\right)\partial_\mu U-i\frac{\lambda_a}{2}\partial_\mu\theta_a^LU && \partial^\mu U^\dagger\to\partial^\mu U^\dagger\left(1+i\theta_a^L\frac{\lambda_a}{2}\right)+iU^\dagger\frac{\lambda_a}{2}\partial^\mu\theta^L_a
 \end{aligned}
 \right.
 \]
 From this, we obtain:
 \[
 \begin{aligned}
-\delta\pazocal{L}&=\frac{f^2}{4}\Tr{Ui\partial_\mu\theta_a^L\frac{\lambda_a}{2}\partial^\mu U^\dagger-\partial_\mu Ui\partial^\mu\theta_a^L\frac{\lambda_a}{2}U^\dagger}\\
-&=\frac{f^2}{4}i\partial_\mu\theta_a^L\Tr{\frac{\lambda_a}{2}[U(\partial^\mu U^\dagger)-(\partial^\mu U)U^\dagger]}\\
-&=\frac{f^2}{4}i\partial_\mu\theta_a^L\Tr{\lambda_a(\partial^\mu U^\dagger)U}
+\delta\pazocal{L}&=\frac{f^2}{4}\Tr{i(\partial_\mu U)U^\dagger\frac{\lambda_a}{2}\partial^\mu\theta_a^L-i\frac{\lambda_a}{2}\partial_\mu\theta_a^LU(\partial^\mu U^\dagger)}\\
+&=\frac{f^2}{4}i\partial_\mu\theta_a^L\Tr{\frac{\lambda_a}{2}[(\partial^\mu U)U^\dagger-U(\partial^\mu U^\dagger)]}\\
+&=\frac{f^2}{4}i\partial_\mu\theta_a^L\Tr{\lambda_a(\partial^\mu U)U^\dagger}
 \marginnote{In the last step, we used:
 \[
 \partial_\mu(UU^\dagger)=0=(\partial_\mu U)U^\dagger+U(\partial_\mu U^\dagger)
 \]
 from which it follows:
 \[
-U(\partial_\mu U^\dagger)=-(\partial_\mu U)U^\dagger
+(\partial_\mu U)U^\dagger=-U(\partial_\mu U^\dagger)
 \]}
 \end{aligned}
 \]
 Using \refeq{currents}, for the left currents we have:
 \begin{equation}
 \labeq{jl}
-J_L^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^L}=i\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U^\dagger)U}
+J_L^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^L}=i\frac{f^2}{4}\Tr{\lambda_a(\partial^\mu U)U^\dagger}
 \end{equation}
 In the same way, by setting $\theta_a^L=0$, for the right currents one gets:
 \begin{equation}
 \labeq{jr}
-J_R^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^R}=-i\frac{f^2}{4}\Tr{\lambda_aU(\partial^\mu U^\dagger)}
+J_R^{\mu,a}=\frac{\partial\delta\pazocal{L}}{\partial\partial_\mu\theta_a^R}=-i\frac{f^2}{4}\Tr{\lambda_aU^\dagger(\partial^\mu U)}
 \end{equation}
 Combining these two results gives us the vector and axial currents:
 \[
 \left\{
 \begin{aligned}
-&J_V^{\mu,a}=J_R^{\mu,a}+J_L^{\mu,a}=-i\frac{f^2}{4}\Tr{\lambda_a[U,\partial^\mu U^\dagger]}\\
-&J_A^{\mu,a}=J_R^{\mu,a}-J_L^{\mu,a}=-i\frac{f^2}{4}\Tr{\lambda_a\{U,\partial^\mu U^\dagger\}}
+&J_V^{\mu,a}=J_R^{\mu,a}+J_L^{\mu,a}=i\frac{f^2}{4}\Tr{\lambda_a[\partial^\mu U,U^\dagger]}\\
+&J_A^{\mu,a}=J_R^{\mu,a}-J_L^{\mu,a}=-i\frac{f^2}{4}\Tr{\lambda_a\{\partial^\mu U, U^\dagger\}}
 \end{aligned}
 \right.
 \]
-Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_A{\mu,a}$.}\\
+Because of the SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry, both currents are conserved. The vector currents contain terms with an even number of Goldstone bosons while the axial currents, on the other hand, are odd in the number of Goldstone bosons.\marginnote[-1cm]{To see that, send $\Phi\to-\Phi$ and notice how $J_V^{\mu,a}$ goes to $J_V^{\mu,a}$ while $J_A^{\mu,a}$ goes to $-J_A^{\mu,a}$.}\\
 % \[
 % \pazocal{L}=\frac{1}{2}\Braket{\partial_\mu\Phi\partial^\mu\Phi}+\frac{1}{12f^2}\Braket{(\Phi\overset{\leftrightarrow}{\partial_\mu}\Phi)(\Phi\overset{\leftrightarrow}{\partial^\mu}\Phi)}+\pazocal{O}(\Phi^6/f^4)
 % \]
 So far, we assumed a perfect SU$(3)_{\text{L}}\times$SU$(3)_{\text{R}}$ symmetry but we have seen in \refsec{symmqcd} that the quark mass term results in explicit symmetry breaking.
 \[
-M=\mqty(\dmat{m_u,m_d,m_s}) \qquad \pazocal{L}_{\text{M}}=-\overline{q}_LM^\dagger q_R-\overline{q}_RMq_L
+M=\mqty(\dmat{m_u,m_d,m_s}) \qquad \pazocal{L}_{\text{M}}=-\overline{q}_LM q_R-\overline{q}_RM^\dagger q_L
 \]
 $M$ is just a constant matrix and does not transform with the quark fields, but $\pazocal{L}_{\text{M}}$ would be invariant if $M$ transformed as:
 \begin{equation}
 \labeq{t2}
-M\to RML^\dagger
+M\to LMR^\dagger
 \end{equation}
 The most general Lagrangian invariant under \refeq{t1} and \refeq{t2} is given, at lowest order in $M$, by:
 \[
@@ -1668,7 +1668,7 @@ In presence of such currents, we define the covariant derivative and the field s
 \[
 \left\{
 \begin{aligned}
-&D_\mu U=\partial_\mu U-ir_\mu U+iUl_\mu &&D_\mu U^\dagger=\partial_\mu U^\dagger+iU^\dagger r_\mu-il_\mu U^\dagger\\
+&D_\mu U=\partial_\mu U-iUr_\mu+il_\mu U &&D_\mu U^\dagger=\partial_\mu U^\dagger+ir_\mu U^\dagger-iU^\dagger l_\mu\\
 &F_{\mu\nu}^L=\partial_\mu l_\nu-\partial_\nu l_\mu-i[l_\mu,l_\nu] &&F^{\mu\nu}_R=\partial_\mu r_\nu-\partial_\nu r_\mu-i[r_\mu,r_\nu]
 \end{aligned}
 \right.
@@ -1694,12 +1694,12 @@ l_\mu=\sum_{a=1}^8\frac{\lambda^a}{2}l_{\mu,a}
 \]
 By explicitly computing the trace, the term linear in $l_\mu$ reads:
 \[
-\pazocal{L}_{\text{int}}=\sum_{a=1}^8l_{\mu,a}i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U^\dagger)U}=\sum_{a=1}^8l_{\mu,a}J_L^{\mu,a}
+\pazocal{L}_{\text{int}}=-\sum_{a=1}^8l_{\mu,a}i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U)U^\dagger}=-\sum_{a=1}^8l_{\mu,a}J_L^{\mu,a}
 \]
 where in the last step we used \refeq{jl} to define $J_L^{\mu,a}$. Expanding $U$ to first order $\Phi$ and using \refeq{Phi}, $J_L^{\mu,a}$ gets written as:
 \[
 \begin{aligned}
-J_L^{\mu,a}&=i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U^\dagger)U}\simeq i\frac{f^2}{4}\Tr{\lambda^a\left(-i\frac{\sqrt{2}}{f}\partial^\mu\Phi\right)}=\frac{f}{2}\partial^\mu\phi^a
+J_L^{\mu,a}&=i\frac{f^2}{4}\Tr{\lambda^a(\partial^\mu U)U^\dagger}\simeq i\frac{f^2}{4}\Tr{\lambda^a\left(i\frac{\sqrt{2}}{f}\partial^\mu\Phi\right)}=-\frac{f}{2}\partial^\mu\phi^a
 \end{aligned}
 \]
 Inserting now the expression of $l_\mu$ from \refeq{lmu}, we get that the interaction term of a single Goldstone boson with a $W$ is the following:

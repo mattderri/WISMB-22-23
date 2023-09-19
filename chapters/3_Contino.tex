@@ -167,7 +167,7 @@ The anomaly function vanishes when $D^{abc}=0$. This happens when:
     \end{align*}
 \end{itemize}
 Groups with only real or pseudo-real representations are SO$(2n+1)$, SO$(4n)$ for $n\ge2$ and Sp$(2n)$ for $n\ge3$. Moreover, groups with complex representations but vanishing anomalies are SO$(4n+2)$ except for SO(2)=U(1) and SO(6)=SU(4). Anomalies are then possible only for algebras that include SU$(n)$ (for $n\ge3$) or U$(1)$ factors. As we know, this is the case of the Standard Model, so we must rely on cancellation among quarks and leptons to make the group anomaly free.\\
-Given this discussion about anomalies, we ask ourselves: \textit{is baryon number a good symmetry? Does it have any anomaly?}\\
+Given this discussion about anomalies, we ask ourselves: \textit{is baryon number a good symmetry? Does it have any anomaly?}\marginnote{From \cite{schwartz}, Section 30.4 and 30.5.1.}\\
 % \[
 % \left\{
 % \begin{aligned}
@@ -176,14 +176,28 @@ Given this discussion about anomalies, we ask ourselves: \textit{is baryon numbe
 % \end{aligned}
 % \right.
 % \]
-There is no anomaly of baryon number under SU$(3)_{\text{C}}$ because they transform under a real representation. Under SU$(2)_{\text{EW}}$ we have:
+Any anomaly with one factor of SU$(2)$ or SU$(3)$ vanishes because of the properties of SU$(N)$ generators\marginnote{For SU$(N)$ we have:
 \[
-D^{Bbc}=\frac{1}{2}\Tr{B}_{\text{weak doublets}}\Tr{\{T^b,T^c\}}=\frac{1}{2}\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize  charge};}}{\frac{1}{3}}\cdot\overset{\mathclap{\tikz \node {$\downarrow$} node [above=1ex] {\footnotesize  colour};}}{3}N_f\delta^{bc}=N_f\frac{\delta^{bc}}{2}\marginnote{In the weak doublets, only $q_L$ contributes and it is factored out because it acts on a different space.}
+\{T^b,T^c\}=\frac{1}{N}\delta^{bc}\mathbb{1}
 \]
-With the same strategy, we can compute the anomaly content under U$(1)_{\text{Y}}$:
+When then taking the trace, the remaining $T^a$ is traceless by definition so it is automatically zero.}, this means fewer combinations to look at. Start with U$(1)^3_{\text{B}}$:
+\[
+D^{BBB}=\frac{1}{2}\Tr{B\{B,B\}}=\Tr{B^3}=3N_f\left[2\cdot\left(\frac{1}{3}\right)^3-\left(\frac{1}{3}\right)^3-\left(\frac{1}{3}\right)^3\right]=0
+\]
+The factor $3$ accounts for the colour, $N_f$ denotes the number of families, the $2$ is there to account for the fact that $Q_L$ is a doublet and the minus sign is because left-handed and right-handed fermions contribute to the anomalies with opposite signs.
+There is no anomaly of baryon number under SU$(3)_{\text{C}}$U$(1)^2_{\text{B}}$:
+\[
+D^{Bbc}=\frac{1}{2}\Tr{B}_{\text{quarks}}\Tr{\{T^b,T^c\}}=\frac{1}{2}3N_f\left(2\cdot\frac{1}{3}-\frac{1}{3}-\frac{1}{3}\right)\delta^{bc}=0
+\]
+We look now at the anomaly under SU$(2)_{\text{EW}}$U$(1)^2_{\text{B}}$:
+\[
+D^{Bbc}=\frac{1}{2}\Tr{B}_{\text{weak doublets}}\Tr{\{T^b,T^c\}}=\frac{1}{2}2\cdot\frac{1}{3}\cdot3N_f\delta^{bc}=N_f\delta^{bc}\marginnote{In the weak doublets, only $q_L$ contributes and it is factored out because it acts on a different space.}
+\]
+There is no anomaly under U$(1)^2_{\text{B}}$U$(1)_{\text{Y}}$
+while if we look at U$(1)^2_{\text{Y}}$U$(1)_{\text{B}}$ we find:
 \begin{align*}
 D^{Byy}&=\frac{1}{2}\Tr{B}_{\text{quarks}}\Tr{\{Y,Y\}}\xleftarrow[]{}\;=2Y^2\\
-&=3N_f\left[\frac{1}{3}\cdot2\cdot\left(-\frac{1}{6}\right)^2+\left(-\frac{1}{3}\right)\cdot\left(-\frac{2}{3}\right)^2+\left(-\frac{1}{3}\right)\cdot\left(\frac{1}{3}\right)^2\right]\\
+&=3N_f\left[\frac{1}{3}\cdot2\cdot\left(\frac{1}{6}\right)^2-\frac{1}{3}\cdot\left(\frac{2}{3}\right)^2-\frac{1}{3}\cdot\left(-\frac{1}{3}\right)^2\right]\\
 &=N_f\left[\frac{1}{18}-\frac{4}{9}-\frac{1}{9}\right]=-\frac{N_f}{2}
 \end{align*}
 This results in:
@@ -194,7 +208,7 @@ which is not a symmetry. At the classical level, there is a symmetry given by th
 \[
 \text{U}(1)_{\text{B$-$L}}\times\text{U}(1)_{L_e-L_\mu}\times\text{U}(1)_{L_e-L_\tau}
 \]
-which is an accidental symmetry of the SM. In particular, B$+$L is anomalous and this is important if we want to extend the SM because it is not possible to gauge it.
+which is an accidental symmetry of the SM. In particular, B$-$L is anomalous and this is important if we want to extend the SM because it is not possible to gauge it.\marginnote[-1cm]{If you look at \cite{schwartz} Section 30.5.1 it says that B$-$L is non-anomalous because it is including the $\nu_R$ which we are not considering here.}
 % Suppose now that B$-$L is promoted to a gauge symmetry, what we need to check is [U$(1)_{\text{B$-$L}}]^3$ which is different from 0 in the SM but equal to 0 when we add $\nu_R$.
 \section{SU(5) Grand Unification Theory}\marginnote[-1cm]{From \cite{CL}, Chapter 14.}
 Elementary particle interactions are correctly described by the gauge group SU$(3)\times$SU$(2)\times$U$(1)$ down to distances as small as $10^{-16}$\,cm: QCD is the strong interaction theory and the Glashow-Weinberg-Salam model provides the theory of weak and electromagnetic interaction. It is desirable to have a more unified theory which can combine all three of these interactions as components of a single force, a theory with only one gauge coupling.\\
@@ -261,7 +275,7 @@ All the SU(5) gauge bosons can be put in a $5\times5$ matrix $A$ of the form:
 A=\frac{1}{2}\sum_{a=0}^{23}A^a\lambda^a
 \]
 \subsection{Proton Decay}
-One prominent feature of the Grand Unification Theory is the non conservation of the baryon number. In the SM, baryon and lepton number are accidental, while the combination $B+L$ is anomalous: there is no proton decay mediated by anomalies.  The SU(5) model has this property and the leading effective Lagrangian for proton decay arises from a set of tree-level $X$ boson exchange diagrams. $X$ bosons couple to two-fermion channels with different baryon numbers:\\
+One prominent feature of the Grand Unification Theory is the non conservation of the baryon number. In the SM, baryon and lepton number are accidental, while the combination $B-L$ is anomalous: there is no proton decay mediated by anomalies.  The SU(5) model has this property and the leading effective Lagrangian for proton decay arises from a set of tree-level $X$ boson exchange diagrams. $X$ bosons couple to two-fermion channels with different baryon numbers:\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Images/baryonnumber.pdf}
@@ -1602,7 +1616,7 @@ These are the 7 parameters written in this linear combination. Notice that some 
 \left\{
 \begin{aligned}
 &\hat{T}:=\frac{g^2}{m_W^2}\left\{[\Pi_{33}(0)-\Pi_{WW}(0)]-[\Pi_{33}^{\text{SM}}(0)-\Pi_{WW}^{\text{SM}}(0)]\right\}\\
-&\hat{S}:=g^2[\Pi_{33}'(0)-\Pi_{33}'^{\text{SM}}(0)]\\
+&\hat{S}:=g^2[\Pi_{3B}'(0)-\Pi_{3B}'^{\text{SM}}(0)]\\
 &\hat{W}:=\frac{g^2m_W^2}{2}[\Pi_{WW}''0)-\Pi_{WW}''^{\text{SM}}(0)]\\
 &\hat{Y}:=\frac{g'^2m_W^2}{2}[\Pi_{BB}''^{\text{SM}}(0)-\Pi_{BB}''^{\text{SM}}(0)]
 \end{aligned}
@@ -1626,9 +1640,9 @@ There is another approach done in the '90s by Peskin and Takeuchi.\marginnote{So
 \[
 \left\{
 \begin{aligned}
-&\hat{S}:=16\pi[\Pi'_{33}(0)-\Pi_{33}'^{\text{SM}}(0)]\\
-&\hat{T}:=\frac{4\pi}{s^2c^2m_Z^2}\left\{[\Pi_{11}(0)-\Pi_{33}(0)]-[\Pi_{11}^{\text{SM}}(0)-\Pi_{33}^{\text{SM}}(0)]\right\}\\
-&\hat{U}:=16\pi\left\{[\Pi'_{WW}(0)-\Pi'_{33}(0)]-[\Pi_{11}'^{\text{SM}}(0)-\Pi_{11}'^{\text{SM}}(0)]\right\}
+&\hat{S}:=16\pi[\Pi'_{3B}(0)-\Pi_{3B}'^{\text{SM}}(0)]\\
+&\hat{T}:=\frac{4\pi}{s^2c^2m_Z^2}\left\{[\Pi_{WW}(0)-\Pi_{33}(0)]-[\Pi_{WW}^{\text{SM}}(0)-\Pi_{33}^{\text{SM}}(0)]\right\}\\
+&\hat{U}:=16\pi\left\{[\Pi'_{WW}(0)-\Pi'_{33}(0)]-[\Pi_{WW}'^{\text{SM}}(0)-\Pi_{33}'^{\text{SM}}(0)]\right\}
 \end{aligned}
 \right.
 \]
@@ -1662,10 +1676,8 @@ The propagator in this diagram is given by:
 \]
 The new physics effects correct this self-energy at order $q^4$. We are at LEP, so we can pretend that $q^2\approx(200\,\text{GeV})^2\gg m_Z^2\simeq(90\,\text{GeV})^2$ and the corrections associated to $\hat{W}$ have to be much smaller than $q^2$ because we are assuming it is a small effect with respect to the SM contribution. It turns out that $\hat{W}$ is constrained to the level of $10^{-3}$ so it is a good approximation, everything is consistent. We can then expand this propagator:
 \begin{align*}
-\frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}&\simeq\frac{i}{q^2-m_Z^2}\left(1-\frac{q^4\hat{W}}{m_Z^2}\frac{i}{q^2-m_Z^2}\right)[1+\pazocal{O}(\hat{W})]\\
-& mimmo 
-2019-20: dybala lautaro zapata
-2020-21: miki morata luka\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
+\frac{i}{q^2-m_Z^2+\frac{q^4\hat{W}}{m_Z^2}}&\simeq\frac{i}{q^2-m_Z^2}\left(1-\frac{q^4\hat{W}}{m_Z^2}\frac{1}{q^2-m_Z^2}\right)[1+\pazocal{O}(\hat{W})]\\
+&\underset{\mathclap{\tikz \node {$\uparrow$} node [below=1ex] {\footnotesize $q^2\gg m_Z^2$ };}}{\simeq}\frac{i}{q^2-m_Z^2}\left(1-\frac{q^2}{m_Z^2}\hat{W}\right)[1+\pazocal{O}(\hat{W})]\\
 &\simeq\frac{i}{q^2-m_Z^2}-\frac{\hat{W}}{m_Z^2}+\pazocal{O}(\hat{W}/q^2)
 \end{align*}
 Notice that now the second term does not depend on $q^2$ and it is a contact interaction, we can see it diagrammatically as:
